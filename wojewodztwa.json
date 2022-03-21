@@ -1,0 +1,42 @@
+{
+  "wojewodztwa": [
+    {
+      "wojewodztwo": "wielkopolskie",
+      "powiaty": [
+        {
+          "powiat": "pow1",
+          "gminy": [
+            "gm1",
+            "gm2"
+          ]
+        },
+        {
+          "powiat": "pow2",
+          "gminy": [
+            "gm3",
+            "gm4"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "mazowieckie",
+      "powiaty": [
+        {
+          "powiat": "pow3",
+          "gminy": [
+            "gm5",
+            "gm6"
+          ]
+        },
+        {
+          "powiat": "pow4",
+          "gminy": [
+            "gm7",
+            "gm8"
+          ]
+        }
+      ]
+    }
+  ]
+}
