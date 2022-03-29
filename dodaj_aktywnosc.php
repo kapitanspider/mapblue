@@ -23,8 +23,22 @@ include('facecheck.php');
 <a href="map.php">Zmień lokację</a>
 <p>Nazwa aktywności/wydarzenia:</p>
 <input type="text" id="nazwa" name="nazwa" required>
+<p>Rodzaj</p>
+<select  id="rodzaj" name="rodzaj" required>
+<option value="ACRT">Aktywność centralna realizowana w terenie</option> 
+<option value="WIP">Własna inicjatywa posła</option> 
+<option value="SW">Spotkanie z wborcami</option>
+<option value="NGO">Aktywność z NGO</option>
+<option value="JST">Aktywność z JST</option>
+<option value="RKP">Regionalna konferencja prasowa</option>
+<option value="OU">Oficjalna uroczystość</option>
+<option value="INNE">Inne</option>
+
+</select>
 <p>Data:</p>
 <input type="date" id="data" name="data" required>
+<p>Godzina:</p>
+<input type="time" id="godzina" name="godzina" required>
 <p>Ilość uczestników</p>
 <input type="number" id="uczestnicy" name="uczestnicy" required>
 <p>Link FB/WWW</p>

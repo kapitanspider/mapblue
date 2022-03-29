@@ -1,20 +1,1683 @@
 {
   "wojewodztwa": [
     {
-      "wojewodztwo": "wielkopolskie",
+      "wojewodztwo": "dolnośląskie",
       "powiaty": [
         {
-          "powiat": "pow1",
+          "powiat": "bolesławiecki",
           "gminy": [
-            "gm1",
-            "gm2"
+            "Bolesławiec",
+            "gmina Bolesławiec",
+            "gmina Gromadka",
+            "gmina Nowogrodziec",
+            "gmina Osiecznica",
+            "gmina Warta Bolesławiecka"
           ]
         },
         {
-          "powiat": "pow2",
+          "powiat": "dzierżoniowski",
           "gminy": [
-            "gm3",
-            "gm4"
+            "Bielawa",
+            "Dzierżoniów",
+            "gmina Pieszyce",
+            "Piława Górna",
+            "gmina Dzierżoniów",
+            "gmina Łagiewniki",
+            "gmina Niemcza"
+          ]
+        },
+        {
+          "powiat": "głogowski",
+          "gminy": [
+            "Głogów",
+            "gmina Głogów",
+            "gmina Jerzmanowa",
+            "gmina Kotla",
+            "gmina Pęcław",
+            "gmina Żukowice"
+          ]
+        },
+        {
+          "powiat": "górowski",
+          "gminy": [
+            "gmina Góra",
+            "gmina Jemielno",
+            "gmina Niechlów",
+            "gmina Wąsosz"
+          ]
+        },
+        {
+          "powiat": "jaworski",
+          "gminy": [
+            "Jawor",
+            "gmina Bolków",
+            "gmina Męcinka",
+            "gmina Mściwojów",
+            "gmina Paszowice",
+            "gmina Wądroże Wielkie"
+          ]
+        },
+        {
+          "powiat": "karkonoski",
+          "gminy": [
+            "Karpacz",
+            "Kowary",
+            "Piechowice",
+            "Szklarska Poręba",
+            "gmina Janowice Wielkie",
+            "gmina Jeżów Sudecki",
+            "gmina Mysłakowice",
+            "gmina Podgórzyn",
+            "gmina Stara Kamienica"
+          ]
+        },
+        {
+          "powiat": "kamiennogórski",
+          "gminy": [
+            "Kamienna Góra",
+            "gmina Kamienna Góra",
+            "gmina Lubawka",
+            "gmina Marciszów"
+          ]
+        },
+        {
+          "powiat": "kłodzki",
+          "gminy": [
+            "Duszniki-Zdrój",
+            "Kłodzko",
+            "Kudowa-Zdrój",
+            "Nowa Ruda",
+            "Polanica-Zdrój",
+            "gmina Bystrzyca Kłodzka",
+            "gmina Kłodzko",
+            "gmina Lądek-Zdrój",
+            "gmina Lewin Kłodzki",
+            "gmina Międzylesie",
+            "gmina Nowa Ruda",
+            "gmina Radków",
+            "gmina Stronie Śląskie",
+            "gmina Szczytna"
+          ]
+        },
+        {
+          "powiat": "legnicki",
+          "gminy": [
+            "Chojnów",
+            "gmina Chojnów",
+            "gmina Krotoszyce",
+            "gmina Kunice",
+            "gmina Legnickie Pole",
+            "gmina Miłkowice",
+            "gmina Prochowice",
+            "gmina Ruja"
+          ]
+        },
+        {
+          "powiat": "lubański",
+          "gminy": [
+            "Lubań",
+            "Świeradów-Zdrój",
+            "gmina Leśna",
+            "gmina Lubań",
+            "gmina Olszyna",
+            "gmina Platerówka",
+            "gmina Siekierczyn"
+          ]
+        },
+        {
+          "powiat": "lubiński",
+          "gminy": [
+            "Lubin",
+            "gmina Lubin",
+            "gmina Rudna",
+            "gmina Ścinawa"
+          ]
+        },
+        {
+          "powiat": "lwówecki",
+          "gminy": [
+            "gmina Gryfów Śląski",
+            "gmina Lubomierz",
+            "gmina Lwówek Śląski",
+            "gmina Mirsk",
+            "gmina Wleń"
+          ]
+        },
+        {
+          "powiat": "milicki",
+          "gminy": [
+            "gmina Cieszków",
+            "gmina Krośnice",
+            "gmina Milicz"
+          ]
+        },
+        {
+          "powiat": "oleśnicki",
+          "gminy": [
+            "Oleśnica",
+            "gmina Bierutów",
+            "gmina Dobroszyce",
+            "gmina Dziadowa Kłoda",
+            "gmina Międzybórz",
+            "gmina Oleśnica",
+            "gmina Syców",
+            "gmina Twardogóra"
+          ]
+        },
+        {
+          "powiat": "oławski",
+          "gminy": [
+            "Oława",
+            "gmina Domaniów",
+            "gmina Jelcz-Laskowice",
+            "gmina Oława"
+          ]
+        },
+        {
+          "powiat": "polkowicki",
+          "gminy": [
+            "gmina Chocianów",
+            "gmina Gaworzyce",
+            "gmina Grębocice",
+            "gmina Polkowice",
+            "gmina Przemków",
+            "gmina Radwanice"
+          ]
+        },
+        {
+          "powiat": "strzeliński",
+          "gminy": [
+            "gmina Borów",
+            "gmina Kondratowice",
+            "gmina Przeworno",
+            "gmina Strzelin",
+            "gmina Wiązów"
+          ]
+        },
+        {
+          "powiat": "średzki",
+          "gminy": [
+            "gmina Kostomłoty",
+            "gmina Malczyce",
+            "gmina Miękinia",
+            "gmina Środa Śląska",
+            "gmina Udanin"
+          ]
+        },
+        {
+          "powiat": "świdnicki",
+          "gminy": [
+            "Świdnica",
+            "Świebodzice",
+            "gmina Dobromierz",
+            "gmina Jaworzyna Śląska",
+            "gmina Marcinowice",
+            "gmina Strzegom",
+            "gmina Świdnica",
+            "gmina Żarów"
+          ]
+        },
+        {
+          "powiat": "trzebnicki",
+          "gminy": [
+            "gmina Oborniki Śląskie",
+            "gmina Prusice",
+            "gmina Trzebnica",
+            "gmina Wisznia Mała",
+            "gmina Zawonia",
+            "gmina Żmigród"
+          ]
+        },
+        {
+          "powiat": "wałbrzyski",
+          "gminy": [
+            "Boguszów-Gorce",
+            "Jedlina-Zdrój",
+            "Szczawno-Zdrój",
+            "gmina Czarny Bór",
+            "gmina Głuszyca",
+            "gmina Mieroszów",
+            "gmina Stare Bogaczowice",
+            "gmina Walim"
+          ]
+        },
+        {
+          "powiat": "wołowski",
+          "gminy": [
+            "gmina Brzeg Dolny",
+            "gmina Wińsko",
+            "gmina Wołów"
+          ]
+        },
+        {
+          "powiat": "wrocławski",
+          "gminy": [
+            "gmina Czernica",
+            "gmina Długołęka",
+            "gmina Jordanów Śląski",
+            "gmina Kąty Wrocławskie",
+            "gmina Kobierzyce",
+            "gmina Mietków",
+            "gmina Sobótka",
+            "gmina Siechnice",
+            "gmina Żórawina"
+          ]
+        },
+        {
+          "powiat": "ząbkowicki",
+          "gminy": [
+            "gmina Bardo",
+            "gmina Ciepłowody",
+            "gmina Kamieniec Ząbkowicki",
+            "gmina Stoszowice",
+            "gmina Ząbkowice Śląskie",
+            "gmina Ziębice",
+            "gmina Złoty Stok"
+          ]
+        },
+        {
+          "powiat": "zgorzelecki",
+          "gminy": [
+            "Zawidów",
+            "Zgorzelec",
+            "gmina Bogatynia",
+            "gmina Pieńsk",
+            "gmina Sulików",
+            "gmina Węgliniec",
+            "gmina Zgorzelec"
+          ]
+        },
+        {
+          "powiat": "złotoryjski",
+          "gminy": [
+            "Wojcieszów",
+            "Złotoryja",
+            "gmina Pielgrzymka",
+            "gmina Świerzawa",
+            "gmina Zagrodno",
+            "gmina Złotoryja"
+          ]
+        },
+        {
+          "powiat": "Jelenia Góra",
+          "gminy": [
+            "Jelenia Góra"
+          ]
+        },
+        {
+          "powiat": "Legnica",
+          "gminy": [
+            "Legnica"
+          ]
+        },
+        {
+          "powiat": "Wrocław",
+          "gminy": [
+            "Wrocław"
+          ]
+        },
+        {
+          "powiat": "Wałbrzych",
+          "gminy": [
+            "Wałbrzych"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "kujawsko-pomorskie",
+      "powiaty": [
+        {
+          "powiat": "aleksandrowski",
+          "gminy": [
+            "Aleksandrów Kujawski",
+            "Ciechocinek",
+            "Nieszawa",
+            "gmina Aleksandrów Kujawski",
+            "gmina Bądkowo",
+            "gmina Koneck",
+            "gmina Raciążek",
+            "gmina Waganiec",
+            "gmina Zakrzewo"
+          ]
+        },
+        {
+          "powiat": "brodnicki",
+          "gminy": [
+            "Brodnica",
+            "gmina Bobrowo",
+            "gmina Brodnica",
+            "gmina Brzozie",
+            "gmina Górzno",
+            "gmina Bartniczka",
+            "gmina Jabłonowo Pomorskie",
+            "gmina Osiek",
+            "gmina Świedziebnia",
+            "gmina Zbiczno"
+          ]
+        },
+        {
+          "powiat": "bydgoski",
+          "gminy": [
+            "gmina Białe Błota",
+            "gmina Dąbrowa Chełmińska",
+            "gmina Dobrcz",
+            "gmina Koronowo",
+            "gmina Nowa Wieś Wielka",
+            "gmina Osielsko",
+            "gmina Sicienko",
+            "gmina Solec Kujawski"
+          ]
+        },
+        {
+          "powiat": "chełmiński",
+          "gminy": [
+            "Chełmno",
+            "gmina Chełmno",
+            "gmina Kijewo Królewskie",
+            "gmina Lisewo",
+            "gmina Papowo Biskupie",
+            "gmina Stolno",
+            "gmina Unisław"
+          ]
+        },
+        {
+          "powiat": "golubsko-dobrzyński",
+          "gminy": [
+            "Golub-Dobrzyń",
+            "gmina Ciechocin",
+            "gmina Golub-Dobrzyń",
+            "gmina Kowalewo Pomorskie",
+            "gmina Radomin",
+            "gmina Zbójno"
+          ]
+        },
+        {
+          "powiat": "grudziądzki",
+          "gminy": [
+            "gmina Grudziądz",
+            "gmina Gruta",
+            "gmina Łasin",
+            "gmina Radzyń Chełmiński",
+            "gmina Rogóźno",
+            "gmina Świecie nad Osą"
+          ]
+        },
+        {
+          "powiat": "inowrocławski",
+          "gminy": [
+            "Inowrocław",
+            "gmina Dąbrowa Biskupia",
+            "gmina Gniewkowo",
+            "gmina Inowrocław",
+            "gmina Janikowo",
+            "gmina Kruszwica",
+            "gmina Pakość",
+            "gmina Rojewo",
+            "gmina Złotniki Kujawskie"
+          ]
+        },
+        {
+          "powiat": "lipnowski",
+          "gminy": [
+            "Lipno",
+            "gmina Bobrowniki",
+            "gmina Chrostkowo",
+            "gmina Dobrzyń nad Wisłą",
+            "gmina Kikół",
+            "gmina Lipno",
+            "gmina Skępe",
+            "gmina Tłuchowo",
+            "gmina Wielgie"
+          ]
+        },
+        {
+          "powiat": "mogileński",
+          "gminy": [
+            "gmina Dąbrowa",
+            "gmina Jeziora Wielkie",
+            "gmina Mogilno",
+            "gmina Strzelno"
+          ]
+        },
+        {
+          "powiat": "nakielski",
+          "gminy": [
+            "gmina Kcynia",
+            "gmina Mrocza",
+            "gmina Nakło nad Notecią",
+            "gmina Sadki",
+            "gmina Szubin"
+          ]
+        },
+        {
+          "powiat": "radziejowski",
+          "gminy": [
+            "Radziejów",
+            "gmina Bytoń",
+            "gmina Dobre",
+            "gmina Osięciny",
+            "gmina Piotrków Kujawski",
+            "gmina Radziejów",
+            "gmina Topólka"
+          ]
+        },
+        {
+          "powiat": "rypiński",
+          "gminy": [
+            "Rypin",
+            "gmina Brzuze",
+            "gmina Rogowo",
+            "gmina Rypin",
+            "gmina Skrwilno",
+            "gmina Wąpielsk"
+          ]
+        },
+        {
+          "powiat": "sępoleński",
+          "gminy": [
+            "gmina Kamień Krajeński",
+            "gmina Sępólno Krajeńskie",
+            "gmina Sośno",
+            "gmina Więcbork"
+          ]
+        },
+        {
+          "powiat": "świecki",
+          "gminy": [
+            "gmina Bukowiec",
+            "gmina Dragacz",
+            "gmina Drzycim",
+            "gmina Jeżewo",
+            "gmina Lniano",
+            "gmina Nowe",
+            "gmina Osie",
+            "gmina Pruszcz",
+            "gmina Świecie",
+            "gmina Świekatowo",
+            "gmina Warlubie"
+          ]
+        },
+        {
+          "powiat": "toruński",
+          "gminy": [
+            "Chełmża",
+            "gmina Chełmża",
+            "gmina Czernikowo",
+            "gmina Lubicz",
+            "gmina Łubianka",
+            "gmina Łysomice",
+            "gmina Obrowo",
+            "gmina Wielka Nieszawka",
+            "gmina Zławieś Wielka"
+          ]
+        },
+        {
+          "powiat": "tucholski",
+          "gminy": [
+            "gmina Cekcyn",
+            "gmina Gostycyn",
+            "gmina Kęsowo",
+            "gmina Lubiewo",
+            "gmina Śliwice",
+            "gmina Tuchola"
+          ]
+        },
+        {
+          "powiat": "wąbrzeski",
+          "gminy": [
+            "Wąbrzeźno",
+            "gmina Dębowa Łąka",
+            "gmina Książki",
+            "gmina Płużnica",
+            "gmina Ryńsk"
+          ]
+        },
+        {
+          "powiat": "włocławski",
+          "gminy": [
+            "Kowal",
+            "gmina Baruchowo",
+            "gmina Boniewo",
+            "gmina Brześć Kujawski",
+            "gmina Choceń",
+            "gmina Chodecz",
+            "gmina Fabianki",
+            "gmina Izbica Kujawska",
+            "gmina Kowal",
+            "gmina Lubanie",
+            "gmina Lubień Kujawski",
+            "gmina Lubraniec",
+            "gmina Włocławek"
+          ]
+        },
+        {
+          "powiat": "żniński",
+          "gminy": [
+            "gmina Barcin",
+            "gmina Gąsawa",
+            "gmina Janowiec Wielkopolski",
+            "gmina Łabiszyn",
+            "gmina Rogowo",
+            "gmina Żnin"
+          ]
+        },
+        {
+          "powiat": "Bydgoszcz",
+          "gminy": [
+            "Bydgoszcz"
+          ]
+        },
+        {
+          "powiat": "Grudziądz",
+          "gminy": [
+            "Grudziądz"
+          ]
+        },
+        {
+          "powiat": "Toruń",
+          "gminy": [
+            "Toruń"
+          ]
+        },
+        {
+          "powiat": "Włocławek",
+          "gminy": [
+            "Włocławek"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "lubelskie",
+      "powiaty": [
+        {
+          "powiat": "bialski",
+          "gminy": [
+            "Międzyrzec Podlaski",
+            "Terespol",
+            "gmina Biała Podlaska",
+            "gmina Drelów",
+            "gmina Janów Podlaski",
+            "gmina Kodeń",
+            "gmina Konstantynów",
+            "gmina Leśna Podlaska",
+            "gmina Łomazy",
+            "gmina Międzyrzec Podlaski",
+            "gmina Piszczac",
+            "gmina Rokitno",
+            "gmina Rossosz",
+            "gmina Sławatycze",
+            "gmina Sosnówka",
+            "gmina Terespol",
+            "gmina Tuczna",
+            "gmina Wisznice",
+            "gmina Zalesie"
+          ]
+        },
+        {
+          "powiat": "biłgorajski",
+          "gminy": [
+            "Biłgoraj",
+            "gmina Aleksandrów",
+            "gmina Biłgoraj",
+            "gmina Biszcza",
+            "gmina Frampol",
+            "gmina Goraj",
+            "gmina Józefów",
+            "gmina Księżpol",
+            "gmina Łukowa",
+            "gmina Obsza",
+            "gmina Potok Górny",
+            "gmina Tarnogród",
+            "gmina Tereszpol",
+            "gmina Turobin"
+          ]
+        },
+        {
+          "powiat": "chełmski",
+          "gminy": [
+            "Rejowiec Fabryczny",
+            "gmina Białopole",
+            "gmina Chełm",
+            "gmina Dorohusk",
+            "gmina Dubienka",
+            "gmina Kamień",
+            "gmina Leśniowice",
+            "gmina Rejowiec Fabryczny",
+            "gmina Ruda-Huta",
+            "gmina Sawin",
+            "gmina Siedliszcze",
+            "gmina Wierzbica",
+            "gmina Wojsławice",
+            "gmina Żmudź",
+            "gmina Rejowiec"
+          ]
+        },
+        {
+          "powiat": "hrubieszowski",
+          "gminy": [
+            "Hrubieszów",
+            "gmina Dołhobyczów",
+            "gmina Horodło",
+            "gmina Hrubieszów",
+            "gmina Mircze",
+            "gmina Trzeszczany",
+            "gmina Uchanie",
+            "gmina Werbkowice"
+          ]
+        },
+        {
+          "powiat": "janowski",
+          "gminy": [
+            "gmina Batorz",
+            "gmina Chrzanów",
+            "gmina Dzwola",
+            "gmina Godziszów",
+            "gmina Janów Lubelski",
+            "gmina Modliborzyce",
+            "gmina Potok Wielki"
+          ]
+        },
+        {
+          "powiat": "krasnostawski",
+          "gminy": [
+            "Krasnystaw",
+            "gmina Fajsławice",
+            "gmina Gorzków",
+            "gmina Izbica",
+            "gmina Krasnystaw",
+            "gmina Kraśniczyn",
+            "gmina Łopiennik Górny",
+            "gmina Rudnik",
+            "gmina Siennica Różana",
+            "gmina Żółkiewka"
+          ]
+        },
+        {
+          "powiat": "kraśnicki",
+          "gminy": [
+            "Kraśnik",
+            "gmina Annopol",
+            "gmina Dzierzkowice",
+            "gmina Gościeradów",
+            "gmina Kraśnik",
+            "gmina Szastarka",
+            "gmina Trzydnik Duży",
+            "gmina Urzędów",
+            "gmina Wilkołaz",
+            "gmina Zakrzówek"
+          ]
+        },
+        {
+          "powiat": "lubartowski",
+          "gminy": [
+            "Lubartów",
+            "gmina Abramów",
+            "gmina Firlej",
+            "gmina Jeziorzany",
+            "gmina Kamionka",
+            "gmina Kock",
+            "gmina Lubartów",
+            "gmina Michów",
+            "gmina Niedźwiada",
+            "gmina Ostrów Lubelski",
+            "gmina Ostrówek",
+            "gmina Serniki",
+            "gmina Uścimów"
+          ]
+        },
+        {
+          "powiat": "lubelski",
+          "gminy": [
+            "gmina Bełżyce",
+            "gmina Borzechów",
+            "gmina Bychawa",
+            "gmina Garbów",
+            "gmina Głusk",
+            "gmina Jabłonna",
+            "gmina Jastków",
+            "gmina Konopnica",
+            "gmina Krzczonów",
+            "gmina Niedrzwica Duża",
+            "gmina Niemce",
+            "gmina Strzyżewice",
+            "gmina Wojciechów",
+            "gmina Wólka",
+            "gmina Wysokie",
+            "gmina Zakrzew"
+          ]
+        },
+        {
+          "powiat": "łęczyński",
+          "gminy": [
+            "gmina Cyców",
+            "gmina Ludwin",
+            "gmina Łęczna",
+            "gmina Milejów",
+            "gmina Puchaczów",
+            "gmina Spiczyn"
+          ]
+        },
+        {
+          "powiat": "łukowski",
+          "gminy": [
+            "Łuków",
+            "Stoczek Łukowski",
+            "gmina Adamów",
+            "gmina Krzywda",
+            "gmina Łuków",
+            "gmina Serokomla",
+            "gmina Stanin",
+            "gmina Stoczek Łukowski",
+            "gmina Trzebieszów",
+            "gmina Wojcieszków",
+            "gmina Wola Mysłowska"
+          ]
+        },
+        {
+          "powiat": "opolski",
+          "gminy": [
+            "gmina Chodel",
+            "gmina Józefów nad Wisłą",
+            "gmina Karczmiska",
+            "gmina Łaziska",
+            "gmina Opole Lubelskie",
+            "gmina Poniatowa",
+            "gmina Wilków"
+          ]
+        },
+        {
+          "powiat": "parczewski",
+          "gminy": [
+            "gmina Dębowa Kłoda",
+            "gmina Jabłoń",
+            "gmina Milanów",
+            "gmina Parczew",
+            "gmina Podedwórze",
+            "gmina Siemień",
+            "gmina Sosnowica"
+          ]
+        },
+        {
+          "powiat": "puławski",
+          "gminy": [
+            "Puławy",
+            "gmina Baranów",
+            "gmina Janowiec",
+            "gmina Kazimierz Dolny",
+            "gmina Końskowola",
+            "gmina Kurów",
+            "gmina Markuszów",
+            "gmina Nałęczów",
+            "gmina Puławy",
+            "gmina Wąwolnica",
+            "gmina Żyrzyn"
+          ]
+        },
+        {
+          "powiat": "radzyński",
+          "gminy": [
+            "Radzyń Podlaski",
+            "gmina Borki",
+            "gmina Czemierniki",
+            "gmina Kąkolewnica",
+            "gmina Komarówka Podlaska",
+            "gmina Radzyń Podlaski",
+            "gmina Ulan-Majorat",
+            "gmina Wohyń"
+          ]
+        },
+        {
+          "powiat": "rycki",
+          "gminy": [
+            "Dęblin",
+            "gmina Kłoczew",
+            "gmina Nowodwór",
+            "gmina Ryki",
+            "gmina Stężyca",
+            "gmina Ułęż"
+          ]
+        },
+        {
+          "powiat": "świdnicki",
+          "gminy": [
+            "Świdnik",
+            "gmina Mełgiew",
+            "gmina Piaski",
+            "gmina Rybczewice",
+            "gmina Trawniki"
+          ]
+        },
+        {
+          "powiat": "tomaszowski",
+          "gminy": [
+            "Tomaszów Lubelski",
+            "gmina Bełżec",
+            "gmina Jarczów",
+            "gmina Krynice",
+            "gmina Lubycza Królewska",
+            "gmina Łaszczów",
+            "gmina Rachanie",
+            "gmina Susiec",
+            "gmina Tarnawatka",
+            "gmina Telatyn",
+            "gmina Tomaszów Lubelski",
+            "gmina Tyszowce",
+            "gmina Ulhówek"
+          ]
+        },
+        {
+          "powiat": "włodawski",
+          "gminy": [
+            "Włodawa",
+            "gmina Hanna",
+            "gmina Hańsk",
+            "gmina Stary Brus",
+            "gmina Urszulin",
+            "gmina Włodawa",
+            "gmina Wola Uhruska",
+            "gmina Wyryki"
+          ]
+        },
+        {
+          "powiat": "zamojski",
+          "gminy": [
+            "gmina Adamów",
+            "gmina Grabowiec",
+            "gmina Komarów-Osada",
+            "gmina Krasnobród",
+            "gmina Łabunie",
+            "gmina Miączyn",
+            "gmina Nielisz",
+            "gmina Radecznica",
+            "gmina Sitno",
+            "gmina Skierbieszów",
+            "gmina Stary Zamość",
+            "gmina Sułów",
+            "gmina Szczebrzeszyn",
+            "gmina Zamość",
+            "gmina Zwierzyniec"
+          ]
+        },
+        {
+          "powiat": "Biała Podlaska",
+          "gminy": [
+            "Biała Podlaska"
+          ]
+        },
+        {
+          "powiat": "Chełm",
+          "gminy": [
+            "Chełm"
+          ]
+        },
+        {
+          "powiat": "Lublin",
+          "gminy": [
+            "Lublin"
+          ]
+        },
+        {
+          "powiat": "Zamość",
+          "gminy": [
+            "Zamość"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "lubuskie",
+      "powiaty": [
+        {
+          "powiat": "gorzowski",
+          "gminy": [
+            "Kostrzyn nad Odrą",
+            "gmina Bogdaniec",
+            "gmina Deszczno",
+            "gmina Kłodawa",
+            "gmina Lubiszyn",
+            "gmina Santok",
+            "gmina Witnica"
+          ]
+        },
+        {
+          "powiat": "krośnieński",
+          "gminy": [
+            "Gubin",
+            "gmina Bobrowice",
+            "gmina Bytnica",
+            "gmina Dąbie",
+            "gmina Gubin",
+            "gmina Krosno Odrzańskie",
+            "gmina Maszewo"
+          ]
+        },
+        {
+          "powiat": "międzyrzecki",
+          "gminy": [
+            "gmina Bledzew",
+            "gmina Międzyrzecz",
+            "gmina Przytoczna",
+            "gmina Pszczew",
+            "gmina Skwierzyna",
+            "gmina Trzciel"
+          ]
+        },
+        {
+          "powiat": "nowosolski",
+          "gminy": [
+            "Nowa Sól",
+            "gmina Bytom Odrzański",
+            "gmina Kolsko",
+            "gmina Kożuchów",
+            "gmina Nowa Sól",
+            "gmina Nowe Miasteczko",
+            "gmina Otyń",
+            "gmina Siedlisko"
+          ]
+        },
+        {
+          "powiat": "słubicki",
+          "gminy": [
+            "gmina Cybinka",
+            "gmina Górzyca",
+            "gmina Ośno Lubuskie",
+            "gmina Rzepin",
+            "gmina Słubice"
+          ]
+        },
+        {
+          "powiat": "strzelecko-drezdenecki",
+          "gminy": [
+            "gmina Dobiegniew",
+            "gmina Drezdenko",
+            "gmina Stare Kurowo",
+            "gmina Strzelce Krajeńskie",
+            "gmina Zwierzyn"
+          ]
+        },
+        {
+          "powiat": "sulęciński",
+          "gminy": [
+            "gmina Krzeszyce",
+            "gmina Lubniewice",
+            "gmina Słońsk",
+            "gmina Sulęcin",
+            "gmina Torzym"
+          ]
+        },
+        {
+          "powiat": "świebodziński",
+          "gminy": [
+            "gmina Lubrza",
+            "gmina Łagów",
+            "gmina Skąpe",
+            "gmina Szczaniec",
+            "gmina Świebodzin",
+            "gmina Zbąszynek"
+          ]
+        },
+        {
+          "powiat": "zielonogórski",
+          "gminy": [
+            "gmina Babimost",
+            "gmina Bojadła",
+            "gmina Czerwieńsk",
+            "gmina Kargowa",
+            "gmina Nowogród Bobrzański",
+            "gmina Sulechów",
+            "gmina Świdnica",
+            "gmina Trzebiechów",
+            "gmina Zabór"
+          ]
+        },
+        {
+          "powiat": "żagański",
+          "gminy": [
+            "Gozdnica",
+            "Żagań",
+            "gmina Brzeźnica",
+            "gmina Iłowa",
+            "gmina Małomice",
+            "gmina Niegosławice",
+            "gmina Szprotawa",
+            "gmina Wymiarki",
+            "gmina Żagań"
+          ]
+        },
+        {
+          "powiat": "żarski",
+          "gminy": [
+            "Łęknica",
+            "Żary",
+            "gmina Brody",
+            "gmina Jasień",
+            "gmina Lipinki Łużyckie",
+            "gmina Lubsko",
+            "gmina Przewóz",
+            "gmina Trzebiel",
+            "gmina Tuplice",
+            "gmina Żary"
+          ]
+        },
+        {
+          "powiat": "wschowski",
+          "gminy": [
+            "gmina Sława",
+            "gmina Szlichtyngowa",
+            "gmina Wschowa"
+          ]
+        },
+        {
+          "powiat": "Gorzów Wielkopolski",
+          "gminy": [
+            "Gorzów Wielkopolski"
+          ]
+        },
+        {
+          "powiat": "Zielona Góra",
+          "gminy": [
+            "Zielona Góra"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "łódzkie",
+      "powiaty": [
+        {
+          "powiat": "bełchatowski",
+          "gminy": [
+            "Bełchatów",
+            "gmina Bełchatów",
+            "gmina Drużbice",
+            "gmina Kleszczów",
+            "gmina Kluki",
+            "gmina Rusiec",
+            "gmina Szczerców",
+            "gmina Zelów"
+          ]
+        },
+        {
+          "powiat": "kutnowski",
+          "gminy": [
+            "Kutno",
+            "gmina Bedlno",
+            "gmina Dąbrowice",
+            "gmina Krośniewice",
+            "gmina Krzyżanów",
+            "gmina Kutno",
+            "gmina Łanięta",
+            "gmina Nowe Ostrowy",
+            "gmina Oporów",
+            "gmina Strzelce",
+            "gmina Żychlin"
+          ]
+        },
+        {
+          "powiat": "łaski",
+          "gminy": [
+            "gmina Buczek",
+            "gmina Łask",
+            "gmina Sędziejowice",
+            "gmina Widawa",
+            "gmina Wodzierady"
+          ]
+        },
+        {
+          "powiat": "łęczycki",
+          "gminy": [
+            "Łęczyca",
+            "gmina Daszyna",
+            "gmina Góra Świętej Małgorzaty",
+            "gmina Grabów",
+            "gmina Łęczyca",
+            "gmina Piątek",
+            "gmina Świnice Warckie",
+            "gmina Witonia"
+          ]
+        },
+        {
+          "powiat": "łowicki",
+          "gminy": [
+            "Łowicz",
+            "gmina Bielawy",
+            "gmina Chąśno",
+            "gmina Domaniewice",
+            "gmina Kiernozia",
+            "gmina Kocierzew Południowy",
+            "gmina Łowicz",
+            "gmina Łyszkowice",
+            "gmina Nieborów",
+            "gmina Zduny"
+          ]
+        },
+        {
+          "powiat": "łódzki wschodni",
+          "gminy": [
+            "gmina Andrespol",
+            "gmina Brójce",
+            "gmina Koluszki",
+            "gmina Nowosolna",
+            "gmina Rzgów",
+            "gmina Tuszyn"
+          ]
+        },
+        {
+          "powiat": "opoczyński",
+          "gminy": [
+            "gmina Białaczów",
+            "gmina Drzewica",
+            "gmina Mniszków",
+            "gmina Opoczno",
+            "gmina Paradyż",
+            "gmina Poświętne",
+            "gmina Sławno",
+            "gmina Żarnów"
+          ]
+        },
+        {
+          "powiat": "pabianicki",
+          "gminy": [
+            "Konstantynów Łódzki",
+            "Pabianice",
+            "gmina Dłutów",
+            "gmina Dobroń",
+            "gmina Ksawerów",
+            "gmina Lutomiersk",
+            "gmina Pabianice"
+          ]
+        },
+        {
+          "powiat": "pajęczański",
+          "gminy": [
+            "gmina Działoszyn",
+            "gmina Kiełczygłów",
+            "gmina Nowa Brzeźnica",
+            "gmina Pajęczno",
+            "gmina Rząśnia",
+            "gmina Siemkowice",
+            "gmina Strzelce Wielkie",
+            "gmina Sulmierzyce"
+          ]
+        },
+        {
+          "powiat": "piotrkowski",
+          "gminy": [
+            "gmina Aleksandrów",
+            "gmina Czarnocin",
+            "gmina Gorzkowice",
+            "gmina Grabica",
+            "gmina Łęki Szlacheckie",
+            "gmina Moszczenica",
+            "gmina Ręczno",
+            "gmina Rozprza",
+            "gmina Sulejów",
+            "gmina Wola Krzysztoporska",
+            "gmina Wolbórz"
+          ]
+        },
+        {
+          "powiat": "poddębicki",
+          "gminy": [
+            "gmina Dalików",
+            "gmina Pęczniew",
+            "gmina Poddębice",
+            "gmina Uniejów",
+            "gmina Wartkowice",
+            "gmina Zadzim"
+          ]
+        },
+        {
+          "powiat": "radomszczański",
+          "gminy": [
+            "Radomsko",
+            "gmina Dobryszyce",
+            "gmina Gidle",
+            "gmina Gomunice",
+            "gmina Kamieńsk",
+            "gmina Kobiele Wielkie",
+            "gmina Kodrąb",
+            "gmina Lgota Wielka",
+            "gmina Ładzice",
+            "gmina Masłowice",
+            "gmina Przedbórz",
+            "gmina Radomsko",
+            "gmina Wielgomłyny",
+            "gmina Żytno"
+          ]
+        },
+        {
+          "powiat": "rawski",
+          "gminy": [
+            "Rawa Mazowiecka",
+            "gmina Biała Rawska",
+            "gmina Cielądz",
+            "gmina Rawa Mazowiecka",
+            "gmina Regnów",
+            "gmina Sadkowice"
+          ]
+        },
+        {
+          "powiat": "sieradzki",
+          "gminy": [
+            "Sieradz",
+            "gmina Błaszki",
+            "gmina Brąszewice",
+            "gmina Brzeźnio",
+            "gmina Burzenin",
+            "gmina Goszczanów",
+            "gmina Klonowa",
+            "gmina Sieradz",
+            "gmina Warta",
+            "gmina Wróblew",
+            "gmina Złoczew"
+          ]
+        },
+        {
+          "powiat": "skierniewicki",
+          "gminy": [
+            "gmina Bolimów",
+            "gmina Głuchów",
+            "gmina Godzianów",
+            "gmina Kowiesy",
+            "gmina Lipce Reymontowskie",
+            "gmina Maków",
+            "gmina Nowy Kawęczyn",
+            "gmina Skierniewice",
+            "gmina Słupia"
+          ]
+        },
+        {
+          "powiat": "tomaszowski",
+          "gminy": [
+            "Tomaszów Mazowiecki",
+            "gmina Będków",
+            "gmina Budziszewice",
+            "gmina Czerniewice",
+            "gmina Inowłódz",
+            "gmina Lubochnia",
+            "gmina Rokiciny",
+            "gmina Rzeczyca",
+            "gmina Tomaszów Mazowiecki",
+            "gmina Ujazd",
+            "gmina Żelechlinek"
+          ]
+        },
+        {
+          "powiat": "wieluński",
+          "gminy": [
+            "gmina Biała",
+            "gmina Czarnożyły",
+            "gmina Konopnica",
+            "gmina Mokrsko",
+            "gmina Osjaków",
+            "gmina Ostrówek",
+            "gmina Pątnów",
+            "gmina Skomlin",
+            "gmina Wieluń",
+            "gmina Wierzchlas"
+          ]
+        },
+        {
+          "powiat": "wieruszowski",
+          "gminy": [
+            "gmina Bolesławiec",
+            "gmina Czastary",
+            "gmina Galewice",
+            "gmina Lututów",
+            "gmina Łubnice",
+            "gmina Sokolniki",
+            "gmina Wieruszów"
+          ]
+        },
+        {
+          "powiat": "zduńskowolski",
+          "gminy": [
+            "Zduńska Wola",
+            "gmina Szadek",
+            "gmina Zapolice",
+            "gmina Zduńska Wola"
+          ]
+        },
+        {
+          "powiat": "zgierski",
+          "gminy": [
+            "Głowno",
+            "Ozorków",
+            "Zgierz",
+            "gmina Aleksandrów Łódzki",
+            "gmina Głowno",
+            "gmina Ozorków",
+            "gmina Parzęczew",
+            "gmina Stryków",
+            "gmina Zgierz"
+          ]
+        },
+        {
+          "powiat": "brzeziński",
+          "gminy": [
+            "Brzeziny",
+            "gmina Brzeziny",
+            "gmina Dmosin",
+            "gmina Jeżów",
+            "gmina Rogów"
+          ]
+        },
+        {
+          "powiat": "Łódź",
+          "gminy": [
+            "Łódź"
+          ]
+        },
+        {
+          "powiat": "Piotrków Trybunalski",
+          "gminy": [
+            "Piotrków Trybunalski"
+          ]
+        },
+        {
+          "powiat": "Skierniewice",
+          "gminy": [
+            "Skierniewice"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "małopolskie",
+      "powiaty": [
+        {
+          "powiat": "bocheński",
+          "gminy": [
+            "Bochnia",
+            "gmina Bochnia",
+            "gmina Drwinia",
+            "gmina Lipnica Murowana",
+            "gmina Łapanów",
+            "gmina Nowy Wiśnicz",
+            "gmina Rzezawa",
+            "gmina Trzciana",
+            "gmina Żegocina"
+          ]
+        },
+        {
+          "powiat": "brzeski",
+          "gminy": [
+            "gmina Borzęcin",
+            "gmina Brzesko",
+            "gmina Czchów",
+            "gmina Dębno",
+            "gmina Gnojnik",
+            "gmina Iwkowa",
+            "gmina Szczurowa"
+          ]
+        },
+        {
+          "powiat": "chrzanowski",
+          "gminy": [
+            "gmina Alwernia",
+            "gmina Babice",
+            "gmina Chrzanów",
+            "gmina Libiąż",
+            "gmina Trzebinia"
+          ]
+        },
+        {
+          "powiat": "dąbrowski",
+          "gminy": [
+            "gmina Bolesław",
+            "gmina Dąbrowa Tarnowska",
+            "gmina Gręboszów",
+            "gmina Mędrzechów",
+            "gmina Olesno",
+            "gmina Radgoszcz",
+            "gmina Szczucin"
+          ]
+        },
+        {
+          "powiat": "gorlicki",
+          "gminy": [
+            "Gorlice",
+            "gmina Biecz",
+            "gmina Bobowa",
+            "gmina Gorlice",
+            "gmina Lipinki",
+            "gmina Łużna",
+            "gmina Moszczenica",
+            "gmina Ropa",
+            "gmina Sękowa",
+            "gmina Uście Gorlickie"
+          ]
+        },
+        {
+          "powiat": "krakowski",
+          "gminy": [
+            "gmina Czernichów",
+            "gmina Igołomia-Wawrzeńczyce",
+            "gmina Iwanowice",
+            "gmina Jerzmanowice-Przeginia",
+            "gmina Kocmyrzów-Luborzyca",
+            "gmina Krzeszowice",
+            "gmina Liszki",
+            "gmina Michałowice",
+            "gmina Mogilany",
+            "gmina Skała",
+            "gmina Skawina",
+            "gmina Słomniki",
+            "gmina Sułoszowa",
+            "gmina Świątniki Górne",
+            "gmina Wielka Wieś",
+            "gmina Zabierzów",
+            "gmina Zielonki"
+          ]
+        },
+        {
+          "powiat": "limanowski",
+          "gminy": [
+            "Limanowa",
+            "Mszana Dolna",
+            "gmina Dobra",
+            "gmina Jodłownik",
+            "gmina Kamienica",
+            "gmina Laskowa",
+            "gmina Limanowa",
+            "gmina Łukowica",
+            "gmina Mszana Dolna",
+            "gmina Niedźwiedź",
+            "gmina Słopnice",
+            "gmina Tymbark"
+          ]
+        },
+        {
+          "powiat": "miechowski",
+          "gminy": [
+            "gmina Charsznica",
+            "gmina Gołcza",
+            "gmina Kozłów",
+            "gmina Książ Wielki",
+            "gmina Miechów",
+            "gmina Racławice",
+            "gmina Słaboszów"
+          ]
+        },
+        {
+          "powiat": "myślenicki",
+          "gminy": [
+            "gmina Dobczyce",
+            "gmina Lubień",
+            "gmina Myślenice",
+            "gmina Pcim",
+            "gmina Raciechowice",
+            "gmina Siepraw",
+            "gmina Sułkowice",
+            "gmina Tokarnia",
+            "gmina Wiśniowa"
+          ]
+        },
+        {
+          "powiat": "nowosądecki",
+          "gminy": [
+            "Grybów",
+            "gmina Chełmiec",
+            "gmina Gródek nad Dunajcem",
+            "gmina Grybów",
+            "gmina Kamionka Wielka",
+            "gmina Korzenna",
+            "gmina Krynica-Zdrój",
+            "gmina Łabowa",
+            "gmina Łącko",
+            "gmina Łososina Dolna",
+            "gmina Muszyna",
+            "gmina Nawojowa",
+            "gmina Piwniczna-Zdrój",
+            "gmina Podegrodzie",
+            "gmina Rytro",
+            "gmina Stary Sącz"
+          ]
+        },
+        {
+          "powiat": "nowotarski",
+          "gminy": [
+            "Nowy Targ",
+            "gmina Szczawnica",
+            "gmina Czarny Dunajec",
+            "gmina Czorsztyn",
+            "gmina Jabłonka",
+            "gmina Krościenko nad Dunajcem",
+            "gmina Lipnica Wielka",
+            "gmina Łapsze Niżne",
+            "gmina Nowy Targ",
+            "gmina Ochotnica Dolna",
+            "gmina Raba Wyżna",
+            "gmina Rabka-Zdrój",
+            "gmina Spytkowice",
+            "gmina Szaflary"
+          ]
+        },
+        {
+          "powiat": "olkuski",
+          "gminy": [
+            "Bukowno",
+            "gmina Bolesław",
+            "gmina Klucze",
+            "gmina Olkusz",
+            "gmina Trzyciąż",
+            "gmina Wolbrom"
+          ]
+        },
+        {
+          "powiat": "oświęcimski",
+          "gminy": [
+            "Oświęcim",
+            "gmina Brzeszcze",
+            "gmina Chełmek",
+            "gmina Kęty",
+            "gmina Osiek",
+            "gmina Oświęcim",
+            "gmina Polanka Wielka",
+            "gmina Przeciszów",
+            "gmina Zator"
+          ]
+        },
+        {
+          "powiat": "proszowicki",
+          "gminy": [
+            "gmina Koniusza",
+            "gmina Koszyce",
+            "gmina Nowe Brzesko",
+            "gmina Pałecznica",
+            "gmina Proszowice",
+            "gmina Radziemice"
+          ]
+        },
+        {
+          "powiat": "suski",
+          "gminy": [
+            "Jordanów",
+            "Sucha Beskidzka",
+            "gmina Budzów",
+            "gmina Bystra-Sidzina",
+            "gmina Jordanów",
+            "gmina Maków Podhalański",
+            "gmina Stryszawa",
+            "gmina Zawoja",
+            "gmina Zembrzyce"
+          ]
+        },
+        {
+          "powiat": "tarnowski",
+          "gminy": [
+            "gmina Ciężkowice",
+            "gmina Gromnik",
+            "gmina Lisia Góra",
+            "gmina Pleśna",
+            "gmina Radłów",
+            "gmina Ryglice",
+            "gmina Rzepiennik Strzyżewski",
+            "gmina Skrzyszów",
+            "gmina Tarnów",
+            "gmina Tuchów",
+            "gmina Wierzchosławice",
+            "gmina Wietrzychowice",
+            "gmina Wojnicz",
+            "gmina Zakliczyn",
+            "gmina Żabno",
+            "gmina Szerzyny"
+          ]
+        },
+        {
+          "powiat": "tatrzański",
+          "gminy": [
+            "Zakopane",
+            "gmina Biały Dunajec",
+            "gmina Bukowina Tatrzańska",
+            "gmina Kościelisko",
+            "gmina Poronin"
+          ]
+        },
+        {
+          "powiat": "wadowicki",
+          "gminy": [
+            "gmina Andrychów",
+            "gmina Brzeźnica",
+            "gmina Kalwaria Zebrzydowska",
+            "gmina Lanckorona",
+            "gmina Mucharz",
+            "gmina Spytkowice",
+            "gmina Stryszów",
+            "gmina Tomice",
+            "gmina Wadowice",
+            "gmina Wieprz"
+          ]
+        },
+        {
+          "powiat": "wielicki",
+          "gminy": [
+            "gmina Biskupice",
+            "gmina Gdów",
+            "gmina Kłaj",
+            "gmina Niepołomice",
+            "gmina Wieliczka"
+          ]
+        },
+        {
+          "powiat": "Kraków",
+          "gminy": [
+            "Kraków"
+          ]
+        },
+        {
+          "powiat": "Nowy Sącz",
+          "gminy": [
+            "Nowy Sącz"
+          ]
+        },
+        {
+          "powiat": "Tarnów",
+          "gminy": [
+            "Tarnów"
           ]
         }
       ]
@@ -23,17 +1686,2773 @@
       "wojewodztwo": "mazowieckie",
       "powiaty": [
         {
-          "powiat": "pow3",
+          "powiat": "białobrzeski",
           "gminy": [
-            "gm5",
-            "gm6"
+            "gmina Białobrzegi",
+            "gmina Promna",
+            "gmina Radzanów",
+            "gmina Stara Błotnica",
+            "gmina Stromiec",
+            "gmina Wyśmierzyce"
           ]
         },
         {
-          "powiat": "pow4",
+          "powiat": "ciechanowski",
           "gminy": [
-            "gm7",
-            "gm8"
+            "Ciechanów",
+            "gmina Ciechanów",
+            "gmina Glinojeck",
+            "gmina Gołymin-Ośrodek",
+            "gmina Grudusk",
+            "gmina Ojrzeń",
+            "gmina Opinogóra Górna",
+            "gmina Regimin",
+            "gmina Sońsk"
+          ]
+        },
+        {
+          "powiat": "garwoliński",
+          "gminy": [
+            "Garwolin",
+            "Łaskarzew",
+            "gmina Borowie",
+            "gmina Garwolin",
+            "gmina Górzno",
+            "gmina Łaskarzew",
+            "gmina Maciejowice",
+            "gmina Miastków Kościelny",
+            "gmina Parysów",
+            "gmina Pilawa",
+            "gmina Sobolew",
+            "gmina Trojanów",
+            "gmina Wilga",
+            "gmina Żelechów"
+          ]
+        },
+        {
+          "powiat": "gostyniński",
+          "gminy": [
+            "Gostynin",
+            "gmina Gostynin",
+            "gmina Pacyna",
+            "gmina Sanniki",
+            "gmina Szczawin Kościelny"
+          ]
+        },
+        {
+          "powiat": "grodziski",
+          "gminy": [
+            "Milanówek",
+            "Podkowa Leśna",
+            "gmina Baranów",
+            "gmina Grodzisk Mazowiecki",
+            "gmina Jaktorów",
+            "gmina Żabia Wola"
+          ]
+        },
+        {
+          "powiat": "grójecki",
+          "gminy": [
+            "gmina Belsk Duży",
+            "gmina Błędów",
+            "gmina Chynów",
+            "gmina Goszczyn",
+            "gmina Grójec",
+            "gmina Jasieniec",
+            "gmina Mogielnica",
+            "gmina Nowe Miasto nad Pilicą",
+            "gmina Pniewy",
+            "gmina Warka"
+          ]
+        },
+        {
+          "powiat": "kozienicki",
+          "gminy": [
+            "gmina Garbatka-Letnisko",
+            "gmina Głowaczów",
+            "gmina Gniewoszów",
+            "gmina Grabów nad Pilicą",
+            "gmina Kozienice",
+            "gmina Magnuszew",
+            "gmina Sieciechów"
+          ]
+        },
+        {
+          "powiat": "legionowski",
+          "gminy": [
+            "Legionowo",
+            "gmina Jabłonna",
+            "gmina Nieporęt",
+            "gmina Serock",
+            "gmina Wieliszew"
+          ]
+        },
+        {
+          "powiat": "lipski",
+          "gminy": [
+            "gmina Chotcza",
+            "gmina Ciepielów",
+            "gmina Lipsko",
+            "gmina Rzeczniów",
+            "gmina Sienno",
+            "gmina Solec nad Wisłą"
+          ]
+        },
+        {
+          "powiat": "łosicki",
+          "gminy": [
+            "gmina Huszlew",
+            "gmina Łosice",
+            "gmina Olszanka",
+            "gmina Platerów",
+            "gmina Sarnaki",
+            "gmina Stara Kornica"
+          ]
+        },
+        {
+          "powiat": "makowski",
+          "gminy": [
+            "Maków Mazowiecki",
+            "gmina Czerwonka",
+            "gmina Karniewo",
+            "gmina Krasnosielc",
+            "gmina Młynarze",
+            "gmina Płoniawy-Bramura",
+            "gmina Różan",
+            "gmina Rzewnie",
+            "gmina Sypniewo",
+            "gmina Szelków"
+          ]
+        },
+        {
+          "powiat": "miński",
+          "gminy": [
+            "Mińsk Mazowiecki",
+            "gmina Cegłów",
+            "gmina Dębe Wielkie",
+            "gmina Dobre",
+            "gmina Halinów",
+            "gmina Jakubów",
+            "gmina Kałuszyn",
+            "gmina Latowicz",
+            "gmina Mińsk Mazowiecki",
+            "gmina Mrozy",
+            "gmina Siennica",
+            "gmina Stanisławów",
+            "Sulejówek"
+          ]
+        },
+        {
+          "powiat": "mławski",
+          "gminy": [
+            "Mława",
+            "gmina Dzierzgowo",
+            "gmina Lipowiec Kościelny",
+            "gmina Radzanów",
+            "gmina Strzegowo",
+            "gmina Stupsk",
+            "gmina Szreńsk",
+            "gmina Szydłowo",
+            "gmina Wieczfnia Kościelna",
+            "gmina Wiśniewo"
+          ]
+        },
+        {
+          "powiat": "nowodworski",
+          "gminy": [
+            "Nowy Dwór Mazowiecki",
+            "gmina Czosnów",
+            "gmina Leoncin",
+            "gmina Nasielsk",
+            "gmina Pomiechówek",
+            "gmina Zakroczym"
+          ]
+        },
+        {
+          "powiat": "ostrołęcki",
+          "gminy": [
+            "gmina Baranowo",
+            "gmina Czarnia",
+            "gmina Czerwin",
+            "gmina Goworowo",
+            "gmina Kadzidło",
+            "gmina Lelis",
+            "gmina Łyse",
+            "gmina Myszyniec",
+            "gmina Olszewo-Borki",
+            "gmina Rzekuń",
+            "gmina Troszyn"
+          ]
+        },
+        {
+          "powiat": "ostrowski",
+          "gminy": [
+            "Ostrów Mazowiecka",
+            "gmina Andrzejewo",
+            "gmina Boguty-Pianki",
+            "gmina Brok",
+            "gmina Małkinia Górna",
+            "gmina Nur",
+            "gmina Ostrów Mazowiecka",
+            "gmina Stary Lubotyń",
+            "gmina Szulborze Wielkie",
+            "gmina Wąsewo",
+            "gmina Zaręby Kościelne"
+          ]
+        },
+        {
+          "powiat": "otwocki",
+          "gminy": [
+            "Józefów",
+            "Otwock",
+            "gmina Celestynów",
+            "gmina Karczew",
+            "gmina Kołbiel",
+            "gmina Osieck",
+            "gmina Sobienie-Jeziory",
+            "gmina Wiązowna"
+          ]
+        },
+        {
+          "powiat": "piaseczyński",
+          "gminy": [
+            "gmina Góra Kalwaria",
+            "gmina Konstancin-Jeziorna",
+            "gmina Lesznowola",
+            "gmina Piaseczno",
+            "gmina Prażmów",
+            "gmina Tarczyn"
+          ]
+        },
+        {
+          "powiat": "płocki",
+          "gminy": [
+            "gmina Bielsk",
+            "gmina Bodzanów",
+            "gmina Brudzeń Duży",
+            "gmina Bulkowo",
+            "gmina Drobin",
+            "gmina Gąbin",
+            "gmina Łąck",
+            "gmina Mała Wieś",
+            "gmina Nowy Duninów",
+            "gmina Radzanowo",
+            "gmina Słubice",
+            "gmina Słupno",
+            "gmina Stara Biała",
+            "gmina Staroźreby",
+            "gmina Wyszogród"
+          ]
+        },
+        {
+          "powiat": "płoński",
+          "gminy": [
+            "Płońsk",
+            "Raciąż",
+            "gmina Baboszewo",
+            "gmina Czerwińsk nad Wisłą",
+            "gmina Dzierzążnia",
+            "gmina Joniec",
+            "gmina Naruszewo",
+            "gmina Nowe Miasto",
+            "gmina Płońsk",
+            "gmina Raciąż",
+            "gmina Sochocin",
+            "gmina Załuski"
+          ]
+        },
+        {
+          "powiat": "pruszkowski",
+          "gminy": [
+            "Piastów",
+            "Pruszków",
+            "gmina Brwinów",
+            "gmina Michałowice",
+            "gmina Nadarzyn",
+            "gmina Raszyn"
+          ]
+        },
+        {
+          "powiat": "przasnyski",
+          "gminy": [
+            "Przasnysz",
+            "gmina Chorzele",
+            "gmina Czernice Borowe",
+            "gmina Jednorożec",
+            "gmina Krasne",
+            "gmina Krzynowłoga Mała",
+            "gmina Przasnysz"
+          ]
+        },
+        {
+          "powiat": "przysuski",
+          "gminy": [
+            "gmina Borkowice",
+            "gmina Gielniów",
+            "gmina Klwów",
+            "gmina Odrzywół",
+            "gmina Potworów",
+            "gmina Przysucha",
+            "gmina Rusinów",
+            "gmina Wieniawa"
+          ]
+        },
+        {
+          "powiat": "pułtuski",
+          "gminy": [
+            "gmina Gzy",
+            "gmina Obryte",
+            "gmina Pokrzywnica",
+            "gmina Pułtusk",
+            "gmina Świercze",
+            "gmina Winnica",
+            "gmina Zatory"
+          ]
+        },
+        {
+          "powiat": "radomski",
+          "gminy": [
+            "Pionki",
+            "gmina Gózd",
+            "gmina Iłża",
+            "gmina Jastrzębia",
+            "gmina Jedlińsk",
+            "gmina Jedlnia-Letnisko",
+            "gmina Kowala",
+            "gmina Pionki",
+            "gmina Przytyk",
+            "gmina Skaryszew",
+            "gmina Wierzbica",
+            "gmina Wolanów",
+            "gmina Zakrzew"
+          ]
+        },
+        {
+          "powiat": "siedlecki",
+          "gminy": [
+            "gmina Domanice",
+            "gmina Korczew",
+            "gmina Kotuń",
+            "gmina Mokobody",
+            "gmina Mordy",
+            "gmina Paprotnia",
+            "gmina Przesmyki",
+            "gmina Siedlce",
+            "gmina Skórzec",
+            "gmina Suchożebry",
+            "gmina Wiśniew",
+            "gmina Wodynie",
+            "gmina Zbuczyn"
+          ]
+        },
+        {
+          "powiat": "sierpecki",
+          "gminy": [
+            "Sierpc",
+            "gmina Gozdowo",
+            "gmina Mochowo",
+            "gmina Rościszewo",
+            "gmina Sierpc",
+            "gmina Szczutowo",
+            "gmina Zawidz"
+          ]
+        },
+        {
+          "powiat": "sochaczewski",
+          "gminy": [
+            "Sochaczew",
+            "gmina Brochów",
+            "gmina Iłów",
+            "gmina Młodzieszyn",
+            "gmina Nowa Sucha",
+            "gmina Rybno",
+            "gmina Sochaczew",
+            "gmina Teresin"
+          ]
+        },
+        {
+          "powiat": "sokołowski",
+          "gminy": [
+            "Sokołów Podlaski",
+            "gmina Bielany",
+            "gmina Ceranów",
+            "gmina Jabłonna Lacka",
+            "gmina Kosów Lacki",
+            "gmina Repki",
+            "gmina Sabnie",
+            "gmina Sokołów Podlaski",
+            "gmina Sterdyń"
+          ]
+        },
+        {
+          "powiat": "szydłowiecki",
+          "gminy": [
+            "gmina Chlewiska",
+            "gmina Jastrząb",
+            "gmina Mirów",
+            "gmina Orońsko",
+            "gmina Szydłowiec"
+          ]
+        },
+        {
+          "powiat": "warszawski zachodni",
+          "gminy": [
+            "gmina Błonie",
+            "gmina Izabelin",
+            "gmina Kampinos",
+            "gmina Leszno",
+            "gmina Łomianki",
+            "gmina Ożarów Mazowiecki",
+            "gmina Stare Babice"
+          ]
+        },
+        {
+          "powiat": "węgrowski",
+          "gminy": [
+            "Węgrów",
+            "gmina Grębków",
+            "gmina Korytnica",
+            "gmina Liw",
+            "gmina Łochów",
+            "gmina Miedzna",
+            "gmina Sadowne",
+            "gmina Stoczek",
+            "gmina Wierzbno"
+          ]
+        },
+        {
+          "powiat": "wołomiński",
+          "gminy": [
+            "Kobyłka",
+            "Marki",
+            "Ząbki",
+            "Zielonka",
+            "gmina Dąbrówka",
+            "gmina Jadów",
+            "gmina Klembów",
+            "gmina Poświętne",
+            "gmina Radzymin",
+            "gmina Strachówka",
+            "gmina Tłuszcz",
+            "gmina Wołomin"
+          ]
+        },
+        {
+          "powiat": "wyszkowski",
+          "gminy": [
+            "gmina Brańszczyk",
+            "gmina Długosiodło",
+            "gmina Rząśnik",
+            "gmina Somianka",
+            "gmina Wyszków",
+            "gmina Zabrodzie"
+          ]
+        },
+        {
+          "powiat": "zwoleński",
+          "gminy": [
+            "gmina Kazanów",
+            "gmina Policzna",
+            "gmina Przyłęk",
+            "gmina Tczów",
+            "gmina Zwoleń"
+          ]
+        },
+        {
+          "powiat": "żuromiński",
+          "gminy": [
+            "gmina Bieżuń",
+            "gmina Kuczbork-Osada",
+            "gmina Lubowidz",
+            "gmina Lutocin",
+            "gmina Siemiątkowo",
+            "gmina Żuromin"
+          ]
+        },
+        {
+          "powiat": "żyrardowski",
+          "gminy": [
+            "Żyrardów",
+            "gmina Mszczonów",
+            "gmina Puszcza Mariańska",
+            "gmina Radziejowice",
+            "gmina Wiskitki"
+          ]
+        },
+        {
+          "powiat": "Ostrołęka",
+          "gminy": [
+            "Ostrołęka"
+          ]
+        },
+        {
+          "powiat": "Płock",
+          "gminy": [
+            "Płock"
+          ]
+        },
+        {
+          "powiat": "Radom",
+          "gminy": [
+            "Radom"
+          ]
+        },
+        {
+          "powiat": "Siedlce",
+          "gminy": [
+            "Siedlce"
+          ]
+        },
+        {
+          "powiat": "Warszawa",
+          "gminy": [
+            "Warszawa"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "opolskie",
+      "powiaty": [
+        {
+          "powiat": "brzeski",
+          "gminy": [
+            "Brzeg",
+            "gmina Skarbimierz",
+            "gmina Grodków",
+            "gmina Lewin Brzeski",
+            "gmina Lubsza",
+            "gmina Olszanka"
+          ]
+        },
+        {
+          "powiat": "głubczycki",
+          "gminy": [
+            "gmina Baborów",
+            "gmina Branice",
+            "gmina Głubczyce",
+            "gmina Kietrz"
+          ]
+        },
+        {
+          "powiat": "kędzierzyńsko-kozielski",
+          "gminy": [
+            "Kędzierzyn-Koźle",
+            "gmina Bierawa",
+            "gmina Cisek",
+            "gmina Pawłowiczki",
+            "gmina Polska Cerekiew",
+            "gmina Reńska Wieś"
+          ]
+        },
+        {
+          "powiat": "kluczborski",
+          "gminy": [
+            "gmina Byczyna",
+            "gmina Kluczbork",
+            "gmina Lasowice Wielkie",
+            "gmina Wołczyn"
+          ]
+        },
+        {
+          "powiat": "krapkowicki",
+          "gminy": [
+            "gmina Gogolin",
+            "gmina Krapkowice",
+            "gmina Strzeleczki",
+            "gmina Walce",
+            "gmina Zdzieszowice"
+          ]
+        },
+        {
+          "powiat": "namysłowski",
+          "gminy": [
+            "gmina Domaszowice",
+            "gmina Namysłów",
+            "gmina Pokój",
+            "gmina Świerczów",
+            "gmina Wilków"
+          ]
+        },
+        {
+          "powiat": "nyski",
+          "gminy": [
+            "gmina Głuchołazy",
+            "gmina Kamiennik",
+            "gmina Korfantów",
+            "gmina Łambinowice",
+            "gmina Nysa",
+            "gmina Otmuchów",
+            "gmina Paczków",
+            "gmina Pakosławice",
+            "gmina Skoroszyce"
+          ]
+        },
+        {
+          "powiat": "oleski",
+          "gminy": [
+            "gmina Dobrodzień",
+            "gmina Gorzów Śląski",
+            "gmina Olesno",
+            "gmina Praszka",
+            "gmina Radłów",
+            "gmina Rudniki",
+            "gmina Zębowice"
+          ]
+        },
+        {
+          "powiat": "opolski",
+          "gminy": [
+            "gmina Chrząstowice",
+            "gmina Dąbrowa",
+            "gmina Dobrzeń Wielki",
+            "gmina Komprachcice",
+            "gmina Łubniany",
+            "gmina Murów",
+            "gmina Niemodlin",
+            "gmina Ozimek",
+            "gmina Popielów",
+            "gmina Prószków",
+            "gmina Tarnów Opolski",
+            "gmina Tułowice",
+            "gmina Turawa"
+          ]
+        },
+        {
+          "powiat": "prudnicki",
+          "gminy": [
+            "gmina Biała",
+            "gmina Głogówek",
+            "gmina Lubrza",
+            "gmina Prudnik"
+          ]
+        },
+        {
+          "powiat": "strzelecki",
+          "gminy": [
+            "gmina Izbicko",
+            "gmina Jemielnica",
+            "gmina Kolonowskie",
+            "gmina Leśnica",
+            "gmina Strzelce Opolskie",
+            "gmina Ujazd",
+            "gmina Zawadzkie"
+          ]
+        },
+        {
+          "powiat": "Opole",
+          "gminy": [
+            "Opole"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "podkarpackie",
+      "powiaty": [
+        {
+          "powiat": "bieszczadzki",
+          "gminy": [
+            "gmina Czarna",
+            "gmina Lutowiska",
+            "gmina Ustrzyki Dolne"
+          ]
+        },
+        {
+          "powiat": "brzozowski",
+          "gminy": [
+            "gmina Brzozów",
+            "gmina Domaradz",
+            "gmina Dydnia",
+            "gmina Haczów",
+            "gmina Jasienica Rosielna",
+            "gmina Nozdrzec"
+          ]
+        },
+        {
+          "powiat": "dębicki",
+          "gminy": [
+            "Dębica",
+            "gmina Brzostek",
+            "gmina Czarna",
+            "gmina Dębica",
+            "gmina Jodłowa",
+            "gmina Pilzno",
+            "gmina Żyraków"
+          ]
+        },
+        {
+          "powiat": "jarosławski",
+          "gminy": [
+            "Jarosław",
+            "Radymno",
+            "gmina Chłopice",
+            "gmina Jarosław",
+            "gmina Laszki",
+            "gmina Pawłosiów",
+            "gmina Pruchnik",
+            "gmina Radymno",
+            "gmina Rokietnica",
+            "gmina Roźwienica",
+            "gmina Wiązownica"
+          ]
+        },
+        {
+          "powiat": "jasielski",
+          "gminy": [
+            "Jasło",
+            "gmina Brzyska",
+            "gmina Dębowiec",
+            "gmina Jasło",
+            "gmina Kołaczyce",
+            "gmina Krempna",
+            "gmina Nowy Żmigród",
+            "gmina Osiek Jasielski",
+            "gmina Skołyszyn",
+            "gmina Tarnowiec"
+          ]
+        },
+        {
+          "powiat": "kolbuszowski",
+          "gminy": [
+            "gmina Cmolas",
+            "gmina Kolbuszowa",
+            "gmina Majdan Królewski",
+            "gmina Niwiska",
+            "gmina Raniżów",
+            "gmina Dzikowiec"
+          ]
+        },
+        {
+          "powiat": "krośnieński",
+          "gminy": [
+            "gmina Chorkówka",
+            "gmina Dukla",
+            "gmina Iwonicz-Zdrój",
+            "gmina Jedlicze",
+            "gmina Korczyna",
+            "gmina Krościenko Wyżne",
+            "gmina Miejsce Piastowe",
+            "gmina Rymanów",
+            "gmina Wojaszówka",
+            "gmina Jaśliska"
+          ]
+        },
+        {
+          "powiat": "leżajski",
+          "gminy": [
+            "Leżajsk",
+            "gmina Grodzisko Dolne",
+            "gmina Kuryłówka",
+            "gmina Leżajsk",
+            "gmina Nowa Sarzyna"
+          ]
+        },
+        {
+          "powiat": "lubaczowski",
+          "gminy": [
+            "Lubaczów",
+            "gmina Cieszanów",
+            "gmina Horyniec-Zdrój",
+            "gmina Lubaczów",
+            "gmina Narol",
+            "gmina Oleszyce",
+            "gmina Stary Dzików",
+            "gmina Wielkie Oczy"
+          ]
+        },
+        {
+          "powiat": "łańcucki",
+          "gminy": [
+            "Łańcut",
+            "gmina Białobrzegi",
+            "gmina Czarna",
+            "gmina Łańcut",
+            "gmina Markowa",
+            "gmina Rakszawa",
+            "gmina Żołynia"
+          ]
+        },
+        {
+          "powiat": "mielecki",
+          "gminy": [
+            "Mielec",
+            "gmina Borowa",
+            "gmina Czermin",
+            "gmina Gawłuszowice",
+            "gmina Mielec",
+            "gmina Padew Narodowa",
+            "gmina Przecław",
+            "gmina Radomyśl Wielki",
+            "gmina Tuszów Narodowy",
+            "gmina Wadowice Górne"
+          ]
+        },
+        {
+          "powiat": "niżański",
+          "gminy": [
+            "gmina Harasiuki",
+            "gmina Jarocin",
+            "gmina Jeżowe",
+            "gmina Krzeszów",
+            "gmina Nisko",
+            "gmina Rudnik nad Sanem",
+            "gmina Ulanów"
+          ]
+        },
+        {
+          "powiat": "przemyski",
+          "gminy": [
+            "gmina Bircza",
+            "gmina Dubiecko",
+            "gmina Fredropol",
+            "gmina Krasiczyn",
+            "gmina Krzywcza",
+            "gmina Medyka",
+            "gmina Orły",
+            "gmina Przemyśl",
+            "gmina Stubno",
+            "gmina Żurawica"
+          ]
+        },
+        {
+          "powiat": "przeworski",
+          "gminy": [
+            "Przeworsk",
+            "gmina Adamówka",
+            "gmina Gać",
+            "gmina Jawornik Polski",
+            "gmina Kańczuga",
+            "gmina Przeworsk",
+            "gmina Sieniawa",
+            "gmina Tryńcza",
+            "gmina Zarzecze"
+          ]
+        },
+        {
+          "powiat": "ropczycko-sędziszowski",
+          "gminy": [
+            "gmina Iwierzyce",
+            "gmina Ostrów",
+            "gmina Ropczyce",
+            "gmina Sędziszów Małopolski",
+            "gmina Wielopole Skrzyńskie"
+          ]
+        },
+        {
+          "powiat": "rzeszowski",
+          "gminy": [
+            "Dynów",
+            "gmina Błażowa",
+            "gmina Boguchwała",
+            "gmina Chmielnik",
+            "gmina Dynów",
+            "gmina Głogów Małopolski",
+            "gmina Hyżne",
+            "gmina Kamień",
+            "gmina Krasne",
+            "gmina Lubenia",
+            "gmina Sokołów Małopolski",
+            "gmina Świlcza",
+            "gmina Trzebownisko",
+            "gmina Tyczyn"
+          ]
+        },
+        {
+          "powiat": "sanocki",
+          "gminy": [
+            "Sanok",
+            "gmina Besko",
+            "gmina Bukowsko",
+            "gmina Komańcza",
+            "gmina Sanok",
+            "gmina Tyrawa Wołoska",
+            "gmina Zagórz",
+            "gmina Zarszyn"
+          ]
+        },
+        {
+          "powiat": "stalowowolski",
+          "gminy": [
+            "Stalowa Wola",
+            "gmina Bojanów",
+            "gmina Pysznica",
+            "gmina Radomyśl nad Sanem",
+            "gmina Zaklików",
+            "gmina Zaleszany"
+          ]
+        },
+        {
+          "powiat": "strzyżowski",
+          "gminy": [
+            "gmina Czudec",
+            "gmina Frysztak",
+            "gmina Niebylec",
+            "gmina Strzyżów",
+            "gmina Wiśniowa"
+          ]
+        },
+        {
+          "powiat": "tarnobrzeski",
+          "gminy": [
+            "gmina Baranów Sandomierski",
+            "gmina Gorzyce",
+            "gmina Grębów",
+            "gmina Nowa Dęba"
+          ]
+        },
+        {
+          "powiat": "leski",
+          "gminy": [
+            "gmina Baligród",
+            "gmina Cisna",
+            "gmina Lesko",
+            "gmina Olszanica",
+            "gmina Solina"
+          ]
+        },
+        {
+          "powiat": "Krosno",
+          "gminy": [
+            "Krosno"
+          ]
+        },
+        {
+          "powiat": "Przemyśl",
+          "gminy": [
+            "Przemyśl"
+          ]
+        },
+        {
+          "powiat": "Rzeszów",
+          "gminy": [
+            "Rzeszów"
+          ]
+        },
+        {
+          "powiat": "Tarnobrzeg",
+          "gminy": [
+            "Tarnobrzeg"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "podlaskie",
+      "powiaty": [
+        {
+          "powiat": "augustowski",
+          "gminy": [
+            "Augustów",
+            "gmina Augustów",
+            "gmina Bargłów Kościelny",
+            "gmina Lipsk",
+            "gmina Nowinka",
+            "gmina Płaska",
+            "gmina Sztabin"
+          ]
+        },
+        {
+          "powiat": "białostocki",
+          "gminy": [
+            "gmina Choroszcz",
+            "gmina Czarna Białostocka",
+            "gmina Dobrzyniewo Duże",
+            "gmina Gródek",
+            "gmina Juchnowiec Kościelny",
+            "gmina Łapy",
+            "gmina Michałowo",
+            "gmina Poświętne",
+            "gmina Supraśl",
+            "gmina Suraż",
+            "gmina Turośń Kościelna",
+            "gmina Tykocin",
+            "gmina Wasilków",
+            "gmina Zabłudów",
+            "gmina Zawady"
+          ]
+        },
+        {
+          "powiat": "bielski",
+          "gminy": [
+            "Bielsk Podlaski",
+            "Brańsk",
+            "gmina Bielsk Podlaski",
+            "gmina Boćki",
+            "gmina Brańsk",
+            "gmina Orla",
+            "gmina Rudka",
+            "gmina Wyszki"
+          ]
+        },
+        {
+          "powiat": "grajewski",
+          "gminy": [
+            "Grajewo",
+            "gmina Grajewo",
+            "gmina Radziłów",
+            "gmina Rajgród",
+            "gmina Szczuczyn",
+            "gmina Wąsosz"
+          ]
+        },
+        {
+          "powiat": "hajnowski",
+          "gminy": [
+            "Hajnówka",
+            "gmina Białowieża",
+            "gmina Czeremcha",
+            "gmina Czyże",
+            "gmina Dubicze Cerkiewne",
+            "gmina Hajnówka",
+            "gmina Kleszczele",
+            "gmina Narew",
+            "gmina Narewka"
+          ]
+        },
+        {
+          "powiat": "kolneński",
+          "gminy": [
+            "Kolno",
+            "gmina Grabowo",
+            "gmina Kolno",
+            "gmina Mały Płock",
+            "gmina Stawiski",
+            "gmina Turośl"
+          ]
+        },
+        {
+          "powiat": "łomżyński",
+          "gminy": [
+            "gmina Jedwabne",
+            "gmina Łomża",
+            "gmina Miastkowo",
+            "gmina Nowogród",
+            "gmina Piątnica",
+            "gmina Przytuły",
+            "gmina Śniadowo",
+            "gmina Wizna",
+            "gmina Zbójna"
+          ]
+        },
+        {
+          "powiat": "moniecki",
+          "gminy": [
+            "gmina Goniądz",
+            "gmina Jasionówka",
+            "gmina Jaświły",
+            "gmina Knyszyn",
+            "gmina Krypno",
+            "gmina Mońki",
+            "gmina Trzcianne"
+          ]
+        },
+        {
+          "powiat": "sejneński",
+          "gminy": [
+            "Sejny",
+            "gmina Giby",
+            "gmina Krasnopol",
+            "gmina Puńsk",
+            "gmina Sejny"
+          ]
+        },
+        {
+          "powiat": "siemiatycki",
+          "gminy": [
+            "Siemiatycze",
+            "gmina Drohiczyn",
+            "gmina Dziadkowice",
+            "gmina Grodzisk",
+            "gmina Mielnik",
+            "gmina Milejczyce",
+            "gmina Nurzec-Stacja",
+            "gmina Perlejewo",
+            "gmina Siemiatycze"
+          ]
+        },
+        {
+          "powiat": "sokólski",
+          "gminy": [
+            "gmina Dąbrowa Białostocka",
+            "gmina Janów",
+            "gmina Korycin",
+            "gmina Krynki",
+            "gmina Kuźnica",
+            "gmina Nowy Dwór",
+            "gmina Sidra",
+            "gmina Sokółka",
+            "gmina Suchowola",
+            "gmina Szudziałowo"
+          ]
+        },
+        {
+          "powiat": "suwalski",
+          "gminy": [
+            "gmina Bakałarzewo",
+            "gmina Filipów",
+            "gmina Jeleniewo",
+            "gmina Przerośl",
+            "gmina Raczki",
+            "gmina Rutka-Tartak",
+            "gmina Suwałki",
+            "gmina Szypliszki",
+            "gmina Wiżajny"
+          ]
+        },
+        {
+          "powiat": "wysokomazowiecki",
+          "gminy": [
+            "Wysokie Mazowieckie",
+            "gmina Ciechanowiec",
+            "gmina Czyżew",
+            "gmina Klukowo",
+            "gmina Kobylin-Borzymy",
+            "gmina Kulesze Kościelne",
+            "gmina Nowe Piekuty",
+            "gmina Sokoły",
+            "gmina Szepietowo",
+            "gmina Wysokie Mazowieckie"
+          ]
+        },
+        {
+          "powiat": "zambrowski",
+          "gminy": [
+            "Zambrów",
+            "gmina Kołaki Kościelne",
+            "gmina Rutki",
+            "gmina Szumowo",
+            "gmina Zambrów"
+          ]
+        },
+        {
+          "powiat": "Białystok",
+          "gminy": [
+            "Białystok"
+          ]
+        },
+        {
+          "powiat": "Łomża",
+          "gminy": [
+            "Łomża"
+          ]
+        },
+        {
+          "powiat": "Suwałki",
+          "gminy": [
+            "Suwałki"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "pomorskie",
+      "powiaty": [
+        {
+          "powiat": "bytowski",
+          "gminy": [
+            "gmina Borzytuchom",
+            "gmina Bytów",
+            "gmina Czarna Dąbrówka",
+            "gmina Kołczygłowy",
+            "gmina Lipnica",
+            "gmina Miastko",
+            "gmina Parchowo",
+            "gmina Studzienice",
+            "gmina Trzebielino",
+            "gmina Tuchomie"
+          ]
+        },
+        {
+          "powiat": "chojnicki",
+          "gminy": [
+            "Chojnice",
+            "gmina Brusy",
+            "gmina Chojnice",
+            "gmina Czersk",
+            "gmina Konarzyny"
+          ]
+        },
+        {
+          "powiat": "człuchowski",
+          "gminy": [
+            "Człuchów",
+            "gmina Czarne",
+            "gmina Człuchów",
+            "gmina Debrzno",
+            "gmina Koczała",
+            "gmina Przechlewo",
+            "gmina Rzeczenica"
+          ]
+        },
+        {
+          "powiat": "gdański",
+          "gminy": [
+            "Pruszcz Gdański",
+            "gmina Cedry Wielkie",
+            "gmina Kolbudy",
+            "gmina Pruszcz Gdański",
+            "gmina Przywidz",
+            "gmina Pszczółki",
+            "gmina Suchy Dąb",
+            "gmina Trąbki Wielkie"
+          ]
+        },
+        {
+          "powiat": "kartuski",
+          "gminy": [
+            "gmina Chmielno",
+            "gmina Kartuzy",
+            "gmina Przodkowo",
+            "gmina Sierakowice",
+            "gmina Somonino",
+            "gmina Stężyca",
+            "gmina Sulęczyno",
+            "gmina Żukowo"
+          ]
+        },
+        {
+          "powiat": "kościerski",
+          "gminy": [
+            "Kościerzyna",
+            "gmina Dziemiany",
+            "gmina Karsin",
+            "gmina Kościerzyna",
+            "gmina Liniewo",
+            "gmina Lipusz",
+            "gmina Nowa Karczma",
+            "gmina Stara Kiszewa"
+          ]
+        },
+        {
+          "powiat": "kwidzyński",
+          "gminy": [
+            "Kwidzyn",
+            "gmina Gardeja",
+            "gmina Kwidzyn",
+            "gmina Prabuty",
+            "gmina Ryjewo",
+            "gmina Sadlinki"
+          ]
+        },
+        {
+          "powiat": "lęborski",
+          "gminy": [
+            "Lębork",
+            "Łeba",
+            "gmina Cewice",
+            "gmina Nowa Wieś Lęborska",
+            "gmina Wicko"
+          ]
+        },
+        {
+          "powiat": "malborski",
+          "gminy": [
+            "Malbork",
+            "gmina Lichnowy",
+            "gmina Malbork",
+            "gmina Miłoradz",
+            "gmina Nowy Staw",
+            "gmina Stare Pole"
+          ]
+        },
+        {
+          "powiat": "nowodworski",
+          "gminy": [
+            "Krynica Morska",
+            "gmina Nowy Dwór Gdański",
+            "gmina Ostaszewo",
+            "gmina Stegna",
+            "gmina Sztutowo"
+          ]
+        },
+        {
+          "powiat": "pucki",
+          "gminy": [
+            "Hel",
+            "gmina Jastarnia",
+            "Puck",
+            "Władysławowo",
+            "gmina Kosakowo",
+            "gmina Krokowa",
+            "gmina Puck"
+          ]
+        },
+        {
+          "powiat": "słupski",
+          "gminy": [
+            "Ustka",
+            "gmina Damnica",
+            "gmina Dębnica Kaszubska",
+            "gmina Główczyce",
+            "gmina Kępice",
+            "gmina Kobylnica",
+            "gmina Potęgowo",
+            "gmina Słupsk",
+            "gmina Smołdzino",
+            "gmina Ustka"
+          ]
+        },
+        {
+          "powiat": "starogardzki",
+          "gminy": [
+            "gmina Czarna Woda",
+            "Skórcz",
+            "Starogard Gdański",
+            "gmina Bobowo",
+            "gmina Kaliska",
+            "gmina Lubichowo",
+            "gmina Osieczna",
+            "gmina Osiek",
+            "gmina Skarszewy",
+            "gmina Skórcz",
+            "gmina Smętowo Graniczne",
+            "gmina Starogard Gdański",
+            "gmina Zblewo"
+          ]
+        },
+        {
+          "powiat": "tczewski",
+          "gminy": [
+            "Tczew",
+            "gmina Gniew",
+            "gmina Morzeszczyn",
+            "gmina Pelplin",
+            "gmina Subkowy",
+            "gmina Tczew"
+          ]
+        },
+        {
+          "powiat": "wejherowski",
+          "gminy": [
+            "Reda",
+            "Rumia",
+            "Wejherowo",
+            "gmina Choczewo",
+            "gmina Gniewino",
+            "gmina Linia",
+            "gmina Luzino",
+            "gmina Łęczyce",
+            "gmina Szemud",
+            "gmina Wejherowo"
+          ]
+        },
+        {
+          "powiat": "sztumski",
+          "gminy": [
+            "gmina Dzierzgoń",
+            "gmina Mikołajki Pomorskie",
+            "gmina Stary Dzierzgoń",
+            "gmina Stary Targ",
+            "gmina Sztum"
+          ]
+        },
+        {
+          "powiat": "Gdańsk",
+          "gminy": [
+            "Gdańsk"
+          ]
+        },
+        {
+          "powiat": "Gdynia",
+          "gminy": [
+            "Gdynia"
+          ]
+        },
+        {
+          "powiat": "Słupsk",
+          "gminy": [
+            "Słupsk"
+          ]
+        },
+        {
+          "powiat": "Sopot",
+          "gminy": [
+            "Sopot"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "śląskie",
+      "powiaty": [
+        {
+          "powiat": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czeladź",
+            "Wojkowice",
+            "gmina Bobrowniki",
+            "gmina Mierzęcice",
+            "gmina Psary",
+            "gmina Siewierz",
+            "Sławków"
+          ]
+        },
+        {
+          "powiat": "bielski",
+          "gminy": [
+            "Szczyrk",
+            "gmina Bestwina",
+            "gmina Buczkowice",
+            "gmina Czechowice-Dziedzice",
+            "gmina Jasienica",
+            "gmina Jaworze",
+            "gmina Kozy",
+            "gmina Porąbka",
+            "gmina Wilamowice",
+            "gmina Wilkowice"
+          ]
+        },
+        {
+          "powiat": "cieszyński",
+          "gminy": [
+            "Cieszyn",
+            "Ustroń",
+            "Wisła",
+            "gmina Brenna",
+            "gmina Chybie",
+            "gmina Dębowiec",
+            "gmina Goleszów",
+            "gmina Hażlach",
+            "gmina Istebna",
+            "gmina Skoczów",
+            "gmina Strumień",
+            "gmina Zebrzydowice"
+          ]
+        },
+        {
+          "powiat": "częstochowski",
+          "gminy": [
+            "gmina Blachownia",
+            "gmina Dąbrowa Zielona",
+            "gmina Janów",
+            "gmina Kamienica Polska",
+            "gmina Kłomnice",
+            "gmina Koniecpol",
+            "gmina Konopiska",
+            "gmina Kruszyna",
+            "gmina Lelów",
+            "gmina Mstów",
+            "gmina Mykanów",
+            "gmina Olsztyn",
+            "gmina Poczesna",
+            "gmina Przyrów",
+            "gmina Rędziny",
+            "gmina Starcza"
+          ]
+        },
+        {
+          "powiat": "gliwicki",
+          "gminy": [
+            "Knurów",
+            "Pyskowice",
+            "gmina Gierałtowice",
+            "gmina Pilchowice",
+            "gmina Rudziniec",
+            "gmina Sośnicowice",
+            "gmina Toszek",
+            "gmina Wielowieś"
+          ]
+        },
+        {
+          "powiat": "kłobucki",
+          "gminy": [
+            "gmina Kłobuck",
+            "gmina Krzepice",
+            "gmina Lipie",
+            "gmina Miedźno",
+            "gmina Opatów",
+            "gmina Panki",
+            "gmina Popów",
+            "gmina Przystajń",
+            "gmina Wręczyca Wielka"
+          ]
+        },
+        {
+          "powiat": "lubliniecki",
+          "gminy": [
+            "Lubliniec",
+            "gmina Boronów",
+            "gmina Ciasna",
+            "gmina Herby",
+            "gmina Kochanowice",
+            "gmina Koszęcin",
+            "gmina Pawonków",
+            "gmina Woźniki"
+          ]
+        },
+        {
+          "powiat": "mikołowski",
+          "gminy": [
+            "Łaziska Górne",
+            "Mikołów",
+            "Orzesze",
+            "gmina Ornontowice",
+            "gmina Wyry"
+          ]
+        },
+        {
+          "powiat": "myszkowski",
+          "gminy": [
+            "Myszków",
+            "gmina Koziegłowy",
+            "gmina Niegowa",
+            "gmina Poraj",
+            "gmina Żarki"
+          ]
+        },
+        {
+          "powiat": "pszczyński",
+          "gminy": [
+            "gmina Goczałkowice-Zdrój",
+            "gmina Kobiór",
+            "gmina Miedźna",
+            "gmina Pawłowice",
+            "gmina Pszczyna",
+            "gmina Suszec"
+          ]
+        },
+        {
+          "powiat": "raciborski",
+          "gminy": [
+            "Racibórz",
+            "gmina Kornowac",
+            "gmina Krzanowice",
+            "gmina Krzyżanowice",
+            "gmina Kuźnia Raciborska",
+            "gmina Nędza",
+            "gmina Pietrowice Wielkie",
+            "gmina Rudnik"
+          ]
+        },
+        {
+          "powiat": "rybnicki",
+          "gminy": [
+            "gmina Czerwionka-Leszczyny",
+            "gmina Gaszowice",
+            "gmina Jejkowice",
+            "gmina Lyski",
+            "gmina Świerklany"
+          ]
+        },
+        {
+          "powiat": "tarnogórski",
+          "gminy": [
+            "Kalety",
+            "Miasteczko Śląskie",
+            "Radzionków",
+            "Tarnowskie Góry",
+            "gmina Krupski Młyn",
+            "gmina Ożarowice",
+            "gmina Świerklaniec",
+            "gmina Tworóg",
+            "gmina Zbrosławice"
+          ]
+        },
+        {
+          "powiat": "bieruńsko-lędziński",
+          "gminy": [
+            "Bieruń",
+            "Imielin",
+            "Lędziny",
+            "gmina Bojszowy",
+            "gmina Chełm Śląski"
+          ]
+        },
+        {
+          "powiat": "wodzisławski",
+          "gminy": [
+            "Pszów",
+            "Radlin",
+            "Rydułtowy",
+            "Wodzisław Śląski",
+            "gmina Godów",
+            "gmina Gorzyce",
+            "gmina Lubomia",
+            "gmina Marklowice",
+            "gmina Mszana"
+          ]
+        },
+        {
+          "powiat": "zawierciański",
+          "gminy": [
+            "Poręba",
+            "Zawiercie",
+            "gmina Irządze",
+            "gmina Kroczyce",
+            "gmina Łazy",
+            "gmina Ogrodzieniec",
+            "gmina Pilica",
+            "gmina Szczekociny",
+            "gmina Włodowice",
+            "gmina Żarnowiec"
+          ]
+        },
+        {
+          "powiat": "żywiecki",
+          "gminy": [
+            "Żywiec",
+            "gmina Czernichów",
+            "gmina Gilowice",
+            "gmina Jeleśnia",
+            "gmina Koszarawa",
+            "gmina Lipowa",
+            "gmina Łękawica",
+            "gmina Łodygowice",
+            "gmina Milówka",
+            "gmina Radziechowy-Wieprz",
+            "gmina Rajcza",
+            "gmina Ślemień",
+            "gmina Świnna",
+            "gmina Ujsoły",
+            "gmina Węgierska Górka"
+          ]
+        },
+        {
+          "powiat": "Bielsko-Biała",
+          "gminy": [
+            "Bielsko-Biała"
+          ]
+        },
+        {
+          "powiat": "Bytom",
+          "gminy": [
+            "Bytom"
+          ]
+        },
+        {
+          "powiat": "Chorzów",
+          "gminy": [
+            "Chorzów"
+          ]
+        },
+        {
+          "powiat": "Częstochowa",
+          "gminy": [
+            "Częstochowa"
+          ]
+        },
+        {
+          "powiat": "Dąbrowa Górnicza",
+          "gminy": [
+            "Dąbrowa Górnicza"
+          ]
+        },
+        {
+          "powiat": "Gliwice",
+          "gminy": [
+            "Gliwice"
+          ]
+        },
+        {
+          "powiat": "Jastrzębie-Zdrój",
+          "gminy": [
+            "Jastrzębie-Zdrój"
+          ]
+        },
+        {
+          "powiat": "Jaworzno",
+          "gminy": [
+            "Jaworzno"
+          ]
+        },
+        {
+          "powiat": "Katowice",
+          "gminy": [
+            "Katowice"
+          ]
+        },
+        {
+          "powiat": "Mysłowice",
+          "gminy": [
+            "Mysłowice"
+          ]
+        },
+        {
+          "powiat": "Piekary Śląskie",
+          "gminy": [
+            "Piekary Śląskie"
+          ]
+        },
+        {
+          "powiat": "Ruda Śląska",
+          "gminy": [
+            "Ruda Śląska"
+          ]
+        },
+        {
+          "powiat": "Rybnik",
+          "gminy": [
+            "Rybnik"
+          ]
+        },
+        {
+          "powiat": "Siemianowice Śląskie",
+          "gminy": [
+            "Siemianowice Śląskie"
+          ]
+        },
+        {
+          "powiat": "Sosnowiec",
+          "gminy": [
+            "Sosnowiec"
+          ]
+        },
+        {
+          "powiat": "Świętochłowice",
+          "gminy": [
+            "Świętochłowice"
+          ]
+        },
+        {
+          "powiat": "Tychy",
+          "gminy": [
+            "Tychy"
+          ]
+        },
+        {
+          "powiat": "Zabrze",
+          "gminy": [
+            "Zabrze"
+          ]
+        },
+        {
+          "powiat": "Żory",
+          "gminy": [
+            "Żory"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "świętokrzyskie",
+      "powiaty": [
+        {
+          "powiat": "buski",
+          "gminy": [
+            "gmina Busko-Zdrój",
+            "gmina Gnojno",
+            "gmina Nowy Korczyn",
+            "gmina Pacanów",
+            "gmina Solec-Zdrój",
+            "gmina Stopnica",
+            "gmina Tuczępy",
+            "gmina Wiślica"
+          ]
+        },
+        {
+          "powiat": "jędrzejowski",
+          "gminy": [
+            "gmina Imielno",
+            "gmina Jędrzejów",
+            "gmina Małogoszcz",
+            "gmina Nagłowice",
+            "gmina Oksa",
+            "gmina Sędziszów",
+            "gmina Słupia",
+            "gmina Sobków",
+            "gmina Wodzisław"
+          ]
+        },
+        {
+          "powiat": "kazimierski",
+          "gminy": [
+            "gmina Bejsce",
+            "gmina Czarnocin",
+            "gmina Kazimierza Wielka",
+            "gmina Opatowiec",
+            "gmina Skalbmierz"
+          ]
+        },
+        {
+          "powiat": "kielecki",
+          "gminy": [
+            "gmina Bieliny",
+            "gmina Bodzentyn",
+            "gmina Chęciny",
+            "gmina Chmielnik",
+            "gmina Daleszyce",
+            "gmina Górno",
+            "gmina Łagów",
+            "gmina Łopuszno",
+            "gmina Masłów",
+            "gmina Miedziana Góra",
+            "gmina Mniów",
+            "gmina Morawica",
+            "gmina Nowa Słupia",
+            "gmina Piekoszów",
+            "gmina Pierzchnica",
+            "gmina Raków",
+            "gmina Nowiny[b]",
+            "gmina Strawczyn",
+            "gmina Zagnańsk"
+          ]
+        },
+        {
+          "powiat": "konecki",
+          "gminy": [
+            "gmina Fałków",
+            "gmina Gowarczów",
+            "gmina Końskie",
+            "gmina Radoszyce",
+            "gmina Ruda Maleniecka",
+            "gmina Słupia Konecka",
+            "gmina Smyków",
+            "gmina Stąporków"
+          ]
+        },
+        {
+          "powiat": "opatowski",
+          "gminy": [
+            "gmina Baćkowice",
+            "gmina Iwaniska",
+            "gmina Lipnik",
+            "gmina Opatów",
+            "gmina Ożarów",
+            "gmina Sadowie",
+            "gmina Tarłów",
+            "gmina Wojciechowice"
+          ]
+        },
+        {
+          "powiat": "ostrowiecki",
+          "gminy": [
+            "Ostrowiec Świętokrzyski",
+            "gmina Bałtów",
+            "gmina Bodzechów",
+            "gmina Ćmielów",
+            "gmina Kunów",
+            "gmina Waśniów"
+          ]
+        },
+        {
+          "powiat": "pińczowski",
+          "gminy": [
+            "gmina Działoszyce",
+            "gmina Kije",
+            "gmina Michałów",
+            "gmina Pińczów",
+            "gmina Złota"
+          ]
+        },
+        {
+          "powiat": "sandomierski",
+          "gminy": [
+            "Sandomierz",
+            "gmina Dwikozy",
+            "gmina Klimontów",
+            "gmina Koprzywnica",
+            "gmina Łoniów",
+            "gmina Obrazów",
+            "gmina Samborzec",
+            "gmina Wilczyce",
+            "gmina Zawichost"
+          ]
+        },
+        {
+          "powiat": "skarżyski",
+          "gminy": [
+            "Skarżysko-Kamienna",
+            "gmina Bliżyn",
+            "gmina Łączna",
+            "gmina Skarżysko Kościelne",
+            "gmina Suchedniów"
+          ]
+        },
+        {
+          "powiat": "starachowicki",
+          "gminy": [
+            "Starachowice",
+            "gmina Brody",
+            "gmina Mirzec",
+            "gmina Pawłów",
+            "gmina Wąchock"
+          ]
+        },
+        {
+          "powiat": "staszowski",
+          "gminy": [
+            "gmina Bogoria",
+            "gmina Łubnice",
+            "gmina Oleśnica",
+            "gmina Osiek",
+            "gmina Połaniec",
+            "gmina Rytwiany",
+            "gmina Staszów",
+            "gmina Szydłów"
+          ]
+        },
+        {
+          "powiat": "włoszczowski",
+          "gminy": [
+            "gmina Kluczewsko",
+            "gmina Krasocin",
+            "gmina Moskorzew",
+            "gmina Radków",
+            "gmina Secemin",
+            "gmina Włoszczowa"
+          ]
+        },
+        {
+          "powiat": "Kielce",
+          "gminy": [
+            "Kielce"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "warmińsko-mazurskie",
+      "powiaty": [
+        {
+          "powiat": "bartoszycki",
+          "gminy": [
+            "Bartoszyce",
+            "Górowo Iławeckie",
+            "gmina Bartoszyce",
+            "gmina Bisztynek",
+            "gmina Górowo Iławeckie",
+            "gmina Sępopol"
+          ]
+        },
+        {
+          "powiat": "braniewski",
+          "gminy": [
+            "Braniewo",
+            "gmina Braniewo",
+            "gmina Frombork",
+            "gmina Lelkowo",
+            "gmina Pieniężno",
+            "gmina Płoskinia",
+            "gmina Wilczęta"
+          ]
+        },
+        {
+          "powiat": "działdowski",
+          "gminy": [
+            "Działdowo",
+            "gmina Działdowo",
+            "gmina Iłowo-Osada",
+            "gmina Lidzbark",
+            "gmina Płośnica",
+            "gmina Rybno"
+          ]
+        },
+        {
+          "powiat": "elbląski",
+          "gminy": [
+            "gmina Elbląg",
+            "gmina Godkowo",
+            "gmina Gronowo Elbląskie",
+            "gmina Markusy",
+            "gmina Milejewo",
+            "gmina Młynary",
+            "gmina Pasłęk",
+            "gmina Rychliki",
+            "gmina Tolkmicko"
+          ]
+        },
+        {
+          "powiat": "ełcki",
+          "gminy": [
+            "Ełk",
+            "gmina Ełk",
+            "gmina Kalinowo",
+            "gmina Prostki",
+            "gmina Stare Juchy"
+          ]
+        },
+        {
+          "powiat": "giżycki",
+          "gminy": [
+            "Giżycko",
+            "gmina Giżycko",
+            "gmina Kruklanki",
+            "gmina Miłki",
+            "gmina Ryn",
+            "gmina Wydminy"
+          ]
+        },
+        {
+          "powiat": "iławski",
+          "gminy": [
+            "Iława",
+            "Lubawa",
+            "gmina Iława",
+            "gmina Kisielice",
+            "gmina Lubawa",
+            "gmina Susz",
+            "gmina Zalewo"
+          ]
+        },
+        {
+          "powiat": "kętrzyński",
+          "gminy": [
+            "Kętrzyn",
+            "gmina Barciany",
+            "gmina Kętrzyn",
+            "gmina Korsze",
+            "gmina Reszel",
+            "gmina Srokowo"
+          ]
+        },
+        {
+          "powiat": "lidzbarski",
+          "gminy": [
+            "Lidzbark Warmiński",
+            "gmina Kiwity",
+            "gmina Lidzbark Warmiński",
+            "gmina Lubomino",
+            "gmina Orneta"
+          ]
+        },
+        {
+          "powiat": "mrągowski",
+          "gminy": [
+            "Mrągowo",
+            "gmina Mikołajki",
+            "gmina Mrągowo",
+            "gmina Piecki",
+            "gmina Sorkwity"
+          ]
+        },
+        {
+          "powiat": "nidzicki",
+          "gminy": [
+            "gmina Janowiec Kościelny",
+            "gmina Janowo",
+            "gmina Kozłowo",
+            "gmina Nidzica"
+          ]
+        },
+        {
+          "powiat": "nowomiejski",
+          "gminy": [
+            "Nowe Miasto Lubawskie",
+            "gmina Biskupiec",
+            "gmina Grodziczno",
+            "gmina Kurzętnik",
+            "gmina Nowe Miasto Lubawskie"
+          ]
+        },
+        {
+          "powiat": "olecki",
+          "gminy": [
+            "gmina Kowale Oleckie",
+            "gmina Olecko",
+            "gmina Świętajno",
+            "gmina Wieliczki"
+          ]
+        },
+        {
+          "powiat": "olsztyński",
+          "gminy": [
+            "gmina Barczewo",
+            "gmina Biskupiec",
+            "gmina Dobre Miasto",
+            "gmina Dywity",
+            "gmina Gietrzwałd",
+            "gmina Jeziorany",
+            "gmina Jonkowo",
+            "gmina Kolno",
+            "gmina Olsztynek",
+            "gmina Purda",
+            "gmina Stawiguda",
+            "gmina Świątki"
+          ]
+        },
+        {
+          "powiat": "ostródzki",
+          "gminy": [
+            "Ostróda",
+            "gmina Dąbrówno",
+            "gmina Grunwald",
+            "gmina Łukta",
+            "gmina Małdyty",
+            "gmina Miłakowo",
+            "gmina Miłomłyn",
+            "gmina Morąg",
+            "gmina Ostróda"
+          ]
+        },
+        {
+          "powiat": "piski",
+          "gminy": [
+            "gmina Biała Piska",
+            "gmina Orzysz",
+            "gmina Pisz",
+            "gmina Ruciane-Nida"
+          ]
+        },
+        {
+          "powiat": "szczycieński",
+          "gminy": [
+            "Szczytno",
+            "gmina Dźwierzuty",
+            "gmina Jedwabno",
+            "gmina Pasym",
+            "gmina Rozogi",
+            "gmina Szczytno",
+            "gmina Świętajno",
+            "gmina Wielbark"
+          ]
+        },
+        {
+          "powiat": "gołdapski",
+          "gminy": [
+            "gmina Banie Mazurskie",
+            "gmina Dubeninki",
+            "gmina Gołdap"
+          ]
+        },
+        {
+          "powiat": "węgorzewski",
+          "gminy": [
+            "gmina Budry",
+            "gmina Pozezdrze",
+            "gmina Węgorzewo"
+          ]
+        },
+        {
+          "powiat": "Elbląg",
+          "gminy": [
+            "Elbląg"
+          ]
+        },
+        {
+          "powiat": "Olsztyn",
+          "gminy": [
+            "Olsztyn"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "wielkopolskie",
+      "powiaty": [
+        {
+          "powiat": "chodzieski",
+          "gminy": [
+            "Chodzież",
+            "gmina Budzyń",
+            "gmina Chodzież",
+            "gmina Margonin",
+            "gmina Szamocin"
+          ]
+        },
+        {
+          "powiat": "czarnkowsko-trzcianecki",
+          "gminy": [
+            "Czarnków",
+            "gmina Czarnków",
+            "gmina Drawsko",
+            "gmina Krzyż Wielkopolski",
+            "gmina Lubasz",
+            "gmina Połajewo",
+            "gmina Trzcianka",
+            "gmina Wieleń"
+          ]
+        },
+        {
+          "powiat": "gnieźnieński",
+          "gminy": [
+            "Gniezno",
+            "gmina Czerniejewo",
+            "gmina Gniezno",
+            "gmina Kiszkowo",
+            "gmina Kłecko",
+            "gmina Łubowo",
+            "gmina Mieleszyn",
+            "gmina Niechanowo",
+            "gmina Trzemeszno",
+            "gmina Witkowo"
+          ]
+        },
+        {
+          "powiat": "gostyński",
+          "gminy": [
+            "gmina Borek Wielkopolski",
+            "gmina Gostyń",
+            "gmina Krobia",
+            "gmina Pępowo",
+            "gmina Piaski",
+            "gmina Pogorzela",
+            "gmina Poniec"
+          ]
+        },
+        {
+          "powiat": "grodziski",
+          "gminy": [
+            "gmina Granowo",
+            "gmina Grodzisk Wielkopolski",
+            "gmina Kamieniec",
+            "gmina Rakoniewice",
+            "gmina Wielichowo"
+          ]
+        },
+        {
+          "powiat": "jarociński",
+          "gminy": [
+            "gmina Jaraczewo",
+            "gmina Jarocin",
+            "gmina Kotlin",
+            "gmina Żerków"
+          ]
+        },
+        {
+          "powiat": "kaliski",
+          "gminy": [
+            "gmina Blizanów",
+            "gmina Brzeziny",
+            "gmina Ceków-Kolonia",
+            "gmina Godziesze Wielkie",
+            "gmina Koźminek",
+            "gmina Lisków",
+            "gmina Mycielin",
+            "gmina Opatówek",
+            "gmina Stawiszyn",
+            "gmina Szczytniki",
+            "gmina Żelazków"
+          ]
+        },
+        {
+          "powiat": "kępiński",
+          "gminy": [
+            "gmina Baranów",
+            "gmina Bralin",
+            "gmina Kępno",
+            "gmina Łęka Opatowska",
+            "gmina Perzów",
+            "gmina Rychtal",
+            "gmina Trzcinica"
+          ]
+        },
+        {
+          "powiat": "kolski",
+          "gminy": [
+            "Koło",
+            "gmina Babiak",
+            "gmina Chodów",
+            "gmina Dąbie",
+            "gmina Grzegorzew",
+            "gmina Kłodawa",
+            "gmina Koło",
+            "gmina Kościelec",
+            "gmina Olszówka",
+            "gmina Osiek Mały",
+            "gmina Przedecz"
+          ]
+        },
+        {
+          "powiat": "koniński",
+          "gminy": [
+            "gmina Golina",
+            "gmina Grodziec",
+            "gmina Kazimierz Biskupi",
+            "gmina Kleczew",
+            "gmina Kramsk",
+            "gmina Krzymów",
+            "gmina Rychwał",
+            "gmina Rzgów",
+            "gmina Skulsk",
+            "gmina Sompolno",
+            "gmina Stare Miasto",
+            "gmina Ślesin",
+            "gmina Wierzbinek",
+            "gmina Wilczyn"
+          ]
+        },
+        {
+          "powiat": "kościański",
+          "gminy": [
+            "Kościan",
+            "gmina Czempiń",
+            "gmina Kościan",
+            "gmina Krzywiń",
+            "gmina Śmigiel"
+          ]
+        },
+        {
+          "powiat": "krotoszyński",
+          "gminy": [
+            "Sulmierzyce",
+            "gmina Kobylin",
+            "gmina Koźmin Wielkopolski",
+            "gmina Krotoszyn",
+            "gmina Rozdrażew",
+            "gmina Zduny"
+          ]
+        },
+        {
+          "powiat": "leszczyński",
+          "gminy": [
+            "gmina Krzemieniewo",
+            "gmina Lipno",
+            "gmina Osieczna",
+            "gmina Rydzyna",
+            "gmina Święciechowa",
+            "gmina Wijewo",
+            "gmina Włoszakowice"
+          ]
+        },
+        {
+          "powiat": "międzychodzki",
+          "gminy": [
+            "gmina Chrzypsko Wielkie",
+            "gmina Kwilcz",
+            "gmina Międzychód",
+            "gmina Sieraków"
+          ]
+        },
+        {
+          "powiat": "nowotomyski",
+          "gminy": [
+            "gmina Kuślin",
+            "gmina Lwówek",
+            "gmina Miedzichowo",
+            "gmina Nowy Tomyśl",
+            "gmina Opalenica",
+            "gmina Zbąszyń"
+          ]
+        },
+        {
+          "powiat": "obornicki",
+          "gminy": [
+            "gmina Oborniki",
+            "gmina Rogoźno",
+            "gmina Ryczywół"
+          ]
+        },
+        {
+          "powiat": "ostrowski",
+          "gminy": [
+            "Ostrów Wielkopolski",
+            "gmina Nowe Skalmierzyce",
+            "gmina Odolanów",
+            "gmina Ostrów Wielkopolski",
+            "gmina Przygodzice",
+            "gmina Raszków",
+            "gmina Sieroszewice",
+            "gmina Sośnie"
+          ]
+        },
+        {
+          "powiat": "ostrzeszowski",
+          "gminy": [
+            "gmina Czajków",
+            "gmina Doruchów",
+            "gmina Grabów nad Prosną",
+            "gmina Kobyla Góra",
+            "gmina Kraszewice",
+            "gmina Mikstat",
+            "gmina Ostrzeszów"
+          ]
+        },
+        {
+          "powiat": "pilski",
+          "gminy": [
+            "Piła",
+            "gmina Białośliwie",
+            "gmina Kaczory",
+            "gmina Łobżenica",
+            "gmina Miasteczko Krajeńskie",
+            "gmina Szydłowo",
+            "gmina Ujście",
+            "gmina Wyrzysk",
+            "gmina Wysoka"
+          ]
+        },
+        {
+          "powiat": "pleszewski",
+          "gminy": [
+            "gmina Chocz",
+            "gmina Czermin",
+            "gmina Dobrzyca",
+            "gmina Gizałki",
+            "gmina Gołuchów",
+            "gmina Pleszew"
+          ]
+        },
+        {
+          "powiat": "poznański",
+          "gminy": [
+            "Luboń",
+            "Puszczykowo",
+            "gmina Buk",
+            "gmina Czerwonak",
+            "gmina Dopiewo",
+            "gmina Kleszczewo",
+            "gmina Komorniki",
+            "gmina Kostrzyn",
+            "gmina Kórnik",
+            "gmina Mosina",
+            "gmina Murowana Goślina",
+            "gmina Pobiedziska",
+            "gmina Rokietnica",
+            "gmina Stęszew",
+            "gmina Suchy Las",
+            "gmina Swarzędz",
+            "gmina Tarnowo Podgórne"
+          ]
+        },
+        {
+          "powiat": "rawicki",
+          "gminy": [
+            "gmina Bojanowo",
+            "gmina Jutrosin",
+            "gmina Miejska Górka",
+            "gmina Pakosław",
+            "gmina Rawicz"
+          ]
+        },
+        {
+          "powiat": "słupecki",
+          "gminy": [
+            "Słupca",
+            "gmina Lądek",
+            "gmina Orchowo",
+            "gmina Ostrowite",
+            "gmina Powidz",
+            "gmina Słupca",
+            "gmina Strzałkowo",
+            "gmina Zagórów"
+          ]
+        },
+        {
+          "powiat": "szamotulski",
+          "gminy": [
+            "Obrzycko",
+            "gmina Duszniki",
+            "gmina Kaźmierz",
+            "gmina Obrzycko",
+            "gmina Ostroróg",
+            "gmina Pniewy",
+            "gmina Szamotuły",
+            "gmina Wronki"
+          ]
+        },
+        {
+          "powiat": "średzki",
+          "gminy": [
+            "gmina Dominowo",
+            "gmina Krzykosy",
+            "gmina Nowe Miasto nad Wartą",
+            "gmina Środa Wielkopolska",
+            "gmina Zaniemyśl"
+          ]
+        },
+        {
+          "powiat": "śremski",
+          "gminy": [
+            "gmina Brodnica",
+            "gmina Dolsk",
+            "gmina Książ Wielkopolski",
+            "gmina Śrem"
+          ]
+        },
+        {
+          "powiat": "turecki",
+          "gminy": [
+            "Turek",
+            "gmina Brudzew",
+            "gmina Dobra",
+            "gmina Kawęczyn",
+            "gmina Malanów",
+            "gmina Przykona",
+            "gmina Tuliszków",
+            "gmina Turek",
+            "gmina Władysławów"
+          ]
+        },
+        {
+          "powiat": "wągrowiecki",
+          "gminy": [
+            "Wągrowiec",
+            "gmina Damasławek",
+            "gmina Gołańcz",
+            "gmina Mieścisko",
+            "gmina Skoki",
+            "gmina Wapno",
+            "gmina Wągrowiec"
+          ]
+        },
+        {
+          "powiat": "wolsztyński",
+          "gminy": [
+            "gmina Przemęt",
+            "gmina Siedlec",
+            "gmina Wolsztyn"
+          ]
+        },
+        {
+          "powiat": "wrzesiński",
+          "gminy": [
+            "gmina Kołaczkowo",
+            "gmina Miłosław",
+            "gmina Nekla",
+            "gmina Pyzdry",
+            "gmina Września"
+          ]
+        },
+        {
+          "powiat": "złotowski",
+          "gminy": [
+            "Złotów",
+            "gmina Jastrowie",
+            "gmina Krajenka",
+            "gmina Lipka",
+            "gmina Okonek",
+            "gmina Tarnówka",
+            "gmina Zakrzewo",
+            "gmina Złotów"
+          ]
+        },
+        {
+          "powiat": "Kalisz",
+          "gminy": [
+            "Kalisz"
+          ]
+        },
+        {
+          "powiat": "Konin",
+          "gminy": [
+            "Konin"
+          ]
+        },
+        {
+          "powiat": "Leszno",
+          "gminy": [
+            "Leszno"
+          ]
+        },
+        {
+          "powiat": "Poznań",
+          "gminy": [
+            "Poznań"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "zachodniopomorskie",
+      "powiaty": [
+        {
+          "powiat": "białogardzki",
+          "gminy": [
+            "Białogard",
+            "gmina Białogard",
+            "gmina Karlino",
+            "gmina Tychowo"
+          ]
+        },
+        {
+          "powiat": "choszczeński",
+          "gminy": [
+            "gmina Bierzwnik",
+            "gmina Choszczno",
+            "gmina Drawno",
+            "gmina Krzęcin",
+            "gmina Pełczyce",
+            "gmina Recz"
+          ]
+        },
+        {
+          "powiat": "drawski",
+          "gminy": [
+            "gmina Czaplinek",
+            "gmina Drawsko Pomorskie",
+            "gmina Kalisz Pomorski",
+            "gmina Wierzchowo",
+            "gmina Złocieniec"
+          ]
+        },
+        {
+          "powiat": "goleniowski",
+          "gminy": [
+            "gmina Goleniów",
+            "gmina Maszewo",
+            "gmina Nowogard",
+            "gmina Osina",
+            "gmina Przybiernów",
+            "gmina Stepnica"
+          ]
+        },
+        {
+          "powiat": "gryficki",
+          "gminy": [
+            "gmina Brojce",
+            "gmina Gryfice",
+            "gmina Karnice",
+            "gmina Płoty",
+            "gmina Rewal",
+            "gmina Trzebiatów"
+          ]
+        },
+        {
+          "powiat": "gryfiński",
+          "gminy": [
+            "gmina Banie",
+            "gmina Cedynia",
+            "gmina Chojna",
+            "gmina Gryfino",
+            "gmina Mieszkowice",
+            "gmina Moryń",
+            "gmina Stare Czarnowo",
+            "gmina Trzcińsko-Zdrój",
+            "gmina Widuchowa"
+          ]
+        },
+        {
+          "powiat": "kamieński",
+          "gminy": [
+            "gmina Dziwnów",
+            "gmina Golczewo",
+            "gmina Kamień Pomorski",
+            "gmina Międzyzdroje",
+            "gmina Świerzno",
+            "gmina Wolin"
+          ]
+        },
+        {
+          "powiat": "kołobrzeski",
+          "gminy": [
+            "Kołobrzeg",
+            "gmina Dygowo",
+            "gmina Gościno",
+            "gmina Kołobrzeg",
+            "gmina Rymań",
+            "gmina Siemyśl",
+            "gmina Ustronie Morskie"
+          ]
+        },
+        {
+          "powiat": "koszaliński",
+          "gminy": [
+            "gmina Będzino",
+            "gmina Biesiekierz",
+            "gmina Bobolice",
+            "gmina Manowo",
+            "gmina Mielno",
+            "gmina Polanów",
+            "gmina Sianów",
+            "gmina Świeszyno"
+          ]
+        },
+        {
+          "powiat": "myśliborski",
+          "gminy": [
+            "gmina Barlinek",
+            "gmina Boleszkowice",
+            "gmina Dębno",
+            "gmina Myślibórz",
+            "gmina Nowogródek Pomorski"
+          ]
+        },
+        {
+          "powiat": "policki",
+          "gminy": [
+            "gmina Dobra (Szczecińska)",
+            "gmina Kołbaskowo",
+            "gmina Nowe Warpno",
+            "gmina Police"
+          ]
+        },
+        {
+          "powiat": "pyrzycki",
+          "gminy": [
+            "gmina Bielice",
+            "gmina Kozielice",
+            "gmina Lipiany",
+            "gmina Przelewice",
+            "gmina Pyrzyce",
+            "gmina Warnice"
+          ]
+        },
+        {
+          "powiat": "sławieński",
+          "gminy": [
+            "Darłowo",
+            "Sławno",
+            "gmina Darłowo",
+            "gmina Malechowo",
+            "gmina Postomino",
+            "gmina Sławno"
+          ]
+        },
+        {
+          "powiat": "stargardzki",
+          "gminy": [
+            "Stargard",
+            "gmina Chociwel",
+            "gmina Dobrzany",
+            "gmina Dolice",
+            "gmina Ińsko",
+            "gmina Kobylanka",
+            "gmina Marianowo",
+            "gmina Stara Dąbrowa",
+            "gmina Stargard",
+            "gmina Suchań"
+          ]
+        },
+        {
+          "powiat": "szczecinecki",
+          "gminy": [
+            "Szczecinek",
+            "gmina Barwice",
+            "gmina Biały Bór",
+            "gmina Borne Sulinowo",
+            "gmina Grzmiąca",
+            "gmina Szczecinek"
+          ]
+        },
+        {
+          "powiat": "świdwiński",
+          "gminy": [
+            "Świdwin",
+            "gmina Brzeżno",
+            "gmina Połczyn-Zdrój",
+            "gmina Rąbino",
+            "gmina Sławoborze",
+            "gmina Świdwin"
+          ]
+        },
+        {
+          "powiat": "wałecki",
+          "gminy": [
+            "Wałcz",
+            "gmina Człopa",
+            "gmina Mirosławiec",
+            "gmina Tuczno",
+            "gmina Wałcz"
+          ]
+        },
+        {
+          "powiat": "łobeski",
+          "gminy": [
+            "gmina Dobra",
+            "gmina Łobez",
+            "gmina Radowo Małe",
+            "gmina Resko",
+            "gmina Węgorzyno"
+          ]
+        },
+        {
+          "powiat": "Koszalin",
+          "gminy": [
+            "Koszalin"
+          ]
+        },
+        {
+          "powiat": "Szczecin",
+          "gminy": [
+            "Szczecin"
+          ]
+        },
+        {
+          "powiat": "Świnoujście",
+          "gminy": [
+            "Świnoujście"
           ]
         }
       ]

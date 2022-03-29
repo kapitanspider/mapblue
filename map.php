@@ -47,7 +47,9 @@ $("#map-poland").CSSMap({
   "size": 960,
   "cities": false,
   "tooltips": false,
-  "responsive": {}
+  "responsive": "auto",
+  "mobileSupport": true
+
 });
 });
 </script>

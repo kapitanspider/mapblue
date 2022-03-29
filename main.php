@@ -35,8 +35,24 @@ include('dbconfig.php');
 <input type="submit" value="wyloguj">
 </form>
 <div class="grid-container">
-  <div class="grid-item">Profil</div>
+  <a href="profil.php"><div class="grid-item">Profil</div></a>
   <a href="map.php"><div class="grid-item">Dodaj Aktywność</div></a>
+  <a href="kalendarz_user.php"><div class="grid-item">Kalendarz aktywności</div></a>
+  <a href="ustawienia.php"><div class="grid-item">Ustawienia</div></a>
+  <a href="pomoc.php"><div class="grid-item">Pomoc</div></a>
+</div>
+<?php
+if($_SESSION["ADMIN"]==1)
+{
+?>
+<h1>Panel administratora</h1>
+<div class="grid-container">
+  <a href="admin_users.php"><div class="grid-item">Urzytkownicy</div></a>
+</div>
+<?php
+}
+?>
+
 </div>
 </body>
 </html>

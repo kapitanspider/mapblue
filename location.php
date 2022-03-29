@@ -9,10 +9,12 @@
 include('facecheck.php');
 ?>
 <form action="dodaj_aktywnosc.php" method="post">
+<label>Wybierz powiat</label>
 <input type="hidden" name="wojewodztwo" id="wojewodztwo" value=<?php echo '"'.$_GET['woj'].'"'; ?>>
-<select name="powiat"  id="powiat" onchange="get_gminy()">
+<select name="powiat"  id="powiat" onchange="get_gminy()" required>
 </select>
-<select name="gmina" id="gmina">
+<label>Wybierz gminę</label>
+<select name="gmina" id="gmina" required>
 </select>
 <input type="submit">
 </form>
@@ -36,7 +38,7 @@ async function get_powiaty(woj){
 	const w = await wojewodztwo;
 	var x=w.wojewodztwa.find(currnet_woj);
 	//console.log(x);
-	var lista="<option value='null' selected disabled>---</option>";
+	var lista="";
 	for(var i=0; i<x.powiaty.length;i++)
 	{
 		lista+="<option value='"+x.powiaty[i].powiat+"'>"+x.powiaty[i].powiat+"</option>";
@@ -48,7 +50,7 @@ async function get_gminy(){
 	const w = await wojewodztwo;
 	var x=w.wojewodztwa.find(currnet_woj);
 	var p=x.powiaty.find(currnet_pow);
-	var lista="<option value='null' selected disabled>---</option>";
+	var lista="";
 	for(var i=0; i<p.gminy.length;i++)
 	{
 		lista+="<option value='"+p.gminy[i]+"'>"+p.gminy[i]+"</option>";
@@ -56,6 +58,7 @@ async function get_gminy(){
 	document.getElementById("gmina").innerHTML=lista;
 }
 get_powiaty($woj);
+get_gminy();
 
 </script>
 </body>
