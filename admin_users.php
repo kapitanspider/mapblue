@@ -58,6 +58,10 @@ if($row["IS_ACTIVE"]==1)
 <input type="hidden" name="deactivate" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Dezaktywuj">
 </form>
+<form action="admin_users_edit.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Edytuj">
+</form>
 </td>
 <?php
 }
@@ -68,6 +72,10 @@ else
 <form action="admin_users.php" method="post">
 <input type="hidden" name="activate" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Aktywuj">
+</form>
+<form action="admin_users_edit.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Edytuj">
 </form>
 </td>
 <?php	
@@ -115,6 +123,10 @@ if($row["IS_ACTIVE"]==1)
 <input type="hidden" name="deactivate" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Dezaktywuj">
 </form>
+<form action="admin_users_edit.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Edytuj">
+</form>
 </td>
 <?php
 }
@@ -126,6 +138,10 @@ else
 <input type="hidden" name="activate" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Aktywuj">
 </form>
+<form action="admin_users_edit.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Edytuj">
+</form>
 </td>
 <?php	
 }
@@ -135,5 +151,7 @@ echo "</tr>";
 </table>
 <br>
 <a href="admin_users_add_new.php">Dodaj urzytkownika</a>
+<br>
+<a href="main.php">Wróć</a>
 </body>
 </html>

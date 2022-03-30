@@ -22,6 +22,7 @@ echo '<p>'.$user["IMIE"]." ".$user["NAZWISKO"].'</p>';
 echo '<p>Login: '.$user["LOGIN"].'</p>';
 echo '<p>Nr. Okręgu: '.$user["NR_OKREGU"].'</p>';
 echo '<p>Specjalizacja: '.$user["SPECJALIZACJA"].'</p>';
+echo '<p>Funkcja: '.$user["FUNKCJA"].'</p>';
 echo '<p>Adres email: '.$user["EMAIL"].' <a href="change_email.php">Zmień</a></p>';
 echo '<p>Nr. telefonu: '.$user["TELEFON"].' <a href="change_tel.php">Zmień</a></p>';
 ?>
