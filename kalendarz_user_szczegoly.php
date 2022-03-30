@@ -34,6 +34,11 @@ echo "Notatka: ".$row["notatka"];
 ?>
 <br>
 <br>
+<form action="kalendarz_user_szczegoly_edit.php" method="post">
+    <input type="hidden" name="ID" value="<?php echo $_POST["ID"];?>">
+    <input type="submit" value="Edytuj">
+</form>
+<br>
 <a href="kalendarz_user.php">Wróć</a>
 </table>
 </body>
