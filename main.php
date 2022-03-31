@@ -48,6 +48,8 @@ if($_SESSION["ADMIN"]==1)
 <h1>Panel administratora</h1>
 <div class="grid-container">
   <a href="admin_users.php"><div class="grid-item">Urzytkownicy</div></a>
+  <a href="admin_aktywnosci.php"><div class="grid-item">Wszystkie aktywności</div></a>
+  <a href="admin_statystyki.php"><div class="grid-item">Statystyki aktywności</div></a>
 </div>
 <?php
 }

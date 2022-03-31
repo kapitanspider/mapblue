@@ -7,7 +7,7 @@
 <?php
 include('facecheck.php');
 include('dbconfig.php');
-$db_data = array();
+
 if(isset($_POST["begin"]))
 {
 $begin=$_POST["begin"];
