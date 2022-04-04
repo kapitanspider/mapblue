@@ -87,7 +87,6 @@ Array.prototype.push.apply(barColors, barColors);
 Array.prototype.push.apply(barColors, barColors);
 Array.prototype.push.apply(barColors, barColors);
 Array.prototype.push.apply(barColors, barColors);
-console.log(barColors);
 </script>    
 <?php
 if(isset($_POST["woj"]))
@@ -128,7 +127,7 @@ new Chart("myChart", {
     legend: {display: false},
     title: {
       display: true,
-      text: "Aktywności w województwach w podanym zakresie dat"
+      text: "Aktywności w powiatach w podanym zakresie dat"
     },
     scales: {
         yAxes: [{
@@ -150,8 +149,14 @@ if(sizeof($gminy)>0)
 <form action="admin_statystyki_powiat_szczegoly.php" method="post">
 <input type="hidden" name="begin" required value="<?php echo $begin; ?>">
 <input type="hidden" name="end" required value="<?php echo  $end; ?>">
-<select >
-
+<select name="powiat">
+<?php
+for($i=0;$i<sizeof($gminy);$i++)
+{
+  echo "<option value=".$gminy[$i].">".$gminy[$i]."</option>";
+}
+?>
+</select>
 <input type="submit" value="Szczegóły powiatu">
 </form>
 <?php

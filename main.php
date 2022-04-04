@@ -50,6 +50,7 @@ if($_SESSION["ADMIN"]==1)
   <a href="admin_users.php"><div class="grid-item">Urzytkownicy</div></a>
   <a href="admin_aktywnosci.php"><div class="grid-item">Wszystkie aktywności</div></a>
   <a href="admin_statystyki.php"><div class="grid-item">Statystyki aktywności</div></a>
+  <a href="admin_statystyki_kategorie.php"><div class="grid-item">Statystyki kategori</div></a>
 </div>
 <?php
 }
