@@ -27,7 +27,7 @@ $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 <input type="date" name="end" required value="<?php echo  $end; ?>">
 <input type="hidden" name="powiat" value="<?php echo  $_POST["powiat"]; ?>">
 <input type="submit" value="Zmień datę">
-
+</form>
 <canvas id="myChart"></canvas>
 <script type="text/javascript">
 var xVal=[];
@@ -105,5 +105,6 @@ for($i=0;$i<sizeof($gminy);$i++)
 <?php
 }
 ?>
+<a href="main.php">Wróć</a>
 </body>
 </html>

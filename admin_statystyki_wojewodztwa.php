@@ -83,6 +83,5 @@ new Chart("myChart", {
 });
 </script> 
 <a href="main.php">Wróć</a>
-<a href="admin_statystyki_powiaty.php">Statystyki powiatów</a>
 </body>
 </html>
