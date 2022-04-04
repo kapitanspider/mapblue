@@ -99,11 +99,11 @@ $sql= "SELECT Count(ID), powiat from aktywnosci Where data between '".$begin."' 
 }
 $result = $conn->query($sql);
 
-$gminy=[];
+$powiaty=[];
 
 while($row = $result->fetch_assoc())
 {
-  array_push($gminy,$row["powiat"]);
+  array_push($powiaty,$row["powiat"]);
 ?>
 <script type="text/javascript">
    xVal.push("<?php echo $row["powiat"]; ?>");
@@ -143,7 +143,7 @@ new Chart("myChart", {
 <br>
 <br>
 <?php
-if(sizeof($gminy)>0)
+if(sizeof($powiaty)>0)
 {
 ?>
 <form action="admin_statystyki_powiat_szczegoly.php" method="post">
@@ -151,9 +151,9 @@ if(sizeof($gminy)>0)
 <input type="hidden" name="end" required value="<?php echo  $end; ?>">
 <select name="powiat">
 <?php
-for($i=0;$i<sizeof($gminy);$i++)
+for($i=0;$i<sizeof($powiaty);$i++)
 {
-  echo "<option value=".$gminy[$i].">".$gminy[$i]."</option>";
+  echo "<option value=".$powiaty[$i].">".$powiaty[$i]."</option>";
 }
 ?>
 </select>

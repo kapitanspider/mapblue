@@ -46,6 +46,7 @@ Array.prototype.push.apply(barColors, barColors);
 
 $sql= "SELECT Count(ID), gmina from aktywnosci Where data between '".$begin."' and '".$end."' and powiat= '".$_POST["powiat"]."' group by powiat";
 $result = $conn->query($sql);
+$gminy=[];
 while($row = $result->fetch_assoc())
 {
     ?>
@@ -54,6 +55,7 @@ while($row = $result->fetch_assoc())
     yVal.push("<?php echo $row["Count(ID)"]; ?>");
  </script>
  <?php
+array_push($gminy,$row["gmina"]);
 }
 ?>
 <script type="text/javascript">
@@ -83,5 +85,25 @@ new Chart("myChart", {
   }
 });
 </script> 
+<?php
+if(sizeof($gminy)>0)
+{
+?>
+<form action="admin_statystyki_gmina_lista.php" method="post">
+<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
+<input type="hidden" name="end" required value="<?php echo  $end; ?>">
+<select name="gmina">
+<?php
+for($i=0;$i<sizeof($gminy);$i++)
+{
+  echo "<option value=".$gminy[$i].">".$gminy[$i]."</option>";
+}
+?>
+</select>
+<input type="submit" value="Lista Aktywnosci w gminie">
+</form>
+<?php
+}
+?>
 </body>
 </html>
