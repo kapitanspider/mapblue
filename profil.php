@@ -14,10 +14,10 @@ $user = null;
 while($row = $result->fetch_assoc()){
 			$user = $row;
 		}
-//var_dump($user["ADMIN"]);
 ?>
 <p>Profil</p>
 <?php
+echo '<img src="'.$user["Profilowe"].'" width="200px" height="200px">';
 echo '<p>'.$user["IMIE"]." ".$user["NAZWISKO"].'</p>';
 echo '<p>Login: '.$user["LOGIN"].'</p>';
 echo '<p>Nr. Okręgu: '.$user["NR_OKREGU"].'</p>';

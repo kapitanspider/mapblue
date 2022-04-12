@@ -20,7 +20,7 @@ if(isset($_POST["activate"]))
 	$conn->query($sql);
 }
 
-$sql = "SELECT * From users Where Not ID = '".$_SESSION["USER"]."' and ADMIN = 0";
+$sql = "SELECT * From users Where ADMIN = 0";
 $result = $conn->query($sql);
 ?>
 Użytkownicy
@@ -85,7 +85,7 @@ echo "</tr>";
 ?>
 </table>
 <?php
-$sql = "SELECT * From users Where Not ID = '".$_SESSION["USER"]."' and ADMIN = 1";
+$sql = "SELECT * From users Where ADMIN = 1";
 $result = $conn->query($sql);
 ?>
 Administratorzy
@@ -119,10 +119,17 @@ if($row["IS_ACTIVE"]==1)
 {
 ?>
 <td>
+<?php
+if($row["ID"]!=$_SESSION["USER"])
+{
+?>
 <form action="admin_users.php" method="post">
 <input type="hidden" name="deactivate" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Dezaktywuj">
 </form>
+<?php
+}
+?>
 <form action="admin_users_edit.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Edytuj">
@@ -134,10 +141,17 @@ else
 {
 ?>
 <td>
+<?php
+if($row["ID"]!=$_SESSION["USER"])
+{
+?>
 <form action="admin_users.php" method="post">
 <input type="hidden" name="activate" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Aktywuj">
 </form>
+<?php
+}
+?>
 <form action="admin_users_edit.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Edytuj">

@@ -17,22 +17,22 @@ include('facecheck.php');
 <div id="map-poland">
 <h1>Proszę wybrać województwo </h1>
  <ul class="poland">
-  <li class="pl1"><a href="location.php?woj=dolnośląskie">Dolnośląskie</a></li>
-  <li class="pl2"><a href="location.php?woj=kujawsko-pomorskie">Kujawsko-pomorskie</a></li>
-  <li class="pl3"><a href="location.php?woj=lubelskie">Lubelskie</a></li>
-  <li class="pl4"><a href="location.php?woj=lubuskie">Lubuskie</a></li>
-  <li class="pl5"><a href="location.php?woj=lódzkie">Łódzkie</a></li>
-  <li class="pl6"><a href="location.php?woj=małopolskie">Małopolskie</a></li>
-  <li class="pl7"><a href="location.php?woj=mazowieckie">Mazowieckie</a></li>
-  <li class="pl8"><a href="location.php?woj=opolskie">Opolskie</a></li>
-  <li class="pl9"><a href="location.php?woj=podkarpackie">Podkarpackie</a></li>
-  <li class="pl10"><a href="location.php?woj=podlaskie">Podlaskie</a></li>
-  <li class="pl11"><a href="location.php?woj=pomorskie">Pomorskie</a></li>
-  <li class="pl12"><a href="location.php?woj=śląskie">Śląskie</a></li>
-  <li class="pl13"><a href="location.php?woj=świętokrzyskie">Świętokrzyskie</a></li>
-  <li class="pl14"><a href="location.php?woj=warmińsko-mazurskie">Warmińsko-mazurskie</a></li>
-  <li class="pl15"><a href="location.php?woj=wielkopolskie">Wielkopolskie</a></li>
-  <li class="pl16"><a href="location.php?woj=zachodniopomorskie">Zachodniopomorskie</a></li>
+  <li class="pl1"><a href="map_okregi.php?woj=dolnośląskie">Dolnośląskie</a></li>
+  <li class="pl2"><a href="map_okregi.php?woj=kujawsko-pomorskie">Kujawsko-pomorskie</a></li>
+  <li class="pl3"><a href="map_okregi.php?woj=lubelskie">Lubelskie</a></li>
+  <li class="pl4"><a href="map_okregi.php?woj=lubuskie">Lubuskie</a></li>
+  <li class="pl5"><a href="map_okregi.php?woj=łódzkie">Łódzkie</a></li>
+  <li class="pl6"><a href="map_okregi.php?woj=małopolskie">Małopolskie</a></li>
+  <li class="pl7"><a href="map_okregi.php?woj=mazowieckie">Mazowieckie</a></li>
+  <li class="pl8"><a href="map_okregi.php?woj=opolskie">Opolskie</a></li>
+  <li class="pl9"><a href="map_okregi.php?woj=podkarpackie">Podkarpackie</a></li>
+  <li class="pl10"><a href="map_okregi.php?woj=podlaskie">Podlaskie</a></li>
+  <li class="pl11"><a href="map_okregi.php?woj=pomorskie">Pomorskie</a></li>
+  <li class="pl12"><a href="map_okregi.php?woj=śląskie">Śląskie</a></li>
+  <li class="pl13"><a href="map_okregi.php?woj=świętokrzyskie">Świętokrzyskie</a></li>
+  <li class="pl14"><a href="map_okregi.php?woj=warmińsko-mazurskie">Warmińsko-mazurskie</a></li>
+  <li class="pl15"><a href="map_okregi.php?woj=wielkopolskie">Wielkopolskie</a></li>
+  <li class="pl16"><a href="map_okregi.php?woj=zachodniopomorskie">Zachodniopomorskie</a></li>
  </ul>
 </div>
 <!-- Koniec mapy -->

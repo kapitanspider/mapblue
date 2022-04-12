@@ -5,7 +5,10 @@
 </head>
 <body>
 <a href="admin_statystyki_wojewodztwa.php">województwa</a>
-<a href="admin_statystyki_powiaty.php">Powiaty</a>
+<br>
+<a href="admin_statystyki_powiaty.php">powiaty szczegółowo</a>
+<br>
+<a href="admin_statystyki_powiaty_best.php">powiaty w skali kraju</a>
 
 <br>
 <a href="main.php">Wróć</a>

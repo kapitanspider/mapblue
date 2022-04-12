@@ -13,21 +13,47 @@ if(isset($_POST['login']))
 {
 $sql = "SELECT * From Users Where Login='".$_POST["login"]."'";
 $result = $conn->query($sql);
+$target_dir = "profiles/";
+$ext = pathinfo($_FILES["profilowe"]["name"], PATHINFO_EXTENSION);
+$target_file = $target_dir.$_POST['login'].".".$ext;
+$uploadOk = 1;
+
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["profilowe"]["tmp_name"], $target_file)) {
+    echo "The file ". htmlspecialchars( basename( $_FILES["profilowe"]["name"])). " has been uploaded.";
+  } else {
+    echo "Sorry, there was an error uploading your file.";
+  }
+}
 if($result->num_rows == 0)
 {
-    $sql = "INSERT INTO `users` (`ADMIN`, `LOGIN`, `PASSWORD`, `IMIE`, `NAZWISKO`, `EMAIL`, `NR_OKREGU`, `FUNKCJA`, `SPECJALIZACJA`, `TELEFON`, `IS_ACTIVE`) VALUES ('".$_POST["admin"]."', '".$_POST["login"]."', '".hash('sha256', $_POST['password'])."', '".$_POST["imie"]."', '".$_POST["nazwisko"]."', '".$_POST["email"]."', '".$_POST["NR_OKREGU"]."', '".$_POST["FUNKCJA"]."', '".$_POST["SPECJALIZACJA"]."', '".$_POST["tel"]."', '1');";
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+	echo "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+	} else {
+	move_uploaded_file($_FILES["profilowe"]["tmp_name"], $target_file);
+    echo "The file ". htmlspecialchars( basename( $_FILES["profilowe"]["name"])). " has been uploaded.";
+	$sql = "INSERT INTO `users` (`ADMIN`, `LOGIN`, `PASSWORD`, `IMIE`, `NAZWISKO`, `EMAIL`, `NR_OKREGU`, `FUNKCJA`, `SPECJALIZACJA`, `TELEFON`, `IS_ACTIVE`, `Profilowe`) VALUES ('".$_POST["admin"]."', '".$_POST["login"]."', '".hash('sha256', $_POST['password'])."', '".$_POST["imie"]."', '".$_POST["nazwisko"]."', '".$_POST["email"]."', '".$_POST["NR_OKREGU"]."', '".$_POST["FUNKCJA"]."', '".$_POST["SPECJALIZACJA"]."', '".$_POST["tel"]."', '1' ,'".$target_file."');";
     $conn->query($sql);
     echo "Dodano urzytkownika: ".$_POST["login"];
+	}
 }
 else{
-    echo "Urzytkownik o loginie ".$_POST["login"]." już istnieje";
+    echo "Urzytkownik już istnieje";
 }
 }
-
 
 
 ?>
-<form action="admin_users_add_new.php" method="post">
+<form action="admin_users_add_new.php" method="post" enctype="multipart/form-data">
+<p>Zdjęcie profilowe</p>
+<input type="file" name="profilowe" required>
 <p>Czy urztkownik ma być administratorem?</p>
 <select name="admin" >
 <option value="0">Nie</option>

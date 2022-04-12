@@ -23,7 +23,7 @@ $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 }
 
 ?>
-<form action="admin_statystyki.php" method="post">
+<form action="admin_statystyki_wojewodztwa.php" method="post">
 <label>Ustaw zakres dat</label>
 <input type="date" name="begin" required value="<?php echo $begin; ?>">
 <input type="date" name="end" required value="<?php echo  $end; ?>">

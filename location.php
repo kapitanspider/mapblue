@@ -20,6 +20,7 @@ include('facecheck.php');
 </form>
 <script>
 $woj = <?php echo '"'.$_GET['woj'].'"'; ?>;
+$okr = <?php echo '"'.$_GET['okr'].'"'; ?>;
 //var mydata = JSON.parse($wojewodztwa);
 const wojewodztwo= fetch('wojewodztwa.json')
   .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal

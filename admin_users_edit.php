@@ -30,6 +30,12 @@ while($row = $result->fetch_assoc()){
     $db_data=$row;
 }
 ?>
+<img src="<?php echo $db_data['Profilowe'];?>" width="200px" height="200px">
+<form action="admin_users_edit.php" method="post" enctype="multipart/form-data">
+<input type="hidden" name="id" value="<?php echo $_POST['id'];?>">
+<input type="file" name="profilowe" required>
+<input type="submit" name="profilowe_zmien" value="Zmień zdjęcie profilowe">
+</form>
 <form action="admin_users_edit.php" method="post">
 <p>Czy urztkownik ma być administratorem?</p>
 <select name="admin" >
@@ -67,6 +73,26 @@ while($row = $result->fetch_assoc()){
 <br>
 <input type="submit" value="Zakualizuj dane" required>
 </form>
+<?php
+if(isset($_POST["profilowe_zmien"]))
+{
+$target_dir = "profiles/";
+$ext = pathinfo($_FILES["profilowe"]["name"], PATHINFO_EXTENSION);
+$target_file = $target_dir.$db_data['LOGIN'].".".$ext;
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+  move_uploaded_file($_FILES["profilowe"]["tmp_name"], $target_file);
+  $sql="UPDATE `users` SET `Profilowe` = '".$target_file."' WHERE `users`.`ID` = ".$_POST['id'].";";
+  $conn->query($sql);
+}
+}
+?>
 <a href="admin_users.php">Wróć</a>
 </body>
 </html>
