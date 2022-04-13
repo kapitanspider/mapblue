@@ -28,8 +28,8 @@ const wojewodztwo= fetch('wojewodztwa.json')
 
 function currnet_woj(x){
 	//console.log(x.wojewodztwo);
-	//console.log($woj);
-	return x.wojewodztwo === $woj;
+	//console.log(x);
+	return (x.wojewodztwo === $woj);
 } 
 function currnet_pow(x){
 	return x.powiat === document.getElementById("powiat").value;
@@ -42,7 +42,10 @@ async function get_powiaty(woj){
 	var lista="";
 	for(var i=0; i<x.powiaty.length;i++)
 	{
+		if(x.powiaty[i].okreg == $okr)
+		{
 		lista+="<option value='"+x.powiaty[i].powiat+"'>"+x.powiaty[i].powiat+"</option>";
+		}
 	}
 	document.getElementById("powiat").innerHTML=lista;
 }

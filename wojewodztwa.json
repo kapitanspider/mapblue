@@ -5,6 +5,7 @@
       "powiaty": [
         {
           "powiat": "bolesławiecki",
+          "okreg": 1,
           "gminy": [
             "Bolesławiec",
             "gmina Bolesławiec",
@@ -28,6 +29,7 @@
         },
         {
           "powiat": "głogowski",
+          "okreg": 1,
           "gminy": [
             "Głogów",
             "gmina Głogów",
@@ -48,6 +50,7 @@
         },
         {
           "powiat": "jaworski",
+          "okreg": 1,
           "gminy": [
             "Jawor",
             "gmina Bolków",
@@ -73,6 +76,7 @@
         },
         {
           "powiat": "kamiennogórski",
+          "okreg": 1,
           "gminy": [
             "Kamienna Góra",
             "gmina Kamienna Góra",
@@ -101,6 +105,7 @@
         },
         {
           "powiat": "legnicki",
+          "okreg": 1,
           "gminy": [
             "Chojnów",
             "gmina Chojnów",
@@ -114,6 +119,7 @@
         },
         {
           "powiat": "lubański",
+          "okreg": 1,
           "gminy": [
             "Lubań",
             "Świeradów-Zdrój",
@@ -126,6 +132,7 @@
         },
         {
           "powiat": "lubiński",
+          "okreg": 1,
           "gminy": [
             "Lubin",
             "gmina Lubin",
@@ -135,6 +142,7 @@
         },
         {
           "powiat": "lwówecki",
+          "okreg": 1,
           "gminy": [
             "gmina Gryfów Śląski",
             "gmina Lubomierz",
@@ -175,6 +183,7 @@
         },
         {
           "powiat": "polkowicki",
+          "okreg": 1,
           "gminy": [
             "gmina Chocianów",
             "gmina Gaworzyce",
@@ -277,6 +286,7 @@
         },
         {
           "powiat": "zgorzelecki",
+          "okreg": 1,
           "gminy": [
             "Zawidów",
             "Zgorzelec",
@@ -289,6 +299,7 @@
         },
         {
           "powiat": "złotoryjski",
+          "okreg": 1,
           "gminy": [
             "Wojcieszów",
             "Złotoryja",
@@ -300,12 +311,14 @@
         },
         {
           "powiat": "Jelenia Góra",
+          "okreg": 1,
           "gminy": [
             "Jelenia Góra"
           ]
         },
         {
           "powiat": "Legnica",
+          "okreg": 1,
           "gminy": [
             "Legnica"
           ]

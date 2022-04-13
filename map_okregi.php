@@ -6,7 +6,7 @@
 
 <style>
 html, body { margin:0; padding:0; overflow:hidden }
-svg { position:fixed; top:0; left:0; height:85vw; width:100vw }
+svg { position:fixed; top:0; left:0; height:50vw; width:100vw }
 </style>
 </head>
 <body>
