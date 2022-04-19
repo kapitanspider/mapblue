@@ -51,7 +51,7 @@ while($row = $result->fetch_assoc())
 	echo "<tr>";
 	echo "<td>".$row["IMIE"]." ".$row["NAZWISKO"]."</td>";
 	echo "<td>".$row["nazwa"]."</td>";
-	echo "<td>".$row["wojewodztwo"]." / ".$row["powiat"]." / ".$row["gmina"]."</td>";
+	echo "<td>".$row["wojewodztwo"]." / ".$row["okreg"]." / ".$row["powiat"]." / ".$row["gmina"]."</td>";
 	echo "<td><a href='".$row["potwierdzenie"]."' target='blank'>".$row["potwierdzenie"]."</a></td>";
 	echo "<td>".$row["rodzaj"]."</td>";
 	echo "<td>".$row["data"]."</td>";

@@ -15,7 +15,7 @@ if(isset($_POST["update"]))
     $result = $conn->query($sql);
     if($result->num_rows == 0)
     {
-    $sql = "UPDATE users SET LOGIN = '".$_POST["login"]."', IMIE ='".$_POST["imie"]."', NAZWISKO ='".$_POST["nazwisko"]."', EMAIL ='".$_POST["email"]."', TELEFON ='".$_POST["tel"]."', NR_OKREGU ='".$_POST["NR_OKREGU"]."', FUNKCJA ='".$_POST["FUNKCJA"]."', SPECJALIZACJA ='".$_POST["SPECJALIZACJA"]."'     WHERE ID = '".$_POST["id"]."'";
+    $sql = "UPDATE users SET LOGIN = '".$_POST["login"]."', IMIE ='".$_POST["imie"]."', NAZWISKO ='".$_POST["nazwisko"]."', EMAIL ='".$_POST["email"]."', TELEFON ='".$_POST["tel"]."', NR_OKREGU ='".$_POST["NR_OKREGU"]."', FUNKCJA ='".$_POST["FUNKCJA"]."', SPECJALIZACJA ='".$_POST["SPECJALIZACJA"]."',ADMIN='".$_POST["admin"]."'     WHERE ID = '".$_POST["id"]."'";
     $conn->query($sql);
     }
     else{

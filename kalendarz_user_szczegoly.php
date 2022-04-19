@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 <?php
 $row = $result->fetch_assoc();
 //var_dump($row);
-echo "Lokalizacja:<br>-->Województwo: ".$row["wojewodztwo"]."<br>--->Powiat: ".$row["powiat"]."<br>---->Gmina: ".$row["gmina"];
+echo "Lokalizacja:<br>-->Województwo: ".$row["wojewodztwo"]."<br>--->Okręg: ".$row["okreg"]."<br>---->Powiat: ".$row["powiat"]."<br>----->Gmina: ".$row["gmina"];
 echo "<br><br>";
 echo "Nazwa Wydarzenia: ".$row["nazwa"];
 echo "<br>";

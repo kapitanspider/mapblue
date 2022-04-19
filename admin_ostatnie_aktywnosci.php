@@ -67,7 +67,7 @@ if(isset($_POST["id_aktywnosci_udostepnij"]))
 <td>Zmień ocenę</td>
 <td>Udostępnij do oceny</td>
 <?php
-$sql= "SELECT users.IMIE, users.NAZWISKO, aktywnosci.ID, aktywnosci.nazwa, aktywnosci.wojewodztwo, aktywnosci.powiat, aktywnosci.ocena, aktywnosci.data, aktywnosci.gmina, aktywnosci.potwierdzenie, aktywnosci.rodzaj from aktywnosci INNER JOIN users ON users.ID=aktywnosci.ID_Organizatora where data between '".$begin."' and '".$end."' order by data_dodania desc limit ".$limit;
+$sql= "SELECT users.IMIE, users.NAZWISKO, aktywnosci.ID, aktywnosci.nazwa, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.ocena, aktywnosci.data, aktywnosci.gmina, aktywnosci.potwierdzenie, aktywnosci.rodzaj from aktywnosci INNER JOIN users ON users.ID=aktywnosci.ID_Organizatora where data between '".$begin."' and '".$end."' order by data_dodania desc limit ".$limit;
 $result = $conn->query($sql);
 
 while($row = $result->fetch_assoc())
@@ -75,7 +75,7 @@ while($row = $result->fetch_assoc())
 	echo "<tr>";
 	echo "<td>".$row["IMIE"]." ".$row["NAZWISKO"]."</td>";
 	echo "<td>".$row["nazwa"]."</td>";
-	echo "<td>".$row["wojewodztwo"]." / ".$row["powiat"]." / ".$row["gmina"]."</td>";
+	echo "<td>".$row["wojewodztwo"]." / ".$row["okreg"]." / ".$row["powiat"]." / ".$row["gmina"]."</td>";
 	echo "<td><a href='".$row["potwierdzenie"]."' target='blank'>".$row["potwierdzenie"]."</a></td>";
 	echo "<td>".$row["rodzaj"]."</td>";
 	echo "<td>".$row["data"]."</td>";

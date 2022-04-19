@@ -53,6 +53,7 @@ $("#map-poland").CSSMap({
 });
 });
 </script>
+<a href="javascript:history.go(-1)">Wróć</a>
 <!-- Koniec skryptu mapy -->
 </body>
 </html>

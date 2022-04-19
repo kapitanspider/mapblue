@@ -33,7 +33,7 @@ $row = $result->fetch_assoc();
 //var_dump($row);
 echo '<form action="kalendarz_user_szczegoly_edit.php" method="post">';
 echo '<input type="hidden" name="ID" value="'.$_POST["ID"].'">';
-echo "Lokalizacja:<br>-->Województwo: ".$row["wojewodztwo"]."<br>--->Powiat: ".$row["powiat"]."<br>---->Gmina: ".$row["gmina"];
+echo "Lokalizacja:<br>-->Województwo: ".$row["wojewodztwo"]."<br>--->Okreg: ".$row["okreg"]."<br>---->Powiat: ".$row["powiat"]."<br>----->Gmina: ".$row["gmina"];
 echo "<br><br>";
 echo "Nazwa Wydarzenia:<br>";
 echo '<input type="text" name="nazwa" value="'.$row["nazwa"].'">';

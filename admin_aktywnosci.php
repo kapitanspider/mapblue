@@ -19,7 +19,7 @@ else
 $begin=date_format(date_create(),"Y-m-d");
 $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 }
-$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' order by data asc, godzina asc";
+$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' order by data asc, godzina asc";
 $result = $conn->query($sql);
 
 ?>
@@ -36,7 +36,7 @@ while($row = $result->fetch_assoc())
 {
 echo "<tr>";
 echo "<td>".$row["IMIE"]." ".$row["NAZWISKO"]."</td>";
-echo "<td>".$row["wojewodztwo"]." / ".$row["powiat"]." / ".$row["gmina"]."</td>";
+echo "<td>".$row["wojewodztwo"]." / ".$row["okreg"]." / ".$row["powiat"]." / ".$row["gmina"]."</td>";
 echo "<td>".$row["nazwa"]."</td>";
 echo "<td>".$row["data"]."</td>";
 echo "<td>".$row["godzina"]."</td>";

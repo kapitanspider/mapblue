@@ -11,6 +11,7 @@ include('facecheck.php');
 <form action="dodaj_aktywnosc.php" method="post">
 <label>Wybierz powiat</label>
 <input type="hidden" name="wojewodztwo" id="wojewodztwo" value=<?php echo '"'.$_GET['woj'].'"'; ?>>
+<input type="hidden" name="okreg" id="okreg" value=<?php echo '"'.$_GET['okr'].'"'; ?>>
 <select name="powiat"  id="powiat" onchange="get_gminy()" required>
 </select>
 <label>Wybierz gminę</label>
@@ -28,8 +29,8 @@ const wojewodztwo= fetch('wojewodztwa.json')
 
 function currnet_woj(x){
 	//console.log(x.wojewodztwo);
-	//console.log(x);
-	return (x.wojewodztwo === $woj);
+	//console.log($woj);
+	return x.wojewodztwo === $woj;
 } 
 function currnet_pow(x){
 	return x.powiat === document.getElementById("powiat").value;
@@ -42,10 +43,8 @@ async function get_powiaty(woj){
 	var lista="";
 	for(var i=0; i<x.powiaty.length;i++)
 	{
-		if(x.powiaty[i].okreg == $okr)
-		{
+		if(x.powiaty[i].okreg==$okr)
 		lista+="<option value='"+x.powiaty[i].powiat+"'>"+x.powiaty[i].powiat+"</option>";
-		}
 	}
 	document.getElementById("powiat").innerHTML=lista;
 }
@@ -65,5 +64,6 @@ get_powiaty($woj);
 get_gminy();
 
 </script>
+<a href="javascript:history.go(-1)">Wróć</a>
 </body>
 </html>

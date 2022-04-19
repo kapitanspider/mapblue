@@ -1,40 +1,108 @@
-<!DOCTYPE HTML>
 <html>
-<head>
-<title>Title of the document</title>
+<head>   
+<link href="calendar.css" type="text/css" rel="stylesheet" />
+<script>
+var events=[];
+
+function dayclick(x)
+{
+	update();
+	x.style.backgroundColor="yellow";
+	var card_date=x.id
+	card_date=card_date.replace('li-', '');
+	var day_events=[];
+	events.forEach(event => {
+		if(event.data==card_date)
+		{
+		day_events.push(event);
+		}
+	});
+	var lista_aktywnosci=document.getElementById("lista_aktywnosci");
+	var lista="";
+	day_events.forEach(event => {
+		lista+='<tr><td>'+event.nazwa+'</td><td>'+event.data+"</td><td>"+event.godzina+'</td><td><form action="kalendarz_user_szczegoly.php" method="post"><input type="hidden" name="ID" value="'+event.ID+'"><input type="submit" value="Szczegóły"></form></td></tr>';
+	});
+	lista_aktywnosci.innerHTML=lista;
+}
+
+ 
+function update()
+{
+	var dates=document.getElementById("cal_dates");
+	var children = [].slice.call(dates.children);
+	children.forEach(child=>{
+		child.style.backgroundColor="#DDD";
+		
+	});
+	events.forEach(event => {
+		var element = document.getElementById("li-"+event.data);
+		element.style.backgroundColor="lightblue";
+		});
+}
+
+function update_month(){
+	var cal_title = document.getElementById("cal_title");
+	var date = cal_title.innerHTML.split(" - ");
+	switch (date[0])
+	{
+	case '01':
+    date[0]="Styczeń";
+    break;
+	case '02':
+    date[0]="Luty";
+    break;
+	case '03':
+    date[0]="Marzec";
+    break;
+	case '04':
+    date[0]="Kwiecień";
+    break;
+	case '05':
+    date[0]="Maj";
+    break;
+	case '06':
+    date[0]="Czerwiec";
+    break;
+	case '07':
+    date[0]="Lipiec";
+    break;
+	case '08':
+    date[0]="Sierpień";
+    break;
+	case '09':
+    date[0]="Wrzesień";
+    break;
+	case '10':
+    date[0]="Październik";
+    break;
+	case '11':
+    date[0]="Listopad";
+    break;
+	case '12':
+    date[0]="Grudzień";
+    break;
+	}
+	cal_title.innerHTML = date[0]+" - "+date[1];
+}
+
+</script>
 </head>
 <body>
+<div style="margin:0,auto;">
 <?php
-include('facecheck.php');
-include('dbconfig.php');
-
-if(isset($_POST["begin"]))
-{
-$begin=$_POST["begin"];
-$end=$_POST["end"];
-}
-else
-{
-$begin=date_format(date_create(),"Y-m-d");
-$end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
-}
-$sql = "SELECT * From Aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
-$result = $conn->query($sql);
+include 'calendar.php';
+ 
+$calendar = new Calendar();
+ 
+echo $calendar->show();
 ?>
-<form action="kalendarz_user.php" method="post">
-<label>Ustaw zakres dat</label>
-<input type="date" name="begin" required value="<?php echo $begin; ?>">
-<input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" value="Prześlij">
-</form>
-<table border="solid">
-<?php
-while($row = $result->fetch_assoc())
-{
-	echo '<tr><td>'.$row["nazwa"].'</td><td>'.$row["data"].'</td><td>'.$row["godzina"].'</td><td><form action="kalendarz_user_szczegoly.php" method="post"><input type="hidden" name="ID" value="'.$row["ID"].'"><input type="submit" value="Szczegóły"></form></td></tr>';
-}
-?>
+</div>
+<br>
+<table width="90%" id="lista_aktywnosci" style="margin:0 auto;">
 </table>
-<a href="main.php">Wróć</a>
+<script>
+update();
+update_month();
+</script>
 </body>
-</html>
+</html>  

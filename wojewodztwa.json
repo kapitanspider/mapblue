@@ -5,7 +5,7 @@
       "powiaty": [
         {
           "powiat": "bolesławiecki",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Bolesławiec",
             "gmina Bolesławiec",
@@ -17,6 +17,7 @@
         },
         {
           "powiat": "dzierżoniowski",
+		  "okreg":"2",
           "gminy": [
             "Bielawa",
             "Dzierżoniów",
@@ -29,7 +30,7 @@
         },
         {
           "powiat": "głogowski",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Głogów",
             "gmina Głogów",
@@ -41,6 +42,7 @@
         },
         {
           "powiat": "górowski",
+		  "okreg":"3",
           "gminy": [
             "gmina Góra",
             "gmina Jemielno",
@@ -50,7 +52,7 @@
         },
         {
           "powiat": "jaworski",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Jawor",
             "gmina Bolków",
@@ -62,6 +64,7 @@
         },
         {
           "powiat": "karkonoski",
+		  "okreg":"1",
           "gminy": [
             "Karpacz",
             "Kowary",
@@ -76,7 +79,7 @@
         },
         {
           "powiat": "kamiennogórski",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Kamienna Góra",
             "gmina Kamienna Góra",
@@ -86,6 +89,7 @@
         },
         {
           "powiat": "kłodzki",
+		  "okreg":"2",
           "gminy": [
             "Duszniki-Zdrój",
             "Kłodzko",
@@ -105,7 +109,7 @@
         },
         {
           "powiat": "legnicki",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Chojnów",
             "gmina Chojnów",
@@ -119,7 +123,7 @@
         },
         {
           "powiat": "lubański",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Lubań",
             "Świeradów-Zdrój",
@@ -132,7 +136,7 @@
         },
         {
           "powiat": "lubiński",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Lubin",
             "gmina Lubin",
@@ -142,7 +146,7 @@
         },
         {
           "powiat": "lwówecki",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "gmina Gryfów Śląski",
             "gmina Lubomierz",
@@ -153,6 +157,7 @@
         },
         {
           "powiat": "milicki",
+		  "okreg":"3",
           "gminy": [
             "gmina Cieszków",
             "gmina Krośnice",
@@ -161,6 +166,7 @@
         },
         {
           "powiat": "oleśnicki",
+		  "okreg":"3",
           "gminy": [
             "Oleśnica",
             "gmina Bierutów",
@@ -174,6 +180,7 @@
         },
         {
           "powiat": "oławski",
+		  "okreg":"3",
           "gminy": [
             "Oława",
             "gmina Domaniów",
@@ -183,7 +190,7 @@
         },
         {
           "powiat": "polkowicki",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "gmina Chocianów",
             "gmina Gaworzyce",
@@ -195,6 +202,7 @@
         },
         {
           "powiat": "strzeliński",
+		  "okreg":"3",
           "gminy": [
             "gmina Borów",
             "gmina Kondratowice",
@@ -205,6 +213,7 @@
         },
         {
           "powiat": "średzki",
+		  "okreg":"3",
           "gminy": [
             "gmina Kostomłoty",
             "gmina Malczyce",
@@ -215,6 +224,7 @@
         },
         {
           "powiat": "świdnicki",
+		  "okreg":"2",
           "gminy": [
             "Świdnica",
             "Świebodzice",
@@ -228,6 +238,7 @@
         },
         {
           "powiat": "trzebnicki",
+		  "okreg":"3",
           "gminy": [
             "gmina Oborniki Śląskie",
             "gmina Prusice",
@@ -239,6 +250,7 @@
         },
         {
           "powiat": "wałbrzyski",
+		  "okreg":"2",
           "gminy": [
             "Boguszów-Gorce",
             "Jedlina-Zdrój",
@@ -252,6 +264,7 @@
         },
         {
           "powiat": "wołowski",
+		  "okreg":"3",
           "gminy": [
             "gmina Brzeg Dolny",
             "gmina Wińsko",
@@ -260,6 +273,7 @@
         },
         {
           "powiat": "wrocławski",
+		  "okreg":"3",
           "gminy": [
             "gmina Czernica",
             "gmina Długołęka",
@@ -274,6 +288,7 @@
         },
         {
           "powiat": "ząbkowicki",
+		  "okreg":"2",
           "gminy": [
             "gmina Bardo",
             "gmina Ciepłowody",
@@ -286,7 +301,7 @@
         },
         {
           "powiat": "zgorzelecki",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Zawidów",
             "Zgorzelec",
@@ -299,7 +314,7 @@
         },
         {
           "powiat": "złotoryjski",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Wojcieszów",
             "Złotoryja",
@@ -311,26 +326,28 @@
         },
         {
           "powiat": "Jelenia Góra",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Jelenia Góra"
           ]
         },
         {
           "powiat": "Legnica",
-          "okreg": 1,
+		  "okreg":"1",
           "gminy": [
             "Legnica"
           ]
         },
         {
           "powiat": "Wrocław",
+		  "okreg":"3",
           "gminy": [
             "Wrocław"
           ]
         },
         {
           "powiat": "Wałbrzych",
+		  "okreg":"2",
           "gminy": [
             "Wałbrzych"
           ]
@@ -342,6 +359,7 @@
       "powiaty": [
         {
           "powiat": "aleksandrowski",
+		  "okreg":"5",
           "gminy": [
             "Aleksandrów Kujawski",
             "Ciechocinek",
@@ -356,6 +374,7 @@
         },
         {
           "powiat": "brodnicki",
+		  "okreg":"5",
           "gminy": [
             "Brodnica",
             "gmina Bobrowo",
@@ -371,6 +390,7 @@
         },
         {
           "powiat": "bydgoski",
+		  "okreg":"4",
           "gminy": [
             "gmina Białe Błota",
             "gmina Dąbrowa Chełmińska",
@@ -384,6 +404,7 @@
         },
         {
           "powiat": "chełmiński",
+		  "okreg":"5",
           "gminy": [
             "Chełmno",
             "gmina Chełmno",
@@ -396,6 +417,7 @@
         },
         {
           "powiat": "golubsko-dobrzyński",
+		  "okreg":"5",
           "gminy": [
             "Golub-Dobrzyń",
             "gmina Ciechocin",
@@ -407,6 +429,7 @@
         },
         {
           "powiat": "grudziądzki",
+		  "okreg":"5",
           "gminy": [
             "gmina Grudziądz",
             "gmina Gruta",
@@ -418,6 +441,7 @@
         },
         {
           "powiat": "inowrocławski",
+		  "okreg":"4",
           "gminy": [
             "Inowrocław",
             "gmina Dąbrowa Biskupia",
@@ -432,6 +456,7 @@
         },
         {
           "powiat": "lipnowski",
+		  "okreg":"5",
           "gminy": [
             "Lipno",
             "gmina Bobrowniki",
@@ -446,6 +471,7 @@
         },
         {
           "powiat": "mogileński",
+		  "okreg":"4",
           "gminy": [
             "gmina Dąbrowa",
             "gmina Jeziora Wielkie",
@@ -455,6 +481,7 @@
         },
         {
           "powiat": "nakielski",
+		  "okreg":"4",
           "gminy": [
             "gmina Kcynia",
             "gmina Mrocza",
@@ -465,6 +492,7 @@
         },
         {
           "powiat": "radziejowski",
+		  "okreg":"5",
           "gminy": [
             "Radziejów",
             "gmina Bytoń",
@@ -477,6 +505,7 @@
         },
         {
           "powiat": "rypiński",
+		  "okreg":"5",
           "gminy": [
             "Rypin",
             "gmina Brzuze",
@@ -488,6 +517,7 @@
         },
         {
           "powiat": "sępoleński",
+		  "okreg":"4",
           "gminy": [
             "gmina Kamień Krajeński",
             "gmina Sępólno Krajeńskie",
@@ -497,6 +527,7 @@
         },
         {
           "powiat": "świecki",
+		  "okreg":"4",
           "gminy": [
             "gmina Bukowiec",
             "gmina Dragacz",
@@ -513,6 +544,7 @@
         },
         {
           "powiat": "toruński",
+		  "okreg":"5",
           "gminy": [
             "Chełmża",
             "gmina Chełmża",
@@ -527,6 +559,7 @@
         },
         {
           "powiat": "tucholski",
+		  "okreg":"4",
           "gminy": [
             "gmina Cekcyn",
             "gmina Gostycyn",
@@ -538,6 +571,7 @@
         },
         {
           "powiat": "wąbrzeski",
+		  "okreg":"5",
           "gminy": [
             "Wąbrzeźno",
             "gmina Dębowa Łąka",
@@ -548,6 +582,7 @@
         },
         {
           "powiat": "włocławski",
+		  "okreg":"5",
           "gminy": [
             "Kowal",
             "gmina Baruchowo",
@@ -566,6 +601,7 @@
         },
         {
           "powiat": "żniński",
+		  "okreg":"4",
           "gminy": [
             "gmina Barcin",
             "gmina Gąsawa",
@@ -577,24 +613,28 @@
         },
         {
           "powiat": "Bydgoszcz",
+		  "okreg":"4",
           "gminy": [
             "Bydgoszcz"
           ]
         },
         {
           "powiat": "Grudziądz",
+		  "okreg":"5",
           "gminy": [
             "Grudziądz"
           ]
         },
         {
           "powiat": "Toruń",
+		  "okreg":"5",
           "gminy": [
             "Toruń"
           ]
         },
         {
           "powiat": "Włocławek",
+		  "okreg":"5",
           "gminy": [
             "Włocławek"
           ]
@@ -606,6 +646,7 @@
       "powiaty": [
         {
           "powiat": "bialski",
+		  "okreg":"7",
           "gminy": [
             "Międzyrzec Podlaski",
             "Terespol",
@@ -630,6 +671,7 @@
         },
         {
           "powiat": "biłgorajski",
+		  "okreg":"7",
           "gminy": [
             "Biłgoraj",
             "gmina Aleksandrów",
@@ -649,6 +691,7 @@
         },
         {
           "powiat": "chełmski",
+		  "okreg":"7",
           "gminy": [
             "Rejowiec Fabryczny",
             "gmina Białopole",
@@ -669,6 +712,7 @@
         },
         {
           "powiat": "hrubieszowski",
+		  "okreg":"7",
           "gminy": [
             "Hrubieszów",
             "gmina Dołhobyczów",
@@ -682,6 +726,7 @@
         },
         {
           "powiat": "janowski",
+		  "okreg":"6",
           "gminy": [
             "gmina Batorz",
             "gmina Chrzanów",
@@ -694,6 +739,7 @@
         },
         {
           "powiat": "krasnostawski",
+		  "okreg":"7",
           "gminy": [
             "Krasnystaw",
             "gmina Fajsławice",
@@ -709,6 +755,7 @@
         },
         {
           "powiat": "kraśnicki",
+		  "okreg":"6",
           "gminy": [
             "Kraśnik",
             "gmina Annopol",
@@ -724,6 +771,7 @@
         },
         {
           "powiat": "lubartowski",
+		  "okreg":"6",
           "gminy": [
             "Lubartów",
             "gmina Abramów",
@@ -742,6 +790,7 @@
         },
         {
           "powiat": "lubelski",
+		  "okreg":"6",
           "gminy": [
             "gmina Bełżyce",
             "gmina Borzechów",
@@ -763,6 +812,7 @@
         },
         {
           "powiat": "łęczyński",
+		  "okreg":"6",
           "gminy": [
             "gmina Cyców",
             "gmina Ludwin",
@@ -774,6 +824,7 @@
         },
         {
           "powiat": "łukowski",
+		  "okreg":"6",
           "gminy": [
             "Łuków",
             "Stoczek Łukowski",
@@ -790,6 +841,7 @@
         },
         {
           "powiat": "opolski",
+		  "okreg":"6",
           "gminy": [
             "gmina Chodel",
             "gmina Józefów nad Wisłą",
@@ -802,6 +854,7 @@
         },
         {
           "powiat": "parczewski",
+		  "okreg":"7",
           "gminy": [
             "gmina Dębowa Kłoda",
             "gmina Jabłoń",
@@ -814,6 +867,7 @@
         },
         {
           "powiat": "puławski",
+		  "okreg":"6",
           "gminy": [
             "Puławy",
             "gmina Baranów",
@@ -830,6 +884,7 @@
         },
         {
           "powiat": "radzyński",
+		  "okreg":"7",
           "gminy": [
             "Radzyń Podlaski",
             "gmina Borki",
@@ -843,6 +898,7 @@
         },
         {
           "powiat": "rycki",
+		  "okreg":"6",
           "gminy": [
             "Dęblin",
             "gmina Kłoczew",
@@ -854,6 +910,7 @@
         },
         {
           "powiat": "świdnicki",
+		  "okreg":"6",
           "gminy": [
             "Świdnik",
             "gmina Mełgiew",
@@ -864,6 +921,7 @@
         },
         {
           "powiat": "tomaszowski",
+		  "okreg":"7",
           "gminy": [
             "Tomaszów Lubelski",
             "gmina Bełżec",
@@ -882,6 +940,7 @@
         },
         {
           "powiat": "włodawski",
+		  "okreg":"7",
           "gminy": [
             "Włodawa",
             "gmina Hanna",
@@ -895,6 +954,7 @@
         },
         {
           "powiat": "zamojski",
+		  "okreg":"7",
           "gminy": [
             "gmina Adamów",
             "gmina Grabowiec",
@@ -915,24 +975,28 @@
         },
         {
           "powiat": "Biała Podlaska",
+		  "okreg":"7",
           "gminy": [
             "Biała Podlaska"
           ]
         },
         {
           "powiat": "Chełm",
+		  "okreg":"7",
           "gminy": [
             "Chełm"
           ]
         },
         {
           "powiat": "Lublin",
+		  "okreg":"6",
           "gminy": [
             "Lublin"
           ]
         },
         {
           "powiat": "Zamość",
+		  "okreg":"7",
           "gminy": [
             "Zamość"
           ]
@@ -944,6 +1008,7 @@
       "powiaty": [
         {
           "powiat": "gorzowski",
+		  "okreg":"8",
           "gminy": [
             "Kostrzyn nad Odrą",
             "gmina Bogdaniec",
@@ -956,6 +1021,7 @@
         },
         {
           "powiat": "krośnieński",
+		  "okreg":"8",
           "gminy": [
             "Gubin",
             "gmina Bobrowice",
@@ -968,6 +1034,7 @@
         },
         {
           "powiat": "międzyrzecki",
+		  "okreg":"8",
           "gminy": [
             "gmina Bledzew",
             "gmina Międzyrzecz",
@@ -979,6 +1046,7 @@
         },
         {
           "powiat": "nowosolski",
+		  "okreg":"8",
           "gminy": [
             "Nowa Sól",
             "gmina Bytom Odrzański",
@@ -992,6 +1060,7 @@
         },
         {
           "powiat": "słubicki",
+		  "okreg":"8",
           "gminy": [
             "gmina Cybinka",
             "gmina Górzyca",
@@ -1002,6 +1071,7 @@
         },
         {
           "powiat": "strzelecko-drezdenecki",
+		  "okreg":"8",
           "gminy": [
             "gmina Dobiegniew",
             "gmina Drezdenko",
@@ -1012,6 +1082,7 @@
         },
         {
           "powiat": "sulęciński",
+		  "okreg":"8",
           "gminy": [
             "gmina Krzeszyce",
             "gmina Lubniewice",
@@ -1022,6 +1093,7 @@
         },
         {
           "powiat": "świebodziński",
+		  "okreg":"8",
           "gminy": [
             "gmina Lubrza",
             "gmina Łagów",
@@ -1033,6 +1105,7 @@
         },
         {
           "powiat": "zielonogórski",
+		  "okreg":"8",
           "gminy": [
             "gmina Babimost",
             "gmina Bojadła",
@@ -1047,6 +1120,7 @@
         },
         {
           "powiat": "żagański",
+		  "okreg":"8",
           "gminy": [
             "Gozdnica",
             "Żagań",
@@ -1061,6 +1135,7 @@
         },
         {
           "powiat": "żarski",
+		  "okreg":"8",
           "gminy": [
             "Łęknica",
             "Żary",
@@ -1076,6 +1151,7 @@
         },
         {
           "powiat": "wschowski",
+		  "okreg":"8",
           "gminy": [
             "gmina Sława",
             "gmina Szlichtyngowa",
@@ -1084,12 +1160,14 @@
         },
         {
           "powiat": "Gorzów Wielkopolski",
+		  "okreg":"8",
           "gminy": [
             "Gorzów Wielkopolski"
           ]
         },
         {
           "powiat": "Zielona Góra",
+		  "okreg":"8",
           "gminy": [
             "Zielona Góra"
           ]
@@ -1101,6 +1179,7 @@
       "powiaty": [
         {
           "powiat": "bełchatowski",
+		  "okreg":"10",
           "gminy": [
             "Bełchatów",
             "gmina Bełchatów",
@@ -1114,6 +1193,7 @@
         },
         {
           "powiat": "kutnowski",
+		  "okreg":"11",
           "gminy": [
             "Kutno",
             "gmina Bedlno",
@@ -1130,6 +1210,7 @@
         },
         {
           "powiat": "łaski",
+		  "okreg":"11",
           "gminy": [
             "gmina Buczek",
             "gmina Łask",
@@ -1140,6 +1221,7 @@
         },
         {
           "powiat": "łęczycki",
+		  "okreg":"11",
           "gminy": [
             "Łęczyca",
             "gmina Daszyna",
@@ -1153,6 +1235,7 @@
         },
         {
           "powiat": "łowicki",
+		  "okreg":"11",
           "gminy": [
             "Łowicz",
             "gmina Bielawy",
@@ -1168,6 +1251,7 @@
         },
         {
           "powiat": "łódzki wschodni",
+		  "okreg":"9",
           "gminy": [
             "gmina Andrespol",
             "gmina Brójce",
@@ -1179,6 +1263,7 @@
         },
         {
           "powiat": "opoczyński",
+		  "okreg":"10",
           "gminy": [
             "gmina Białaczów",
             "gmina Drzewica",
@@ -1192,6 +1277,7 @@
         },
         {
           "powiat": "pabianicki",
+		  "okreg":"11",
           "gminy": [
             "Konstantynów Łódzki",
             "Pabianice",
@@ -1204,6 +1290,7 @@
         },
         {
           "powiat": "pajęczański",
+		  "okreg":"11",
           "gminy": [
             "gmina Działoszyn",
             "gmina Kiełczygłów",
@@ -1217,6 +1304,7 @@
         },
         {
           "powiat": "piotrkowski",
+		  "okreg":"10",
           "gminy": [
             "gmina Aleksandrów",
             "gmina Czarnocin",
@@ -1233,6 +1321,7 @@
         },
         {
           "powiat": "poddębicki",
+		  "okreg":"11",
           "gminy": [
             "gmina Dalików",
             "gmina Pęczniew",
@@ -1244,6 +1333,7 @@
         },
         {
           "powiat": "radomszczański",
+		  "okreg":"10",
           "gminy": [
             "Radomsko",
             "gmina Dobryszyce",
@@ -1263,6 +1353,7 @@
         },
         {
           "powiat": "rawski",
+		  "okreg":"10",
           "gminy": [
             "Rawa Mazowiecka",
             "gmina Biała Rawska",
@@ -1274,6 +1365,7 @@
         },
         {
           "powiat": "sieradzki",
+		  "okreg":"11",
           "gminy": [
             "Sieradz",
             "gmina Błaszki",
@@ -1290,6 +1382,7 @@
         },
         {
           "powiat": "skierniewicki",
+		  "okreg":"10",
           "gminy": [
             "gmina Bolimów",
             "gmina Głuchów",
@@ -1304,6 +1397,7 @@
         },
         {
           "powiat": "tomaszowski",
+		  "okreg":"10",
           "gminy": [
             "Tomaszów Mazowiecki",
             "gmina Będków",
@@ -1320,6 +1414,7 @@
         },
         {
           "powiat": "wieluński",
+		  "okreg":"11",
           "gminy": [
             "gmina Biała",
             "gmina Czarnożyły",
@@ -1335,6 +1430,7 @@
         },
         {
           "powiat": "wieruszowski",
+		  "okreg":"11",
           "gminy": [
             "gmina Bolesławiec",
             "gmina Czastary",
@@ -1347,6 +1443,7 @@
         },
         {
           "powiat": "zduńskowolski",
+		  "okreg":"11",
           "gminy": [
             "Zduńska Wola",
             "gmina Szadek",
@@ -1356,6 +1453,7 @@
         },
         {
           "powiat": "zgierski",
+		  "okreg":"11",
           "gminy": [
             "Głowno",
             "Ozorków",
@@ -1370,6 +1468,7 @@
         },
         {
           "powiat": "brzeziński",
+		  "okreg":"9",
           "gminy": [
             "Brzeziny",
             "gmina Brzeziny",
@@ -1380,18 +1479,21 @@
         },
         {
           "powiat": "Łódź",
+		  "okreg":"9",
           "gminy": [
             "Łódź"
           ]
         },
         {
           "powiat": "Piotrków Trybunalski",
+		  "okreg":"10",
           "gminy": [
             "Piotrków Trybunalski"
           ]
         },
         {
           "powiat": "Skierniewice",
+		  "okreg":"10",
           "gminy": [
             "Skierniewice"
           ]
@@ -1403,6 +1505,7 @@
       "powiaty": [
         {
           "powiat": "bocheński",
+		  "okreg":"15",
           "gminy": [
             "Bochnia",
             "gmina Bochnia",
@@ -1417,6 +1520,7 @@
         },
         {
           "powiat": "brzeski",
+		  "okreg":"15",
           "gminy": [
             "gmina Borzęcin",
             "gmina Brzesko",
@@ -1429,6 +1533,7 @@
         },
         {
           "powiat": "chrzanowski",
+		  "okreg":"12",
           "gminy": [
             "gmina Alwernia",
             "gmina Babice",
@@ -1439,6 +1544,7 @@
         },
         {
           "powiat": "dąbrowski",
+		  "okreg":"15",
           "gminy": [
             "gmina Bolesław",
             "gmina Dąbrowa Tarnowska",
@@ -1451,6 +1557,7 @@
         },
         {
           "powiat": "gorlicki",
+		  "okreg":"14",
           "gminy": [
             "Gorlice",
             "gmina Biecz",
@@ -1466,6 +1573,7 @@
         },
         {
           "powiat": "krakowski",
+		  "okreg":"13",
           "gminy": [
             "gmina Czernichów",
             "gmina Igołomia-Wawrzeńczyce",
@@ -1488,6 +1596,7 @@
         },
         {
           "powiat": "limanowski",
+		  "okreg":"14",
           "gminy": [
             "Limanowa",
             "Mszana Dolna",
@@ -1505,6 +1614,7 @@
         },
         {
           "powiat": "miechowski",
+		  "okreg":"13",
           "gminy": [
             "gmina Charsznica",
             "gmina Gołcza",
@@ -1517,6 +1627,7 @@
         },
         {
           "powiat": "myślenicki",
+		  "okreg":"12",
           "gminy": [
             "gmina Dobczyce",
             "gmina Lubień",
@@ -1531,6 +1642,7 @@
         },
         {
           "powiat": "nowosądecki",
+		  "okreg":"14",
           "gminy": [
             "Grybów",
             "gmina Chełmiec",
@@ -1552,6 +1664,7 @@
         },
         {
           "powiat": "nowotarski",
+		  "okreg":"14",
           "gminy": [
             "Nowy Targ",
             "gmina Szczawnica",
@@ -1571,6 +1684,7 @@
         },
         {
           "powiat": "olkuski",
+		  "okreg":"13",
           "gminy": [
             "Bukowno",
             "gmina Bolesław",
@@ -1582,6 +1696,7 @@
         },
         {
           "powiat": "oświęcimski",
+		  "okreg":"12",
           "gminy": [
             "Oświęcim",
             "gmina Brzeszcze",
@@ -1596,6 +1711,7 @@
         },
         {
           "powiat": "proszowicki",
+		  "okreg":"15",
           "gminy": [
             "gmina Koniusza",
             "gmina Koszyce",
@@ -1607,6 +1723,7 @@
         },
         {
           "powiat": "suski",
+		  "okreg":"12",
           "gminy": [
             "Jordanów",
             "Sucha Beskidzka",
@@ -1621,6 +1738,7 @@
         },
         {
           "powiat": "tarnowski",
+		  "okreg":"15",
           "gminy": [
             "gmina Ciężkowice",
             "gmina Gromnik",
@@ -1642,6 +1760,7 @@
         },
         {
           "powiat": "tatrzański",
+		  "okreg":"14",
           "gminy": [
             "Zakopane",
             "gmina Biały Dunajec",
@@ -1652,6 +1771,7 @@
         },
         {
           "powiat": "wadowicki",
+		  "okreg":"12",
           "gminy": [
             "gmina Andrychów",
             "gmina Brzeźnica",
@@ -1667,6 +1787,7 @@
         },
         {
           "powiat": "wielicki",
+		  "okreg":"15",
           "gminy": [
             "gmina Biskupice",
             "gmina Gdów",
@@ -1677,18 +1798,21 @@
         },
         {
           "powiat": "Kraków",
+		  "okreg":"13",
           "gminy": [
             "Kraków"
           ]
         },
         {
           "powiat": "Nowy Sącz",
+		  "okreg":"14",
           "gminy": [
             "Nowy Sącz"
           ]
         },
         {
           "powiat": "Tarnów",
+		  "okreg":"15",
           "gminy": [
             "Tarnów"
           ]
@@ -1700,6 +1824,7 @@
       "powiaty": [
         {
           "powiat": "białobrzeski",
+		  "okreg":"17",
           "gminy": [
             "gmina Białobrzegi",
             "gmina Promna",
@@ -1711,6 +1836,7 @@
         },
         {
           "powiat": "ciechanowski",
+		  "okreg":"16",
           "gminy": [
             "Ciechanów",
             "gmina Ciechanów",
@@ -1725,6 +1851,7 @@
         },
         {
           "powiat": "garwoliński",
+		  "okreg":"18",
           "gminy": [
             "Garwolin",
             "Łaskarzew",
@@ -1744,6 +1871,7 @@
         },
         {
           "powiat": "gostyniński",
+		  "okreg":"16",
           "gminy": [
             "Gostynin",
             "gmina Gostynin",
@@ -1754,6 +1882,7 @@
         },
         {
           "powiat": "grodziski",
+		  "okreg":"20",
           "gminy": [
             "Milanówek",
             "Podkowa Leśna",
@@ -1765,6 +1894,7 @@
         },
         {
           "powiat": "grójecki",
+		  "okreg":"17",
           "gminy": [
             "gmina Belsk Duży",
             "gmina Błędów",
@@ -1780,6 +1910,7 @@
         },
         {
           "powiat": "kozienicki",
+		  "okreg":"17",
           "gminy": [
             "gmina Garbatka-Letnisko",
             "gmina Głowaczów",
@@ -1792,6 +1923,7 @@
         },
         {
           "powiat": "legionowski",
+		  "okreg":"20",
           "gminy": [
             "Legionowo",
             "gmina Jabłonna",
@@ -1802,6 +1934,7 @@
         },
         {
           "powiat": "lipski",
+		  "okreg":"17",
           "gminy": [
             "gmina Chotcza",
             "gmina Ciepielów",
@@ -1813,6 +1946,7 @@
         },
         {
           "powiat": "łosicki",
+		  "okreg":"18",
           "gminy": [
             "gmina Huszlew",
             "gmina Łosice",
@@ -1824,6 +1958,7 @@
         },
         {
           "powiat": "makowski",
+		  "okreg":"18",
           "gminy": [
             "Maków Mazowiecki",
             "gmina Czerwonka",
@@ -1839,6 +1974,7 @@
         },
         {
           "powiat": "miński",
+		  "okreg":"18",
           "gminy": [
             "Mińsk Mazowiecki",
             "gmina Cegłów",
@@ -1857,6 +1993,7 @@
         },
         {
           "powiat": "mławski",
+		  "okreg":"16",
           "gminy": [
             "Mława",
             "gmina Dzierzgowo",
@@ -1872,6 +2009,7 @@
         },
         {
           "powiat": "nowodworski",
+		  "okreg":"20",
           "gminy": [
             "Nowy Dwór Mazowiecki",
             "gmina Czosnów",
@@ -1883,6 +2021,7 @@
         },
         {
           "powiat": "ostrołęcki",
+		  "okreg":"18",
           "gminy": [
             "gmina Baranowo",
             "gmina Czarnia",
@@ -1899,6 +2038,7 @@
         },
         {
           "powiat": "ostrowski",
+		  "okreg":"18",
           "gminy": [
             "Ostrów Mazowiecka",
             "gmina Andrzejewo",
@@ -1915,6 +2055,7 @@
         },
         {
           "powiat": "otwocki",
+		  "okreg":"20",
           "gminy": [
             "Józefów",
             "Otwock",
@@ -1928,6 +2069,7 @@
         },
         {
           "powiat": "piaseczyński",
+		  "okreg":"20",
           "gminy": [
             "gmina Góra Kalwaria",
             "gmina Konstancin-Jeziorna",
@@ -1939,6 +2081,7 @@
         },
         {
           "powiat": "płocki",
+		  "okreg":"16",
           "gminy": [
             "gmina Bielsk",
             "gmina Bodzanów",
@@ -1959,6 +2102,7 @@
         },
         {
           "powiat": "płoński",
+		  "okreg":"16",
           "gminy": [
             "Płońsk",
             "Raciąż",
@@ -1976,6 +2120,7 @@
         },
         {
           "powiat": "pruszkowski",
+		  "okreg":"20",
           "gminy": [
             "Piastów",
             "Pruszków",
@@ -1987,6 +2132,7 @@
         },
         {
           "powiat": "przasnyski",
+		  "okreg":"16",
           "gminy": [
             "Przasnysz",
             "gmina Chorzele",
@@ -1999,6 +2145,7 @@
         },
         {
           "powiat": "przysuski",
+		  "okreg":"17",
           "gminy": [
             "gmina Borkowice",
             "gmina Gielniów",
@@ -2012,6 +2159,7 @@
         },
         {
           "powiat": "pułtuski",
+		  "okreg":"18",
           "gminy": [
             "gmina Gzy",
             "gmina Obryte",
@@ -2024,6 +2172,7 @@
         },
         {
           "powiat": "radomski",
+		  "okreg":"17",
           "gminy": [
             "Pionki",
             "gmina Gózd",
@@ -2042,6 +2191,7 @@
         },
         {
           "powiat": "siedlecki",
+		  "okreg":"18",
           "gminy": [
             "gmina Domanice",
             "gmina Korczew",
@@ -2060,6 +2210,7 @@
         },
         {
           "powiat": "sierpecki",
+		  "okreg":"16",
           "gminy": [
             "Sierpc",
             "gmina Gozdowo",
@@ -2072,6 +2223,7 @@
         },
         {
           "powiat": "sochaczewski",
+		  "okreg":"16",
           "gminy": [
             "Sochaczew",
             "gmina Brochów",
@@ -2085,6 +2237,7 @@
         },
         {
           "powiat": "sokołowski",
+		  "okreg":"18",
           "gminy": [
             "Sokołów Podlaski",
             "gmina Bielany",
@@ -2099,6 +2252,7 @@
         },
         {
           "powiat": "szydłowiecki",
+		  "okreg":"17",
           "gminy": [
             "gmina Chlewiska",
             "gmina Jastrząb",
@@ -2109,6 +2263,7 @@
         },
         {
           "powiat": "warszawski zachodni",
+		  "okreg":"20",
           "gminy": [
             "gmina Błonie",
             "gmina Izabelin",
@@ -2121,6 +2276,7 @@
         },
         {
           "powiat": "węgrowski",
+		  "okreg":"18",
           "gminy": [
             "Węgrów",
             "gmina Grębków",
@@ -2135,6 +2291,7 @@
         },
         {
           "powiat": "wołomiński",
+		  "okreg":"20",
           "gminy": [
             "Kobyłka",
             "Marki",
@@ -2152,6 +2309,7 @@
         },
         {
           "powiat": "wyszkowski",
+		  "okreg":"18",
           "gminy": [
             "gmina Brańszczyk",
             "gmina Długosiodło",
@@ -2163,6 +2321,7 @@
         },
         {
           "powiat": "zwoleński",
+		  "okreg":"17",
           "gminy": [
             "gmina Kazanów",
             "gmina Policzna",
@@ -2173,6 +2332,7 @@
         },
         {
           "powiat": "żuromiński",
+		  "okreg":"16",
           "gminy": [
             "gmina Bieżuń",
             "gmina Kuczbork-Osada",
@@ -2184,6 +2344,7 @@
         },
         {
           "powiat": "żyrardowski",
+		  "okreg":"16",
           "gminy": [
             "Żyrardów",
             "gmina Mszczonów",
@@ -2194,30 +2355,35 @@
         },
         {
           "powiat": "Ostrołęka",
+		  "okreg":"18",
           "gminy": [
             "Ostrołęka"
           ]
         },
         {
           "powiat": "Płock",
+		  "okreg":"16",
           "gminy": [
             "Płock"
           ]
         },
         {
           "powiat": "Radom",
+		  "okreg":"17",
           "gminy": [
             "Radom"
           ]
         },
         {
           "powiat": "Siedlce",
+		  "okreg":"18",
           "gminy": [
             "Siedlce"
           ]
         },
         {
           "powiat": "Warszawa",
+		  "okreg":"19",
           "gminy": [
             "Warszawa"
           ]
@@ -2229,6 +2395,7 @@
       "powiaty": [
         {
           "powiat": "brzeski",
+		  "okreg":"21",
           "gminy": [
             "Brzeg",
             "gmina Skarbimierz",
@@ -2240,6 +2407,7 @@
         },
         {
           "powiat": "głubczycki",
+		  "okreg":"21",
           "gminy": [
             "gmina Baborów",
             "gmina Branice",
@@ -2249,6 +2417,7 @@
         },
         {
           "powiat": "kędzierzyńsko-kozielski",
+		  "okreg":"21",
           "gminy": [
             "Kędzierzyn-Koźle",
             "gmina Bierawa",
@@ -2260,6 +2429,7 @@
         },
         {
           "powiat": "kluczborski",
+		  "okreg":"21",
           "gminy": [
             "gmina Byczyna",
             "gmina Kluczbork",
@@ -2269,6 +2439,7 @@
         },
         {
           "powiat": "krapkowicki",
+		  "okreg":"21",
           "gminy": [
             "gmina Gogolin",
             "gmina Krapkowice",
@@ -2279,6 +2450,7 @@
         },
         {
           "powiat": "namysłowski",
+		  "okreg":"21",
           "gminy": [
             "gmina Domaszowice",
             "gmina Namysłów",
@@ -2289,6 +2461,7 @@
         },
         {
           "powiat": "nyski",
+		  "okreg":"21",
           "gminy": [
             "gmina Głuchołazy",
             "gmina Kamiennik",
@@ -2303,6 +2476,7 @@
         },
         {
           "powiat": "oleski",
+		  "okreg":"21",
           "gminy": [
             "gmina Dobrodzień",
             "gmina Gorzów Śląski",
@@ -2315,6 +2489,7 @@
         },
         {
           "powiat": "opolski",
+		  "okreg":"21",
           "gminy": [
             "gmina Chrząstowice",
             "gmina Dąbrowa",
@@ -2333,6 +2508,7 @@
         },
         {
           "powiat": "prudnicki",
+		  "okreg":"21",
           "gminy": [
             "gmina Biała",
             "gmina Głogówek",
@@ -2342,6 +2518,7 @@
         },
         {
           "powiat": "strzelecki",
+		  "okreg":"21",
           "gminy": [
             "gmina Izbicko",
             "gmina Jemielnica",
@@ -2354,6 +2531,7 @@
         },
         {
           "powiat": "Opole",
+		  "okreg":"21",
           "gminy": [
             "Opole"
           ]
@@ -2365,6 +2543,7 @@
       "powiaty": [
         {
           "powiat": "bieszczadzki",
+		  "okreg":"22",
           "gminy": [
             "gmina Czarna",
             "gmina Lutowiska",
@@ -2373,6 +2552,7 @@
         },
         {
           "powiat": "brzozowski",
+		  "okreg":"22",
           "gminy": [
             "gmina Brzozów",
             "gmina Domaradz",
@@ -2384,6 +2564,7 @@
         },
         {
           "powiat": "dębicki",
+		  "okreg":"23",
           "gminy": [
             "Dębica",
             "gmina Brzostek",
@@ -2396,6 +2577,7 @@
         },
         {
           "powiat": "jarosławski",
+		  "okreg":"22",
           "gminy": [
             "Jarosław",
             "Radymno",
@@ -2412,6 +2594,7 @@
         },
         {
           "powiat": "jasielski",
+		  "okreg":"22",
           "gminy": [
             "Jasło",
             "gmina Brzyska",
@@ -2427,6 +2610,7 @@
         },
         {
           "powiat": "kolbuszowski",
+		  "okreg":"23",
           "gminy": [
             "gmina Cmolas",
             "gmina Kolbuszowa",
@@ -2438,6 +2622,7 @@
         },
         {
           "powiat": "krośnieński",
+		  "okreg":"22",
           "gminy": [
             "gmina Chorkówka",
             "gmina Dukla",
@@ -2453,6 +2638,7 @@
         },
         {
           "powiat": "leżajski",
+		  "okreg":"23",
           "gminy": [
             "Leżajsk",
             "gmina Grodzisko Dolne",
@@ -2463,6 +2649,7 @@
         },
         {
           "powiat": "lubaczowski",
+		  "okreg":"22",
           "gminy": [
             "Lubaczów",
             "gmina Cieszanów",
@@ -2476,6 +2663,7 @@
         },
         {
           "powiat": "łańcucki",
+		  "okreg":"23",
           "gminy": [
             "Łańcut",
             "gmina Białobrzegi",
@@ -2488,6 +2676,7 @@
         },
         {
           "powiat": "mielecki",
+		  "okreg":"23",
           "gminy": [
             "Mielec",
             "gmina Borowa",
@@ -2503,6 +2692,7 @@
         },
         {
           "powiat": "niżański",
+		  "okreg":"23",
           "gminy": [
             "gmina Harasiuki",
             "gmina Jarocin",
@@ -2515,6 +2705,7 @@
         },
         {
           "powiat": "przemyski",
+		  "okreg":"22",
           "gminy": [
             "gmina Bircza",
             "gmina Dubiecko",
@@ -2530,6 +2721,7 @@
         },
         {
           "powiat": "przeworski",
+		  "okreg":"22",
           "gminy": [
             "Przeworsk",
             "gmina Adamówka",
@@ -2544,6 +2736,7 @@
         },
         {
           "powiat": "ropczycko-sędziszowski",
+		  "okreg":"23",
           "gminy": [
             "gmina Iwierzyce",
             "gmina Ostrów",
@@ -2554,6 +2747,7 @@
         },
         {
           "powiat": "rzeszowski",
+		  "okreg":"23",
           "gminy": [
             "Dynów",
             "gmina Błażowa",
@@ -2573,6 +2767,7 @@
         },
         {
           "powiat": "sanocki",
+		  "okreg":"22",
           "gminy": [
             "Sanok",
             "gmina Besko",
@@ -2586,6 +2781,7 @@
         },
         {
           "powiat": "stalowowolski",
+		  "okreg":"23",
           "gminy": [
             "Stalowa Wola",
             "gmina Bojanów",
@@ -2597,6 +2793,7 @@
         },
         {
           "powiat": "strzyżowski",
+		  "okreg":"23",
           "gminy": [
             "gmina Czudec",
             "gmina Frysztak",
@@ -2607,6 +2804,7 @@
         },
         {
           "powiat": "tarnobrzeski",
+		  "okreg":"23",
           "gminy": [
             "gmina Baranów Sandomierski",
             "gmina Gorzyce",
@@ -2616,6 +2814,7 @@
         },
         {
           "powiat": "leski",
+		  "okreg":"22",
           "gminy": [
             "gmina Baligród",
             "gmina Cisna",
@@ -2626,24 +2825,28 @@
         },
         {
           "powiat": "Krosno",
+		  "okreg":"22",
           "gminy": [
             "Krosno"
           ]
         },
         {
           "powiat": "Przemyśl",
+		  "okreg":"22",
           "gminy": [
             "Przemyśl"
           ]
         },
         {
           "powiat": "Rzeszów",
+		  "okreg":"23",
           "gminy": [
             "Rzeszów"
           ]
         },
         {
           "powiat": "Tarnobrzeg",
+		  "okreg":"23",
           "gminy": [
             "Tarnobrzeg"
           ]
@@ -2655,6 +2858,7 @@
       "powiaty": [
         {
           "powiat": "augustowski",
+		  "okreg":"24",
           "gminy": [
             "Augustów",
             "gmina Augustów",
@@ -2667,6 +2871,7 @@
         },
         {
           "powiat": "białostocki",
+		  "okreg":"24",
           "gminy": [
             "gmina Choroszcz",
             "gmina Czarna Białostocka",
@@ -2687,6 +2892,7 @@
         },
         {
           "powiat": "bielski",
+		  "okreg":"24",
           "gminy": [
             "Bielsk Podlaski",
             "Brańsk",
@@ -2700,6 +2906,7 @@
         },
         {
           "powiat": "grajewski",
+		  "okreg":"24",
           "gminy": [
             "Grajewo",
             "gmina Grajewo",
@@ -2711,6 +2918,7 @@
         },
         {
           "powiat": "hajnowski",
+		  "okreg":"24",
           "gminy": [
             "Hajnówka",
             "gmina Białowieża",
@@ -2725,6 +2933,7 @@
         },
         {
           "powiat": "kolneński",
+		  "okreg":"24",
           "gminy": [
             "Kolno",
             "gmina Grabowo",
@@ -2736,6 +2945,7 @@
         },
         {
           "powiat": "łomżyński",
+		  "okreg":"24",
           "gminy": [
             "gmina Jedwabne",
             "gmina Łomża",
@@ -2750,6 +2960,7 @@
         },
         {
           "powiat": "moniecki",
+		  "okreg":"24",
           "gminy": [
             "gmina Goniądz",
             "gmina Jasionówka",
@@ -2762,6 +2973,7 @@
         },
         {
           "powiat": "sejneński",
+		  "okreg":"24",
           "gminy": [
             "Sejny",
             "gmina Giby",
@@ -2772,6 +2984,7 @@
         },
         {
           "powiat": "siemiatycki",
+		  "okreg":"24",
           "gminy": [
             "Siemiatycze",
             "gmina Drohiczyn",
@@ -2786,6 +2999,7 @@
         },
         {
           "powiat": "sokólski",
+		  "okreg":"24",
           "gminy": [
             "gmina Dąbrowa Białostocka",
             "gmina Janów",
@@ -2801,6 +3015,7 @@
         },
         {
           "powiat": "suwalski",
+		  "okreg":"24",
           "gminy": [
             "gmina Bakałarzewo",
             "gmina Filipów",
@@ -2815,6 +3030,7 @@
         },
         {
           "powiat": "wysokomazowiecki",
+		  "okreg":"24",
           "gminy": [
             "Wysokie Mazowieckie",
             "gmina Ciechanowiec",
@@ -2830,6 +3046,7 @@
         },
         {
           "powiat": "zambrowski",
+		  "okreg":"24",
           "gminy": [
             "Zambrów",
             "gmina Kołaki Kościelne",
@@ -2840,18 +3057,21 @@
         },
         {
           "powiat": "Białystok",
+		  "okreg":"24",
           "gminy": [
             "Białystok"
           ]
         },
         {
           "powiat": "Łomża",
+		  "okreg":"24",
           "gminy": [
             "Łomża"
           ]
         },
         {
           "powiat": "Suwałki",
+		  "okreg":"24",
           "gminy": [
             "Suwałki"
           ]
@@ -2863,6 +3083,7 @@
       "powiaty": [
         {
           "powiat": "bytowski",
+		  "okreg":"26",
           "gminy": [
             "gmina Borzytuchom",
             "gmina Bytów",
@@ -2878,6 +3099,7 @@
         },
         {
           "powiat": "chojnicki",
+		  "okreg":"26",
           "gminy": [
             "Chojnice",
             "gmina Brusy",
@@ -2888,6 +3110,7 @@
         },
         {
           "powiat": "człuchowski",
+		  "okreg":"26",
           "gminy": [
             "Człuchów",
             "gmina Czarne",
@@ -2900,6 +3123,7 @@
         },
         {
           "powiat": "gdański",
+		  "okreg":"25",
           "gminy": [
             "Pruszcz Gdański",
             "gmina Cedry Wielkie",
@@ -2913,6 +3137,7 @@
         },
         {
           "powiat": "kartuski",
+		  "okreg":"26",
           "gminy": [
             "gmina Chmielno",
             "gmina Kartuzy",
@@ -2926,6 +3151,7 @@
         },
         {
           "powiat": "kościerski",
+		  "okreg":"26",
           "gminy": [
             "Kościerzyna",
             "gmina Dziemiany",
@@ -2939,6 +3165,7 @@
         },
         {
           "powiat": "kwidzyński",
+		  "okreg":"25",
           "gminy": [
             "Kwidzyn",
             "gmina Gardeja",
@@ -2950,6 +3177,7 @@
         },
         {
           "powiat": "lęborski",
+		  "okreg":"26",
           "gminy": [
             "Lębork",
             "Łeba",
@@ -2960,6 +3188,7 @@
         },
         {
           "powiat": "malborski",
+		  "okreg":"25",
           "gminy": [
             "Malbork",
             "gmina Lichnowy",
@@ -2971,6 +3200,7 @@
         },
         {
           "powiat": "nowodworski",
+		  "okreg":"25",
           "gminy": [
             "Krynica Morska",
             "gmina Nowy Dwór Gdański",
@@ -2981,6 +3211,7 @@
         },
         {
           "powiat": "pucki",
+		  "okreg":"26",
           "gminy": [
             "Hel",
             "gmina Jastarnia",
@@ -2993,6 +3224,7 @@
         },
         {
           "powiat": "słupski",
+		  "okreg":"26",
           "gminy": [
             "Ustka",
             "gmina Damnica",
@@ -3008,6 +3240,7 @@
         },
         {
           "powiat": "starogardzki",
+		  "okreg":"25",
           "gminy": [
             "gmina Czarna Woda",
             "Skórcz",
@@ -3026,6 +3259,7 @@
         },
         {
           "powiat": "tczewski",
+		  "okreg":"25",
           "gminy": [
             "Tczew",
             "gmina Gniew",
@@ -3037,6 +3271,7 @@
         },
         {
           "powiat": "wejherowski",
+		  "okreg":"26",
           "gminy": [
             "Reda",
             "Rumia",
@@ -3052,6 +3287,7 @@
         },
         {
           "powiat": "sztumski",
+		  "okreg":"25",
           "gminy": [
             "gmina Dzierzgoń",
             "gmina Mikołajki Pomorskie",
@@ -3062,24 +3298,28 @@
         },
         {
           "powiat": "Gdańsk",
+		  "okreg":"25",
           "gminy": [
             "Gdańsk"
           ]
         },
         {
           "powiat": "Gdynia",
+		  "okreg":"26",
           "gminy": [
             "Gdynia"
           ]
         },
         {
           "powiat": "Słupsk",
+		  "okreg":"26",
           "gminy": [
             "Słupsk"
           ]
         },
         {
           "powiat": "Sopot",
+		  "okreg":"25",
           "gminy": [
             "Sopot"
           ]
@@ -3091,6 +3331,7 @@
       "powiaty": [
         {
           "powiat": "będziński",
+		  "okreg":"32",
           "gminy": [
             "Będzin",
             "Czeladź",
@@ -3104,6 +3345,7 @@
         },
         {
           "powiat": "bielski",
+		  "okreg":"27",
           "gminy": [
             "Szczyrk",
             "gmina Bestwina",
@@ -3119,6 +3361,7 @@
         },
         {
           "powiat": "cieszyński",
+		  "okreg":"27",
           "gminy": [
             "Cieszyn",
             "Ustroń",
@@ -3136,6 +3379,7 @@
         },
         {
           "powiat": "częstochowski",
+		  "okreg":"28",
           "gminy": [
             "gmina Blachownia",
             "gmina Dąbrowa Zielona",
@@ -3157,6 +3401,7 @@
         },
         {
           "powiat": "gliwicki",
+		  "okreg":"29",
           "gminy": [
             "Knurów",
             "Pyskowice",
@@ -3170,6 +3415,7 @@
         },
         {
           "powiat": "kłobucki",
+		  "okreg":"28",
           "gminy": [
             "gmina Kłobuck",
             "gmina Krzepice",
@@ -3184,6 +3430,7 @@
         },
         {
           "powiat": "lubliniecki",
+		  "okreg":"28",
           "gminy": [
             "Lubliniec",
             "gmina Boronów",
@@ -3197,6 +3444,7 @@
         },
         {
           "powiat": "mikołowski",
+		  "okreg":"30",
           "gminy": [
             "Łaziska Górne",
             "Mikołów",
@@ -3207,6 +3455,7 @@
         },
         {
           "powiat": "myszkowski",
+		  "okreg":"28",
           "gminy": [
             "Myszków",
             "gmina Koziegłowy",
@@ -3217,6 +3466,7 @@
         },
         {
           "powiat": "pszczyński",
+		  "okreg":"27",
           "gminy": [
             "gmina Goczałkowice-Zdrój",
             "gmina Kobiór",
@@ -3228,6 +3478,7 @@
         },
         {
           "powiat": "raciborski",
+		  "okreg":"30",
           "gminy": [
             "Racibórz",
             "gmina Kornowac",
@@ -3241,6 +3492,7 @@
         },
         {
           "powiat": "rybnicki",
+		  "okreg":"30",
           "gminy": [
             "gmina Czerwionka-Leszczyny",
             "gmina Gaszowice",
@@ -3251,6 +3503,7 @@
         },
         {
           "powiat": "tarnogórski",
+		  "okreg":"29",
           "gminy": [
             "Kalety",
             "Miasteczko Śląskie",
@@ -3265,6 +3518,7 @@
         },
         {
           "powiat": "bieruńsko-lędziński",
+		  "okreg":"31",
           "gminy": [
             "Bieruń",
             "Imielin",
@@ -3275,6 +3529,7 @@
         },
         {
           "powiat": "wodzisławski",
+		  "okreg":"30",
           "gminy": [
             "Pszów",
             "Radlin",
@@ -3289,6 +3544,7 @@
         },
         {
           "powiat": "zawierciański",
+		  "okreg":"32",
           "gminy": [
             "Poręba",
             "Zawiercie",
@@ -3304,6 +3560,7 @@
         },
         {
           "powiat": "żywiecki",
+		  "okreg":"27",
           "gminy": [
             "Żywiec",
             "gmina Czernichów",
@@ -3324,114 +3581,133 @@
         },
         {
           "powiat": "Bielsko-Biała",
+		  "okreg":"27",
           "gminy": [
             "Bielsko-Biała"
           ]
         },
         {
           "powiat": "Bytom",
+		  "okreg":"29",
           "gminy": [
             "Bytom"
           ]
         },
         {
           "powiat": "Chorzów",
+		  "okreg":"31",
           "gminy": [
             "Chorzów"
           ]
         },
         {
           "powiat": "Częstochowa",
+		  "okreg":"28",
           "gminy": [
             "Częstochowa"
           ]
         },
         {
           "powiat": "Dąbrowa Górnicza",
+		  "okreg":"32",
           "gminy": [
             "Dąbrowa Górnicza"
           ]
         },
         {
           "powiat": "Gliwice",
+		  "okreg":"29",
           "gminy": [
             "Gliwice"
           ]
         },
         {
           "powiat": "Jastrzębie-Zdrój",
+		  "okreg":"30",
           "gminy": [
             "Jastrzębie-Zdrój"
           ]
         },
         {
           "powiat": "Jaworzno",
+		  "okreg":"32",
           "gminy": [
             "Jaworzno"
           ]
         },
         {
           "powiat": "Katowice",
+		  "okreg":"31",
           "gminy": [
             "Katowice"
           ]
         },
         {
           "powiat": "Mysłowice",
+		  "okreg":"31",
           "gminy": [
             "Mysłowice"
           ]
         },
         {
           "powiat": "Piekary Śląskie",
+		  "okreg":"31",
           "gminy": [
             "Piekary Śląskie"
           ]
         },
         {
           "powiat": "Ruda Śląska",
+		  "okreg":"31",
           "gminy": [
             "Ruda Śląska"
           ]
         },
         {
           "powiat": "Rybnik",
+		  "okreg":"30",
           "gminy": [
             "Rybnik"
           ]
         },
         {
           "powiat": "Siemianowice Śląskie",
+		  "okreg":"31",
           "gminy": [
             "Siemianowice Śląskie"
           ]
         },
         {
           "powiat": "Sosnowiec",
+		  "okreg":"32",
           "gminy": [
             "Sosnowiec"
           ]
         },
         {
           "powiat": "Świętochłowice",
+		  "okreg":"31",
           "gminy": [
             "Świętochłowice"
           ]
         },
         {
           "powiat": "Tychy",
+		  "okreg":"31",
           "gminy": [
             "Tychy"
           ]
         },
         {
           "powiat": "Zabrze",
+		  "okreg":"29",
           "gminy": [
             "Zabrze"
           ]
         },
         {
           "powiat": "Żory",
+		  "okreg":"30",
           "gminy": [
             "Żory"
           ]
@@ -3443,6 +3719,7 @@
       "powiaty": [
         {
           "powiat": "buski",
+		  "okreg":"33",
           "gminy": [
             "gmina Busko-Zdrój",
             "gmina Gnojno",
@@ -3456,6 +3733,7 @@
         },
         {
           "powiat": "jędrzejowski",
+		  "okreg":"33",
           "gminy": [
             "gmina Imielno",
             "gmina Jędrzejów",
@@ -3470,6 +3748,7 @@
         },
         {
           "powiat": "kazimierski",
+		  "okreg":"33",
           "gminy": [
             "gmina Bejsce",
             "gmina Czarnocin",
@@ -3480,6 +3759,7 @@
         },
         {
           "powiat": "kielecki",
+		  "okreg":"33",
           "gminy": [
             "gmina Bieliny",
             "gmina Bodzentyn",
@@ -3504,6 +3784,7 @@
         },
         {
           "powiat": "konecki",
+		  "okreg":"33",
           "gminy": [
             "gmina Fałków",
             "gmina Gowarczów",
@@ -3517,6 +3798,7 @@
         },
         {
           "powiat": "opatowski",
+		  "okreg":"33",
           "gminy": [
             "gmina Baćkowice",
             "gmina Iwaniska",
@@ -3530,6 +3812,7 @@
         },
         {
           "powiat": "ostrowiecki",
+		  "okreg":"33",
           "gminy": [
             "Ostrowiec Świętokrzyski",
             "gmina Bałtów",
@@ -3541,6 +3824,7 @@
         },
         {
           "powiat": "pińczowski",
+		  "okreg":"33",
           "gminy": [
             "gmina Działoszyce",
             "gmina Kije",
@@ -3551,6 +3835,7 @@
         },
         {
           "powiat": "sandomierski",
+		  "okreg":"33",
           "gminy": [
             "Sandomierz",
             "gmina Dwikozy",
@@ -3565,6 +3850,7 @@
         },
         {
           "powiat": "skarżyski",
+		  "okreg":"33",
           "gminy": [
             "Skarżysko-Kamienna",
             "gmina Bliżyn",
@@ -3575,6 +3861,7 @@
         },
         {
           "powiat": "starachowicki",
+		  "okreg":"33",
           "gminy": [
             "Starachowice",
             "gmina Brody",
@@ -3585,6 +3872,7 @@
         },
         {
           "powiat": "staszowski",
+		  "okreg":"33",
           "gminy": [
             "gmina Bogoria",
             "gmina Łubnice",
@@ -3598,6 +3886,7 @@
         },
         {
           "powiat": "włoszczowski",
+		  "okreg":"33",
           "gminy": [
             "gmina Kluczewsko",
             "gmina Krasocin",
@@ -3609,6 +3898,7 @@
         },
         {
           "powiat": "Kielce",
+		  "okreg":"33",
           "gminy": [
             "Kielce"
           ]
@@ -3620,6 +3910,7 @@
       "powiaty": [
         {
           "powiat": "bartoszycki",
+		  "okreg":"34",
           "gminy": [
             "Bartoszyce",
             "Górowo Iławeckie",
@@ -3631,6 +3922,7 @@
         },
         {
           "powiat": "braniewski",
+		  "okreg":"34",
           "gminy": [
             "Braniewo",
             "gmina Braniewo",
@@ -3643,6 +3935,7 @@
         },
         {
           "powiat": "działdowski",
+		  "okreg":"34",
           "gminy": [
             "Działdowo",
             "gmina Działdowo",
@@ -3654,6 +3947,7 @@
         },
         {
           "powiat": "elbląski",
+		  "okreg":"34",
           "gminy": [
             "gmina Elbląg",
             "gmina Godkowo",
@@ -3668,6 +3962,7 @@
         },
         {
           "powiat": "ełcki",
+		  "okreg":"35",
           "gminy": [
             "Ełk",
             "gmina Ełk",
@@ -3678,6 +3973,7 @@
         },
         {
           "powiat": "giżycki",
+		  "okreg":"35",
           "gminy": [
             "Giżycko",
             "gmina Giżycko",
@@ -3689,6 +3985,7 @@
         },
         {
           "powiat": "iławski",
+		  "okreg":"34",
           "gminy": [
             "Iława",
             "Lubawa",
@@ -3701,6 +3998,7 @@
         },
         {
           "powiat": "kętrzyński",
+		  "okreg":"35",
           "gminy": [
             "Kętrzyn",
             "gmina Barciany",
@@ -3712,6 +4010,7 @@
         },
         {
           "powiat": "lidzbarski",
+		  "okreg":"34",
           "gminy": [
             "Lidzbark Warmiński",
             "gmina Kiwity",
@@ -3722,6 +4021,7 @@
         },
         {
           "powiat": "mrągowski",
+		  "okreg":"35",
           "gminy": [
             "Mrągowo",
             "gmina Mikołajki",
@@ -3732,6 +4032,7 @@
         },
         {
           "powiat": "nidzicki",
+		  "okreg":"35",
           "gminy": [
             "gmina Janowiec Kościelny",
             "gmina Janowo",
@@ -3741,6 +4042,7 @@
         },
         {
           "powiat": "nowomiejski",
+		  "okreg":"34",
           "gminy": [
             "Nowe Miasto Lubawskie",
             "gmina Biskupiec",
@@ -3751,6 +4053,7 @@
         },
         {
           "powiat": "olecki",
+		  "okreg":"35",
           "gminy": [
             "gmina Kowale Oleckie",
             "gmina Olecko",
@@ -3760,6 +4063,7 @@
         },
         {
           "powiat": "olsztyński",
+		  "okreg":"35",
           "gminy": [
             "gmina Barczewo",
             "gmina Biskupiec",
@@ -3777,6 +4081,7 @@
         },
         {
           "powiat": "ostródzki",
+		  "okreg":"34",
           "gminy": [
             "Ostróda",
             "gmina Dąbrówno",
@@ -3791,6 +4096,7 @@
         },
         {
           "powiat": "piski",
+		  "okreg":"35",
           "gminy": [
             "gmina Biała Piska",
             "gmina Orzysz",
@@ -3800,6 +4106,7 @@
         },
         {
           "powiat": "szczycieński",
+		  "okreg":"35",
           "gminy": [
             "Szczytno",
             "gmina Dźwierzuty",
@@ -3813,6 +4120,7 @@
         },
         {
           "powiat": "gołdapski",
+		  "okreg":"35",
           "gminy": [
             "gmina Banie Mazurskie",
             "gmina Dubeninki",
@@ -3821,6 +4129,7 @@
         },
         {
           "powiat": "węgorzewski",
+		  "okreg":"35",
           "gminy": [
             "gmina Budry",
             "gmina Pozezdrze",
@@ -3829,12 +4138,14 @@
         },
         {
           "powiat": "Elbląg",
+		  "okreg":"34",
           "gminy": [
             "Elbląg"
           ]
         },
         {
           "powiat": "Olsztyn",
+		  "okreg":"35",
           "gminy": [
             "Olsztyn"
           ]
@@ -3846,6 +4157,7 @@
       "powiaty": [
         {
           "powiat": "chodzieski",
+		  "okreg":"38",
           "gminy": [
             "Chodzież",
             "gmina Budzyń",
@@ -3856,6 +4168,7 @@
         },
         {
           "powiat": "czarnkowsko-trzcianecki",
+		  "okreg":"38",
           "gminy": [
             "Czarnków",
             "gmina Czarnków",
@@ -3869,6 +4182,7 @@
         },
         {
           "powiat": "gnieźnieński",
+		  "okreg":"37",
           "gminy": [
             "Gniezno",
             "gmina Czerniejewo",
@@ -3884,6 +4198,7 @@
         },
         {
           "powiat": "gostyński",
+		  "okreg":"36",
           "gminy": [
             "gmina Borek Wielkopolski",
             "gmina Gostyń",
@@ -3896,6 +4211,7 @@
         },
         {
           "powiat": "grodziski",
+		  "okreg":"38",
           "gminy": [
             "gmina Granowo",
             "gmina Grodzisk Wielkopolski",
@@ -3906,6 +4222,7 @@
         },
         {
           "powiat": "jarociński",
+		  "okreg":"36",
           "gminy": [
             "gmina Jaraczewo",
             "gmina Jarocin",
@@ -3915,6 +4232,7 @@
         },
         {
           "powiat": "kaliski",
+		  "okreg":"36",
           "gminy": [
             "gmina Blizanów",
             "gmina Brzeziny",
@@ -3931,6 +4249,7 @@
         },
         {
           "powiat": "kępiński",
+		  "okreg":"36",
           "gminy": [
             "gmina Baranów",
             "gmina Bralin",
@@ -3943,6 +4262,7 @@
         },
         {
           "powiat": "kolski",
+		  "okreg":"37",
           "gminy": [
             "Koło",
             "gmina Babiak",
@@ -3959,6 +4279,7 @@
         },
         {
           "powiat": "koniński",
+		  "okreg":"37",
           "gminy": [
             "gmina Golina",
             "gmina Grodziec",
@@ -3978,6 +4299,7 @@
         },
         {
           "powiat": "kościański",
+		  "okreg":"36",
           "gminy": [
             "Kościan",
             "gmina Czempiń",
@@ -3988,6 +4310,7 @@
         },
         {
           "powiat": "krotoszyński",
+		  "okreg":"36",
           "gminy": [
             "Sulmierzyce",
             "gmina Kobylin",
@@ -3999,6 +4322,7 @@
         },
         {
           "powiat": "leszczyński",
+		  "okreg":"36",
           "gminy": [
             "gmina Krzemieniewo",
             "gmina Lipno",
@@ -4011,6 +4335,7 @@
         },
         {
           "powiat": "międzychodzki",
+		  "okreg":"38",
           "gminy": [
             "gmina Chrzypsko Wielkie",
             "gmina Kwilcz",
@@ -4020,6 +4345,7 @@
         },
         {
           "powiat": "nowotomyski",
+		  "okreg":"38",
           "gminy": [
             "gmina Kuślin",
             "gmina Lwówek",
@@ -4031,6 +4357,7 @@
         },
         {
           "powiat": "obornicki",
+		  "okreg":"38",
           "gminy": [
             "gmina Oborniki",
             "gmina Rogoźno",
@@ -4039,6 +4366,7 @@
         },
         {
           "powiat": "ostrowski",
+		  "okreg":"36",
           "gminy": [
             "Ostrów Wielkopolski",
             "gmina Nowe Skalmierzyce",
@@ -4052,6 +4380,7 @@
         },
         {
           "powiat": "ostrzeszowski",
+		  "okreg":"36",
           "gminy": [
             "gmina Czajków",
             "gmina Doruchów",
@@ -4064,6 +4393,7 @@
         },
         {
           "powiat": "pilski",
+		  "okreg":"38",
           "gminy": [
             "Piła",
             "gmina Białośliwie",
@@ -4078,6 +4408,7 @@
         },
         {
           "powiat": "pleszewski",
+		  "okreg":"36",
           "gminy": [
             "gmina Chocz",
             "gmina Czermin",
@@ -4089,6 +4420,7 @@
         },
         {
           "powiat": "poznański",
+		  "okreg":"39",
           "gminy": [
             "Luboń",
             "Puszczykowo",
@@ -4111,6 +4443,7 @@
         },
         {
           "powiat": "rawicki",
+		  "okreg":"36",
           "gminy": [
             "gmina Bojanowo",
             "gmina Jutrosin",
@@ -4121,6 +4454,7 @@
         },
         {
           "powiat": "słupecki",
+		  "okreg":"37",
           "gminy": [
             "Słupca",
             "gmina Lądek",
@@ -4134,6 +4468,7 @@
         },
         {
           "powiat": "szamotulski",
+		  "okreg":"38",
           "gminy": [
             "Obrzycko",
             "gmina Duszniki",
@@ -4147,6 +4482,7 @@
         },
         {
           "powiat": "średzki",
+		  "okreg":"37",
           "gminy": [
             "gmina Dominowo",
             "gmina Krzykosy",
@@ -4157,6 +4493,7 @@
         },
         {
           "powiat": "śremski",
+		  "okreg":"37",
           "gminy": [
             "gmina Brodnica",
             "gmina Dolsk",
@@ -4166,6 +4503,7 @@
         },
         {
           "powiat": "turecki",
+		  "okreg":"37",
           "gminy": [
             "Turek",
             "gmina Brudzew",
@@ -4180,6 +4518,7 @@
         },
         {
           "powiat": "wągrowiecki",
+		  "okreg":"38",
           "gminy": [
             "Wągrowiec",
             "gmina Damasławek",
@@ -4192,6 +4531,7 @@
         },
         {
           "powiat": "wolsztyński",
+		  "okreg":"38",
           "gminy": [
             "gmina Przemęt",
             "gmina Siedlec",
@@ -4200,6 +4540,7 @@
         },
         {
           "powiat": "wrzesiński",
+		  "okreg":"37",
           "gminy": [
             "gmina Kołaczkowo",
             "gmina Miłosław",
@@ -4210,6 +4551,7 @@
         },
         {
           "powiat": "złotowski",
+		  "okreg":"38",
           "gminy": [
             "Złotów",
             "gmina Jastrowie",
@@ -4223,24 +4565,28 @@
         },
         {
           "powiat": "Kalisz",
+		  "okreg":"36",
           "gminy": [
             "Kalisz"
           ]
         },
         {
           "powiat": "Konin",
+		  "okreg":"37",
           "gminy": [
             "Konin"
           ]
         },
         {
           "powiat": "Leszno",
+		  "okreg":"36",
           "gminy": [
             "Leszno"
           ]
         },
         {
           "powiat": "Poznań",
+		  "okreg":"39",
           "gminy": [
             "Poznań"
           ]
@@ -4252,6 +4598,7 @@
       "powiaty": [
         {
           "powiat": "białogardzki",
+		  "okreg":"40",
           "gminy": [
             "Białogard",
             "gmina Białogard",
@@ -4261,6 +4608,7 @@
         },
         {
           "powiat": "choszczeński",
+		  "okreg":"40",
           "gminy": [
             "gmina Bierzwnik",
             "gmina Choszczno",
@@ -4272,6 +4620,7 @@
         },
         {
           "powiat": "drawski",
+		  "okreg":"40",
           "gminy": [
             "gmina Czaplinek",
             "gmina Drawsko Pomorskie",
@@ -4282,6 +4631,7 @@
         },
         {
           "powiat": "goleniowski",
+		  "okreg":"41",
           "gminy": [
             "gmina Goleniów",
             "gmina Maszewo",
@@ -4293,6 +4643,7 @@
         },
         {
           "powiat": "gryficki",
+		  "okreg":"41",
           "gminy": [
             "gmina Brojce",
             "gmina Gryfice",
@@ -4304,6 +4655,7 @@
         },
         {
           "powiat": "gryfiński",
+		  "okreg":"41",
           "gminy": [
             "gmina Banie",
             "gmina Cedynia",
@@ -4318,6 +4670,7 @@
         },
         {
           "powiat": "kamieński",
+		  "okreg":"41",
           "gminy": [
             "gmina Dziwnów",
             "gmina Golczewo",
@@ -4329,6 +4682,7 @@
         },
         {
           "powiat": "kołobrzeski",
+		  "okreg":"40",
           "gminy": [
             "Kołobrzeg",
             "gmina Dygowo",
@@ -4341,6 +4695,7 @@
         },
         {
           "powiat": "koszaliński",
+		  "okreg":"40",
           "gminy": [
             "gmina Będzino",
             "gmina Biesiekierz",
@@ -4354,6 +4709,7 @@
         },
         {
           "powiat": "myśliborski",
+		  "okreg":"41",
           "gminy": [
             "gmina Barlinek",
             "gmina Boleszkowice",
@@ -4364,6 +4720,7 @@
         },
         {
           "powiat": "policki",
+		  "okreg":"41",
           "gminy": [
             "gmina Dobra (Szczecińska)",
             "gmina Kołbaskowo",
@@ -4373,6 +4730,7 @@
         },
         {
           "powiat": "pyrzycki",
+		  "okreg":"41",
           "gminy": [
             "gmina Bielice",
             "gmina Kozielice",
@@ -4384,6 +4742,7 @@
         },
         {
           "powiat": "sławieński",
+		  "okreg":"40",
           "gminy": [
             "Darłowo",
             "Sławno",
@@ -4395,6 +4754,7 @@
         },
         {
           "powiat": "stargardzki",
+		  "okreg":"41",
           "gminy": [
             "Stargard",
             "gmina Chociwel",
@@ -4410,6 +4770,7 @@
         },
         {
           "powiat": "szczecinecki",
+		  "okreg":"40",
           "gminy": [
             "Szczecinek",
             "gmina Barwice",
@@ -4421,6 +4782,7 @@
         },
         {
           "powiat": "świdwiński",
+		  "okreg":"40",
           "gminy": [
             "Świdwin",
             "gmina Brzeżno",
@@ -4432,6 +4794,7 @@
         },
         {
           "powiat": "wałecki",
+		  "okreg":"40",
           "gminy": [
             "Wałcz",
             "gmina Człopa",
@@ -4442,6 +4805,7 @@
         },
         {
           "powiat": "łobeski",
+		  "okreg":"41",
           "gminy": [
             "gmina Dobra",
             "gmina Łobez",
@@ -4452,18 +4816,21 @@
         },
         {
           "powiat": "Koszalin",
+		  "okreg":"40",
           "gminy": [
             "Koszalin"
           ]
         },
         {
           "powiat": "Szczecin",
+		  "okreg":"41",
           "gminy": [
             "Szczecin"
           ]
         },
         {
           "powiat": "Świnoujście",
+		  "okreg":"41",
           "gminy": [
             "Świnoujście"
           ]

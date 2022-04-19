@@ -61,10 +61,10 @@ else
  <a href="user_udostepnione.php"><div class="grid-item">Udostępnione dla mnie</div></a>
 </div>
 <?php
-if($_SESSION["ADMIN"]==1)
+if($_SESSION["ADMIN"]>0)
 {
 ?>
-<h1>Panel administratora</h1>
+<h1>Panel moderatora</h1>
 <div class="grid-container">
   <a href="admin_users.php"><div class="grid-item">Użytkownicy</div></a>
   <a href="admin_aktywnosci.php"><div class="grid-item">Wszystkie aktywności</div></a>
@@ -76,7 +76,14 @@ if($_SESSION["ADMIN"]==1)
 <?php
 }
 ?>
-
+<?php
+if($_SESSION["ADMIN"]>1)
+{
+?>
+Admin
+<?php
+}
+?>
 </div>
 </body>
 </html>
