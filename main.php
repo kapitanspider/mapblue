@@ -76,14 +76,6 @@ if($_SESSION["ADMIN"]>0)
 <?php
 }
 ?>
-<?php
-if($_SESSION["ADMIN"]>1)
-{
-?>
-Admin
-<?php
-}
-?>
 </div>
 </body>
 </html>

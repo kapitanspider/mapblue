@@ -21,6 +21,8 @@ if(isset($_POST["id_wydarzenia_usun"]))
 	$conn->query($sql);
 	$sql="DELETE FROM powiadomienia WHERE `powiadomienia`.`id_wydarzenia`  ='".$_POST["id_wydarzenia_usun"]."'";
 	$conn->query($sql);
+	$sql="UPDATE `aktywnosci` SET `ID_Parent`='0' WHERE ID_Parent='".$_POST["id_wydarzenia_usun"]."'";
+	$conn->query($sql);
 }
 
 if(isset($_POST["begin"]))

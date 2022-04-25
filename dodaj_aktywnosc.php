@@ -6,7 +6,7 @@
 <body>
 <?php
 include('facecheck.php');
-//print_r($_POST); 
+print_r($_POST); 
 ?>
 <form action="dodaj_aktywnosc_db.php" method="post">
 <p>Lokalizacja:</p>
@@ -22,6 +22,7 @@ include('facecheck.php');
 <p>Gmina:</p>
 <input type="text" disabled value="<?php echo $_POST['gmina']; ?>">
 <input type="hidden" id="gmina" name="gmina"  value="<?php echo $_POST['gmina']; ?>">
+<input type="hidden" id="ID_Parent" name="ID_Parent"  value="<?php echo $_POST['ID_Parent']; ?>">
 </br>
 <a href="map.php">Zmień lokację</a>
 <p>Nazwa aktywności/wydarzenia:</p>

@@ -42,6 +42,12 @@ while($row = $result->fetch_assoc())
 	echo "<td>".$row["data"]."</td>";
 	echo "<td>".$row["godzina"]."</td>";
 	echo "<td><a href='".$row["plik"]."' target='blank' >Załącznik</a></td>";
+	echo "<td>
+	<form method='GET' action='map.php'>
+	<input type='hidden' name='ID_Parent' value='".$row["ID"]."'>
+	<input type='submit' value='Utwórz wydarzenie pochodne'>
+	</form>
+	</td>";
 	echo "</form></td>";
 	echo "</tr>";
 }
