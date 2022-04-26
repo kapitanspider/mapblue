@@ -43,7 +43,7 @@ $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 <input type="submit" value="Prześlij">
 </form>
 
-<table >
+<table>
 <?php
 $sql="SELECT * FROM wydarzenia_ogolnopolskie WHERE data between '".$begin."' and '".$end."' order by data asc, godzina asc";
 $result = $conn->query($sql);
@@ -57,6 +57,10 @@ while($row = $result->fetch_assoc())
 	echo "<td><form action='admin_wydarzenie_krajowe.php' method='post'>";
 	echo "<input type='hidden' name='id_wydarzenia_usun' value='".$row["ID"]."'>";
 	echo "<input type='submit' value='Usuń'> ";
+	echo "</form></td>";
+	echo "<td><form action='admin_wydarzenie_krajowe_pochodne.php' method='post'>";
+	echo "<input type='hidden' name='id' value='".$row["ID"]."'>";
+	echo "<input type='submit' value='Wyświetl wydarzenia pochodne'> ";
 	echo "</form></td>";
 	echo "</tr>";
 }
