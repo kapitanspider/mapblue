@@ -55,8 +55,7 @@ include('dbconfig.php');
 			</div>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
+
 	<a href="kalendarz_user.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -81,8 +80,6 @@ include('dbconfig.php');
 			</div>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
 	<a href="pomoc.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -129,8 +126,6 @@ else
 ?>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
 	<a href="user_udostepnione.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -142,7 +137,6 @@ else
 			</div>
 		</div>
 	</a>
-</div>
 </div>
 <?php
 if($_SESSION["ADMIN"]==1)
@@ -175,8 +169,6 @@ if($_SESSION["ADMIN"]==1)
 			</div>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
 	<a href="admin_statystyki_kategorie.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -200,8 +192,6 @@ if($_SESSION["ADMIN"]==1)
 			</div>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
 	<a href="admin_wydarzenie_krajowe.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -215,7 +205,6 @@ if($_SESSION["ADMIN"]==1)
 			</div>
 		</div>
 	</a>
-</div>
 </div>
 <?php
 }
@@ -251,8 +240,6 @@ if($_SESSION["ADMIN"]==2)
 			</div>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
 	<a href="admin_statystyki_kategorie.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -276,8 +263,6 @@ if($_SESSION["ADMIN"]==2)
 			</div>
 		</div>
 	</a>
-</div>
-<div class="row justify-content-center">
 	<a href="admin_wydarzenie_krajowe.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 20rem; height: 20rem;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
@@ -301,8 +286,7 @@ if($_SESSION["ADMIN"]==2)
 				<p class="card-text text-center" style="font-size:xx-large;">Użytkownicy</p>
 			</div>
 		</div>
-	</a>
-</div>
+	</a> 
 </div>
 <?php
 }
