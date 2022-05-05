@@ -1,34 +1,78 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Title of the document</title>
+<title>MapBlue - Dodawanie aktywności</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="main.php"><span class="h3">MapBlue</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="main.php">Strona główna</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="profil.php">Profil</a>
+      </li>
+	  <li class="nav-item active" >
+        <a class="nav-link" href="map.php">Dodaj aktywność</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="kalendarz_user.php">Kalendarz</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="ustawienia.php">Ustawienia</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="pomoc.php">Pomoc</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="wydarzenia_krajowe.php">Wydarzenia Ogólnopolskie</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <?php
 include('facecheck.php');
-print_r($_POST); 
 ?>
+<div class="container-fluid p-3 card mt-2 " style="max-width:500px;">
 <form action="dodaj_aktywnosc_db.php" method="post">
-<p>Lokalizacja:</p>
-<p>Województwo:</p>
-<input type="text" disabled value="<?php echo $_POST['wojewodztwo']; ?>">
+<p class="form-label m-2">Lokalizacja:</p>
+<p class="form-label m-2">Województwo:</p>
+<input class="m-2" type="text" disabled value="<?php echo $_POST['wojewodztwo']; ?>">
 <input type="hidden" id="wojewodztwo" name="wojewodztwo"  value="<?php echo $_POST['wojewodztwo']; ?>">
-<p>Okręg:</p>
-<input type="text" disabled value="<?php echo $_POST['okreg']; ?>">
+<p class="form-label m-2">Okręg:</p>
+<input class="m-2" type="text" disabled value="<?php echo $_POST['okreg']; ?>">
 <input type="hidden" id="okreg" name="okreg"  value="<?php echo $_POST['okreg']; ?>">
-<p>Powiat:</p>
-<input type="text" disabled value="<?php echo $_POST['powiat']; ?>">
+<p class="form-label m-2">Powiat:</p>
+<input class="m-2" type="text" disabled value="<?php echo $_POST['powiat']; ?>">
 <input type="hidden" id="powiat" name="powiat"  value="<?php echo $_POST['powiat']; ?>">
-<p>Gmina:</p>
-<input type="text" disabled value="<?php echo $_POST['gmina']; ?>">
+<p class="form-label m-2">Gmina:</p>
+<input class="m-2" type="text" disabled value="<?php echo $_POST['gmina']; ?>">
 <input type="hidden" id="gmina" name="gmina"  value="<?php echo $_POST['gmina']; ?>">
+<?php
+if(isset($_POST['ID_Parent']))
+{
+?>
 <input type="hidden" id="ID_Parent" name="ID_Parent"  value="<?php echo $_POST['ID_Parent']; ?>">
+<?php
+}
+?>
 </br>
-<a href="map.php">Zmień lokację</a>
-<p>Nazwa aktywności/wydarzenia:</p>
-<input type="text" id="nazwa" name="nazwa" required>
-<p>Rodzaj</p>
-<select  id="rodzaj" name="rodzaj" required>
+<a href="map.php" class="form-label m-2">Zmień lokację</a>
+<p class="form-label m-2">Nazwa aktywności/wydarzenia:</p>
+<input class="m-2" type="text" id="nazwa" name="nazwa" required>
+<p class="form-label m-2">Rodzaj</p>
+<select  class="m-2" id="rodzaj" name="rodzaj" required>
 <option value="ACRT">ACRT - Aktywność centralna realizowana w terenie</option> 
 <option value="WIP">WIP - Własna inicjatywa posła</option> 
 <option value="SW">SW - Spotkanie z wborcami</option>
@@ -39,17 +83,20 @@ print_r($_POST);
 <option value="INNE">Inne</option>
 
 </select>
-<p>Data:</p>
-<input type="date" id="data" name="data" required>
-<p>Godzina:</p>
-<input type="time" id="godzina" name="godzina" required>
-<p>Ilość uczestników</p>
-<input type="number" id="uczestnicy" name="uczestnicy" required>
-<p>Link FB/WWW</p>
-<input type="text" id="potwierdzenie" name="potwierdzenie" required>
-<p>Notatka:</p>
-<textarea id="notatka" name="notatka" rows="4" cols="50"></textarea>
-<input type="submit">
+<p class="form-label m-2">Data:</p>
+<input class="m-2" type="date" id="data" name="data" required>
+<p class="form-label m-2">Godzina:</p>
+<input class="m-2" type="time" id="godzina" name="godzina" required>
+<p class="form-label m-2">Ilość uczestników</p>
+<input class="m-2" type="number" id="uczestnicy" name="uczestnicy" required>
+<p class="form-label m-2">Link FB/WWW</p>
+<input class="m-2" type="text" id="potwierdzenie" name="potwierdzenie" required>
+<p class="form-label m-2">Notatka:</p>
+<textarea class="m-2" id="notatka" name="notatka" rows="4" cols="50"></textarea>
+<input class="btn btn-primary m-2" type="submit">
 </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
