@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>Map Blue - Profil</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
-<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
 <?php
 include('facecheck.php');
 include('dbconfig.php');
@@ -16,20 +15,20 @@ while($row = $result->fetch_assoc()){
 		}
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="main.php"><span class="h3">MapBlue</span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MapBlue</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
-	  <li class="nav-item active">
-        <a class="nav-link" href="profil.php">Profil</a>
-      </li>
 	  <li class="nav-item">
+        <a class="nav-link active" href="profil.php">Profil</a>
+      </li>
+	  <li class="nav-item" >
         <a class="nav-link" href="map.php">Dodaj aktywność</a>
       </li>
 	  <li class="nav-item">
@@ -48,10 +47,11 @@ while($row = $result->fetch_assoc()){
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
       </li>
     </ul>
+    </div>
   </div>
 </nav>
 <br>
-<div class="container-fluid p-2 card" style="max-width:500px;">
+<div class="container-fluid p-2 card" style="max-width:700px;">
 <?php
 echo '<img class="card-img-top" src="'.$user["Profilowe"].'">';
 echo '<div class="card-body"><h5 class="card-title">'.$user["IMIE"]." ".$user["NAZWISKO"].'</h5>';
