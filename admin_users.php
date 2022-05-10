@@ -71,7 +71,7 @@ while($row = $result->fetch_assoc())
 //var_dump($row);
 if($row["IS_ACTIVE"]==1)
 {
-echo "<tr bgcolor=lime>";
+echo "<tr bgcolor=lightgreen>";
 }
 else
 {
@@ -136,7 +136,7 @@ while($row = $result->fetch_assoc())
 //var_dump($row);
 if($row["IS_ACTIVE"]==1)
 {
-echo "<tr bgcolor=lime>";
+echo "<tr bgcolor=lightgreen>";
 }
 else
 {
@@ -196,7 +196,7 @@ echo "</tr>";
 ?>
 </table>
 <br>
-<a href="admin_users_add_new.php">Dodaj urzytkownika</a>
+<a href="admin_users_add_new.php" class="btn btn-primary">Dodaj urzytkownika</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

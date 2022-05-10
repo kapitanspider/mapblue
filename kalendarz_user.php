@@ -1,6 +1,7 @@
 <?php
 include('facecheck.php');
 include('dbconfig.php');
+include('calendar.php');
 ?>
 <html>
 <head>  

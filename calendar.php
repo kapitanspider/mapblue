@@ -1,6 +1,5 @@
 <?php
-include('facecheck.php');
-include('dbconfig.php');
+
 
 class Calendar {  
 
@@ -60,6 +59,7 @@ class Calendar {
          
         $this->currentMonth=$month;
 		
+        include('dbconfig.php');
 		
 		$time = strtotime($month.'/1'."/".$year);
 		$month_len=$this->_daysInMonth($month,$year);

@@ -300,7 +300,7 @@ if($_SESSION["ADMIN"]==2)
 ?>
 </div>
 <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy;2022 Company Name</p>
+    <p class="mb-1">&copy;2022 PRONEX</p>
 </footer>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

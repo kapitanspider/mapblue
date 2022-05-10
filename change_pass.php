@@ -60,11 +60,11 @@ function validate(){
 <form action="change_pass_db.php" method="post">
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">Nowe hasło</span>
-  <input type="password" class="form-control" name='haslo' id="haslo" oninput="validate()" placeholder="Email" aria-describedby="basic-addon1">
+  <input type="password" class="form-control" name='haslo' id="haslo" oninput="validate()" placeholder="Hasło" aria-describedby="basic-addon1">
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon2">Potwierdź hasło</span>
-  <input type="password" class="form-control" name='haslo2' id="haslo2" oninput="validate()" placeholder="Email" aria-describedby="basic-addon2">
+  <input type="password" class="form-control" name='haslo2' id="haslo2" oninput="validate()" placeholder="Hasło" aria-describedby="basic-addon2">
 </div>
 <input type="submit" class="btn btn-primary m-1" id="sub" disabled value="Zatwierdź">
 </form>
