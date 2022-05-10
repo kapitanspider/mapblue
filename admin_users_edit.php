@@ -61,8 +61,8 @@ while($row = $result->fetch_assoc()){
 <img src="<?php echo $db_data['Profilowe'];?>" width="200px" height="200px">
 <form action="admin_users_edit.php" method="post" enctype="multipart/form-data">
 <input type="hidden" name="id" value="<?php echo $_POST['id'];?>">
-<input type="file" name="profilowe" required>
-<input type="submit" name="profilowe_zmien" value="Zmień zdjęcie profilowe">
+<input type="file" class="btn btn-primary m-2" name="profilowe" required>
+<input type="submit" class="btn btn-primary m-2" name="profilowe_zmien" value="Zmień zdjęcie profilowe">
 </form>
 <form action="admin_users_edit.php" method="post">
 <p>Czy urztkownik ma być administratorem?</p>
@@ -83,24 +83,24 @@ while($row = $result->fetch_assoc()){
 <input type="hidden" name="update" value="update">
 <input type="hidden" name="id" value="<?php echo $_POST['id'];?>">
 <p>Login</p>
-<input type="text" name="login" required value="<?php echo $db_data['LOGIN'];?>">
+<input type="text" name="login" class="w-100" required value="<?php echo $db_data['LOGIN'];?>" >
 <p>Imie</p>
-<input type="text" name="imie" required value="<?php echo $db_data['IMIE'];?>">
+<input type="text" name="imie" class="w-100" required value="<?php echo $db_data['IMIE'];?>">
 <p>Nazwisko</p>
-<input type="text" name="nazwisko" required value="<?php echo $db_data['NAZWISKO'];?>">
+<input type="text" name="nazwisko" class="w-100" required value="<?php echo $db_data['NAZWISKO'];?>">
 <p>Email</p>
-<input type="email" name="email" required value="<?php echo $db_data['EMAIL'];?>">
+<input type="email" name="email" class="w-100" required value="<?php echo $db_data['EMAIL'];?>">
 <p>Nr Telefonu</p>
-<input type="tel" name='tel' id="tel" placeholder="+48 123456789" maxlength="13" pattern="[+][0-9]{2}[' ']{1}[0-9]{9}" required value="<?php echo $db_data['TELEFON'];?>">
+<input type="tel" name='tel' id="tel" class="w-100" placeholder="+48 123456789" maxlength="13" pattern="[+][0-9]{2}[' ']{1}[0-9]{9}" required value="<?php echo $db_data['TELEFON'];?>">
 <p>Nr_okręgu</p>
-<input type="text" name="NR_OKREGU" required value="<?php echo $db_data['NR_OKREGU'];?>">
+<input type="text" name="NR_OKREGU" class="w-100" required value="<?php echo $db_data['NR_OKREGU'];?>">
 <p>Funkcja</p>
-<input type="text" name="FUNKCJA" required value="<?php echo $db_data['FUNKCJA'];?>">
+<input type="text" name="FUNKCJA" class="w-100" required value="<?php echo $db_data['FUNKCJA'];?>">
 <p>Specjalizacjia</p>
-<input type="text" name="SPECJALIZACJA" required value="<?php echo $db_data['SPECJALIZACJA'];?>">
+<input type="text" name="SPECJALIZACJA" class="w-100" required value="<?php echo $db_data['SPECJALIZACJA'];?>">
 <br>
 <br>
-<input type="submit" value="Zakualizuj dane" required>
+<input type="submit" class="btn btn-primary m-2" value="Zakualizuj dane" required>
 </form>
 <?php
 if(isset($_POST["profilowe_zmien"]))

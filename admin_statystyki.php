@@ -37,11 +37,11 @@
 
 <body>
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;">
-<a href="admin_statystyki_wojewodztwa.php">województwa</a>
+<a href="admin_statystyki_wojewodztwa.php" class="btn btn-primary m-2">województwa</a> 
 <br>
-<a href="admin_statystyki_powiaty.php">powiaty szczegółowo</a>
+<a href="admin_statystyki_powiaty.php" class="btn btn-primary m-2">powiaty szczegółowo</a>
 <br>
-<a href="admin_statystyki_powiaty_best.php">powiaty w skali kraju</a>
+<a href="admin_statystyki_powiaty_best.php" class="btn btn-primary m-2">powiaty w skali kraju</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

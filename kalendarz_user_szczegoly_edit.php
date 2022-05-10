@@ -64,7 +64,7 @@ $db_data = array();
 $sql = "SELECT * From Aktywnosci Where ID='".$_POST["ID"]."'";
 $result = $conn->query($sql);
 ?>
-<div class="container-fluid p-3 mt-1 " style="max-width:700px;">
+<div class="container-fluid p-3 mt-1" style="max-width:700px;">
 <?php
 $row = $result->fetch_assoc();
 //var_dump($row);
