@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -5,9 +9,6 @@
 </head>
 <body>
 <?php
-include('facecheck.php');
-include('dbconfig.php');
-
 if(isset($_POST["begin"]))
 {
 $begin=$_POST["begin"];
@@ -18,7 +19,7 @@ else
 $begin=date_format(date_create(),"Y-m-d");
 $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 }
-$sql = "SELECT * From Aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
+$sql = "SELECT * From aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
 $result = $conn->query($sql);
 ?>
 <form action="kalendarz_user.php" method="post">

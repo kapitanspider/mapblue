@@ -7,7 +7,7 @@ if(isset($_POST["Login"]) and isset($_POST["Password"]))
 {
 	$db_data = array();
 	$sql = "SELECT * From users Where Login='".$_POST["Login"]."' and PASSWORD='".hash('sha256', $_POST['Password'])."'";
-	//$sql = "SELECT * From Users";
+	//$sql = "SELECT * From users";
 	$result = $conn->query($sql);
 	//var_dump($result->num_rows);
 	if($result->num_rows == 1)

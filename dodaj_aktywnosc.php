@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -42,7 +46,6 @@
   </div>
 </nav>
 <?php
-include('facecheck.php');
 ?>
 <div class="container-fluid p-3 card mt-2 " style="max-width:700px;">
 <form action="dodaj_aktywnosc_db.php" method="post">

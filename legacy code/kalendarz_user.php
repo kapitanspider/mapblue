@@ -18,7 +18,7 @@ else
 $begin=date_format(date_create(),"Y-m-d");
 $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 }
-$sql = "SELECT * From Aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
+$sql = "SELECT * From aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
 $result = $conn->query($sql);
 ?>
 <form action="kalendarz_user.php" method="post">

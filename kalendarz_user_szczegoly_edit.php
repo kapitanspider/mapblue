@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -41,8 +45,6 @@
   </div>
 </nav>
 <?php
-include('facecheck.php');
-include('dbconfig.php');
 
 if(isset($_POST["update"]))
 {
@@ -61,7 +63,7 @@ if(isset($_POST["update"]))
 }
 
 $db_data = array();
-$sql = "SELECT * From Aktywnosci Where ID='".$_POST["ID"]."'";
+$sql = "SELECT * From aktywnosci Where ID='".$_POST["ID"]."'";
 $result = $conn->query($sql);
 ?>
 <div class="container-fluid p-3 mt-1" style="max-width:700px;">

@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -8,8 +12,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </head>
 <body>
 <?php
-include('facecheck.php');
-include('dbconfig.php');
 var_dump($_POST);
 $sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where ID_Parent='".$_POST["id"]."' order by users.IMIE, users.NAZWISKO asc";
 $result = $conn->query($sql);

@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -47,9 +51,6 @@ h1 {
     </div>
   </div>
 </nav>
-<?php
-include('facecheck.php');
-?>
 <!-- Mapa -->
 <?php 
 if(isset($_GET['ID_Parent']))

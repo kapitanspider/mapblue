@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <html>
 <head>  
 <title>MapBlue - Kalendarz</title>
@@ -128,7 +132,7 @@ function update_month(){
 </nav>
 <div class="container-fluid p-1">
 <?php
-include 'calendar.php';
+
  
 $calendar = new Calendar();
  

@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -41,9 +45,6 @@
     </div>
   </div>
 </nav>
-<?php
-include('facecheck.php');
-?>
 <div class="container-fluid p-3 card mt-1 " style="max-width:700px;">
 <form action="dodaj_aktywnosc.php" method="post">
 <label>Wybierz powiat</label>

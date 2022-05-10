@@ -1,3 +1,7 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -47,7 +51,7 @@ svg {top:0; left:0; height:70vw; width:90vw }
   </div>
 </nav>
 <?php
-include('facecheck.php');
+
 
 if(isset($_GET["ID_Parent"]))
 {

@@ -1,13 +1,16 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Map Blue - Profil</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
+
 <?php
 include('facecheck.php');
 include('dbconfig.php');
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>MapBlue - Profil</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
+<?php
 $db_data = array();
-$sql = "SELECT * From Users Where ID='".$_SESSION["USER"]."'";
+$sql = "SELECT * From users Where ID='".$_SESSION["USER"]."'";
 $result = $conn->query($sql);
 $user = null;
 while($row = $result->fetch_assoc()){

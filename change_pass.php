@@ -1,7 +1,11 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Map Blue - Profil - Zmiana Hasła</title>
+<title>MapBlue - Profil - Zmiana Hasła</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -40,10 +44,7 @@
     </div>
   </div>
 </nav>
-<?php
-include('facecheck.php');
-include('dbconfig.php');
-?>
+
 <script>
 function validate(){
 	if(document.getElementById("haslo").value == document.getElementById("haslo2").value && document.getElementById("haslo").value!=="")

@@ -1,4 +1,7 @@
 <?php
+include('facecheck.php');
+include('dbconfig.php');
+
 class Calendar {  
 
     /**
@@ -57,15 +60,13 @@ class Calendar {
          
         $this->currentMonth=$month;
 		
-		include('dbconfig.php');
-		include('facecheck.php');
 		
 		$time = strtotime($month.'/1'."/".$year);
 		$month_len=$this->_daysInMonth($month,$year);
 		$time2 = strtotime($month."/".$month_len."/".$year);
 		$firstdaymonth=date('Y-m-d',$time);
 		$lastdaymonth=date('Y-m-d',$time2);
-		$sql = "SELECT * From Aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$firstdaymonth."' and '".$lastdaymonth."' order by data asc, godzina asc";
+		$sql = "SELECT * From aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$firstdaymonth."' and '".$lastdaymonth."' order by data asc, godzina asc";
 		$result = $conn->query($sql);
 		
 		while($row = $result->fetch_assoc())

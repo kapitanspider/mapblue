@@ -1,7 +1,11 @@
+<?php
+include('facecheck.php');
+include('dbconfig.php');
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Map Blue - wydarzenia Ogólnopolskie</title>
+<title>MapBlue - wydarzenia Ogólnopolskie</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -44,8 +48,7 @@
 <br>
 <div class="container-fluid p-2 card" style="max-width:700px;">
 <?php
-include('facecheck.php');
-include('dbconfig.php');
+
 
 if(isset($_POST["begin"]))
 {
