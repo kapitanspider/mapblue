@@ -66,7 +66,7 @@ $i=0;
 echo '<div class="accordion" id="accordion1">';
 while($row = $result->fetch_assoc())
 {
-    echo '<div class="accordion-item">';
+  echo '<div class="accordion-item">';
   echo '<h2 class="accordion-header" id="heading'.$i.'">
   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
   '.$row["IMIE"].' '.$row["NAZWISKO"].' - '.$row["nazwa"].'
