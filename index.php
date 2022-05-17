@@ -6,11 +6,9 @@
 <title>MapBlue</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
 <body>
-<br>
-
 <div class="d-flex justify-content-center m-1">
 	<form action="login.php" method="post" class="card p-2 w-100">
-	<img src="images/logo.jpg" class="rounded mx-auto" style="max-width: 900px;" alt="...">
+	<img src="images/logo.jpg" class="rounded mx-auto" style="max-width: 600px;" width="90%"alt="...">
 	
 <?php
 include('dbconfig.php');
@@ -36,7 +34,6 @@ if(isset($_GET['login']))
 	</div>
 	</form>
 </div>
-
 <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">&copy;2022 PRONEX</p>
   </footer>

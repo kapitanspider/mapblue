@@ -31,6 +31,7 @@ function dayclick(x)
 		lista+='<tr><td style="width:25%;">'+event.nazwa+'</td><td style="width:25%;">'+event.data+'</td><td style="width:25%;">'+event.godzina+'</td><td style="width:25%;"><form action="kalendarz_user_szczegoly.php" method="post"><input type="hidden" name="ID" value="'+event.ID+'"><input class="btn btn-primary m-2" type="submit" value="Szczegóły"></form></td></tr>';
 	});
 	lista_aktywnosci.innerHTML=lista;
+	lista_aktywnosci.scrollIntoView();
 }
 
  
@@ -133,7 +134,7 @@ function update_month(){
     </div>
   </div>
 </nav>
-<div class="container-fluid p-1">
+<div class="container-fluid p-1 w-100">
 <?php
 
  
@@ -143,7 +144,7 @@ echo $calendar->show();
 ?>
 </div>
 <br>
-<div class="container-fluid w-75">
+<div class="container-fluid w-100">
 <table  class="table table-striped" id="lista_aktywnosci" style="margin:0 auto;">
 </table>
 </div>

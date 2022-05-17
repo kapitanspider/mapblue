@@ -70,7 +70,7 @@ OD:
 <input type="date" name="begin" required value="<?php echo $begin; ?>"> 
 DO:
 <input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" value="Ustaw">
+<input type="submit" class="btn btn-primary m-2" value="Ustaw">
 </form>
 <div class="accordion" id="accordion1">
 <?php

@@ -59,9 +59,12 @@ $result = $conn->query($sql);
 ?>
 <form action="admin_aktywnosci.php" method="post">
 <label>Ustaw zakres dat</label>
+<br>
+<label>Od:</label>
 <input type="date" name="begin" required value="<?php echo $begin; ?>">
+<label>Do:</label>
 <input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" value="Prześlij">
+<input type="submit" class="btn btn-primary m-2" value="Prześlij">
 </form>
 <?php
 $i=0;

@@ -75,10 +75,14 @@ if(isset($_POST["id_aktywnosci"]))
 
 ?>
 <form action="user_udostepnione.php" method="post">
-<label>Ustaw zakres dat</label>
+<label><b>Ustaw zakres dat</b></label>
+<br>
+<label>Od:</label>
 <input type="date" name="begin" required value="<?php echo $begin; ?>">
+<label>Do:</label>
 <input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" value="Prześlij">
+<br>
+<input type="submit"  class="btn btn-primary m-2" value="Prześlij">
 </form>
 <?php
 $sql="SELECT * FROM aktywnosci INNER JOIN users on users.ID = aktywnosci.ID_organizatora INNER JOIN udostepnienia on udostepnienia.id_aktywnosci=aktywnosci.ID WHERE udostepnienia.id_usera=".$_SESSION["USER"]." and aktywnosci.data between '".$begin."' and '".$end."'";
