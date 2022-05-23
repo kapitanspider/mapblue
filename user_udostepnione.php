@@ -9,13 +9,14 @@ include('dbconfig.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue - Udostępnione</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<link rel="stylesheet" href="colors.css">
 <script
 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +83,7 @@ if(isset($_POST["id_aktywnosci"]))
 <label>Do:</label>
 <input type="date" name="end" required value="<?php echo  $end; ?>">
 <br>
-<input type="submit"  class="btn btn-primary m-2" value="Prześlij">
+<input type="submit"  class="btn blue m-2" value="Prześlij">
 </form>
 <?php
 $sql="SELECT * FROM aktywnosci INNER JOIN users on users.ID = aktywnosci.ID_organizatora INNER JOIN udostepnienia on udostepnienia.id_aktywnosci=aktywnosci.ID WHERE udostepnienia.id_usera=".$_SESSION["USER"]." and aktywnosci.data between '".$begin."' and '".$end."'";

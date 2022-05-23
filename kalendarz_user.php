@@ -9,6 +9,7 @@ include('calendar.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue - Kalendarz</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link href="calendar.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="colors.css">
 <script>
 var events=[];
 
@@ -28,7 +29,7 @@ function dayclick(x)
 	var lista_aktywnosci=document.getElementById("lista_aktywnosci");
 	var lista="";
 	day_events.forEach(event => {
-		lista+='<tr><td style="width:25%;">'+event.nazwa+'</td><td style="width:25%;">'+event.data+'</td><td style="width:25%;">'+event.godzina+'</td><td style="width:25%;"><form action="kalendarz_user_szczegoly.php" method="post"><input type="hidden" name="ID" value="'+event.ID+'"><input class="btn btn-primary m-2" type="submit" value="Szczegóły"></form></td></tr>';
+		lista+='<tr><td style="width:25%;">'+event.nazwa+'</td><td style="width:25%;">'+event.data+'</td><td style="width:25%;">'+event.godzina+'</td><td style="width:25%;"><form action="kalendarz_user_szczegoly.php" method="post"><input type="hidden" name="ID" value="'+event.ID+'"><input class="btn blue m-2" type="submit" value="Szczegóły"></form></td></tr>';
 	});
 	lista_aktywnosci.innerHTML=lista;
 	lista_aktywnosci.scrollIntoView();
@@ -98,7 +99,7 @@ function update_month(){
 </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

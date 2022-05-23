@@ -9,8 +9,10 @@ include('dbconfig.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue - Profil - Zmiana Hasła</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
+<link rel="stylesheet" href="colors.css">
+</head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +70,7 @@ function validate(){
   <span class="input-group-text" id="basic-addon2">Potwierdź hasło</span>
   <input type="password" class="form-control" name='haslo2' id="haslo2" oninput="validate()" placeholder="Hasło" aria-describedby="basic-addon2">
 </div>
-<input type="submit" class="btn btn-primary m-1" id="sub" disabled value="Zatwierdź">
+<input type="submit" class="btn blue m-1" id="sub" disabled value="Zatwierdź">
 </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></body>

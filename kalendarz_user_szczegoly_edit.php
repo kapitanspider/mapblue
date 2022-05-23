@@ -9,8 +9,10 @@ include('dbconfig.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue - Kalendarz</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
+<link rel="stylesheet" href="colors.css">
+</head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,13 +56,15 @@ if(isset($_POST["update"]))
     {
     $sql = "UPDATE `aktywnosci` SET `nazwa` = '".$_POST["nazwa"]."',`rodzaj` = '".$_POST["rodzaj"]."',`data` = '".$_POST["data"]."',`godzina` = '".$_POST["godzina"]."',`uczestnicy` = '".$_POST["uczestnicy"]."',`potwierdzenie` = '".$_POST["potwierdzenie"]."',`notatka` = '".$_POST["notatka"]."' WHERE ID='".$_POST["ID"]."'";
     $conn->query($sql);
-    header("Location: kalendarz_user.php");
+    echo '<script>location.replace("kalendarz_user.php")</script>';
+    //header("Location: kalendarz_user.php");
     }
     if($_POST["update"]=="delete")
     {
         $sql = "DELETE FROM `aktywnosci` WHERE ID='".$_POST["ID"]."'";
         $conn->query($sql);
-        header("Location: kalendarz_user.php");
+        echo '<script>location.replace("kalendarz_user.php")</script>';
+        //header("Location: kalendarz_user.php");
     }
 }
 
@@ -217,8 +221,8 @@ echo "<br>";
 echo '<textarea id="notatka" name="notatka" rows="4" cols="50">'.$row["notatka"].'</textarea>';
 echo "<br>";
 echo '<input type="hidden" name="update" value="update">';
-echo '<input class="btn btn-primary m-2" type="submit"  value="Aktualizuj">';
-echo '<input class="btn btn-primary m-2" type="submit" value="Usuń Aktywność" form="form2">';
+echo '<input class="btn blue m-2" type="submit"  value="Aktualizuj">';
+echo '<input class="btn blue m-2" type="submit" value="Usuń Aktywność" form="form2">';
 echo "</div>";
 echo "</form>";
 ?>

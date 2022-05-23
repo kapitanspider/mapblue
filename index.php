@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
+<link rel="stylesheet" href="colors.css">
+</head>
 <body>
 <div class="d-flex justify-content-center m-1">
 	<form action="login.php" method="post" class="card p-2 w-100">
@@ -30,7 +32,7 @@ if(isset($_GET['login']))
 	<input class="form-control text-center w-75 mx-auto d-block" type="text" name="Login" style="font-size:x-large;"><br>
 	<p style="font-size:xx-large;">Hasło:</p> 
 	<input class="form-control text-center w-75 mx-auto d-block" type="password" name="Password" style="font-size:x-large;"><br>
-	<input type="submit" class="btn btn-primary" value="Zaloguj">
+	<input type="submit" class="btn blue " value="Zaloguj">
 	</div>
 	</form>
 </div>

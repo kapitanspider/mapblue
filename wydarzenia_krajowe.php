@@ -9,9 +9,10 @@ include('dbconfig.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue - wydarzenia Ogólnopolskie</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="colors.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +71,7 @@ OD:
 <input type="date" name="begin" required value="<?php echo $begin; ?>"> 
 DO:
 <input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" class="btn btn-primary m-2" value="Ustaw">
+<input type="submit" class="btn blue m-2" value="Ustaw">
 </form>
 <div class="accordion" id="accordion1">
 <?php
@@ -96,7 +97,7 @@ while($row = $result->fetch_assoc())
 </svg></a></p>
   <form method="GET" action="map.php">
 	<input type="hidden" name="ID_Parent" value="'.$row["ID"].'">
-	<input type="submit" class="btn btn-primary m-1" value="Utwórz wydarzenie pochodne">
+	<input type="submit" class="btn blue m-1" value="Utwórz wydarzenie pochodne">
 	</form>
   </div>
   </div>';
