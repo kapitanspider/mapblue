@@ -23,12 +23,8 @@ var ics=function(e,t){"use strict";{if(!(navigator.userAgent.indexOf("MSIE")>-1&
 function save_event()
 {
   cal=ics();
-  console.log(event.data);
-  console.log(event.godzina);
   var x=event.data.split('-');
   var y=event.godzina.split(':');
-  console.log(x);
-  console.log(y);
   var date_beg=new Date(x[0],x[1],x[2],y[0],y[1])
   var date_end = new Date(new Date(date_beg).setHours(new Date(date_beg).getHours() + 2));
   cal.addEvent(event.nazwa,event.notatka,event.gmina,date_beg,date_end);
