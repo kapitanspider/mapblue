@@ -107,11 +107,11 @@ var event = {nazwa:"'.$row["nazwa"].'",data:"'.$row["data"].'",godzina:"'.$row["
 ?>
 <br>
 <br>
-<form action="kalendarz_user_szczegoly_edit.php" method="post">
+<form action="kalendarz_user_szczegoly_edit.php" method="post" id="form1">
     <input type="hidden" name="ID" value="<?php echo $_POST["ID"];?>">
-    <input type="submit" class="btn blue m-2 w-25" value="Edytuj wydarzenie">
 </form>
-<p class="btn blue m-2 w-25" onclick="save_event()">Dodaj do kalendarza urządzenia</p>
+<input type="submit" class="btn blue m-2" value="Edytuj wydarzenie" form="form1">
+<p class="btn blue m-2" onclick="save_event()">Dodaj do kalendarza urządzenia</p>
 </div>
 <br>
 </div>
