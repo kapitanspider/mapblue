@@ -71,70 +71,28 @@ function save_event()
   </div>
 </nav>
 <?php
-if(isset($_POST["id_uczestnika"])){
-$sql = "DELETE FROM wspoluczestnicy WHERE id_aktywnosci='".$_POST["ID"]."' and id_uzytkownika='".$_POST["id_uczestnika"]."'";
-$conn->query($sql);
+if(isset($_POST["id_uczestnika"]))
+{
+    $sql = "INSERT INTO wspoluczestnicy (`id`, `id_aktywnosci`, `id_uzytkownika`) VALUES (NULL, '".$_POST["ID"]."', '".$_POST["id_uczestnika"]."');";
+    $conn->query($sql);
+    echo "<script>alert('Dodano wpółuczestnika');</script>";
 }
-
-$db_data = array();
-$sql = "SELECT * From aktywnosci Where ID='".$_POST["ID"]."'";
-$result = $conn->query($sql);
 ?>
-<div class="container-fluid p-3 mt-1 " style="max-width:700px;">
-<?php
-$row = $result->fetch_assoc();
-//var_dump($row);
-echo "<div class='card m-1 p-2'>";
-echo "Lokalizacja:<br>Województwo: ".$row["wojewodztwo"]."<br>Okręg: ".$row["okreg"]."<br>Powiat: ".$row["powiat"]."<br>Gmina: ".$row["gmina"];
-echo "</div>";
-echo "<div class='card m-1 p-2'>";
-echo "Nazwa Wydarzenia: ".$row["nazwa"];
-echo "<br>";
-echo "<a href='".$row["potwierdzenie"]."' target='blank' >
-	<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='currentColor' class='bi bi-link' viewBox='0 0 16 16'>
-	<path d='M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z'/>
-	<path d='M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z'/>
-	</svg></a>";
-echo "Typ Wydarzenia: ".$row["rodzaj"];
-echo "<br>";
-echo "Data wydarzenia: ".$row["data"];
-echo "<br>";
-echo "Godzina: ".$row["godzina"];
-echo "<br><br>";
-echo "Ilość uczestników: ".$row["uczestnicy"];
-echo "<br>";
-echo "Notatka: ".$row["notatka"];
-echo '
-<script>
-var event = {nazwa:"'.$row["nazwa"].'",data:"'.$row["data"].'",godzina:"'.$row["godzina"].'",notatka:"'.$row["notatka"].'",gmina:"'.$row["gmina"].'"}; 
-</script>
-';
-?>
-<br>
-<br>
-<form action="kalendarz_user_szczegoly_edit.php" method="post" id="form1">
-    <input type="hidden" name="ID" value="<?php echo $_POST["ID"];?>">
-</form>
-<input type="submit" class="btn blue m-2" value="Edytuj wydarzenie" form="form1">
-<p class="btn blue m-2" onclick="save_event()">Dodaj do kalendarza urządzenia</p>
-</div>
-<div class="card m-1 p-2"> 
-Współuczestnicy:
+<div class="container-fluid p-3 mt-1 card" style="max-width:700px;">
 <div class="row row-cols-1 row-cols-md-3 g-4">
-<br>
 <?php
-$sql = "SELECT users.ID, users.IMIE, users.NAZWISKO, users.Profilowe FROM `wspoluczestnicy` inner join users on wspoluczestnicy.id_uzytkownika=users.ID Where id_aktywnosci='".$_POST["ID"]."'";
+$sql = "SELECT users.ID, users.IMIE, users.NAZWISKO, users.Profilowe FROM `users` WHERE ID not in (select id_uzytkownika from wspoluczestnicy where id_aktywnosci='".$_POST['ID']."') order by NAZWISKO,IMIE ASC";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()){
 echo '<div class="col">
 <div class="card float-right mx-auto text-center" style="width: 10rem;">
-<img src="'.$row["Profilowe"].'" class="card-img-top" alt="...">
+<img src="'.$row["Profilowe"].'" class="card-img-top" >
 <div class="card-body">
   <h5 class="card-title">'.$row["IMIE"].'</h5><h5>'.$row["NAZWISKO"].'</h5>
-<form action="kalendarz_user_szczegoly.php" method="POST">
+<form action="kalendarz_user_szczegoly_add_coop.php" method="POST">
 <input type="hidden" name="ID" value="'.$_POST["ID"].'">
 <input type="hidden" name="id_uczestnika" value="'.$row["ID"].'">
-<input type="submit" class="btn blue" value="Usuń">
+<input type="submit" class="btn blue" value="Dodaj">
 </form>
 </div>
 </div>
@@ -142,12 +100,10 @@ echo '<div class="col">
 }
 ?>
 </div>
-<br>
-<form action="kalendarz_user_szczegoly_add_coop.php" id="form2" method="POST">
+<form action="kalendarz_user_szczegoly.php" method="POST" id="form_wroc">
 <input type="hidden" name="ID" value="<?php echo $_POST["ID"];?>">
 </form>
-<input type="submit" class="btn blue m-2" value="Dodaj współuczestnika" form="form2">
-</div>
+<input type="submit" class="btn blue m-3" value="Wróć" form="form_wroc">
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
