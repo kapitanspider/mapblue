@@ -18,7 +18,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MapBlue</a>
+    <a class="navbar-brand" href="main.php">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

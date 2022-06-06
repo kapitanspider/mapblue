@@ -7,14 +7,11 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Admin - Statystyki</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
+<title>MapBlue - Profil</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
 <link rel="stylesheet" href="colors.css">
 </head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
     <a class="navbar-brand" href="main.php">MapBlue</a>
@@ -29,6 +26,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+	  <li class="nav-item" >
+        <a class="nav-link" href="map.php">Dodaj aktywność</a>
+      </li>
 	  <li class="nav-item">
         <a class="nav-link" href="kalendarz_user.php">Kalendarz</a>
       </li>
@@ -38,51 +38,40 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 	  <li class="nav-item">
         <a class="nav-link" href="pomoc.php">Pomoc</a>
       </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="wydarzenia_krajowe.php">Wydarzenia Ogólnopolskie</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
+      </li>
     </ul>
     </div>
   </div>
 </nav>
-<div class="container-fluid p-2 card mt-1" style="max-width:1000px;">
-<body>
+<br>
+<div class="container-fluid p-2 card" style="max-width:700px;">
+<div class="row row-cols-1 row-cols-md-3 g-4">
 <?php
-
-if(isset($_POST["begin"]))
-{
-$begin=$_POST["begin"];
-$end=$_POST["end"];
-}
-else
-{
-$begin=date_format(date_create(),"Y-m-d");
-$end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
-}
-?>
-<form action="admin_statystyki_powiaty_best.php" method="post">
-<label>Ustaw zakres dat</label>
-<input type="date" name="begin" required value="<?php echo $begin; ?>">
-<input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" value="Prześlij">
-</form>
-<table class="table table-striped">
-	<tr>
-		<th scope="col">Powiat</th>
-        <th scope="col">Wojewdzótwo</th>
-        <th scope="col">Ilość aktywnosci w powiecie</th>
-	</tr>
-<?php
-$sql= "SELECT powiat, COUNT(ID), wojewodztwo from aktywnosci where data between '".$begin."' and '".$end."'group by powiat order by COUNT(ID) DESC";
+$sql = "SELECT * From users Where not ID='".$_SESSION["USER"]."' order by NAZWISKO,IMIE ASC";
 $result = $conn->query($sql);
-
 while($row = $result->fetch_assoc())
 {
-	echo "<tr>";
-	echo "<td>".$row["powiat"]."</td><td>".$row["wojewodztwo"]."</td><td>".$row["COUNT(ID)"]."</td>";
-	echo "</tr>";
+  echo '<div class="col">
+  <div class="card float-right mx-auto text-center" style="width: 10rem;">
+  <img src="'.$row["Profilowe"].'" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">'.$row["IMIE"].'</h5><h5>'.$row["NAZWISKO"].'</h5>
+  <form action="users_aktywnosci.php" method="POST">
+  <input type="hidden" name="id_uczestnika" value="'.$row["ID"].'">
+  <input type="submit" class="btn blue" value="Aktywności">
+  </form>
+  </div>
+  </div>
+  </div>';
 }
 ?>
-</table>
+</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 </html>

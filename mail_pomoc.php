@@ -25,8 +25,8 @@ $mail->IsHTML(true);
 $mail->Username = "system@mapblue.pl"; /* login do skrzynki email często adres*/
 $mail->Password = "4qkDiZ4x"; /* Hasło do poczty */
 $mail->setFrom('system@mapblue.pl', 'Pronex'); /* adres e-mail i nazwa nadawcy */
-$mail->AddAddress("witek.wiry@op.pl"); /* adres lub adresy odbiorców */
-$mail->Subject = "Uwaga dotycząca aplikacji od: " .$user["IMIE"]." ".$user["NAZWISKO"]; /* Tytuł wiadomości */
+$mail->AddAddress("witek.wiry@op.pl","support@mapblue.pl"); /* adres lub adresy odbiorców */
+$mail->Subject = "Uwaga dotycząca aplikacji MapBlue od użytkownika: " .$user["IMIE"]." ".$user["NAZWISKO"]; /* Tytuł wiadomości */
 $mail->Body = $_POST["uwaga"];;
 
 if(!$mail->Send()) {

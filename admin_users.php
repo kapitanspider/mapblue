@@ -15,7 +15,7 @@ include('dbconfig.php');
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MapBlue</a>
+    <a class="navbar-brand" href="main.php">MapBlue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -96,6 +96,10 @@ if($row["IS_ACTIVE"]==1)
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Edytuj">
 </form>
+<form action="admin_users_change_pass.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Zmień hasło">
+</form>
 </td>
 <?php
 }
@@ -110,6 +114,10 @@ else
 <form action="admin_users_edit.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Edytuj">
+</form>
+<form action="admin_users_change_pass.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Zmień hasło">
 </form>
 </td>
 <?php	
@@ -167,6 +175,10 @@ if($row["ID"]!=$_SESSION["USER"])
 <form action="admin_users_edit.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Edytuj">
+</form>
+<form action="admin_users_change_pass.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Zmień hasło">
 </form>
 </td>
 <?php
