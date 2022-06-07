@@ -24,6 +24,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="main.php">Strona Główna</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="admin_aktywnosci.php">Wszystkie aktywności</a>
       </li>
