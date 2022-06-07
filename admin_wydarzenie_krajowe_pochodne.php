@@ -19,21 +19,26 @@ include('dbconfig.php');
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <a class="nav-link" href="main.php">Strona główna</a>
+        <a class="nav-link" href="admin_aktywnosci.php">Wszystkie aktywności</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="profil.php">Profil</a>
+        <a class="nav-link" href="admin_statystyki.php">Statystyki</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="kalendarz_user.php">Kalendarz</a>
+        <a class="nav-link" href="admin_statystyki_kategorie.php">Statystyki kategorii</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="ustawienia.php">Ustawienia</a>
+        <a class="nav-link" href="admin_wydarzenie_krajowe.php">Wydarzenia ogólnopolskie</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="pomoc.php">Pomoc</a>
+        <a class="nav-link" href="admin_users.php">Użytkownicy</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>
@@ -43,6 +48,10 @@ include('dbconfig.php');
 <?php
 $sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where ID_Parent='".$_POST["id"]."' order by users.IMIE, users.NAZWISKO asc";
 $result = $conn->query($sql);
+if($result->num_rows==0)
+{
+  echo "Brak wydarzeń pochodnych";
+}
 $i=0;
 echo '<div class="accordion" id="accordion1">';
 while($row = $result->fetch_assoc())

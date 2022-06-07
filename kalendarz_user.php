@@ -27,10 +27,17 @@ function dayclick(x)
 		}
 	});
 	var lista_aktywnosci=document.getElementById("lista_aktywnosci");
-	var lista="";
+	if(day_events.length==0)
+	{
+	var	lista="<tr>Brak wydarzeń tego dnia</tr>";
+	}
+	else
+	{
+	var lista="<tr><td>Nazwa</td><td>Data</td><td>Godzina</td><td></td></tr>";
 	day_events.forEach(event => {
 		lista+='<tr><td style="width:25%;">'+event.nazwa+'</td><td style="width:25%;">'+event.data+'</td><td style="width:25%;">'+event.godzina+'</td><td style="width:25%;"><form action="kalendarz_user_szczegoly.php" method="post"><input type="hidden" name="ID" value="'+event.ID+'"><input class="btn blue m-2" type="submit" value="Szczegóły"></form></td></tr>';
 	});
+	}
 	lista_aktywnosci.innerHTML=lista;
 	lista_aktywnosci.scrollIntoView();
 }
@@ -96,6 +103,7 @@ function update_month(){
 	cal_title.innerHTML = date[0]+" - "+date[1];
 }
 
+
 </script>
 </head>
 <body>
@@ -106,13 +114,16 @@ function update_month(){
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link" href="map.php">Dodaj aktywność</a>
       </li>
@@ -132,6 +143,11 @@ function update_month(){
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
       </li>
     </ul>
+	<ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
+      </li>
+    </ul>
     </div>
   </div>
 </nav>
@@ -146,7 +162,7 @@ echo $calendar->show();
 </div>
 <br>
 <div class="container-fluid w-100">
-<table  class="table table-striped" id="lista_aktywnosci" style="margin:0 auto;">
+<table  class="table table-striped w-75" id="lista_aktywnosci" style="margin:0 auto;">
 </table>
 </div>
 <script>

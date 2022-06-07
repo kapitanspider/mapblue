@@ -41,13 +41,16 @@ function save_event()
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link " href="map.php">Dodaj aktywność</a>
       </li>
@@ -65,6 +68,11 @@ function save_event()
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>
@@ -123,7 +131,7 @@ Współuczestnicy:
 <div class="row row-cols-1 row-cols-md-3 g-4">
 <br>
 <?php
-$sql = "SELECT users.ID, users.IMIE, users.NAZWISKO, users.Profilowe FROM `wspoluczestnicy` inner join users on wspoluczestnicy.id_uzytkownika=users.ID Where id_aktywnosci='".$_POST["ID"]."'";
+$sql = "SELECT users.ID, users.IMIE, users.NAZWISKO, users.Profilowe, users.NR_OKREGU FROM `wspoluczestnicy` inner join users on wspoluczestnicy.id_uzytkownika=users.ID Where id_aktywnosci='".$_POST["ID"]."'";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()){
 echo '<div class="col">
@@ -131,6 +139,7 @@ echo '<div class="col">
 <img src="'.$row["Profilowe"].'" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">'.$row["IMIE"].'</h5><h5>'.$row["NAZWISKO"].'</h5>
+  <p>Nr. okręgu: '.$row["NR_OKREGU"].'</p>
 <form action="kalendarz_user_szczegoly.php" method="POST">
 <input type="hidden" name="ID" value="'.$_POST["ID"].'">
 <input type="hidden" name="id_uczestnika" value="'.$row["ID"].'">

@@ -41,13 +41,16 @@ function save_event()
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link " href="map.php">Dodaj aktywność</a>
       </li>
@@ -67,6 +70,11 @@ function save_event()
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
       </li>
     </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
+      </li>
+    </ul>
     </div>
   </div>
 </nav>
@@ -81,7 +89,7 @@ if(isset($_POST["id_uczestnika"]))
 <div class="container-fluid p-3 mt-1 card" style="max-width:700px;">
 <div class="row row-cols-1 row-cols-md-3 g-4">
 <?php
-$sql = "SELECT users.ID, users.IMIE, users.NAZWISKO, users.Profilowe FROM `users` WHERE ID not in (select id_uzytkownika from wspoluczestnicy where id_aktywnosci='".$_POST['ID']."') order by NAZWISKO,IMIE ASC";
+$sql = "SELECT users.ID, users.IMIE, users.NAZWISKO, users.Profilowe, users.NR_OKREGU FROM `users` WHERE ID not in (select id_uzytkownika from wspoluczestnicy where id_aktywnosci='".$_POST['ID']."') order by NR_OKREGU,NAZWISKO,IMIE ASC";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()){
 echo '<div class="col">
@@ -89,6 +97,7 @@ echo '<div class="col">
 <img src="'.$row["Profilowe"].'" class="card-img-top" >
 <div class="card-body">
   <h5 class="card-title">'.$row["IMIE"].'</h5><h5>'.$row["NAZWISKO"].'</h5>
+  <p>Nr. okręgu: '.$row["NR_OKREGU"].'</p>
 <form action="kalendarz_user_szczegoly_add_coop.php" method="POST">
 <input type="hidden" name="ID" value="'.$_POST["ID"].'">
 <input type="hidden" name="id_uczestnika" value="'.$row["ID"].'">

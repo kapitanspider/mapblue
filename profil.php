@@ -28,13 +28,16 @@ while($row = $result->fetch_assoc()){
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link active" href="profil.php">Profil</a>
       </li>
+    <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link" href="map.php">Dodaj aktywność</a>
       </li>
@@ -52,6 +55,11 @@ while($row = $result->fetch_assoc()){
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>

@@ -19,13 +19,16 @@ include('dbconfig.php');
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link active" href="map.php">Dodaj aktywność</a>
       </li>
@@ -43,6 +46,11 @@ include('dbconfig.php');
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
+      </li>
+    </ul>
+	<ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>
@@ -70,7 +78,11 @@ if(isset($_GET['ID_Parent']))
 <select class="form-select" name="gmina" style="width:100%;" id="gmina" required>
 </select>
 <br>
-<input class="btn blue m-1" type="submit">
+<input class="btn blue m-1 w-100" type="submit" value="Dalej">
+</form>
+<form action="map_okregi.php" method="get">
+<input type="hidden" name="woj" id="woj" value=<?php echo '"'.$_GET['woj'].'"'; ?>>
+<input class="btn blue m-1 w-100" type="submit" value="Wróć">
 </form>
 </div>
 <script>

@@ -30,8 +30,10 @@ $mail->Subject = "Uwaga dotycząca aplikacji MapBlue od użytkownika: " .$user["
 $mail->Body = $_POST["uwaga"];;
 
 if(!$mail->Send()) {
-header('Location: pomoc.php');
+//header('Location: pomoc.php');
+echo '<script>window.location.href = "pomoc.php";</script>';
 } else {
-    header('Location: pomoc.php');
+//header('Location: pomoc.php');
+echo '<script>window.location.href = "pomoc.php";</script>';
 }
 ?>

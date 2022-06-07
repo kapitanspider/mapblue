@@ -20,21 +20,26 @@ include('dbconfig.php');
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <a class="nav-link" href="main.php">Strona główna</a>
+        <a class="nav-link" href="admin_aktywnosci.php">Wszystkie aktywności</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="profil.php">Profil</a>
+        <a class="nav-link" href="admin_statystyki.php">Statystyki</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="kalendarz_user.php">Kalendarz</a>
+        <a class="nav-link" href="admin_statystyki_kategorie.php">Statystyki kategorii</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="ustawienia.php">Ustawienia</a>
+        <a class="nav-link" href="admin_wydarzenie_krajowe.php">Wydarzenia ogólnopolskie</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="pomoc.php">Pomoc</a>
+        <a class="nav-link" href="admin_users.php">Użytkownicy</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>
@@ -57,12 +62,13 @@ if(isset($_POST["activate"]))
 $sql = "SELECT * From users Where ADMIN = 0";
 $result = $conn->query($sql);
 ?>
-Użytkownicy
-<table border="solid">
+<h4>Użytkownicy</h4>
+<table class="table">
 <tr>
 <th>Login</th>
 <th>Imię</th>
 <th>Nazwisko</th>
+<th>Nr. Okręgu</th>
 <th>Email</th>
 <th>Telefon</th>
 <th>Zmiana statusu konta</th>
@@ -73,7 +79,7 @@ while($row = $result->fetch_assoc())
 //var_dump($row);
 if($row["IS_ACTIVE"]==1)
 {
-echo "<tr bgcolor=lightgreen>";
+echo "<tr>";
 }
 else
 {
@@ -82,6 +88,7 @@ echo "<tr bgcolor=red>";
 echo "<td>".$row["LOGIN"]."</td>";
 echo "<td>".$row["IMIE"]."</td>";
 echo "<td>".$row["NAZWISKO"]."</td>";
+echo "<td>".$row["NR_OKREGU"]."</td>";
 echo "<td>".$row["EMAIL"]."</td>";
 echo "<td>".$row["TELEFON"]."</td>";
 if($row["IS_ACTIVE"]==1)
@@ -130,12 +137,13 @@ echo "</tr>";
 $sql = "SELECT * From users Where ADMIN = 1";
 $result = $conn->query($sql);
 ?>
-Moderatorzy
-<table border="solid">
+<h4>Moderatorzy</h4>
+<table class="table">
 <tr>
 <th>Login</th>
 <th>Imię</th>
 <th>Nazwisko</th>
+<th>Nr. Okręgu</th>
 <th>Email</th>
 <th>Telefon</th>
 <th>Zmiana statusu konta</th>
@@ -146,7 +154,7 @@ while($row = $result->fetch_assoc())
 //var_dump($row);
 if($row["IS_ACTIVE"]==1)
 {
-echo "<tr bgcolor=lightgreen>";
+echo "<tr class=''>";
 }
 else
 {
@@ -155,6 +163,7 @@ echo "<tr bgcolor=red>";
 echo "<td>".$row["LOGIN"]."</td>";
 echo "<td>".$row["IMIE"]."</td>";
 echo "<td>".$row["NAZWISKO"]."</td>";
+echo "<td>".$row["NR_OKREGU"]."</td>";
 echo "<td>".$row["EMAIL"]."</td>";
 echo "<td>".$row["TELEFON"]."</td>";
 if($row["IS_ACTIVE"]==1)

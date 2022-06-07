@@ -28,13 +28,16 @@ textarea {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link " href="map.php">Dodaj aktywność</a>
       </li>
@@ -54,18 +57,29 @@ textarea {
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
       </li>
     </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
+      </li>
+    </ul>
     </div>
   </div>
 </nav>
 </br>
 <div class="container-fluid p-2 card" style="max-width:700px;">
 <form action="mail_pomoc.php" method="Post">
-<label>Uwagi dotycząsce aplikacji</label>
+<label>Masz problem? Napisz jak możemy Ci pomóc.</label>
 <br>
 <textarea name="uwaga" rows="10" required></textarea>
 <br>
 <input type="submit" class="btn blue m-1" value="Wyślij">
+<p><?php
+echo $_SESSION["IMIE"]." ";
+echo $_SESSION["NAZWISKO"];
+?>
+</p>
 </form>
+
 </div>
 <!-- Koniec skryptu mapy -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

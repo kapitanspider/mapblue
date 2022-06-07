@@ -19,13 +19,16 @@ include('dbconfig.php');
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link" href="map.php">Dodaj aktywność</a>
       </li>
@@ -45,6 +48,11 @@ include('dbconfig.php');
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
       </li>
     </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
+      </li>
+    </ul>
     </div>
   </div>
 </nav>
@@ -61,6 +69,7 @@ while($row = $result->fetch_assoc())
   <img src="'.$row["Profilowe"].'" class="card-img-top" >
   <div class="card-body">
     <h5 class="card-title">'.$row["IMIE"].'</h5><h5>'.$row["NAZWISKO"].'</h5>
+    <p>Nr. Okręgu: '.$row["NR_OKREGU"].'</p>
   <form action="users_aktywnosci.php" method="POST">
   <input type="hidden" name="id_uczestnika" value="'.$row["ID"].'">
   <input type="submit" class="btn blue" value="Aktywności">

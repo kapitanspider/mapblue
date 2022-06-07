@@ -19,13 +19,16 @@ include('dbconfig.php');
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a class="nav-link" href="main.php">Strona główna</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="profil.php">Profil</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users.php">Użytkownicy</a>
+    </li>
 	  <li class="nav-item" >
         <a class="nav-link" href="map.php">Dodaj aktywność</a>
       </li>
@@ -43,6 +46,11 @@ include('dbconfig.php');
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="user_udostepnione.php">Udostępnione</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>
@@ -79,6 +87,10 @@ $sql="DELETE FROM powiadomienia WHERE id_osoby='".$_SESSION["USER"]."'";
 $conn->query($sql);
 $sql="SELECT * FROM wydarzenia_ogolnopolskie WHERE data between '".$begin."' and '".$end."' order by data asc, godzina asc";
 $result = $conn->query($sql);
+if($result->num_rows==0)
+{
+  echo "Brak wydarzeń ogólnoposkich w podanym zakresie";
+}
 $i=0;
 while($row = $result->fetch_assoc())
 {

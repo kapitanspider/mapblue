@@ -25,21 +25,26 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <a class="nav-link" href="main.php">Strona główna</a>
+        <a class="nav-link" href="admin_aktywnosci.php">Wszystkie aktywności</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="profil.php">Profil</a>
+        <a class="nav-link" href="admin_statystyki.php">Statystyki</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="kalendarz_user.php">Kalendarz</a>
+        <a class="nav-link" href="admin_statystyki_kategorie.php">Statystyki kategorii</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="ustawienia.php">Ustawienia</a>
+        <a class="nav-link" href="admin_wydarzenie_krajowe.php">Wydarzenia ogólnopolskie</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="pomoc.php">Pomoc</a>
+        <a class="nav-link" href="admin_users.php">Użytkownicy</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>

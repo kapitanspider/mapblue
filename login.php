@@ -20,6 +20,10 @@ if(isset($_POST["Login"]) and isset($_POST["Password"]))
 		session_start();
 		$_SESSION["USER"]=$db_data["ID"];
 		$_SESSION["ADMIN"]=$db_data["ADMIN"];
+		$_SESSION["IMIE"]=$db_data["IMIE"];
+		$_SESSION["NAZWISKO"]=$db_data["NAZWISKO"];
+		$_SESSION["LOGIN"]=$db_data["LOGIN"];
+		$_SESSION["Profilowe"]=$db_data["Profilowe"];
 		header("Location: main.php");
 		}
 		else
