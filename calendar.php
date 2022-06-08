@@ -72,9 +72,26 @@ class Calendar {
 		while($row = $result->fetch_assoc())
 		{
 			echo "<script>";
-			echo "var js_data = '".json_encode($row)."';";
-			echo "var js_obj_data = JSON.parse(js_data);";
-			echo "events.push(js_obj_data);";
+            echo 'var js_data={
+            ID: `'.$row["ID"].'`,
+            ID_Organizatora: `'.$row["ID_Organizatora"].'`,
+            wojewodztwo: `'.$row["wojewodztwo"].'`,
+            okreg: `'.$row["okreg"].'`,
+            powiat: `'.$row["powiat"].'`,
+            gmina: `'.$row["gmina"].'`,
+            nazwa: `'.$row["nazwa"].'`,
+            rodzaj: `'.$row["rodzaj"].'`,
+            data: `'.$row["data"].'`,
+            godzina: `'.$row["godzina"].'`,
+            uczestnicy: `'.$row["uczestnicy"].'`,
+            potwierdzenie: `'.$row["potwierdzenie"].'`,
+            notatka: `'.$row["notatka"].'`,
+            data_dodania: `'.$row["data_dodania"].'`,
+            ocena: `'.$row["ocena"].'`,
+            ID_Parent: `'.$row["ID_Parent"].'`
+            }
+            ';
+			echo "events.push(js_data);";
 			echo "</script>";
 		}
          

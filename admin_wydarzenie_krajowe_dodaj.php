@@ -77,7 +77,7 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["zalacznik"]["tmp_name"], $target_file)) {
     echo "Plik ". htmlspecialchars( basename( $_FILES["zalacznik"]["name"])). " został wgrany na serwer, A wydarzenie zostało utworzone";
-	$sql = "INSERT INTO `wydarzenia_ogolnopolskie` (`nazwa`, `data`, `godzina`, `plik`) VALUES ('".$_POST["nazwa"]."', '".$_POST["data"]."', '".$_POST["godzina"]."', '".$target_file."')";
+	$sql = "INSERT INTO `wydarzenia_ogolnopolskie` (`nazwa`, `data`, `godzina`, `plik`, `informacje`) VALUES ('".$_POST["nazwa"]."', '".$_POST["data"]."', '".$_POST["godzina"]."', '".$target_file."','".$_POST["informacje"]."')";
 	$conn->query($sql);
 	$sql = "SELECT * from wydarzenia_ogolnopolskie where plik = '".$target_file."'";
 	$result=$conn->query($sql);
@@ -99,19 +99,23 @@ if ($uploadOk == 0) {
 }
 }
 ?>
-<form action="admin_wydarzenie_krajowe_dodaj.php" method="post" enctype="multipart/form-data">
+<form action="admin_wydarzenie_krajowe_dodaj.php" method="post" enctype="multipart/form-data" id="form1">
 <p>Nazwa wydarzenia:</p>
-<input type="text" name="nazwa" required>
+<input class="w-100" type="text" name="nazwa" required>
 <p>Data wydarzenia:</p>
-<input type="date" name="data" id="input_data" min="<?= date('Y-m-d'); ?>"required>
+<input class="w-100"type="date" name="data" id="input_data" min="<?= date('Y-m-d'); ?>"required>
 <p>Godzina wydarzenia:</p>
-<input type="time" name="godzina" required>
+<input class="w-100" type="time" name="godzina" required>
 <p>Załącznik:</p>
 <input type="file" name="zalacznik" required>
 <br>
 <br>
-<input type="submit" value="Utwórz">
+<p>Informacja:</p>
+<textarea class="w-100" name="informacje" required></textarea>
+
 </form>
+<input type="submit"  class="btn blue mt-2" value="Utwórz" form="form1">
+<a href="admin_wydarzenie_krajowe.php" class="btn blue mt-2">Wróć</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

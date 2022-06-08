@@ -29,9 +29,9 @@ if(isset($_GET['login']))
 	
 	<div class="container text-center ">
 	<p style="font-size:xx-large;">Login:</p> 
-	<input class="form-control text-center w-75 mx-auto d-block" type="text" name="Login" style="font-size:x-large;"><br>
+	<input class="form-control text-center w-50 mx-auto d-block" type="text" name="Login" style="font-size:x-large;"><br>
 	<p style="font-size:xx-large;">Hasło:</p> 
-	<input class="form-control text-center w-75 mx-auto d-block" type="password" name="Password" style="font-size:x-large;"><br>
+	<input class="form-control text-center w-50 mx-auto d-block" type="password" name="Password" style="font-size:x-large;"><br>
 	<input type="submit" class="btn blue " value="Zaloguj">
 	</div>
 	</form>
