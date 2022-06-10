@@ -110,6 +110,11 @@ if($row["IS_ACTIVE"]==1)
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Zmień hasło">
 </form>
+<form action="admin_users_remove.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="hidden" name="login" value=<?php echo  $row["LOGIN"]; ?>>
+<input type="submit" value="Usuń">
+</form>
 </td>
 <?php
 }
@@ -128,6 +133,11 @@ else
 <form action="admin_users_change_pass.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Zmień hasło">
+</form>
+<form action="admin_users_remove.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="hidden" name="login" value=<?php echo  $row["LOGIN"]; ?>>
+<input type="submit" value="Usuń">
 </form>
 </td>
 <?php	
@@ -192,6 +202,11 @@ if($row["ID"]!=$_SESSION["USER"])
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Zmień hasło">
 </form>
+<form action="admin_users_remove.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="hidden" name="login" value=<?php echo  $row["LOGIN"]; ?>>
+<input type="submit" value="Usuń">
+</form>
 </td>
 <?php
 }
@@ -213,6 +228,15 @@ if($row["ID"]!=$_SESSION["USER"])
 <form action="admin_users_edit.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
 <input type="submit" value="Edytuj">
+</form>
+<form action="admin_users_change_pass.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="submit" value="Zmień hasło">
+</form>
+<form action="admin_users_remove.php" method="post">
+<input type="hidden" name="id" value=<?php echo  $row["ID"]; ?>>
+<input type="hidden" name="login" value=<?php echo  $row["LOGIN"]; ?>>
+<input type="submit" value="Usuń">
 </form>
 </td>
 <?php	
