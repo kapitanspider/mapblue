@@ -10,7 +10,57 @@ include('dbconfig.php');
 <title>MapBlue - Użytkownicy</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="colors.css">
-
+<script>
+function tablefilter() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  elem = document.getElementById("table");
+  elem2 = document.getElementById("table2");
+  lista = elem.getElementsByTagName('tr');
+  lista2 = elem2.getElementsByTagName('tr');
+  for (i = 1; i < lista.length; i++) {
+    imie = lista[i].getElementsByClassName("imie")[0];
+    nazwisko = lista[i].getElementsByClassName("nazwisko")[0];
+    login = lista[i].getElementsByClassName("login")[0];
+    email = lista[i].getElementsByClassName("email")[0];
+    telefon = lista[i].getElementsByClassName("telefon")[0];
+    txtValue = imie.textContent || imie.innerText;
+    txtValue2 = nazwisko.textContent || nazwisko.innerText;
+    txtValue3 = login.textContent || login.innerText;
+    txtValue4 = email.textContent || email.innerText;
+    txtValue5 = telefon.textContent || telefon.innerText;
+   
+    if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1 || txtValue3.toUpperCase().indexOf(filter) > -1 || txtValue4.toUpperCase().indexOf(filter) > -1 || txtValue5.toUpperCase().indexOf(filter) > -1) 
+    {
+      lista[i].style.display = "";
+    } else {
+      lista[i].style.display = "none";
+    }
+  }
+  for (i = 1; i < lista2.length; i++) {
+    imie = lista2[i].getElementsByClassName("imie")[0];
+    nazwisko = lista2[i].getElementsByClassName("nazwisko")[0];
+    login = lista2[i].getElementsByClassName("login")[0];
+    email = lista2[i].getElementsByClassName("email")[0];
+    telefon = lista2[i].getElementsByClassName("telefon")[0];
+    txtValue = imie.textContent || imie.innerText;
+    txtValue2 = nazwisko.textContent || nazwisko.innerText;
+    txtValue3 = login.textContent || login.innerText;
+    txtValue4 = email.textContent || email.innerText;
+    txtValue5 = telefon.textContent || telefon.innerText;
+   
+    if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1 || txtValue3.toUpperCase().indexOf(filter) > -1 || txtValue4.toUpperCase().indexOf(filter) > -1 || txtValue5.toUpperCase().indexOf(filter) > -1) 
+    {
+   
+      lista2[i].style.display = "";
+    } else {
+      lista2[i].style.display = "none";
+    }
+  }
+}
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -66,7 +116,8 @@ $sql = "SELECT * From users Where ADMIN = 0";
 $result = $conn->query($sql);
 ?>
 <h4>Użytkownicy</h4>
-<table class="table">
+<input type="text" class="m-2" id="myInput" onkeyup="tablefilter()" placeholder="Wyszukaj">
+<table class="table" id="table">
 <tr>
 <th>Login</th>
 <th>Imię</th>
@@ -88,12 +139,12 @@ else
 {
 echo "<tr bgcolor=red>";	
 }
-echo "<td>".$row["LOGIN"]."</td>";
-echo "<td>".$row["IMIE"]."</td>";
-echo "<td>".$row["NAZWISKO"]."</td>";
+echo "<td class='login'>".$row["LOGIN"]."</td>";
+echo "<td class='imie'>".$row["IMIE"]."</td>";
+echo "<td class='nazwisko'>".$row["NAZWISKO"]."</td>";
 echo "<td>".$row["NR_OKREGU"]."</td>";
-echo "<td>".$row["EMAIL"]."</td>";
-echo "<td>".$row["TELEFON"]."</td>";
+echo "<td class='email'>".$row["EMAIL"]."</td>";
+echo "<td class='telefon'>".$row["TELEFON"]."</td>";
 if($row["IS_ACTIVE"]==1)
 {
 ?>
@@ -151,7 +202,7 @@ $sql = "SELECT * From users Where ADMIN = 1";
 $result = $conn->query($sql);
 ?>
 <h4>Moderatorzy</h4>
-<table class="table">
+<table class="table" id="table2">
 <tr>
 <th>Login</th>
 <th>Imię</th>
@@ -173,12 +224,12 @@ else
 {
 echo "<tr bgcolor=red>";	
 }
-echo "<td>".$row["LOGIN"]."</td>";
-echo "<td>".$row["IMIE"]."</td>";
-echo "<td>".$row["NAZWISKO"]."</td>";
+echo "<td  class='login'>".$row["LOGIN"]."</td>";
+echo "<td  class='imie'>".$row["IMIE"]."</td>";
+echo "<td  class='nazwisko'>".$row["NAZWISKO"]."</td>";
 echo "<td>".$row["NR_OKREGU"]."</td>";
-echo "<td>".$row["EMAIL"]."</td>";
-echo "<td>".$row["TELEFON"]."</td>";
+echo "<td class='email'>".$row["EMAIL"]."</td>";
+echo "<td class='telefon'>".$row["TELEFON"]."</td>";
 if($row["IS_ACTIVE"]==1)
 {
 ?>

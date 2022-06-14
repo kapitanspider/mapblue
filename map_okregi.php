@@ -60,31 +60,13 @@ svg {height:40vw; width:100vw }
     </div>
   </div>
 </nav>
-<?php
-
-
-if(isset($_GET["ID_Parent"]))
-{
-   echo "<script>var ID_Parent='".$_GET["ID_Parent"]."';</script>";
-}
-else
-{
-   echo "<script>var ID_Parent=-1;</script>";
-}
-?>
-
 <script>
 
 
 function click(e){
 	//console.log(e);
 	$woj = <?php echo '"'.$_GET['woj'].'"'; ?>;
-   if(ID_Parent==(-1)){
 	window.location.href = "location.php?woj="+$woj+"&okr="+e+"";
-   }
-   else{
-	window.location.href = "location.php?woj="+$woj+"&okr="+e+"&ID_Parent="+ID_Parent;
-   }
 }
 
 function m_on(e){

@@ -73,16 +73,12 @@ include('dbconfig.php');
 <p class="form-label m-1">Gmina:</p>
 <input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['gmina']; ?>">
 <input type="hidden" id="gmina" name="gmina"  value="<?php echo $_POST['gmina']; ?>">
-<?php
-if(isset($_POST['ID_Parent']))
-{
-?>
-<input type="hidden" id="ID_Parent" name="ID_Parent"  value="<?php echo $_POST['ID_Parent']; ?>">
-<?php
-}
-?>
 </br>
 <a href="map.php" class="btn blue m-1 w-100">Zmień lokację</a>
+<p class="form-label m-1">Ogólnopolskie wydarzenie macierzyste:</p>
+<select  class="m-1 w-100" id="ID_Parent" name="ID_Parent" required>
+<option value="0" selected>Brak</option>
+</select>
 <p class="form-label m-1">Nazwa aktywności/wydarzenia:</p>
 <input class="m-1 w-100" type="text" id="nazwa" name="nazwa" required>
 <p class="form-label m-1">Rodzaj</p>
@@ -110,6 +106,30 @@ if(isset($_POST['ID_Parent']))
 <input class="btn blue m-1 w-100" type="submit" value="Dodaj">
 </form>
 </div>
+<script>
+<?php
+$sql = "SELECT nazwa,ID FROM `wydarzenia_ogolnopolskie` order by ID DESC limit 3";
+//$sql = "SELECT * From users";
+$result = $conn->query($sql);
+echo "var nazwy=[];";
+echo "var id=[];";
+while($row = $result->fetch_assoc()){
+  echo '
+  nazwy.push("'.$row["nazwa"].'");
+  id.push("'.$row["ID"].'");
+  ';
+}
+?>
+
+let elem=document.getElementById("ID_Parent");
+console.log(elem);
+var lista= elem.innerHTML;
+for (var i=0;i<nazwy.length;i++)
+{
+  lista+='<option value="'+id[i]+'">'+nazwy[i]+'</option>';
+}
+elem.innerHTML=lista;
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>

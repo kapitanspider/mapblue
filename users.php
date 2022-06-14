@@ -10,6 +10,28 @@ include('dbconfig.php');
 <title>MapBlue - Profil</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
 <link rel="stylesheet" href="colors.css">
+<script>
+function cardfilter() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  elem = document.getElementById("card_wrapper");
+  lista = elem.getElementsByClassName('card');
+  //console.log(li);
+  for (i = 0; i < lista.length; i++) {
+    h = lista[i].getElementsByTagName("h5")[0];
+    txtValue = h.textContent || h.innerText;
+    //console.log(h);
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      lista[i].parentElement.style.display = "";
+    } else {
+      lista[i].parentElement.style.display = "none";
+    }
+  }
+
+}
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -58,7 +80,8 @@ include('dbconfig.php');
 </nav>
 <br>
 <div class="container-fluid p-2 card" style="max-width:700px;">
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<input type="text" class="m-2" id="myInput" onkeyup="cardfilter()" placeholder="Wyszukaj">
+<div class="row row-cols-1 row-cols-sm-3 g-4" id="card_wrapper">
 <?php
 $sql = "SELECT * From users Where not ID='".$_SESSION["USER"]."' order by NAZWISKO,IMIE ASC";
 $result = $conn->query($sql);
@@ -68,7 +91,7 @@ while($row = $result->fetch_assoc())
   <div class="card float-right mx-auto text-center" style="width: 10rem;">
   <img src="'.$row["Profilowe"].'" class="card-img-top" >
   <div class="card-body">
-    <h5 class="card-title">'.$row["IMIE"].'</h5><h5>'.$row["NAZWISKO"].'</h5>
+    <h5 class="card-title">'.$row["IMIE"].' '.$row["NAZWISKO"].'</h5>
     <p>Nr. Okręgu: '.$row["NR_OKREGU"].'</p>
   <form action="users_aktywnosci.php" method="POST">
   <input type="hidden" name="id_uczestnika" value="'.$row["ID"].'">

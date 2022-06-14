@@ -108,10 +108,6 @@ while($row = $result->fetch_assoc())
   <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
 </svg></a></p>
   <p class="m-1"><b>Informacje: </b>'.$row["informacje"].'
-  <form method="GET" action="map.php">
-	<input type="hidden" name="ID_Parent" value="'.$row["ID"].'">
-	<input type="submit" class="btn blue m-1" value="Utwórz wydarzenie pochodne">
-	</form>
   </div>
   </div>';
 	echo "</div>";

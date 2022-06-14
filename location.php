@@ -62,14 +62,6 @@ include('dbconfig.php');
 <br>
 <input type="hidden" name="wojewodztwo" id="wojewodztwo" value=<?php echo '"'.$_GET['woj'].'"'; ?>>
 <input type="hidden" name="okreg" id="okreg" value=<?php echo '"'.$_GET['okr'].'"'; ?>>
-<?php
-if(isset($_GET['ID_Parent']))
-{
-?>
-<input type="hidden" name="ID_Parent" id="ID_Parent" value=<?php echo '"'.$_GET['ID_Parent'].'"'; ?>>
-<?php
-}
-?>
 <select class="form-select" name="powiat" style="width:100%;" id="powiat" onchange="get_gminy()" required>
 </select>
 <br>
