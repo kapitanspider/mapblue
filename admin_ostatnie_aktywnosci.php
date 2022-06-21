@@ -100,7 +100,7 @@ if(isset($_POST["id_aktywnosci_udostepnij"]))
 </form>
 
 <?php
-$sql= "SELECT users.IMIE, users.NAZWISKO, aktywnosci.ID, aktywnosci.nazwa, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.ocena, aktywnosci.data, aktywnosci.gmina, aktywnosci.potwierdzenie, aktywnosci.rodzaj from aktywnosci INNER JOIN users ON users.ID=aktywnosci.ID_Organizatora where data between '".$begin."' and '".$end."' order by data_dodania desc limit ".$limit;
+$sql= "SELECT users.IMIE, users.NAZWISKO, aktywnosci.ID, aktywnosci.nazwa, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.ocena, aktywnosci.data, aktywnosci.gmina, aktywnosci.potwierdzenie, aktywnosci.rodzaj, aktywnosci.uwagi from aktywnosci INNER JOIN users ON users.ID=aktywnosci.ID_Organizatora where data between '".$begin."' and '".$end."' order by data_dodania desc limit ".$limit;
 $result = $conn->query($sql);
 echo '<div class="accordion" id="accordion1">';
 $i=0;
@@ -159,8 +159,16 @@ while($row = $result->fetch_assoc())
 	<input type='hidden' name='end' value=".$end.">
 	<input type='hidden' name='limit' value=".$limit.">
 	<input type='hidden' name='id_aktywnosci' value=".$row["ID"].">
-	<input type='submit' value='Udostępnij'>
-	</form>";
+	<input type='submit' class='btn blue' value='Udostępnij'>
+	</form>
+  <p><b>Uwagi: </b>".$row["uwagi"]."</p>";
+  echo '<form action="admin_dodaj_uwage.php" method="post">
+  <input type="hidden" name="id" value="'.$row["ID"].'">
+  <input type="hidden" name="begin" value="'.$begin.'">
+  <input type="hidden" name="end" value="'.$end.'">
+  <input type="hidden" name="orgin" value="admin_ostatnie_aktywnosci.php">
+  <input type="submit" class="btn blue" value="Edytuj uwagę">
+  </form>';
   echo '</div>';
   echo "</div>";
   echo "</div>";

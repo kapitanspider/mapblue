@@ -61,7 +61,7 @@ else
 $begin=date_format(date_create(),"Y-m-d");
 $end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
 }
-$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' order by data asc, godzina asc";
+$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena, aktywnosci.uwagi FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' order by data asc, godzina asc";
 $result = $conn->query($sql);
 
 ?>
@@ -92,7 +92,15 @@ while($row = $result->fetch_assoc())
   <p class="m-1"><b>Rodzaj wydarzenia:</b> '.$row["rodzaj"].'</p>
   <p class="m-1"><b>Data:</b> '.$row["data"].'</p>
   <p class="m-1"><b>Ocena:</b> '.$row["ocena"].'</p>
-  <p class="m-1"><b>Notatka:</b> '.$row["notatka"].'</p>';
+  <p class="m-1"><b>Notatka:</b> '.$row["notatka"].'</p>
+  <p class="m-1"><b>Uwagi:</b> '.$row["uwagi"].'</p>
+  <form action="admin_dodaj_uwage.php" method="post">
+  <input type="hidden" name="id" value="'.$row["ID"].'">
+  <input type="hidden" name="begin" value="'.$begin.'">
+  <input type="hidden" name="end" value="'.$end.'">
+  <input type="hidden" name="orgin" value="admin_aktywnosci.php">
+  <input type="submit" class="btn blue" value="Edytuj uwagę">
+  </form>';
   echo '</div>';
   echo "</div>";
   echo "</div>";
