@@ -24,6 +24,10 @@ if(isset($_GET['login']))
 	{
 	echo '<script>alert("Konto zostało wyłączone przez administratora");</script>';
 	}
+	if($_GET['login']=="error2")
+	{
+	echo '<script>alert("Przekroczono dopuszczalną ilość błędnych logowań, logowanie zostało zawieszone na 30 min.");</script>';
+	}
 }
 ?>
 	
