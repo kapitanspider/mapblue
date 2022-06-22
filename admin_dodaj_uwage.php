@@ -51,12 +51,12 @@ include('dbconfig.php');
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;">
 <form action="admin_dodaj_uwage_db.php" method="post" class="w-100">
 <textarea name="uwagi" class="m-1 w-100">
-  <?php
+<?php
 $sql = "SELECT `uwagi` FROM `aktywnosci` WHERE `ID`= ".$_POST['id'].";";
 $result = $conn->query($sql);
 $row=$result->fetch_assoc();
 echo $row["uwagi"];
-  ?>
+?>
 </textarea>
 <input type="hidden" name="orgin" value="<?php echo $_POST['orgin'];?>">
 <input type="hidden" name="id" value="<?php echo $_POST['id'];?>">
