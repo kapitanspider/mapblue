@@ -59,9 +59,6 @@ function validate(){
 	}
 }
 </script>
-<?php
-var_dump($_POST);
-?>
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;">
 <form action="admin_users_change_pass_db.php" method="post">
 <input type="hidden" name="id" value=<?php echo  $_POST["id"]; ?>>

@@ -1,4 +1,5 @@
 <?php
+include('input_check.php');
 include('facecheck.php');
 include('dbconfig.php');
 ?>
@@ -60,6 +61,7 @@ include('dbconfig.php');
 
 if(isset($_POST["update"]))
 {
+  if(mainInputCheck()){
     if($_POST["update"]=="update")
     {
     $sql = "UPDATE `aktywnosci` SET `nazwa` = '".$_POST["nazwa"]."',`rodzaj` = '".$_POST["rodzaj"]."',`data` = '".$_POST["data"]."',`godzina` = '".$_POST["godzina"]."',`uczestnicy` = '".$_POST["uczestnicy"]."',`potwierdzenie` = '".$_POST["potwierdzenie"]."',`notatka` = '".$_POST["notatka"]."' WHERE ID='".$_POST["ID"]."'";
@@ -75,6 +77,11 @@ if(isset($_POST["update"]))
         //header("Location: kalendarz_user.php");
     }
 }
+else{
+	header("Location: forcelogout.php");
+}
+}
+
 
 $db_data = array();
 $sql = "SELECT * From aktywnosci Where ID='".$_POST["ID"]."'";

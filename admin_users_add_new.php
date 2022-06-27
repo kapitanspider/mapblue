@@ -1,4 +1,5 @@
 <?php
+include('input_check.php');
 include('facecheck.php');
 include('dbconfig.php');
 ?>
@@ -52,6 +53,7 @@ include('dbconfig.php');
 
 if(isset($_POST['login']))
 {
+if(mainInputCheck()){
 $sql = "SELECT * From users Where Login='".$_POST["login"]."'";
 $result = $conn->query($sql);
 $target_dir = "profiles/";
@@ -93,6 +95,10 @@ else{
     echo "Urzytkownik już istnieje";
 }
 }
+else{
+	header("Location: forcelogout.php");
+}
+}
 
 
 ?>
@@ -124,7 +130,7 @@ else{
 <input type="text" name="SPECJALIZACJA" required>
 <br>
 <br>
-<input type="submit" value="Dodaj urzytkownika" required>
+<input type="submit" class="btn blue" value="Dodaj urzytkownika" required>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

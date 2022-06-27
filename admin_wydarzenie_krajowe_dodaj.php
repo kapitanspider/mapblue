@@ -1,4 +1,5 @@
 <?php
+include('input_check.php');
 include('facecheck.php');
 include('dbconfig.php');
 ?>
@@ -53,6 +54,7 @@ include('dbconfig.php');
 
 if(isset($_POST["nazwa"]))
 {
+if(mainInputCheck()){
 $target_dir = "pliki_wydarzen/";
 $target_file = $target_dir .$_POST["data"]." ".$_POST["nazwa"]." ". basename($_FILES["zalacznik"]["name"]);
 $uploadOk = 1;
@@ -96,6 +98,10 @@ if ($uploadOk == 0) {
   else {
     echo "Wystąpił błąd";
   }
+}
+}
+else{
+	header("Location: forcelogout.php");
 }
 }
 ?>

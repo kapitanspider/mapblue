@@ -28,7 +28,12 @@ if(isset($_GET['login']))
 	{
 	echo '<script>alert("Przekroczono dopuszczalną ilość błędnych logowań, logowanie zostało zawieszone na 30 min.");</script>';
 	}
+	if($_GET['login']=="error3")
+	{
+	echo '<script>alert("Wprowadzono zabronione słowo co skutkowało przymusowym wylogowaniem.");</script>';
+	}
 }
+
 ?>
 	
 	<div class="container text-center ">

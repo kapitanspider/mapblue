@@ -1,11 +1,11 @@
 <?php
-include('facecheck.php');
+include('input_check.php');
 include('dbconfig.php');
 require("PHPMailer/src/PHPMailer.php");
 require("PHPMailer/src/SMTP.php");
 require("PHPMailer/src/Exception.php");
-//echo "Connected successfully";
-//$action = $_POST["action"];
+if(mainInputCheck())
+{
 if(isset($_POST["Login"]) and isset($_POST["Password"]))
 {
 	$sql = "SELECT count(id) as liczba FROM `bledne_logowania` WHERE login='".$_POST['Login']."' and data > (NOW() - INTERVAL 30 MINUTE);";
@@ -81,5 +81,9 @@ if(isset($_POST["Login"]) and isset($_POST["Password"]))
 else 
 {
 	header("Location: index.php");
+}
+}
+else{
+	header("Location: forcelogout.php");
 }
 ?>

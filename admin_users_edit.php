@@ -1,4 +1,5 @@
 <?php
+include('input_check.php');
 include('facecheck.php');
 include('dbconfig.php');
 ?>
@@ -52,6 +53,7 @@ include('dbconfig.php');
 
 if(isset($_POST["update"]))
 {
+  if(mainInputCheck()){
     $sql = "SELECT * From users Where Login='".$_POST["login"]."'and not ID='".$_POST["id"]."' ";
     $result = $conn->query($sql);
     if($result->num_rows == 0)
@@ -62,6 +64,10 @@ if(isset($_POST["update"]))
     else{
     echo "Login: ".$_POST["login"]." jest zajęty";
     }
+}
+else{
+	header("Location: forcelogout.php");
+}
 }
 
 $sql = "SELECT * From users Where ID = '".$_POST["id"]."'";
