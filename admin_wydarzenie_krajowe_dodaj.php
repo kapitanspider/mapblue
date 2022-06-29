@@ -101,7 +101,10 @@ if ($uploadOk == 0) {
 }
 }
 else{
-	header("Location: forcelogout.php");
+	echo '
+  <script>
+  window.location.replace("forcelogout.php");
+  </script>';
 }
 }
 ?>

@@ -96,7 +96,10 @@ else{
 }
 }
 else{
-	header("Location: forcelogout.php");
+  echo '
+  <script>
+  window.location.replace("forcelogout.php");
+  </script>';
 }
 }
 
