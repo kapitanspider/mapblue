@@ -30,6 +30,7 @@ if(isset($_POST["Login"]) and isset($_POST["Password"]))
 		$_SESSION["NAZWISKO"]=$db_data["NAZWISKO"];
 		$_SESSION["LOGIN"]=$db_data["LOGIN"];
 		$_SESSION["Profilowe"]=$db_data["Profilowe"];
+		$_SESSION["NR_OKREGU"]=$db_data["NR_OKREGU"];
 		header("Location: main.php");
 		}
 		else

@@ -7,9 +7,124 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Dodawanie aktywności</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>MapBlue - Profil</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
 <link rel="stylesheet" href="colors.css">
+
+<script>
+function displayFuntion(){
+  var select = document.getElementById("lista");
+  document.getElementById("myChart").style.display = "none";
+  document.getElementById("myChart2").style.display = "none";
+  document.getElementById("myChart3").style.display = "none";
+  if(select.value=="Powiat")
+  {
+    var xValues = [];
+    var yValues = [];
+    var barColors = ["#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000"];
+    for (const [key, value] of Object.entries(powiaty)) {
+      xValues.push(key);
+      yValues.push(value);
+    }
+
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Statystyki powiatów"
+    }
+  }
+});
+  document.getElementById("myChart").style.display = "initial";
+  }
+  if(select.value=="Gmina")
+  {
+    var xValues = [];
+    var yValues = [];
+    var barColors = ["#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000","#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000","#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000"];
+    for (const [key, value] of Object.entries(gminy)) {
+      xValues.push(key);
+      yValues.push(value);
+    }
+
+    new Chart("myChart2", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Statystyki gmin"
+    }
+  }
+});
+  document.getElementById("myChart2").style.display = "initial";
+  console.log(gminy);
+  }
+  if(select.value=="Rodzaje")
+  {
+    {
+    var xValues = [];
+    var yValues = [];
+    var barColors = ["#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000"];
+    for (const [key, value] of Object.entries(aktywnosci)) {
+      xValues.push(key);
+      yValues.push(value);
+    }
+
+    new Chart("myChart3", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Statystyki rodzajów aktywności"
+    }
+  }
+});
+  document.getElementById("myChart3").style.display = "initial";
+  }
+}
+}
+
+var powiaty={};
+var gminy={};
+var aktywnosci={
+  ACRT:0,
+  WIP:0,
+  SW:0,
+  NGO:0,
+  JST:0,
+  RKP:0,
+  OU:0,
+  INNE:0
+};
+
+</script>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -28,7 +143,7 @@ include('dbconfig.php');
         <br>Strona główna</a>
       </li>
 	  <li class="nav-item text-center">
-    <a class="nav-link" href="profil.php">
+    <a class="nav-link active" href="profil.php">
     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
 				<path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
 				<path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
@@ -45,7 +160,7 @@ include('dbconfig.php');
       <br>Użytkownicy</a>
     </li>
 	  <li class="nav-item text-center" >
-    <a class="nav-link active" href="map.php">
+    <a class="nav-link" href="map.php">
     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
 				<path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
 				<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -101,81 +216,88 @@ include('dbconfig.php');
     </div>
   </div>
 </nav>
+<br>
+<div class="container-fluid p-2 card" style="max-width:700px;">
 <?php
-?>
-<div class="container-fluid p-3 card mt-2 " style="max-width:700px;">
-<form action="dodaj_aktywnosc_db.php" method="post">
-<p class="form-label m-1">Lokalizacja:</p>
-<p class="form-label m-1">Województwo:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['wojewodztwo']; ?>">
-<input type="hidden" id="wojewodztwo" name="wojewodztwo"  value="<?php echo $_POST['wojewodztwo']; ?>">
-<p class="form-label m-1">Okręg:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['okreg']; ?>">
-<input type="hidden" id="okreg" name="okreg"  value="<?php echo $_POST['okreg']; ?>">
-<p class="form-label m-1">Powiat:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['powiat']; ?>">
-<input type="hidden" id="powiat" name="powiat"  value="<?php echo $_POST['powiat']; ?>">
-<p class="form-label m-1">Gmina:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['gmina']; ?>">
-<input type="hidden" id="gmina" name="gmina"  value="<?php echo $_POST['gmina']; ?>">
-</br>
-<a href="map.php" class="btn blue m-1 w-100">Zmień lokację</a>
-<p class="form-label m-1">Ogólnopolskie wydarzenie macierzyste:</p>
-<select  class="m-1 w-100" id="ID_Parent" name="ID_Parent" required>
-<option value="0" selected>Brak</option>
-</select>
-<p class="form-label m-1">Nazwa aktywności/wydarzenia:</p>
-<input class="m-1 w-100" type="text" id="nazwa" name="nazwa" required>
-<p class="form-label m-1">Rodzaj</p>
-<select  class="m-1 w-100" id="rodzaj" name="rodzaj" required>
-<option value="ACRT">ACRT - Aktywność centralna realizowana w terenie</option> 
-<option value="WIP">WIP - Własna inicjatywa posła</option> 
-<option value="SW">SW - Spotkanie z wborcami</option>
-<option value="NGO">NGO - Aktywność z NGO</option>
-<option value="JST">JST - Aktywność z JST</option>
-<option value="RKP">RPK - Regionalna konferencja prasowa</option>
-<option value="OU">OU - Oficjalna uroczystość</option>
-<option value="INNE">Inne</option>
+if(isset($_POST["begin"]))
+{
+$begin=$_POST["begin"];
+$end=$_POST["end"];
+}
+else
+{
+$end=date_format(date_create(),"Y-m-d");
+$begin=date("Y-m-d",mktime(0,0,0,date('m')-1,date('d'),date('y')));
+}
 
-</select>
-<p class="form-label m-1">Data:</p>
-<input class="m-1 w-100" type="date" id="data" name="data" required>
-<p class="form-label m-1">Godzina:</p>
-<input class="m-1 w-100" type="time" id="godzina" name="godzina" required>
-<p class="form-label m-1">Ilość uczestników</p>
-<input class="m-1 w-100" type="number" id="uczestnicy" name="uczestnicy" required>
-<p class="form-label m-1">Link FB/WWW</p>
-<input class="m-1 w-100" type="text" id="potwierdzenie" name="potwierdzenie" required>
-<p class="form-label m-1">Notatka:</p>
-<textarea class="m-1 w-100" id="notatka" name="notatka" rows="4" cols="50"></textarea>
-<input class="btn blue m-1 w-100" type="submit" value="Dodaj">
-</form>
-</div>
-<script>
-<?php
-$sql = "SELECT nazwa,ID FROM `wydarzenia_ogolnopolskie` order by ID DESC limit 3";
-//$sql = "SELECT * From users";
+$sql= 'select powiat from powiaty where okreg="'.$_SESSION["NR_OKREGU"].'" order by powiat asc';
 $result = $conn->query($sql);
-echo "var nazwy=[];";
-echo "var id=[];";
 while($row = $result->fetch_assoc()){
+  //var_dump($row);
   echo '
-  nazwy.push("'.$row["nazwa"].'");
-  id.push("'.$row["ID"].'");
+  <script>
+  powiaty["'.$row["powiat"].'"]=0;
+  </script>
   ';
 }
-?>
 
-let elem=document.getElementById("ID_Parent");
-console.log(elem);
-var lista= elem.innerHTML;
-for (var i=0;i<nazwy.length;i++)
-{
-  lista+='<option value="'+id[i]+'">'+nazwy[i]+'</option>';
+$sql= 'select gmina from gminy where okreg="'.$_SESSION["NR_OKREGU"].'" order by gmina asc';
+$result = $conn->query($sql);
+while($row = $result->fetch_assoc()){
+  //var_dump($row);
+  echo '
+  <script>
+  gminy["'.$row["gmina"].'"]=0;
+  </script>
+  ';
 }
-elem.innerHTML=lista;
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+$sql = "SELECT * From aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
+$result = $conn->query($sql);
+while($row = $result->fetch_assoc()){
+  echo '
+  <script>
+  if("'.$row["gmina"].'" in gminy)
+  {
+    gminy["'.$row["gmina"].'"]+=1;
+  }
+  if("'.$row["powiat"].'" in powiaty)
+  {
+    powiaty["'.$row["powiat"].'"]+=1;
+  }
+  if("'.$row["rodzaj"].'" in aktywnosci)
+  {
+    aktywnosci["'.$row["rodzaj"].'"]+=1;
+  }
+  </script>
+  ';
+  }
+?>
+<form action="statystyki.php" method="post">
+<label>Ustaw zakres dat</label>
+<br>
+<label>Od:</label>
+<input type="date" name="begin" required value="<?php echo $begin; ?>">
+<label>Do:</label>
+<input type="date" name="end" required value="<?php echo  $end; ?>">
+<input type="submit" class="btn blue m-2" value="Prześlij">
+</form>
+<select id="lista" onchange="displayFuntion()">
+<option value="---" disabled selected>---</option>
+<option value="Powiat" >Powiaty</option>
+<option value="Gmina">Gminy</option>
+<option value="Rodzaje">Rodzaje Aktywności</option>
+</select>
+<canvas id="myChart" style="width:100%;"></canvas>
+<canvas id="myChart2" style="width:100%;"></canvas>
+<canvas id="myChart3" style="width:100%;"></canvas>
+<script>
+  document.getElementById("myChart").style.display = "none";
+  document.getElementById("myChart2").style.display = "none";
+  document.getElementById("myChart3").style.display = "none";
+</script>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

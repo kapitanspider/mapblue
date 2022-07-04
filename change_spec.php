@@ -7,8 +7,8 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Dodawanie aktywności</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>MapBlue - Profil - Zmiana Email</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
 <link rel="stylesheet" href="colors.css">
 </head>
 <body>
@@ -28,7 +28,7 @@ include('dbconfig.php');
         <br>Strona główna</a>
       </li>
 	  <li class="nav-item text-center">
-    <a class="nav-link" href="profil.php">
+    <a class="nav-link active" href="profil.php">
     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
 				<path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
 				<path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
@@ -45,7 +45,7 @@ include('dbconfig.php');
       <br>Użytkownicy</a>
     </li>
 	  <li class="nav-item text-center" >
-    <a class="nav-link active" href="map.php">
+    <a class="nav-link" href="map.php">
     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
 				<path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
 				<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -101,81 +101,31 @@ include('dbconfig.php');
     </div>
   </div>
 </nav>
-<?php
-?>
-<div class="container-fluid p-3 card mt-2 " style="max-width:700px;">
-<form action="dodaj_aktywnosc_db.php" method="post">
-<p class="form-label m-1">Lokalizacja:</p>
-<p class="form-label m-1">Województwo:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['wojewodztwo']; ?>">
-<input type="hidden" id="wojewodztwo" name="wojewodztwo"  value="<?php echo $_POST['wojewodztwo']; ?>">
-<p class="form-label m-1">Okręg:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['okreg']; ?>">
-<input type="hidden" id="okreg" name="okreg"  value="<?php echo $_POST['okreg']; ?>">
-<p class="form-label m-1">Powiat:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['powiat']; ?>">
-<input type="hidden" id="powiat" name="powiat"  value="<?php echo $_POST['powiat']; ?>">
-<p class="form-label m-1">Gmina:</p>
-<input class="m-1 w-100" type="text" disabled value="<?php echo $_POST['gmina']; ?>">
-<input type="hidden" id="gmina" name="gmina"  value="<?php echo $_POST['gmina']; ?>">
-</br>
-<a href="map.php" class="btn blue m-1 w-100">Zmień lokację</a>
-<p class="form-label m-1">Ogólnopolskie wydarzenie macierzyste:</p>
-<select  class="m-1 w-100" id="ID_Parent" name="ID_Parent" required>
-<option value="0" selected>Brak</option>
-</select>
-<p class="form-label m-1">Nazwa aktywności/wydarzenia:</p>
-<input class="m-1 w-100" type="text" id="nazwa" name="nazwa" required>
-<p class="form-label m-1">Rodzaj</p>
-<select  class="m-1 w-100" id="rodzaj" name="rodzaj" required>
-<option value="ACRT">ACRT - Aktywność centralna realizowana w terenie</option> 
-<option value="WIP">WIP - Własna inicjatywa posła</option> 
-<option value="SW">SW - Spotkanie z wborcami</option>
-<option value="NGO">NGO - Aktywność z NGO</option>
-<option value="JST">JST - Aktywność z JST</option>
-<option value="RKP">RPK - Regionalna konferencja prasowa</option>
-<option value="OU">OU - Oficjalna uroczystość</option>
-<option value="INNE">Inne</option>
+<script>
+function validate(){
+	if(document.getElementById("email").value == document.getElementById("email2").value && document.getElementById("email").value!=="")
+	{
+	document.getElementById("sub").disabled = false;
+	}
+	else{
+	document.getElementById("sub").disabled = true;	
+	}
+}
+</script>
+<div class="container-fluid p-2 card mt-1" style="max-width:700px;">
+<form action="change_spec_db.php" method="post">
 
-</select>
-<p class="form-label m-1">Data:</p>
-<input class="m-1 w-100" type="date" id="data" name="data" required>
-<p class="form-label m-1">Godzina:</p>
-<input class="m-1 w-100" type="time" id="godzina" name="godzina" required>
-<p class="form-label m-1">Ilość uczestników</p>
-<input class="m-1 w-100" type="number" id="uczestnicy" name="uczestnicy" required>
-<p class="form-label m-1">Link FB/WWW</p>
-<input class="m-1 w-100" type="text" id="potwierdzenie" name="potwierdzenie" required>
-<p class="form-label m-1">Notatka:</p>
-<textarea class="m-1 w-100" id="notatka" name="notatka" rows="4" cols="50"></textarea>
-<input class="btn blue m-1 w-100" type="submit" value="Dodaj">
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Nowa specjalizacja</span>
+  <input type="text" class="form-control" name='spec' id="email" oninput="validate()" placeholder="Specjalizacja" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon2">Potwierdź nową specjalizację</span>
+  <input type="text" class="form-control" name='spec2' id="email2" oninput="validate()" placeholder="Specjalizacja" aria-label="Username" aria-describedby="basic-addon2">
+</div>
+<input type="submit" class="btn blue m-1" id="sub" disabled value="Zatwierdź">
 </form>
 </div>
-<script>
-<?php
-$sql = "SELECT nazwa,ID FROM `wydarzenia_ogolnopolskie` order by ID DESC limit 3";
-//$sql = "SELECT * From users";
-$result = $conn->query($sql);
-echo "var nazwy=[];";
-echo "var id=[];";
-while($row = $result->fetch_assoc()){
-  echo '
-  nazwy.push("'.$row["nazwa"].'");
-  id.push("'.$row["ID"].'");
-  ';
-}
-?>
-
-let elem=document.getElementById("ID_Parent");
-console.log(elem);
-var lista= elem.innerHTML;
-for (var i=0;i<nazwy.length;i++)
-{
-  lista+='<option value="'+id[i]+'">'+nazwy[i]+'</option>';
-}
-elem.innerHTML=lista;
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 </html>
