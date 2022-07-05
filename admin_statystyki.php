@@ -89,29 +89,66 @@ function move(elem){
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="main.php">Strona Główna</a>
+    <li class="nav-item text-center">
+      <a class="nav-link" href="main.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </svg>
+        <br>Strona główna</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="admin_aktywnosci.php">Wszystkie aktywności</a>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_aktywnosci.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 0 .5Zm0 2A.5.5 0 0 1 .5 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm9 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm-9 2A.5.5 0 0 1 .5 4h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm5 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm7 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm-12 2A.5.5 0 0 1 .5 6h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm8 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm-8 2A.5.5 0 0 1 .5 8h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm7 0a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm-7 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+    </svg>
+        <br>Wszystkie aktywności</a>
       </li>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_statystyki.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+    </svg>
+        <br>Statystyki</a>
+      </li>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_ostatnie_aktywnosci.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+			<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>
+        <br>Ostatnio dodane aktywnosci</a>
+      </li>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_wydarzenie_krajowe.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z"/>
+			<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+			<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+    </svg>
+        <br>Wydarzenia ogólnopolskie</a>
+      </li>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_users.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+    </svg>
+        <br>Użytkownicy</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
 	  <li class="nav-item">
-        <a class="nav-link" href="admin_statystyki.php">Statystyki</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_statystyki_kategorie.php">Statystyki kategorii</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_wydarzenie_krajowe.php">Wydarzenia ogólnopolskie</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_users.php">Użytkownicy</a>
+        <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
     </div>
   </div>
 </nav>
-<div class="container-fluid p-2 card mt-1" style="max-width:700px;">
+<div class="container-fluid p-2 card mt-1 text-center" style="max-width:700px;">
 <?php
 if(isset($_POST["begin"]))
 {
@@ -167,11 +204,21 @@ while($row = $result->fetch_assoc())
     <polygon id="dolnośląskie" onclick="move(this)" style="stroke:#1f1a17;stroke-width:.0762;fill:#ffffff" points="37.761 84.963 43.134 85.867 43.932 87.197 45.368 88.527 49.039 87.357 51.114 89.538 48.028 92.73 50.954 94.645 53.614 98.954 56.008 96.667 58.03 95.656 55.955 92.411 57.126 92.304 58.775 90.921 59.041 88.793 62.392 83.048 64.52 80.547 64.893 76.61 66.702 76.557 66.116 72.727 63.988 71.929 64.361 69.269 60.956 67.673 59.36 69.535 56.168 69.428 52.55 67.141 52.444 65.545 50.156 65.279 49.199 66.715 49.358 68.471 46.326 68.63 44.57 69.96 44.198 68.098 43.347 67.779 40.155 72.195 38.559 70.599 37.495 70.492 36.59 72.62 34.356 72.354 32.494 74.057 32.707 77.515 30.366 83.367 31.962 83.473 32.866 80.441 35.899 80.813 36.324 83.633" class="fil5 str0"/>
     <polygon id="opolskie" onclick="move(this)" style="stroke:#1f1a17;stroke-width:.0762;fill:#ffffff" points="77.82 82.09 77.022 83.526 77.022 85.122 75.958 87.41 77.395 88.58 77.395 89.112 75.586 89.644 74.735 92.304 74.894 95.337 71.17 97.305 70.532 99.806 68.51 101.03 65.85 97.837 67.978 96.135 66.382 94.007 62.924 95.177 59.732 92.57 57.498 92.411 59.094 91.081 59.307 88.953 62.765 83.207 64.893 80.547 65.212 77.036 67.606 76.876 67.606 78.1 69.84 78.792 72.075 77.462 77.022 78.206 78.086 79.536" class="fil4 str0"/>
 </svg>
-<a href="admin_statystyki_wojewodztwa.php" class="btn blue m-2">województwa</a> 
-<br>
-<a href="admin_statystyki_powiaty.php" class="btn blue m-2">powiaty szczegółowo</a>
-<br>
-<a href="admin_statystyki_powiaty_best.php" class="btn blue m-2">powiaty w skali kraju</a>
+<form action="admin_statystyki_powiaty.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
+<input type="hidden" name="end" required value="<?php echo  $end; ?>">
+<input type="submit"  class="btn blue m-2 w-75" value="Powiaty szczegółowo">
+</form>
+<form action="admin_statystyki_gminy.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
+<input type="hidden" name="end" required value="<?php echo  $end; ?>">
+<input type="submit"  class="btn blue m-2 w-75" value="Gminy szczegółowo">
+</form>
+<form action="admin_statystyki_kategorie.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
+<input type="hidden" name="end" required value="<?php echo  $end; ?>">
+<input type="submit"  class="btn blue m-2 w-75" value="Rodzaje Aktywnosci">
+</form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

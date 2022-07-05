@@ -9,10 +9,6 @@ include('dbconfig.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapBlue - Admin - Statystyki</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
 <link rel="stylesheet" href="colors.css">
 </head>
 <body>
@@ -24,23 +20,55 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="main.php">Strona Główna</a>
+    <li class="nav-item text-center">
+      <a class="nav-link" href="main.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </svg>
+        <br>Strona główna</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="admin_aktywnosci.php">Wszystkie aktywności</a>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_aktywnosci.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 0 .5Zm0 2A.5.5 0 0 1 .5 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm9 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm-9 2A.5.5 0 0 1 .5 4h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm5 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm7 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm-12 2A.5.5 0 0 1 .5 6h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm8 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm-8 2A.5.5 0 0 1 .5 8h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm7 0a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm-7 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+    </svg>
+        <br>Wszystkie aktywności</a>
       </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_statystyki.php">Statystyki</a>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_statystyki.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+    </svg>
+        <br>Statystyki</a>
       </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_statystyki_kategorie.php">Statystyki kategorii</a>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_ostatnie_aktywnosci.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+			<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>
+        <br>Ostatnio dodane aktywnosci</a>
       </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_wydarzenie_krajowe.php">Wydarzenia ogólnopolskie</a>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_wydarzenie_krajowe.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z"/>
+			<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+			<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+    </svg>
+        <br>Wydarzenia ogólnopolskie</a>
       </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="admin_users.php">Użytkownicy</a>
+
+    <li class="nav-item text-center">
+      <a class="nav-link" href="admin_users.php">
+      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+			<path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+    </svg>
+        <br>Użytkownicy</a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -52,158 +80,41 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:1000px;">
+<table class="table">
+<tr>
+<th>Powiat<th>
+<th>Ilość Aktywnosci<th>
+</tr>
 <?php
-
-if(isset($_POST["begin"]))
-{
-$begin=$_POST["begin"];
-$end=$_POST["end"];
-}
-else
-{
-$begin=date_format(date_create(),"Y-m-d");
-$end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
-}
-?>
-<form action="admin_statystyki_powiaty.php" method="post">
-<label>Ustaw zakres dat</label>
-<input type="date" name="begin" required value="<?php echo $begin; ?>">
-<input type="date" name="end" required value="<?php echo  $end; ?>">
-<label>Wybierz województwo</label>
-<select name="woj">
-<?php
-if(isset($_POST["woj"]))
-{
-?>
-<option value="dolnośląskie" <?=$_POST['woj'] == 'dolnośląskie' ? ' selected="selected"' : '';?>>dolnośląskie</option>
-<option value="kujawsko-pomorskie"  <?=$_POST['woj'] == 'kujawsko-pomorskie' ? ' selected="selected"' : '';?>>kujawsko-pomorskie</option>
-<option value="lubelskie"  <?=$_POST['woj'] == 'lubelskie' ? ' selected="selected"' : '';?>>lubelskie</option>
-<option value="lubuskie"  <?=$_POST['woj'] == 'lubuskie' ? ' selected="selected"' : '';?>>lubuskie</option>
-<option value="łódzkie"  <?=$_POST['woj'] == 'łódzkie' ? ' selected="selected"' : '';?>>łódzkie</option>
-<option value="małopolskie"  <?=$_POST['woj'] == 'małopolskie' ? ' selected="selected"' : '';?>>małopolskie</option>
-<option value="mazowieckie"  <?=$_POST['woj'] == 'mazowieckie' ? ' selected="selected"' : '';?>>mazowieckie</option>
-<option value="opolskie"  <?=$_POST['woj'] == 'opolskie' ? ' selected="selected"' : '';?>>opolskie</option>
-<option value="podkarpackie"  <?=$_POST['woj'] == 'podkarpackie' ? ' selected="selected"' : '';?>>podkarpackie</option>
-<option value="podlaskie"  <?=$_POST['woj'] == 'podlaskie' ? ' selected="selected"' : '';?>>podlaskie</option>
-<option value="pomorskie"  <?=$_POST['woj'] == 'pomorskie' ? ' selected="selected"' : '';?>>pomorskie</option>
-<option value="śląskie"  <?=$_POST['woj'] == 'śląskie' ? ' selected="selected"' : '';?>>śląskie</option>
-<option value="świętokrzyskie"  <?=$_POST['woj'] == 'świętokrzyskie' ? ' selected="selected"' : '';?>>świętokrzyskie</option>
-<option value="warmińsko-mazurskie"  <?=$_POST['woj'] == 'warmińsko-mazurskie' ? ' selected="selected"' : '';?>>warmińsko-mazurskie</option>
-<option value="wielkopolskie"  <?=$_POST['woj'] == 'wielkopolskie' ? ' selected="selected"' : '';?>>wielkopolskie</option>
-<option value="zachodniopomorskie" <?=$_POST['woj'] == 'zachodniopomorskie' ? ' selected="selected"' : '';?>>zachodniopomorskie</option>
-<?php
-}
-else
-{
-?>
-<option value="dolnośląskie">dolnośląskie</option>
-<option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
-<option value="lubelskie">lubelskie</option>
-<option value="lubuskie">lubuskie</option>
-<option value="łódzkie">łódzkie</option>
-<option value="małopolskie">małopolskie</option>
-<option value="mazowieckie">mazowieckie</option>
-<option value="opolskie">opolskie</option>
-<option value="podkarpackie">podkarpackie</option>
-<option value="podlaskie">podlaskie</option>
-<option value="pomorskie">pomorskie</option>
-<option value="śląskie">śląskie</option>
-<option value="świętokrzyskie">świętokrzyskie</option>
-<option value="warmińsko-mazurskie">warmińsko-mazurskie</option>
-<option value="wielkopolskie">wielkopolskie</option>
-<option value="zachodniopomorskie">zachodniopomorskie</option>
-<?php
-}
-?>
-</select>
-<input type="submit" value="Prześlij">
-</form>
-<canvas id="myChart"></canvas>
-<script type="text/javascript">
-var xVal=[];
-var yVal=[];
-var barColors = ['red', 'green', 'blue'];
-Array.prototype.push.apply(barColors, barColors);
-Array.prototype.push.apply(barColors, barColors);
-Array.prototype.push.apply(barColors, barColors);
-Array.prototype.push.apply(barColors, barColors);
-Array.prototype.push.apply(barColors, barColors);
-Array.prototype.push.apply(barColors, barColors);
-Array.prototype.push.apply(barColors, barColors);
-</script>    
-<?php
-if(isset($_POST["woj"]))
-{
-$sql= "SELECT Count(ID), powiat from aktywnosci Where data between '".$begin."' and '".$end."' and wojewodztwo= '".$_POST["woj"]."' group by powiat";
-}
-else
-{
-$sql= "SELECT Count(ID), powiat from aktywnosci Where data between '".$begin."' and '".$end."' group by powiat";
-}
+$sql = "SELECT count(id), powiat FROM `aktywnosci` Where data between '".$_GET["begin"]."' and '".$_GET["end"]."' GROUP by powiat order by count(id) desc";
 $result = $conn->query($sql);
-
-$powiaty=[];
-
 while($row = $result->fetch_assoc())
 {
-  array_push($powiaty,$row["powiat"]);
-?>
-<script type="text/javascript">
-   xVal.push("<?php echo $row["powiat"]; ?>");
-   yVal.push("<?php echo $row["Count(ID)"]; ?>");
-</script>
-<?php
+echo '
+<tr>
+<td>'.$row['powiat'].'<td>
+<td>'.$row['count(id)'].'<td>
+</tr>
+';
+}
+$sql = "select powiat from powiaty where powiat not in (SELECT powiat FROM `aktywnosci` Where data between '".$_GET["begin"]."' and '".$_GET["end"]."') order by powiat asc";
+$result = $conn->query($sql);
+while($row = $result->fetch_assoc())
+{
+echo '
+<tr>
+<td>'.$row['powiat'].'<td>
+<td>0<td>
+</tr>
+';
 }
 ?>
-<script type="text/javascript">
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xVal,
-    datasets: [{
-        backgroundColor: barColors,
-        data: yVal
-    }]
-  },
-  options: {
-    responsive: true,
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "Aktywności w powiatach w podanym zakresie dat"
-    },
-    scales: {
-        yAxes: [{
-            ticks: {
-                min: 0, // minimum value
-            }
-        }]
-    }
-  }
-});
-</script> 
-<br>
-<br>
-<?php
-if(sizeof($powiaty)>0)
-{
-?>
-<form action="admin_statystyki_powiat_szczegoly.php" method="post">
-<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
-<input type="hidden" name="end" required value="<?php echo  $end; ?>">
-<select name="powiat">
-<?php
-for($i=0;$i<sizeof($powiaty);$i++)
-{
-  echo "<option value=".$powiaty[$i].">".$powiaty[$i]."</option>";
-}
-?>
-</select>
-<input type="submit" value="Szczegóły powiatu">
+</table>
+<form action="admin_statystyki.php" method="post">
+<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
+<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="submit"  class="btn blue w-100" value="Wróć" >
 </form>
-<?php
-}
-?>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

@@ -7,11 +7,9 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Admin - Aktywności</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>MapBlue - Dodawanie aktywności</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="colors.css">
-
-</head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
   <div class="container-fluid">
@@ -82,32 +80,12 @@ include('dbconfig.php');
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;">
 <?php
-
-if(isset($_POST["begin"]))
-{
-$begin=$_POST["begin"];
-$end=$_POST["end"];
-}
-else
-{
-$begin=date_format(date_create(),"Y-m-d");
-$end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
-}
-$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena, aktywnosci.uwagi FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' order by data asc, godzina asc";
-$result = $conn->query($sql);
-
-?>
-<form action="admin_aktywnosci.php" method="post">
-<label>Ustaw zakres dat</label>
-<br>
-<label>Od:</label>
-<input type="date" name="begin" required value="<?php echo $begin; ?>">
-<label>Do:</label>
-<input type="date" name="end" required value="<?php echo  $end; ?>">
-<input type="submit" class="btn blue m-2" value="Prześlij">
-</form>
-<?php
+$begin=$_GET["begin"];
+$end=$_GET["end"];
+$woj=$_GET["woj"];
 $i=0;
+$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena, aktywnosci.uwagi FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' and aktywnosci.wojewodztwo='".$woj."' order by data_dodania desc";
+$result = $conn->query($sql);
 echo '<div class="accordion" id="accordion1">';
 while($row = $result->fetch_assoc())
 {
@@ -125,20 +103,20 @@ while($row = $result->fetch_assoc())
   <p class="m-1"><b>Data:</b> '.$row["data"].'</p>
   <p class="m-1"><b>Ocena:</b> '.$row["ocena"].'</p>
   <p class="m-1"><b>Notatka:</b> '.$row["notatka"].'</p>
-  <p class="m-1"><b>Uwagi:</b> '.$row["uwagi"].'</p>
-  <form action="admin_dodaj_uwage.php" method="post">
-  <input type="hidden" name="id" value="'.$row["ID"].'">
-  <input type="hidden" name="begin" value="'.$begin.'">
-  <input type="hidden" name="end" value="'.$end.'">
-  <input type="hidden" name="orgin" value="admin_aktywnosci.php">
-  <input type="submit" class="btn blue" value="Edytuj uwagę">
-  </form>';
+  <p class="m-1"><b>Uwagi:</b> '.$row["uwagi"].'</p>';
   echo '</div>';
   echo "</div>";
   echo "</div>";
   $i++;
 }
 ?>
+</div>
+<form action="admin_statystyki_okregi.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
+<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
+<input type="submit"  class="btn blue w-100" value="Wróć" >
+</form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

@@ -267,17 +267,6 @@ if($_SESSION["ADMIN"]==2)
 			</div>
 		</div>
 	</a>
-	<a href="admin_statystyki_kategorie.php" style="text-decoration:none;">
-		<div class="col card m-1 p-2" style="width: 15rem; height: 15rem;">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="#00529c" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
-			<path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
-			</svg>
-			<div class="card-body">
-				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Statystyki kategorii</p>
-			</div>
-		</div>
-	</a>
 	<a href="admin_ostatnie_aktywnosci.php" style="text-decoration:none;">
 		<div class="col card m-1 p-2" style="width: 15rem; height: 15rem;">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="#00529c" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
