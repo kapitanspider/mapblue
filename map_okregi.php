@@ -123,6 +123,7 @@ function m_off(e){
 
 </script>
 <h1 class="text-center">Proszę wybrać okręg wyborczy</h1>
+<div class="container-fluid p-2 card mt-1" style="max-width:700px;">
 <div id="okregi">
 <?php
 if($_GET['woj']=="dolnośląskie")
@@ -534,7 +535,6 @@ else if($_GET['woj']=="zachodniopomorskie")
 }
 ?>
 </div>
-<div class="container-fluid" style="max-width:700px;">
 <a href="map.php" class="btn blue w-100">Wróć</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
