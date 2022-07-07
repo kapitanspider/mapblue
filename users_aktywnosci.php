@@ -36,7 +36,7 @@ include('dbconfig.php');
        <br>Profil</a>
       </li>
     <li class="nav-item text-center">
-    <a class="nav-link active" href="users.php">
+    <a class="nav-link" href="users.php">
     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
 			<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
  			<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
@@ -61,6 +61,27 @@ include('dbconfig.php');
       <br>Kalendarz</a>
       </li>
 	  <li class="nav-item text-center">
+    <a class="nav-link" href="wydarzenia_krajowe.php">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
+			<path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+			</svg>
+      <br>Wydarzenia Ogólnopolskie</a>
+      </li>
+	  <li class="nav-item text-center">
+    <a class="nav-link" href="user_udostepnione.php">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
+			<path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+			</svg>
+      <br>Udostępnione</a>
+      </li>
+      <li class="nav-item text-center">
+    <a class="nav-link" href="statystyki.php">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
+      <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>			</svg>
+			</svg>
+      <br>Statystyki</a>
+      </li>
+      <li class="nav-item text-center">
     <a class="nav-link" href="ustawienia.php">
     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
 				<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
@@ -76,20 +97,6 @@ include('dbconfig.php');
 				<path d="M7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
 			</svg>
       <br>Pomoc</a>
-      </li>
-	  <li class="nav-item text-center">
-    <a class="nav-link" href="wydarzenia_krajowe.php">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
-			<path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
-			</svg>
-      <br>Wydarzenia Ogólnopolskie</a>
-      </li>
-	  <li class="nav-item text-center">
-    <a class="nav-link" href="user_udostepnione.php">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 16 16" height="30px">
-			<path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-			</svg>
-      <br>Udostępnione</a>
       </li>
     </ul>
     <ul class="navbar-nav">

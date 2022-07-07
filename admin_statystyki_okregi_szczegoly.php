@@ -79,6 +79,12 @@ include('dbconfig.php');
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;">
+<form action="admin_statystyki_okregi.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
+<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
+<input type="submit"  class="btn blue w-100" value="Wróć" >
+</form>
 <?php
 $begin=$_GET["begin"];
 $end=$_GET["end"];
@@ -86,7 +92,7 @@ $okr=$_GET["okr"];
 $i=0;
 $sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena, aktywnosci.uwagi FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' and aktywnosci.okreg='".$okr."' order by data_dodania desc";
 $result = $conn->query($sql);
-echo '<div class="accordion" id="accordion1">';
+echo '<div class="accordion mt-2" id="accordion1">';
 while($row = $result->fetch_assoc())
 {
   echo '<div class="accordion-item">';
@@ -111,12 +117,7 @@ while($row = $result->fetch_assoc())
 }
 ?>
 </div>
-<form action="admin_statystyki_okregi.php" method="get">
-<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
-<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
-<input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
-<input type="submit"  class="btn blue w-100" value="Wróć" >
-</form>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
