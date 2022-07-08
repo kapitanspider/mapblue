@@ -13,6 +13,16 @@ include('dbconfig.php');
 <style>
 html, body { margin:0; padding:0; overflow:hidden }
 #okregi svg {width:100%;}
+.square {
+    border-radius:4px;
+    height:25px;
+    width:25px;
+    border-radius:4px;
+    margin-left: auto;
+    margin-right: auto;
+    display:inline-block;
+    background-color:#B80000;
+}
 </style>
 <script>
 var okr=[];
@@ -173,6 +183,20 @@ array_push($data,$row);
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;" id="main">
+
+<div id="scale" class="mt-2 text-center">
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+</div>
+
 <div id="okregi">
 
 
@@ -561,6 +585,19 @@ else if($_GET['woj']=="zachodniopomorskie")
 <input type="submit"  class="btn blue mt-2 w-100" value="Wróć" >
 </form>
 </div>
+<script>
+var squares=document.getElementById("scale").children;
+squares[0].style.backgroundColor=cmax;
+squares[1].style.backgroundColor=c8;
+squares[2].style.backgroundColor=c7;
+squares[3].style.backgroundColor=c6;
+squares[4].style.backgroundColor=c5;
+squares[5].style.backgroundColor=c4;
+squares[6].style.backgroundColor=c3;
+squares[7].style.backgroundColor=c2;
+squares[8].style.backgroundColor=c1;
+squares[9].style.backgroundColor=c0;
+</script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

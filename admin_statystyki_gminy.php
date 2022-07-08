@@ -10,6 +10,54 @@ include('dbconfig.php');
 <title>MapBlue - Admin - Statystyki</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="colors.css">
+<script>
+var to_export=[["Gmina",'ilość']]
+  function download(elem){
+    exportToCsv("Gminy", to_export);
+  }
+
+  function exportToCsv(filename, rows) {
+    var processRow = function (row) {
+            var finalVal = '';
+            for (var j = 0; j < row.length; j++) {
+                var innerValue = row[j] === null ? '' : row[j].toString();
+                if (row[j] instanceof Date) {
+                    innerValue = row[j].toLocaleString();
+                };
+                var result = innerValue.replace(/"/g, '""');
+                if (result.search(/("|,|\n)/g) >= 0)
+                    result = '"' + result + '"';
+                if (j > 0)
+                    finalVal += ',';
+                finalVal += result;
+            }
+            return finalVal + '\n';
+        };
+
+        var csvFile = '';
+        for (var i = 0; i < rows.length; i++) {
+            csvFile += processRow(rows[i]);
+        }
+
+        var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        } else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    }
+    
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -80,13 +128,18 @@ include('dbconfig.php');
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:1000px;">
-<form action="admin_statystyki.php" method="post">
+<form action="admin_statystyki.php" class='text-center' method="post">
 <input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
 <input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
-<input type="submit"  class="btn blue w-100" value="Wróć" >
+<input type="submit"  class="btn blue w-75" value="Wróć" >
+<svg xmlns="http://www.w3.org/2000/svg" onclick="download()"style="float:right;" width="30" height="30" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+</svg>
+</form>
 <table class="table">
 <tr>
-<th>Powiat<th>
+<th>Gmina<th>
 <th>Ilość Aktywnosci<th>
 </tr>
 <?php
@@ -95,6 +148,9 @@ $result = $conn->query($sql);
 while($row = $result->fetch_assoc())
 {
 echo '
+<script>
+to_export.push(["'.$row['gmina'].'","'.$row['count(id)'].'"]);
+</script>
 <tr>
 <td>'.$row['gmina'].'<td>
 <td>'.$row['count(id)'].'<td>
@@ -106,6 +162,9 @@ $result = $conn->query($sql);
 while($row = $result->fetch_assoc())
 {
 echo '
+<script>
+to_export.push(["'.$row['gmina'].'","0"]);
+</script>
 <tr>
 <td>'.$row['gmina'].'<td>
 <td>0<td>

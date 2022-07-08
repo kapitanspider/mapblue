@@ -10,6 +10,18 @@ include('dbconfig.php');
 <title>MapBlue - Admin - Statystyki</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="colors.css">
+<style>
+.square {
+    border-radius:4px;
+    height:25px;
+    width:25px;
+    border-radius:4px;
+    margin-left: auto;
+    margin-right: auto;
+    display:inline-block;
+    background-color:#B80000;
+}
+</style> 
 <script>
 
 
@@ -186,6 +198,19 @@ while($row = $result->fetch_assoc())
 <input type="date" name="end" required value="<?php echo  $end; ?>">
 <input type="submit"  class="btn blue" value="Ustaw">
 </form>
+<div id="scale" class="mt-2">
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+</div>
+
 <svg id="map" onload="update(this)" viewBox="15 0 140 130"> 
     <polygon id="pomorskie" onclick="move(this)" style="stroke:#1f1a17;stroke-width:.0762;fill:#ffffff" points="86.191 22.766 83.453 27.132 80.049 27.132 78.051 25.356 73.463 25.356 69.911 23.802 67.543 23.802 65.841 26.836 62.363 27.132 61.771 29.204 57.479 29.204 55.111 26.836 55.481 24.616 56.369 23.284 55.481 22.174 56.591 21.434 54.519 19.362 54.162 16.203 53.149 15.299 54.741 14.182 54.844 10.128 52.994 8.33 55.481 7.5965 58.226 5.3185 66.359 2.78 72.984 2.2395 77.028 3.7955 79.486 5.8945 79.058 6.538 76.805 4.4105 73.55 3.026 76.298 10.664 79.723 11.967 84.301 11.794 89.225 9.2041 89.521 9.5135 84.563 12.07 85.886 13.589 84.901 17.406 86.561 18.844 86.561 19.954 89.151 19.954 88.041 22.914" class="fil1 str0"/>
     <polygon id="zachodniopomorskie" onclick="move(this)" style="stroke:#1f1a17;stroke-width:.0762;fill:#ffffff" points="54.893 22.026 56.019 23.528 55.118 24.279 54.742 26.908 53.616 27.133 53.24 29.161 50.537 30.287 50.236 31.94 52.79 33.291 50.912 35.77 48.885 37.422 48.359 38.699 46.256 39.9 44.379 39.149 43.102 37.647 41.149 40.05 36.869 40.276 35.742 42.454 33.865 43.43 30.629 43.1 28.867 46.723 27.336 47.643 25.7 47.017 21.626 43.409 21.95 41.147 24.204 39.702 25.003 34.357 23.632 26.334 25.979 27.809 26.956 22.177 25.228 22.327 23.313 23.359 21.698 22.702 21.698 21.726 24.759 21.585 27.857 19.698 46.482 13.69 50.537 8.959 52.414 8.7337 54.292 10.386 54.142 13.916 52.264 15.267 53.541 16.394 54.292 19.924 55.794 21.275" class="fil4 str0"/>
@@ -220,6 +245,19 @@ while($row = $result->fetch_assoc())
 <input type="submit"  class="btn blue m-2 w-75" value="Rodzaje Aktywnosci">
 </form>
 </div>
+<script>
+var squares=document.getElementById("scale").children;
+squares[0].style.backgroundColor=cmax;
+squares[1].style.backgroundColor=c8;
+squares[2].style.backgroundColor=c7;
+squares[3].style.backgroundColor=c6;
+squares[4].style.backgroundColor=c5;
+squares[5].style.backgroundColor=c4;
+squares[6].style.backgroundColor=c3;
+squares[7].style.backgroundColor=c2;
+squares[8].style.backgroundColor=c1;
+squares[9].style.backgroundColor=c0;
+</script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
