@@ -85,12 +85,35 @@ include('dbconfig.php');
 <input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
 <input type="submit"  class="btn blue w-100" value="Wróć" >
 </form>
+<form action="admin_statystyki_okregi_szczegoly.php" class="text-center"method="get">
+<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
+<input type="hidden" name="okr" required value="<?php echo $_GET["okr"]; ?>">
+<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
+<input type="submit"  class="btn blue w-25 m-2" name="ilosc" value="10" >
+<input type="submit"  class="btn blue w-25 m-2" name="ilosc" value="100" >
+<input type="submit"  class="btn blue w-25 m-2" name="ilosc" value="500" >
+</form>
 <?php
 $begin=$_GET["begin"];
 $end=$_GET["end"];
 $okr=$_GET["okr"];
 $i=0;
 $sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena, aktywnosci.uwagi FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where data between '".$begin."' and '".$end."' and aktywnosci.okreg='".$okr."' order by data_dodania desc";
+if(isset($_GET['ilosc']))
+{
+  switch ($_GET['ilosc']) {
+    case 10:
+      $sql.=" limit 10";
+        break;
+    case 100:
+      $sql.=" limit 100";
+        break;
+    case 500:
+      $sql.=" limit 500";
+        break;
+}
+}
 $result = $conn->query($sql);
 echo '<div class="accordion mt-2" id="accordion1">';
 while($row = $result->fetch_assoc())

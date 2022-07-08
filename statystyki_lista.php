@@ -12,119 +12,6 @@ include('dbconfig.php');
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><body>
 <link rel="stylesheet" href="colors.css">
 
-<script>
-function displayFuntion(){
-  var select = document.getElementById("lista");
-  document.getElementById("myChart").style.display = "none";
-  document.getElementById("myChart2").style.display = "none";
-  document.getElementById("myChart3").style.display = "none";
-  if(select.value=="Powiat")
-  {
-    var xValues = [];
-    var yValues = [];
-    var barColors = ["#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000"];
-    for (const [key, value] of Object.entries(powiaty)) {
-      xValues.push(key);
-      yValues.push(value);
-    }
-
-    new Chart("myChart", {
-      type: "bar",
-      data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-      },
-      options: {
-        legend: {display: false},
-        title: {
-          display: true,
-          text: "Statystyki powiatów"
-    }
-  }
-});
-  document.getElementById("myChart").style.display = "initial";
-  }
-  if(select.value=="Gmina")
-  {
-    var xValues = [];
-    var yValues = [];
-    var barColors = ["#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000","#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000","#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000"];
-    for (const [key, value] of Object.entries(gminy)) {
-      xValues.push(key);
-      yValues.push(value);
-    }
-
-    new Chart("myChart2", {
-      type: "bar",
-      data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-      },
-      options: {
-        legend: {display: false},
-        title: {
-          display: true,
-          text: "Statystyki gmin"
-    }
-  }
-});
-  document.getElementById("myChart2").style.display = "initial";
-  console.log(gminy);
-  }
-  if(select.value=="Rodzaje")
-  {
-    {
-    var xValues = [];
-    var yValues = [];
-    var barColors = ["#ff0000", "#ff8000","#ffff00","#80ff00","#00ff00", "#00ff80","#00ffff","#0080ff","#0000ff","#8000ff","#ff00ff","#ff0080","#ff0000"];
-    for (const [key, value] of Object.entries(aktywnosci)) {
-      xValues.push(key);
-      yValues.push(value);
-    }
-
-    new Chart("myChart3", {
-      type: "bar",
-      data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-      },
-      options: {
-        legend: {display: false},
-        title: {
-          display: true,
-          text: "Statystyki rodzajów aktywności"
-    }
-  }
-});
-  document.getElementById("myChart3").style.display = "initial";
-  }
-}
-}
-
-var powiaty={};
-var gminy={};
-var aktywnosci={
-  ACRT:0,
-  WIP:0,
-  SW:0,
-  NGO:0,
-  JST:0,
-  RKP:0,
-  OU:0,
-  INNE:0
-};
-
-</script>
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -237,50 +124,8 @@ $end=date_format(date_create(),"Y-m-d");
 $begin=date("Y-m-d",mktime(0,0,0,date('m')-1,date('d'),date('y')));
 }
 
-$sql= 'select powiat from powiaty where okreg="'.$_SESSION["NR_OKREGU"].'" order by powiat asc';
-$result = $conn->query($sql);
-while($row = $result->fetch_assoc()){
-  //var_dump($row);
-  echo '
-  <script>
-  powiaty["'.$row["powiat"].'"]=0;
-  </script>
-  ';
-}
-
-$sql= 'select gmina from gminy where okreg="'.$_SESSION["NR_OKREGU"].'" order by gmina asc';
-$result = $conn->query($sql);
-while($row = $result->fetch_assoc()){
-  //var_dump($row);
-  echo '
-  <script>
-  gminy["'.$row["gmina"].'"]=0;
-  </script>
-  ';
-}
-
-$sql = "SELECT * From aktywnosci Where ID_Organizatora='".$_SESSION["USER"]."' and data between '".$begin."' and '".$end."' order by data asc, godzina asc";
-$result = $conn->query($sql);
-while($row = $result->fetch_assoc()){
-  echo '
-  <script>
-  if("'.$row["gmina"].'" in gminy)
-  {
-    gminy["'.$row["gmina"].'"]+=1;
-  }
-  if("'.$row["powiat"].'" in powiaty)
-  {
-    powiaty["'.$row["powiat"].'"]+=1;
-  }
-  if("'.$row["rodzaj"].'" in aktywnosci)
-  {
-    aktywnosci["'.$row["rodzaj"].'"]+=1;
-  }
-  </script>
-  ';
-  }
 ?>
-<form action="statystyki.php" method="post">
+<form action="statystyki_lista.php" method="post">
 <label>Ustaw zakres dat</label>
 <br>
 <label>Od:</label>
@@ -289,21 +134,36 @@ while($row = $result->fetch_assoc()){
 <input type="date" name="end" required value="<?php echo  $end; ?>">
 <input type="submit" class="btn blue m-2" value="Prześlij">
 </form>
-<a href="statystyki_lista.php"  class="btn blue m-2">Moje wszystkie aktywności</a>
-<select id="lista" onchange="displayFuntion()">
-<option value="---" disabled selected>---</option>
-<option value="Powiat" >Powiaty</option>
-<option value="Gmina">Gminy</option>
-<option value="Rodzaje">Rodzaje Aktywności</option>
-</select>
-<canvas id="myChart" style="width:100%;"></canvas>
-<canvas id="myChart2" style="width:100%;"></canvas>
-<canvas id="myChart3" style="width:100%;"></canvas>
-<script>
-  document.getElementById("myChart").style.display = "none";
-  document.getElementById("myChart2").style.display = "none";
-  document.getElementById("myChart3").style.display = "none";
-</script>
+<?php
+$sql= "SELECT * FROM aktywnosci Where data between '".$begin."' and '".$end."' and ID_Organizatora = '".$_SESSION["USER"]."'order by data desc, godzina asc";
+$result = $conn->query($sql);
+$i=0;
+echo '<div class="accordion" id="accordion1">';
+while($row = $result->fetch_assoc())
+{
+  echo '<div class="accordion-item">';
+  echo '<h2 class="accordion-header" id="heading'.$i.'">
+  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
+  '.$row["gmina"]." ".$row["data"]." ".$row["nazwa"].'
+  </button>
+  </h2>';
+  echo '<div id="collapse'.$i.'" class="accordion-collapse collapse" aria-labelledby="heading'.$i.'" data-bs-parent="#accordion1">
+  <div class="accordion-body">
+  <p class="m-1"><b>Woj: </b>'.$row["wojewodztwo"]."<b> Nr. Okręgu: </b>".$row["okreg"]." <b>Powiat: </b> ".$row["powiat"]." <b>Gmina: </b>".$row["gmina"].'</p>
+  <p class="m-1"><b>Nazwa:</b> '.$row["nazwa"].'</p>
+  <p class="m-1"><b>Link do wydarzenia: </b><a href="'.$row["potwierdzenie"].'" target="blank">'.$row["potwierdzenie"].'</a></p>
+  <p class="m-1"><b>Rodzaj wydarzenia:</b> '.$row["rodzaj"].'</p>
+  <p class="m-1"><b>Data:</b> '.$row["data"].'</p>
+  <p class="m-1"><b>Notatka:</b> '.$row["notatka"].'</p>
+  <p class="m-1"><b>Uwagi:</b> '.$row["uwagi"].'</p>
+';
+  echo '</div>';
+  echo "</div>";
+  echo "</div>";
+  $i++;
+}
+?>
+
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
