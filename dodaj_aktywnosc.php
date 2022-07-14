@@ -135,7 +135,6 @@ include('dbconfig.php');
 <input class="m-1 w-100" type="text" id="nazwa" name="nazwa" required>
 <p class="form-label m-1">Rodzaj</p>
 <select  class="m-1 w-100" id="rodzaj" name="rodzaj" required>
-<option value="ACRT">ACRT - Aktywność centralna realizowana w terenie</option> 
 <option value="WIP">WIP - Własna inicjatywa posła</option> 
 <option value="SW">SW - Spotkanie z wborcami</option>
 <option value="NGO">NGO - Aktywność z NGO</option>
@@ -183,6 +182,8 @@ for (var i=0;i<nazwy.length;i++)
 elem.innerHTML=lista;
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

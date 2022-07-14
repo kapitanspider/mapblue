@@ -229,6 +229,11 @@ while($row = $result->fetch_assoc())
     <polygon id="dolnośląskie" onclick="move(this)" style="stroke:#1f1a17;stroke-width:.0762;fill:#ffffff" points="37.761 84.963 43.134 85.867 43.932 87.197 45.368 88.527 49.039 87.357 51.114 89.538 48.028 92.73 50.954 94.645 53.614 98.954 56.008 96.667 58.03 95.656 55.955 92.411 57.126 92.304 58.775 90.921 59.041 88.793 62.392 83.048 64.52 80.547 64.893 76.61 66.702 76.557 66.116 72.727 63.988 71.929 64.361 69.269 60.956 67.673 59.36 69.535 56.168 69.428 52.55 67.141 52.444 65.545 50.156 65.279 49.199 66.715 49.358 68.471 46.326 68.63 44.57 69.96 44.198 68.098 43.347 67.779 40.155 72.195 38.559 70.599 37.495 70.492 36.59 72.62 34.356 72.354 32.494 74.057 32.707 77.515 30.366 83.367 31.962 83.473 32.866 80.441 35.899 80.813 36.324 83.633" class="fil5 str0"/>
     <polygon id="opolskie" onclick="move(this)" style="stroke:#1f1a17;stroke-width:.0762;fill:#ffffff" points="77.82 82.09 77.022 83.526 77.022 85.122 75.958 87.41 77.395 88.58 77.395 89.112 75.586 89.644 74.735 92.304 74.894 95.337 71.17 97.305 70.532 99.806 68.51 101.03 65.85 97.837 67.978 96.135 66.382 94.007 62.924 95.177 59.732 92.57 57.498 92.411 59.094 91.081 59.307 88.953 62.765 83.207 64.893 80.547 65.212 77.036 67.606 76.876 67.606 78.1 69.84 78.792 72.075 77.462 77.022 78.206 78.086 79.536" class="fil4 str0"/>
 </svg>
+<form action="admin_statystyki_users.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
+<input type="hidden" name="end" required value="<?php echo  $end; ?>">
+<input type="submit"  class="btn blue m-2 w-75" value="Użykownicy szczegółowo">
+</form>
 <form action="admin_statystyki_powiaty.php" method="get">
 <input type="hidden" name="begin" required value="<?php echo $begin; ?>">
 <input type="hidden" name="end" required value="<?php echo  $end; ?>">
@@ -243,6 +248,11 @@ while($row = $result->fetch_assoc())
 <input type="hidden" name="begin" required value="<?php echo $begin; ?>">
 <input type="hidden" name="end" required value="<?php echo  $end; ?>">
 <input type="submit"  class="btn blue m-2 w-75" value="Rodzaje Aktywnosci">
+</form>
+<form action="admin_statystyki_wydarzenie_krajowe.php" method="get">
+<input type="hidden" name="begin" required value="<?php echo $begin; ?>">
+<input type="hidden" name="end" required value="<?php echo  $end; ?>">
+<input type="submit"  class="btn blue m-2 w-75" value="Wydarzenia ogólnopolskie">
 </form>
 </div>
 <script>
@@ -259,5 +269,8 @@ squares[8].style.backgroundColor=c1;
 squares[9].style.backgroundColor=c0;
 </script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

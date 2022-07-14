@@ -7,12 +7,8 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Ostatnie Aktywności</title>
+<title>MapBlue - Wydarzenia ogólnopolskie</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
 <link rel="stylesheet" href="colors.css">
 </head>
 <body>
@@ -83,134 +79,49 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </div>
   </div>
 </nav>
-<div class="container-fluid p-2 card mt-1" style="max-width:1000px;">
-<?php
-if(isset($_POST["begin"]))
-{
-$begin=$_POST["begin"];
-$end=$_POST["end"];
-$limit=$_POST["limit"];
-
-}
-else
-{
-$begin=date_format(date_create(),"Y-m-d");
-$end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
-$limit=10;
-}
-
-
-if(isset($_POST["id_aktywnosci"]))
-{
-	$sql="UPDATE aktywnosci SET ocena = '".$_POST["ocena"]."' WHERE aktywnosci.ID = ".$_POST["id_aktywnosci"]."";
-	$conn->query($sql);
-}
-if(isset($_POST["id_aktywnosci_udostepnij"]))
-{
-	$sql="SELECT * FROM `udostepnienia` Where id_usera='".$_POST["id_usera_udostepnij"]."'and id_aktywnosci='".$_POST["id_aktywnosci_udostepnij"]."'";
-	$result = $conn->query($sql);
-	if($result->num_rows==0)
-	{
-	$sql="INSERT INTO `udostepnienia` (`id_admina`, `id_usera`, `id_aktywnosci`) VALUES ('".$_SESSION["USER"]."', '".$_POST["id_usera_udostepnij"]."', '".$_POST["id_aktywnosci_udostepnij"]."')";
-	$conn->query($sql);
-	}
-	else
-	{
-		echo "<script>
-		alert('Ta aktywnosc już jest udostępniona dla tego urzytwkonika');
-		</script>";
-	}
-}
-?>
-<form action="admin_ostatnie_aktywnosci.php" method="post">
-<label>Ustaw zakres dat</label>
-<input type="date" name="begin" required value="<?php echo $begin; ?>">
-<input type="date" name="end" required value="<?php echo  $end; ?>">
-<label>Ilość:</label>
-<input type="number" name="limit" required value="<?php echo  $limit; ?>">
-<input type="submit" value="Prześlij">
+<div class="container-fluid p-2 card mt-1 " style="max-width:1000px;">
+<form action="admin_statystyki_wydarzenie_krajowe.php" class='text-center' method="get">
+<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
+<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="submit"  class="btn blue w-75" value="Wróć" >
 </form>
-
+<br>
 <?php
-$sql= "SELECT users.IMIE, users.NAZWISKO, aktywnosci.ID, aktywnosci.nazwa, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.ocena, aktywnosci.data, aktywnosci.gmina, aktywnosci.potwierdzenie, aktywnosci.rodzaj, aktywnosci.uwagi from aktywnosci INNER JOIN users ON users.ID=aktywnosci.ID_Organizatora where data between '".$begin."' and '".$end."' order by data_dodania desc limit ".$limit;
+$sql= "SELECT aktywnosci.ID, users.IMIE,users.NAZWISKO , aktywnosci.ID_Organizatora, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.gmina, aktywnosci.nazwa, aktywnosci.rodzaj, aktywnosci.data, aktywnosci.godzina, aktywnosci.uczestnicy, aktywnosci.potwierdzenie, aktywnosci.notatka, aktywnosci.data_dodania, aktywnosci.ocena FROM aktywnosci INNER JOIN users ON aktywnosci.ID_Organizatora=users.ID Where ID_Parent='".$_GET["id"]."' order by users.IMIE, users.NAZWISKO asc";
 $result = $conn->query($sql);
-echo '<div class="accordion" id="accordion1">';
+if($result->num_rows==0)
+{
+  echo "Brak wydarzeń pochodnych";
+}
 $i=0;
+echo '<div class="accordion" id="accordion1">';
 while($row = $result->fetch_assoc())
 {
-	echo '<div class="accordion-item">';
-  if($row['ocena']!=0){
-  echo '<h2 class="accordion-header" id="heading'.$i.'">
-  <button style="background-color:lightgreen;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
-  '.$row["IMIE"].' '.$row["NAZWISKO"].' - '.$row["nazwa"].'
-  </button>
-  </h2>';
-  }
-  else{
-  echo '<h2 class="accordion-header" id="heading'.$i.'">
-  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
-  '.$row["IMIE"].' '.$row["NAZWISKO"].' - '.$row["nazwa"].'
-  </button>
-  </h2>';
-  }
-  echo '<div id="collapse'.$i.'" class="accordion-collapse collapse" aria-labelledby="heading'.$i.'" data-bs-parent="#accordion1">
-  <div class="accordion-body">
-  <p class="m-1"><b>Woj: </b>'.$row["wojewodztwo"]."<b> Nr. Okręgu: </b>".$row["okreg"]." <b>Powiat: </b> ".$row["powiat"]." <b>Gmina: </b>".$row["gmina"].'</p>
-  <p class="m-1"><b>Link do wydarzenia: </b><a href="'.$row["potwierdzenie"].'" target="blank">'.$row["potwierdzenie"].'</a></p>
-  <p class="m-1"><b>Rodzaj wydarzenia:</b> '.$row["rodzaj"].'</p>
-  <p class="m-1"><b>Data:</b> '.$row["data"].'</p>';
-  switch ($row["ocena"]) {
-    case 0:
-        echo "<p style='background-color:white;'>".$row["ocena"]."</p>";
-        break;
-    case 1:
-        echo "<p style='background-color:red;'>".$row["ocena"]."</p>";
-        break;
-    case 2:
-        echo "<p style='background-color:yellow;'>".$row["ocena"]."</p>";
-        break;
-	case 3:
-        echo "<p style='background-color:lightgreen;'>".$row["ocena"]."</p>";
-        break;
-	}
-
-	echo "<form action='admin_ostatnie_aktywnosci.php' method='post'>
-	<input type='hidden' name='begin' value=".$begin.">
-	<input type='hidden' name='end' value=".$end.">
-	<input type='hidden' name='limit' value=".$limit.">
-	<input type='hidden' name='id_aktywnosci' value=".$row["ID"].">
-	
-	<input type='submit' name='ocena' style='background-color:white;' value='0'>
-	<input type='submit' name='ocena' style='background-color:red;' value='1'>
-	<input type='submit' name='ocena' style='background-color:yellow;' value='2'>
-	<input type='submit' name='ocena' style='background-color:lightgreen;' value='3'>
-	</form>";
-	echo "<br>";
-	echo "<form action='admin_ostatnie_aktywnosci_udostępnij.php' method='post'>
-	<input type='hidden' name='begin' value=".$begin.">
-	<input type='hidden' name='end' value=".$end.">
-	<input type='hidden' name='limit' value=".$limit.">
-	<input type='hidden' name='id_aktywnosci' value=".$row["ID"].">
-	<input type='submit' class='btn blue' value='Udostępnij'>
-	</form>
-  <p><b>Uwagi: </b>".$row["uwagi"]."</p>";
-  echo '<form action="admin_dodaj_uwage.php" method="post">
-  <input type="hidden" name="id" value="'.$row["ID"].'">
-  <input type="hidden" name="begin" value="'.$begin.'">
-  <input type="hidden" name="end" value="'.$end.'">
-  <input type="hidden" name="orgin" value="admin_ostatnie_aktywnosci.php">
-  <input type="submit" class="btn blue" value="Edytuj uwagę">
-  </form>';
-  echo '</div>';
-  echo "</div>";
-  echo "</div>";
-  $i++;
-
-
+    echo '<div class="accordion-item">';
+    echo '<h2 class="accordion-header" id="heading'.$i.'">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
+    '.$row["IMIE"].' '.$row["NAZWISKO"].' - '.$row["nazwa"].'
+    </button>
+    </h2>';
+    echo '<div id="collapse'.$i.'" class="accordion-collapse collapse" aria-labelledby="heading'.$i.'" data-bs-parent="#accordion1">
+    <div class="accordion-body">
+    <p class="m-1"><b>Woj: </b>'.$row["wojewodztwo"]."<b> Nr. Okręgu: </b>".$row["okreg"]." <b>Powiat: </b> ".$row["powiat"]." <b>Gmina: </b>".$row["gmina"].'</p>
+    <p class="m-1"><b>Link do wydarzenia: </b><a href="'.$row["potwierdzenie"].'" target="blank">'.$row["potwierdzenie"].'</a></p>
+    <p class="m-1"><b>Rodzaj wydarzenia:</b> '.$row["rodzaj"].'</p>
+    <p class="m-1"><b>Liczba uczestników:</b> '.$row["uczestnicy"].'</p>
+    <p class="m-1"><b>Data:</b> '.$row["data"].'</p>
+    <p class="m-1"><b>Godzina:</b> '.$row["godzina"].'</p>
+    <p class="m-1"><b>Czas Utworzenia:</b> '.$row["data_dodania"].'</p>
+    <p class="m-1"><b>Ocena:</b> '.$row["ocena"].'</p>
+    <p class="m-1"><b>Notatka:</b> '.$row["notatka"].'</p>';
+    echo '</div>';
+    echo "</div>";
+    echo "</div>";
+    $i++;
 }
+echo '</div>';
 ?>
-</table>
-</div>
+<br>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
 include('apply_settings.php');

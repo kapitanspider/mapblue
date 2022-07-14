@@ -126,6 +126,8 @@ while($row = $result->fetch_assoc())
 	echo "<td>".$row["godzina"]."</td>";
 	echo "<td><a href='".$row["plik"]."' target='blank' >Załącznik</a></td>";
 	echo "<td><form action='admin_wydarzenie_krajowe.php' method='post'>";
+	echo "<input type='hidden' name='begin' value='".$begin."'>";
+	echo "<input type='hidden' name='end' value='".$end."'>";
 	echo "<input type='hidden' name='id_wydarzenia_usun' value='".$row["ID"]."'>";
 	echo "<input type='submit' value='Usuń'> ";
 	echo "</form></td>";
@@ -140,5 +142,8 @@ while($row = $result->fetch_assoc())
 <a href="admin_wydarzenie_krajowe_dodaj.php" class="btn blue">Dodaj wydarzenie ogólnopolskie</a>
 <br>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

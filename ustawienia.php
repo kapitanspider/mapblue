@@ -7,7 +7,7 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Dodawanie aktywności</title>
+<title>MapBlue - Ustawienia</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
 h1 {
@@ -118,10 +118,95 @@ textarea {
   </div>
 </nav>
 </br>
+<?php
+if(isset($_POST['ust_theme']))
+{
+  $_SESSION["ust_theme"]=$_POST['ust_theme'];
+  $_SESSION["ust_size"]=$_POST['ust_size'];
+  $_SESSION["ust_pow"]=$_POST['ust_pow'];
+  $sql = "UPDATE `users` SET `ust_theme` = '".$_POST['ust_theme']."', `ust_size` = '".$_POST['ust_size']."', `ust_pow` = '".$_POST['ust_pow']."' WHERE `users`.`ID` = '".$_SESSION["USER"]."'";
+  $conn->query($sql);
+} 
+?>
 <div class="container-fluid p-2 card" style="max-width:700px;">
-Funkcjonalność w budowie 
+<form action="ustawienia.php" method="POST">
+<p class="m-2"><b>Motyw:</b></p>
+<?php
+if($_SESSION["ust_theme"]=="dark")
+{
+  ?>
+  <select name="ust_theme" class="form-select">
+  <option value="light">Jasny</option>
+  <option value="dark" selected>Ciemny</option>
+  </select>
+  <?php
+}
+else{
+  ?>
+  <select name="ust_theme"  class="form-select">
+  <option value="light" selected>Jasny</option>
+  <option value="dark">Ciemny</option>
+  </select>
+  <?php
+}
+echo '<p class="m-2"><b>Rozmiar czcionki:</b></p>';
+if($_SESSION["ust_size"]=="small")
+{
+  ?>
+  <select name="ust_size" class="form-select">
+  <option value="small"selected>Mniejsza</option>
+  <option value="normal" >Normalna</option>
+  <option value="big" >Większa</option>
+  </select>
+  <?php
+}
+else if($_SESSION["ust_size"]=="normal")
+{
+  ?>
+  <select name="ust_size" class="form-select">
+  <option value="small" >Mniejsza</option>
+  <option value="normal" selected>Normalna</option>
+  <option value="big" >Większa</option>
+  </select>
+  <?php
+}
+else
+{
+  ?>
+  <select name="ust_size" class="form-select">
+  <option value="small" >Mniejsza</option>
+  <option value="normal">Normalna</option>
+  <option value="big" selected>Większa</option>
+  </select>
+  <?php
+}
+echo '<p class="m-2"><b>Czy wyświetlać powiadomienia o wydarzeniach ogólnopolskich:</b></p>';
+if($_SESSION["ust_pow"]==0)
+{
+  ?>
+  <select name="ust_pow" class="form-select">
+  <option value="1">TAK</option>
+  <option value="0" selected>NIE</option>
+  </select>
+  <?php
+}
+else{
+  ?>
+  <select name="ust_pow"  class="form-select">
+  <option value="1" selected>TAK</option>
+  <option value="0">NIE</option>
+  </select>
+  <?php
+}
+?>
+<input type="submit" class="btn blue mt-3 w-100" value="Zatwiedź">
+</form>
 </div>
 <!-- Koniec skryptu mapy -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

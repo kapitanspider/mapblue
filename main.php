@@ -26,11 +26,18 @@ include('dbconfig.php');
     <ul class="navbar-nav mr-auto">
 	</ul>
 	<ul class="navbar-nav">
+		<li>
+		<form class="d-flex" action="users.php" method="get">
+        <input class="form-control me-2" type="search" placeholder="Szukaj" aria-label="Search" name="search">&nbsp;
+        <button class="btn btn-outline-success" type="submit">Szukaj</button>
+      </form>
+	</li>
 	  <li class="nav-item">
         <a class="nav-link" href="logout.php">Wyloguj</a>
       </li>
     </ul>
   </div>
+  
 </nav>
 <br>
 <div class="container w-100">
@@ -43,7 +50,7 @@ include('dbconfig.php');
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Profil</p>
+				<p class="card-text text-center " style="font-size:x-large;">Profil</p>
 			</div>
 		</div>
 	</a>
@@ -56,7 +63,7 @@ include('dbconfig.php');
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Użytkownicy</p>
+				<p class="card-text text-center " style="font-size:x-large;">Użytkownicy</p>
 			</div>
 		</div>
 	</a>
@@ -68,7 +75,7 @@ include('dbconfig.php');
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Dodaj Aktywność</p>
+				<p class="card-text text-center " style="font-size:x-large;">Dodaj Aktywność</p>
 			</div>
 		</div>
 	</a>
@@ -81,7 +88,7 @@ include('dbconfig.php');
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Kalendarz aktywności</p>
+				<p class="card-text text-center " style="font-size:x-large;">Kalendarz aktywności</p>
 			</div>
 		</div>
 	</a>
@@ -98,7 +105,7 @@ if($result->num_rows==0)
 			</svg>
 			<div class="card-body">
 			<i class="bi bi-file-person"></i>
-			<p class="card-text text-center blue_text" style="font-size:x-large;">Wydarzenia ogólnopolskie</p>
+			<p class="card-text text-center " style="font-size:x-large;">Wydarzenia ogólnopolskie</p>
 			</div>
 <?php
 }
@@ -111,7 +118,7 @@ else
 			</svg>
 			<div class="card-body">
 			<i class="bi bi-file-person"></i>
-			<p class="card-text text-center blue_text" style="font-size:x-large;">Wydarzenia ogólnopolskie !!!</p>
+			<p class="card-text text-center " style="font-size:x-large;">Wydarzenia ogólnopolskie !!!</p>
 			</div>
 <?php
 }
@@ -125,7 +132,7 @@ else
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Udostępnione dla mnie</p>
+				<p class="card-text text-center " style="font-size:x-large;">Udostępnione dla mnie</p>
 			</div>
 		</div>
 	</a>
@@ -135,7 +142,7 @@ else
 			<path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Statystyki</p>
+				<p class="card-text text-center " style="font-size:x-large;">Statystyki</p>
 			</div>
 		</div>
 	</a>
@@ -147,7 +154,7 @@ else
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Ustawienia</p>
+				<p class="card-text text-center " style="font-size:x-large;">Ustawienia</p>
 			</div>
 		</div>
 	</a>
@@ -160,7 +167,7 @@ else
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Pomoc</p>
+				<p class="card-text text-center " style="font-size:x-large;">Pomoc</p>
 			</div>
 		</div>
 	</a>
@@ -181,7 +188,7 @@ if($_SESSION["ADMIN"]==1)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Wszystkie aktywności</p>
+				<p class="card-text text-center " style="font-size:x-large;">Wszystkie aktywności</p>
 			</div>
 		</div>
 	</a>
@@ -192,18 +199,7 @@ if($_SESSION["ADMIN"]==1)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Statystyki aktywności</p>
-			</div>
-		</div>
-	</a>
-	<a href="admin_statystyki_kategorie.php" style="text-decoration:none;">
-		<div class="col card m-1 p-2" style="width: 15rem; height: 15rem;">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="#00529c" class="bi bi-file-earmark-person card-img-top" viewBox="0 0 16 16">
-			<path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
-			</svg>
-			<div class="card-body">
-				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Statystyki kategori</p>
+				<p class="card-text text-center " style="font-size:x-large;">Statystyki aktywności</p>
 			</div>
 		</div>
 	</a>
@@ -215,7 +211,7 @@ if($_SESSION["ADMIN"]==1)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Ostatnio dodane aktywnosci</p>
+				<p class="card-text text-center " style="font-size:x-large;">Ostatnio dodane aktywnosci</p>
 			</div>
 		</div>
 	</a>
@@ -228,7 +224,7 @@ if($_SESSION["ADMIN"]==1)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Wydarzenia ogólnopolskie</p>
+				<p class="card-text text-center " style="font-size:x-large;">Wydarzenia ogólnopolskie</p>
 			</div>
 		</div>
 	</a>
@@ -252,7 +248,7 @@ if($_SESSION["ADMIN"]==2)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Wszystkie aktywności</p>
+				<p class="card-text text-center " style="font-size:x-large;">Wszystkie aktywności</p>
 			</div>
 		</div>
 	</a>
@@ -263,7 +259,7 @@ if($_SESSION["ADMIN"]==2)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Statystyki aktywności</p>
+				<p class="card-text text-center " style="font-size:x-large;">Statystyki aktywności</p>
 			</div>
 		</div>
 	</a>
@@ -275,7 +271,7 @@ if($_SESSION["ADMIN"]==2)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Ostatnio dodane aktywnosci</p>
+				<p class="card-text text-center " style="font-size:x-large;">Ostatnio dodane aktywnosci</p>
 			</div>
 		</div>
 	</a>
@@ -288,7 +284,7 @@ if($_SESSION["ADMIN"]==2)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Wydarzenia ogólnopolskie</p>
+				<p class="card-text text-center " style="font-size:x-large;">Wydarzenia ogólnopolskie</p>
 			</div>
 		</div>
 	</a>
@@ -299,7 +295,7 @@ if($_SESSION["ADMIN"]==2)
 			</svg>
 			<div class="card-body">
 				<i class="bi bi-file-person"></i>
-				<p class="card-text text-center blue_text" style="font-size:x-large;">Użytkownicy</p>
+				<p class="card-text text-center " style="font-size:x-large;">Użytkownicy</p>
 			</div>
 		</div>
 	</a> 
@@ -316,5 +312,8 @@ if($_SESSION["ADMIN"]==2)
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

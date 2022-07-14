@@ -89,6 +89,7 @@ if(isset($_POST["nazwa"]))
 if(mainInputCheck()){
 $target_dir = "pliki_wydarzen/";
 $target_file = $target_dir .$_POST["data"]." ".$_POST["nazwa"]." ". basename($_FILES["zalacznik"]["name"]);
+$target_file2 = $target_dir .$_POST["data"]." ".$_POST["nazwa"]." 2 ". basename($_FILES["zalacznik"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -109,15 +110,41 @@ if ($uploadOk == 0) {
   echo "Wystąpił błąd";
 // if everything is ok, try to upload file
 } else {
+  if($_FILES["zalacznik2"]!="")
+  {
+    if (move_uploaded_file($_FILES["zalacznik"]["tmp_name"], $target_file) and move_uploaded_file($_FILES["zalacznik2"]["tmp_name"], $target_file2)) {
+      echo "Wydarzenie zostało utworzone";
+    $sql = "INSERT INTO `wydarzenia_ogolnopolskie` (`nazwa`, `data`, `godzina`, `plik`,`plik2`, `informacje`) VALUES ('".$_POST["nazwa"]."', '".$_POST["data"]."', '".$_POST["godzina"]."', '".$target_file."', '".$target_file2."','".$_POST["informacje"]."')";
+    $conn->query($sql);
+    $sql = "SELECT * from wydarzenia_ogolnopolskie where plik = '".$target_file."'";
+    $result=$conn->query($sql);
+    $row = $result->fetch_assoc();
+    $wydarzenie=$row["ID"];
+    $sql = "select ID from users where ust_pow = 1";
+    $result=$conn->query($sql);
+    $ins_sql="INSERT INTO `powiadomienia` (`id_wydarzenia`, `id_osoby`) VALUES ";
+    while($row = $result->fetch_assoc())
+    {
+      $ins_sql.="('".$wydarzenie."','".$row["ID"]."'), ";
+    }
+    $ins_sql = rtrim($ins_sql, ", ");
+    $conn->query($ins_sql);
+    } 
+    else {
+      echo "Wystąpił błąd";
+    }
+  }
+  else
+  {
   if (move_uploaded_file($_FILES["zalacznik"]["tmp_name"], $target_file)) {
-    echo "Plik ". htmlspecialchars( basename( $_FILES["zalacznik"]["name"])). " został wgrany na serwer, A wydarzenie zostało utworzone";
+    echo "Wydarzenie zostało utworzone";
 	$sql = "INSERT INTO `wydarzenia_ogolnopolskie` (`nazwa`, `data`, `godzina`, `plik`, `informacje`) VALUES ('".$_POST["nazwa"]."', '".$_POST["data"]."', '".$_POST["godzina"]."', '".$target_file."','".$_POST["informacje"]."')";
 	$conn->query($sql);
 	$sql = "SELECT * from wydarzenia_ogolnopolskie where plik = '".$target_file."'";
 	$result=$conn->query($sql);
 	$row = $result->fetch_assoc();
 	$wydarzenie=$row["ID"];
-	$sql = "select ID from users";
+	$sql = "select ID from users where ust_pow = 1";
 	$result=$conn->query($sql);
 	$ins_sql="INSERT INTO `powiadomienia` (`id_wydarzenia`, `id_osoby`) VALUES ";
 	while($row = $result->fetch_assoc())
@@ -130,6 +157,7 @@ if ($uploadOk == 0) {
   else {
     echo "Wystąpił błąd";
   }
+}
 }
 }
 else{
@@ -150,6 +178,8 @@ else{
 <p>Załącznik:</p>
 <input type="file" name="zalacznik" required>
 <br>
+<p>Drugi załącznik (opcjonalnie):</p>
+<input type="file" name="zalacznik2">
 <br>
 <p>Informacja:</p>
 <textarea class="w-100" name="informacje" required></textarea>
@@ -159,6 +189,8 @@ else{
 <a href="admin_wydarzenie_krajowe.php" class="btn blue mt-2">Wróć</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

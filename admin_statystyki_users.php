@@ -7,13 +7,57 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Ostatnie Aktywności</title>
+<title>MapBlue - Admin - Statystyki</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
 <link rel="stylesheet" href="colors.css">
+<script>
+var to_export=[["Imie",'Nazwisko','Ilość aktywnosci','Ilość aktywnosci w okręgu','Ilość aktywnosci poza okręgiem']]
+  function download(elem){
+    exportToCsv("Użytkownicy", to_export);
+  }
+
+  function exportToCsv(filename, rows) {
+    var processRow = function (row) {
+            var finalVal = '';
+            for (var j = 0; j < row.length; j++) {
+                var innerValue = row[j] === null ? '' : row[j].toString();
+                if (row[j] instanceof Date) {
+                    innerValue = row[j].toLocaleString();
+                };
+                var result = innerValue.replace(/"/g, '""');
+                if (result.search(/("|,|\n)/g) >= 0)
+                    result = '"' + result + '"';
+                if (j > 0)
+                    finalVal += ',';
+                finalVal += result;
+            }
+            return finalVal + '\n';
+        };
+
+        var csvFile = '';
+        for (var i = 0; i < rows.length; i++) {
+            csvFile += processRow(rows[i]);
+        }
+
+        var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        } else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    }
+    
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -84,133 +128,53 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:1000px;">
-<?php
-if(isset($_POST["begin"]))
-{
-$begin=$_POST["begin"];
-$end=$_POST["end"];
-$limit=$_POST["limit"];
-
-}
-else
-{
-$begin=date_format(date_create(),"Y-m-d");
-$end=date("Y-m-d",mktime(0,0,0,date('m')+1,date('d'),date('y')));
-$limit=10;
-}
-
-
-if(isset($_POST["id_aktywnosci"]))
-{
-	$sql="UPDATE aktywnosci SET ocena = '".$_POST["ocena"]."' WHERE aktywnosci.ID = ".$_POST["id_aktywnosci"]."";
-	$conn->query($sql);
-}
-if(isset($_POST["id_aktywnosci_udostepnij"]))
-{
-	$sql="SELECT * FROM `udostepnienia` Where id_usera='".$_POST["id_usera_udostepnij"]."'and id_aktywnosci='".$_POST["id_aktywnosci_udostepnij"]."'";
-	$result = $conn->query($sql);
-	if($result->num_rows==0)
-	{
-	$sql="INSERT INTO `udostepnienia` (`id_admina`, `id_usera`, `id_aktywnosci`) VALUES ('".$_SESSION["USER"]."', '".$_POST["id_usera_udostepnij"]."', '".$_POST["id_aktywnosci_udostepnij"]."')";
-	$conn->query($sql);
-	}
-	else
-	{
-		echo "<script>
-		alert('Ta aktywnosc już jest udostępniona dla tego urzytwkonika');
-		</script>";
-	}
-}
-?>
-<form action="admin_ostatnie_aktywnosci.php" method="post">
-<label>Ustaw zakres dat</label>
-<input type="date" name="begin" required value="<?php echo $begin; ?>">
-<input type="date" name="end" required value="<?php echo  $end; ?>">
-<label>Ilość:</label>
-<input type="number" name="limit" required value="<?php echo  $limit; ?>">
-<input type="submit" value="Prześlij">
+<form action="admin_statystyki.php" class='text-center' method="post">
+<input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
+<input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="submit"  class="btn blue w-75" value="Wróć" >
+<svg xmlns="http://www.w3.org/2000/svg" onclick="download()"style="float:right;" width="30" height="30" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+</svg>
 </form>
-
+<table>
+<table class="table" id="maintable">
+<tr>
+<th>Imię</th>
+<th>Nazwisko</th>
+<th>Ilość aktywnosci</th>
+<th>Ilość aktywnosci w okręgu</th>
+<th>Ilość aktywnosci poza okręgiem</th>
+</tr>
 <?php
-$sql= "SELECT users.IMIE, users.NAZWISKO, aktywnosci.ID, aktywnosci.nazwa, aktywnosci.wojewodztwo, aktywnosci.okreg, aktywnosci.powiat, aktywnosci.ocena, aktywnosci.data, aktywnosci.gmina, aktywnosci.potwierdzenie, aktywnosci.rodzaj, aktywnosci.uwagi from aktywnosci INNER JOIN users ON users.ID=aktywnosci.ID_Organizatora where data between '".$begin."' and '".$end."' order by data_dodania desc limit ".$limit;
+$sql="SELECT users.IMIE,users.NAZWISKO,count(a1.id),users.ID FROM `users` join aktywnosci as a1 on a1.ID_Organizatora=users.ID where data between '".$_GET["begin"]."' and '".$_GET["end"]."' GROUP by users.IMIE, users.NAZWISKO order by count(a1.id) desc";
 $result = $conn->query($sql);
-echo '<div class="accordion" id="accordion1">';
-$i=0;
 while($row = $result->fetch_assoc())
 {
-	echo '<div class="accordion-item">';
-  if($row['ocena']!=0){
-  echo '<h2 class="accordion-header" id="heading'.$i.'">
-  <button style="background-color:lightgreen;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
-  '.$row["IMIE"].' '.$row["NAZWISKO"].' - '.$row["nazwa"].'
-  </button>
-  </h2>';
-  }
-  else{
-  echo '<h2 class="accordion-header" id="heading'.$i.'">
-  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">
-  '.$row["IMIE"].' '.$row["NAZWISKO"].' - '.$row["nazwa"].'
-  </button>
-  </h2>';
-  }
-  echo '<div id="collapse'.$i.'" class="accordion-collapse collapse" aria-labelledby="heading'.$i.'" data-bs-parent="#accordion1">
-  <div class="accordion-body">
-  <p class="m-1"><b>Woj: </b>'.$row["wojewodztwo"]."<b> Nr. Okręgu: </b>".$row["okreg"]." <b>Powiat: </b> ".$row["powiat"]." <b>Gmina: </b>".$row["gmina"].'</p>
-  <p class="m-1"><b>Link do wydarzenia: </b><a href="'.$row["potwierdzenie"].'" target="blank">'.$row["potwierdzenie"].'</a></p>
-  <p class="m-1"><b>Rodzaj wydarzenia:</b> '.$row["rodzaj"].'</p>
-  <p class="m-1"><b>Data:</b> '.$row["data"].'</p>';
-  switch ($row["ocena"]) {
-    case 0:
-        echo "<p style='background-color:white;'>".$row["ocena"]."</p>";
-        break;
-    case 1:
-        echo "<p style='background-color:red;'>".$row["ocena"]."</p>";
-        break;
-    case 2:
-        echo "<p style='background-color:yellow;'>".$row["ocena"]."</p>";
-        break;
-	case 3:
-        echo "<p style='background-color:lightgreen;'>".$row["ocena"]."</p>";
-        break;
-	}
+  $sql2="SELECT count(a2.id) FROM `users` join aktywnosci as a2 on a2.ID_Organizatora=users.ID where a2.okreg=users.NR_OKREGU and users.ID='".$row["ID"]."'and data between '".$_GET["begin"]."' and '".$_GET["end"]."'";
+  $result2 = $conn->query($sql2);
+  $row2 = $result2->fetch_assoc();
 
-	echo "<form action='admin_ostatnie_aktywnosci.php' method='post'>
-	<input type='hidden' name='begin' value=".$begin.">
-	<input type='hidden' name='end' value=".$end.">
-	<input type='hidden' name='limit' value=".$limit.">
-	<input type='hidden' name='id_aktywnosci' value=".$row["ID"].">
-	
-	<input type='submit' name='ocena' style='background-color:white;' value='0'>
-	<input type='submit' name='ocena' style='background-color:red;' value='1'>
-	<input type='submit' name='ocena' style='background-color:yellow;' value='2'>
-	<input type='submit' name='ocena' style='background-color:lightgreen;' value='3'>
-	</form>";
-	echo "<br>";
-	echo "<form action='admin_ostatnie_aktywnosci_udostępnij.php' method='post'>
-	<input type='hidden' name='begin' value=".$begin.">
-	<input type='hidden' name='end' value=".$end.">
-	<input type='hidden' name='limit' value=".$limit.">
-	<input type='hidden' name='id_aktywnosci' value=".$row["ID"].">
-	<input type='submit' class='btn blue' value='Udostępnij'>
-	</form>
-  <p><b>Uwagi: </b>".$row["uwagi"]."</p>";
-  echo '<form action="admin_dodaj_uwage.php" method="post">
-  <input type="hidden" name="id" value="'.$row["ID"].'">
-  <input type="hidden" name="begin" value="'.$begin.'">
-  <input type="hidden" name="end" value="'.$end.'">
-  <input type="hidden" name="orgin" value="admin_ostatnie_aktywnosci.php">
-  <input type="submit" class="btn blue" value="Edytuj uwagę">
-  </form>';
-  echo '</div>';
-  echo "</div>";
-  echo "</div>";
-  $i++;
+  $v1=(int) $row["count(a1.id)"];
+  $v2=(int) $row2["count(a2.id)"];
 
+  echo '
+  <tr>
+  <td>'.$row["IMIE"].'</td>
+  <td>'.$row["NAZWISKO"].'</td>
+  <td>'.$v1.'</td>
+  <td>'.$v2.'</td>
+  <td>'.($v1-$v2).'</td>
+  </tr>
+  <script>
+  to_export.push(["'.$row['IMIE'].'","'.$row['NAZWISKO'].'","'.$v1.'","'.$v2.'","'.($v1-$v2).'"]);
+  </script>
+  ';
+  
 
 }
 ?>
 </table>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
 include('apply_settings.php');

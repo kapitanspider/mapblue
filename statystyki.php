@@ -58,7 +58,7 @@ function displayFuntion(){
     }
 
     new Chart("myChart2", {
-      type: "bar",
+      type: "horizontalBar",
       data: {
         labels: xValues,
         datasets: [{
@@ -70,12 +70,14 @@ function displayFuntion(){
         legend: {display: false},
         title: {
           display: true,
-          text: "Statystyki gmin"
+          text: "Statystyki gmin",
+          responsive: true,
+          maintainAspectRatio: false,
     }
   }
 });
   document.getElementById("myChart2").style.display = "initial";
-  console.log(gminy);
+  //console.log(gminy);
   }
   if(select.value=="Rodzaje")
   {
@@ -109,11 +111,9 @@ function displayFuntion(){
   }
 }
 }
-
 var powiaty={};
 var gminy={};
 var aktywnosci={
-  ACRT:0,
   WIP:0,
   SW:0,
   NGO:0,
@@ -122,7 +122,6 @@ var aktywnosci={
   OU:0,
   INNE:0
 };
-
 </script>
 
 </head>
@@ -296,9 +295,9 @@ while($row = $result->fetch_assoc()){
 <option value="Gmina">Gminy</option>
 <option value="Rodzaje">Rodzaje Aktywności</option>
 </select>
-<canvas id="myChart" style="width:100%;"></canvas>
-<canvas id="myChart2" style="width:100%;"></canvas>
-<canvas id="myChart3" style="width:100%;"></canvas>
+<canvas id="myChart"></canvas>
+<canvas id="myChart2" height="500px"></canvas>
+<canvas id="myChart3"></canvas>
 <script>
   document.getElementById("myChart").style.display = "none";
   document.getElementById("myChart2").style.display = "none";
@@ -307,5 +306,8 @@ while($row = $result->fetch_assoc()){
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>

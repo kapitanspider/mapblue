@@ -131,8 +131,8 @@ function cardfilter() {
   </div>
 </nav>
 <br>
-<div class="container-fluid p-2 card" style="max-width:700px;">
-<input type="text" class="m-2" id="myInput" onkeyup="cardfilter()" placeholder="Wyszukaj">
+<div class="container-fluid p-2 card" style="max-width:700px;min-height:150px;">
+<input type="text" class="m-2" id="myInput" onkeyup="cardfilter()" placeholder="Wyszukaj" value="<?php if(isset($_GET["search"])){ echo $_GET["search"];}?>">
 <div class="row row-cols-1 row-cols-sm-3 g-4" id="card_wrapper">
 <?php
 $sql = "SELECT * From users Where not ID='".$_SESSION["USER"]."' order by NAZWISKO,IMIE ASC";
@@ -156,6 +156,12 @@ while($row = $result->fetch_assoc())
 ?>
 </div>
 </div>
+<script>
+cardfilter();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<?php
+include('apply_settings.php');
+?>
 </body>
 </html>
