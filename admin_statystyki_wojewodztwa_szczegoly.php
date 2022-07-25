@@ -113,6 +113,9 @@ if(isset($_GET['ilosc']))
         break;
 }
 }
+else{
+  $sql.=" limit 10";
+}
 $result = $conn->query($sql);
 echo '<div class="accordion mt-2" id="accordion1">';
 while($row = $result->fetch_assoc())

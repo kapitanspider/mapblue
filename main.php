@@ -27,7 +27,7 @@ include('dbconfig.php');
 	</ul>
 	<ul class="navbar-nav">
 		<li>
-		<form class="d-flex" action="users.php" method="get">
+		<form class="d-flex" action="search.php" method="get">
         <input class="form-control me-2" type="search" placeholder="Szukaj" aria-label="Search" name="search">&nbsp;
         <button class="btn btn-outline-success" type="submit">Szukaj</button>
       </form>

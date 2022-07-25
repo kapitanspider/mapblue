@@ -11,7 +11,6 @@ include('dbconfig.php');
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="colors.css">
 <style>
-html, body { margin:0; padding:0; overflow:hidden }
 #okregi svg {width:100%;}
 .square {
     border-radius:4px;
@@ -90,7 +89,7 @@ function update(elem){
 
 
 function move(elem){
-  window.location.replace('admin_statystyki_okregi_szczegoly.php?okr='+elem.id+"&begin="+begin+"&end="+end+"&woj="+woj);
+  window.location.replace('admin_statystyki_okregi_okreg.php?okr='+elem.id+"&begin="+begin+"&end="+end+"&woj="+woj);
 }
 </script>
 </head>
@@ -158,7 +157,7 @@ array_push($data,$row);
 
     <li class="nav-item text-center">
       <a class="nav-link" href="admin_wydarzenie_krajowe.php">
-      <svg xmlns="http://www.w3.org/2000/svg"fill="#ffffff" viewBox="0 0 16 16" height="30px">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 16 16" height="30px">
 			<path d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z"/>
 			<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
 			<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
@@ -185,6 +184,7 @@ array_push($data,$row);
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;" id="main">
 
 <div id="scale" class="mt-2 text-center">
+  <b class="m-2">Dużo</b>
   <div class="square"></div>
   <div class="square"></div>
   <div class="square"></div>
@@ -195,6 +195,7 @@ array_push($data,$row);
   <div class="square"></div>
   <div class="square"></div>
   <div class="square"></div>
+  <b class="m-2">Mało</b>
 </div>
 
 <div id="okregi">
@@ -587,16 +588,16 @@ else if($_GET['woj']=="zachodniopomorskie")
 </div>
 <script>
 var squares=document.getElementById("scale").children;
-squares[0].style.backgroundColor=cmax;
-squares[1].style.backgroundColor=c8;
-squares[2].style.backgroundColor=c7;
-squares[3].style.backgroundColor=c6;
-squares[4].style.backgroundColor=c5;
-squares[5].style.backgroundColor=c4;
-squares[6].style.backgroundColor=c3;
-squares[7].style.backgroundColor=c2;
-squares[8].style.backgroundColor=c1;
-squares[9].style.backgroundColor=c0;
+squares[1].style.backgroundColor=cmax;
+squares[2].style.backgroundColor=c8;
+squares[3].style.backgroundColor=c7;
+squares[4].style.backgroundColor=c6;
+squares[5].style.backgroundColor=c5;
+squares[6].style.backgroundColor=c4;
+squares[7].style.backgroundColor=c3;
+squares[8].style.backgroundColor=c2;
+squares[9].style.backgroundColor=c1;
+squares[10].style.backgroundColor=c0;
 </script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php

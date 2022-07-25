@@ -11,9 +11,9 @@ include('dbconfig.php');
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="colors.css">
 <script>
-var to_export=[["Powiat",'ilość']]
+var to_export=[["System Map Blue","Powiaty w skali krajowej","Od <?php echo $_GET["begin"]?>","Do <?php echo $_GET["end"]?>"],["Powiat",'ilość']]
   function download(elem){
-    exportToCsv("Powiaty", to_export);
+    exportToCsv("Powiaty skala krajowa", to_export);
   }
 
   function exportToCsv(filename, rows) {

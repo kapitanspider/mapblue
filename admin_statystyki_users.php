@@ -11,9 +11,9 @@ include('dbconfig.php');
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="colors.css">
 <script>
-var to_export=[["Imie",'Nazwisko','Ilość aktywnosci','Ilość aktywnosci w okręgu','Ilość aktywnosci poza okręgiem']]
+var to_export=[["System Map Blue","Użytkownicy w skali krajowej","Od <?php echo $_GET["begin"]?>","Do <?php echo $_GET["end"]?>"],["Imie",'Nazwisko','Ilość aktywnosci','Ilość aktywnosci w okręgu','Ilość aktywnosci poza okręgiem']]
   function download(elem){
-    exportToCsv("Użytkownicy", to_export);
+    exportToCsv("Użytkownicy skala krajowa", to_export);
   }
 
   function exportToCsv(filename, rows) {

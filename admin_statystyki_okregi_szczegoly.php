@@ -79,10 +79,11 @@ include('dbconfig.php');
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:700px;">
-<form action="admin_statystyki_okregi.php" method="get">
+<form action="admin_statystyki_okregi_okreg.php" method="get">
 <input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
 <input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
 <input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
+<input type="hidden" name="okr" required value="<?php echo $_GET["okr"]; ?>">
 <input type="submit"  class="btn blue w-100" value="Wróć" >
 </form>
 <form action="admin_statystyki_okregi_szczegoly.php" class="text-center"method="get">
@@ -113,6 +114,9 @@ if(isset($_GET['ilosc']))
       $sql.=" limit 500";
         break;
 }
+}
+else{
+  $sql.=" limit 10";
 }
 $result = $conn->query($sql);
 echo '<div class="accordion mt-2" id="accordion1">';

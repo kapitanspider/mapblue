@@ -25,6 +25,17 @@ for(var i=0;i<cards.length;i++){
 </script>
 <?php
 }
+else
+{
+    ?>
+    <script>
+    function update_theme()
+    {
+
+    }
+    </script>
+    <?php
+}
 if($_SESSION["ust_size"]=="small")
 {
     ?>

@@ -198,7 +198,8 @@ while($row = $result->fetch_assoc())
 <input type="date" name="end" required value="<?php echo  $end; ?>">
 <input type="submit"  class="btn blue" value="Ustaw">
 </form>
-<div id="scale" class="mt-2">
+<div id="scale" class="mt-2 text-center">
+  <b class="m-2">Dużo</b>
   <div class="square"></div>
   <div class="square"></div>
   <div class="square"></div>
@@ -209,6 +210,7 @@ while($row = $result->fetch_assoc())
   <div class="square"></div>
   <div class="square"></div>
   <div class="square"></div>
+  <b class="m-2">Mało</b>
 </div>
 
 <svg id="map" onload="update(this)" viewBox="15 0 140 130"> 
@@ -257,16 +259,16 @@ while($row = $result->fetch_assoc())
 </div>
 <script>
 var squares=document.getElementById("scale").children;
-squares[0].style.backgroundColor=cmax;
-squares[1].style.backgroundColor=c8;
-squares[2].style.backgroundColor=c7;
-squares[3].style.backgroundColor=c6;
-squares[4].style.backgroundColor=c5;
-squares[5].style.backgroundColor=c4;
-squares[6].style.backgroundColor=c3;
-squares[7].style.backgroundColor=c2;
-squares[8].style.backgroundColor=c1;
-squares[9].style.backgroundColor=c0;
+squares[1].style.backgroundColor=cmax;
+squares[2].style.backgroundColor=c8;
+squares[3].style.backgroundColor=c7;
+squares[4].style.backgroundColor=c6;
+squares[5].style.backgroundColor=c5;
+squares[6].style.backgroundColor=c4;
+squares[7].style.backgroundColor=c3;
+squares[8].style.backgroundColor=c2;
+squares[9].style.backgroundColor=c1;
+squares[10].style.backgroundColor=c0;
 </script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php

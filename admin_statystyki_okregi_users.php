@@ -7,9 +7,57 @@ include('dbconfig.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MapBlue - Wydarzenia ogólnopolskie</title>
+<title>MapBlue - Admin - Statystyki</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="colors.css">
+<script>
+var to_export=[["System Map Blue","Użytkownicy w okręgu nr <?php echo $_GET["okr"]?>","Od <?php echo $_GET["begin"]?>","Do <?php echo $_GET["end"]?>"],["Imie",'Nazwisko','Ilość aktywnosci','Ilość aktywnosci w okręgu','Ilość aktywnosci poza okręgiem']]
+  function download(elem){
+    exportToCsv("Użytkownicy w okręgu nr <?php echo $_GET["okr"]?>", to_export);
+  }
+
+  function exportToCsv(filename, rows) {
+    var processRow = function (row) {
+            var finalVal = '';
+            for (var j = 0; j < row.length; j++) {
+                var innerValue = row[j] === null ? '' : row[j].toString();
+                if (row[j] instanceof Date) {
+                    innerValue = row[j].toLocaleString();
+                };
+                var result = innerValue.replace(/"/g, '""');
+                if (result.search(/("|,|\n)/g) >= 0)
+                    result = '"' + result + '"';
+                if (j > 0)
+                    finalVal += ',';
+                finalVal += result;
+            }
+            return finalVal + '\n';
+        };
+
+        var csvFile = '';
+        for (var i = 0; i < rows.length; i++) {
+            csvFile += processRow(rows[i]);
+        }
+
+        var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        } else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    }
+    
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
@@ -80,45 +128,45 @@ include('dbconfig.php');
   </div>
 </nav>
 <div class="container-fluid p-2 card mt-1" style="max-width:1000px;">
-
-<form action="admin_statystyki.php" class='text-center' method="post">
+<form action="admin_statystyki_okregi_okreg.php" class='text-center' method="get">
 <input type="hidden" name="begin" required value="<?php echo $_GET["begin"]; ?>">
 <input type="hidden" name="end" required value="<?php echo  $_GET["end"]; ?>">
+<input type="hidden" name="woj" required value="<?php echo  $_GET["woj"]; ?>">
+<input type="hidden" name="okr" required value="<?php echo $_GET["okr"]; ?>">
 <input type="submit"  class="btn blue w-75" value="Wróć" >
+<svg xmlns="http://www.w3.org/2000/svg" onclick="download()"style="float:right;" width="30" height="30" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+</svg>
 </form>
-<table class="table table-striped mt-2">
+<table>
+<table class="table" id="maintable">
 <tr>
-  <th>Nazwa</th>
-  <th>Data</th>
-  <th>Godzina</th>
-  <th>Załącznik</th>
-  <th>Ilość wydarzeń pochodnych</th>
-  <th></th>
-</tr> 
+<th>Imię</th>
+<th>Nazwisko</th>
+<th>Ilość aktywnosci w okręgu</th>
+</tr>
 <?php
-
-$sql="SELECT wydarzenia_ogolnopolskie.ID, wydarzenia_ogolnopolskie.data, wydarzenia_ogolnopolskie.nazwa, wydarzenia_ogolnopolskie.plik, wydarzenia_ogolnopolskie.godzina, count(aktywnosci.id) FROM wydarzenia_ogolnopolskie join aktywnosci on aktywnosci.ID_Parent=wydarzenia_ogolnopolskie.ID WHERE wydarzenia_ogolnopolskie.data between '".$_GET["begin"]."' and '".$_GET["end"]."' GROUP by wydarzenia_ogolnopolskie.id order by data asc, godzina asc;";
-//$sql="SELECT * FROM wydarzenia_ogolnopolskie WHERE data between '".$_GET["begin"]."' and '".$_GET["end"]."' order by data asc, godzina asc";
+$sql="SELECT users.IMIE,users.NAZWISKO,count(a1.id),users.ID FROM `users` join aktywnosci as a1 on a1.ID_Organizatora=users.ID where data between '".$_GET["begin"]."' and '".$_GET["end"]."'and okreg = '".$_GET["okr"]."' GROUP by users.IMIE, users.NAZWISKO order by count(a1.id) desc";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc())
 {
-	echo "<tr>";
-	echo "<td>".$row["nazwa"]."</td>";
-	echo "<td>".$row["data"]."</td>";
-	echo "<td>".$row["godzina"]."</td>";
-	echo "<td><a href='".$row["plik"]."' target='blank' >Załącznik</a></td>";
-  echo "<td>".$row["count(aktywnosci.id)"]."</td>";
-	echo "<td><form action='admin_statystyki_wydarzenie_krajowe_pochodne.php' method='get'>";
-	echo "<input type='hidden' name='id' value='".$row["ID"]."'>";
-	echo "<input type='hidden' name='begin' value='".$_GET["begin"]."'>";
-	echo "<input type='hidden' name='end' value='".$_GET["end"]."'>";
-	echo "<input type='submit' value='Wyświetl wydarzenia pochodne'> ";
-	echo "</form></td>";
-	echo "</tr>";
+  $v1=(int) $row["count(a1.id)"];
+  echo '
+  <tr>
+  <td>'.$row["IMIE"].'</td>
+  <td>'.$row["NAZWISKO"].'</td>
+  <td>'.$v1.'</td>
+  </tr>
+  <script>
+  to_export.push(["'.$row['IMIE'].'","'.$row['NAZWISKO'].'","'.$v1.'"]);
+  </script>
+  ';
+  
+
 }
 ?>
 </table>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
 include('apply_settings.php');
