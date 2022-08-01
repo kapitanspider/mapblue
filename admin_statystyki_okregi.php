@@ -110,8 +110,8 @@ array_push($data,$row);
 }
 ?>
 <script>
-  var begin='<?php echo $begin; ?>';
-  var end='<?php echo $end; ?>';
+  var begin='<?php echo $_GET["begin"]; ?>';
+  var end='<?php echo $_GET["end"]; ?>';
 </script>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark blue">
