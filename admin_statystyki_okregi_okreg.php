@@ -36,11 +36,14 @@ var c4='#8080ff';
 var c3='#9999ff';
 var c2='#b3b3ff';
 var c1='#ccccff';
-var c0='#e6e6ff';
+var c0='#ddddff';
 
 function update(elem){
   for (var i=0;i<pow.length;i++)
   {
+    //console.log(pow);
+    //console.log(ilosci);
+    //console.log(suma);
     obj=elem.getElementById(pow[i]);
     if(ilosci[i]>(suma/10))
     {
@@ -86,7 +89,7 @@ function update(elem){
 }
 </script>
 <?php
-$sql = "SELECT count(id), powiat FROM `aktywnosci` WHERE okreg  = '".$_GET["okr"]."' and data BETWEEN '".$_GET["begin"]."' and '".$_GET["end"]."' GROUP by okreg;";
+$sql = "SELECT count(id), powiat FROM `aktywnosci` WHERE okreg  = '".$_GET["okr"]."' and data BETWEEN '".$_GET["begin"]."' and '".$_GET["end"]."' GROUP by powiat;";
 $result = $conn->query($sql);
 $data=[];
 while($row = $result->fetch_assoc())

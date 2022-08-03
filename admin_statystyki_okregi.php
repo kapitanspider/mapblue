@@ -37,7 +37,7 @@ var c4='#8080ff';
 var c3='#9999ff';
 var c2='#b3b3ff';
 var c1='#ccccff';
-var c0='#e6e6ff';
+var c0='#ddddff';
 
 function update(elem){
 
